@@ -300,7 +300,7 @@ body#forums .heading+.forum_index th, body#staff .thin>div:nth-of-type(2) h3+tab
   position: absolute;
   top: -36px;
   margin-top: 9999px;
-  font-size: 16px
+  font-size: 24px
 }
 
 #userinfo_minor:hover, #userinfo_username:hover, .page__title~.linkbox:hover:first-of-type, body#bprate .linkbox:hover, body#requests .page__title~.linkbox:hover:first-of-type:not(:last-of-type), body#requests .page__title~.linkbox:hover:nth-of-type(2), body#userhistory .tabs__panel>.linkbox:hover {
@@ -2877,7 +2877,6 @@ body#staff .thin>div:nth-of-type(2) h3 {
   height: 40px;
   margin-top: 1055px;
   line-height: 40px;
-  font-size: 20px;
   color: #ded1c1
 }
 
