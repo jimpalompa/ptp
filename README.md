@@ -4,7 +4,7 @@
 <br>
 
 ## Django <sup>`BETA`</sup>
-Standalone stylesheets
+Standalone stylesheet
 ```
 https://jimpalompa.github.io/ptp/css/django.css
 ```
