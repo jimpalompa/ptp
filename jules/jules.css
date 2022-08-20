@@ -1,24 +1,105 @@
-@charset "UTF-8";
-/* ---------------------- I like the way you die, boy --------------------------
+/* ----------------- This is some fucked up repugnant shit ---------------------
 
-Marcel stylesheet for passthepopcorn
+Jules BETA stylesheet for passthepopcorn
 by jimpalompa
 
 Stylesheet url: https://github.com/jimpalompa/ptp
 Profile url: https://passthepopcorn.me/user.php?id=53284
 
 ----------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
-/* @ok BREAKPOINTS
-/* -------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
-/* @ok DEFAULT VARIABLES
-/* -------------------------------------------------------------------------- */
-@import url(//fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap);
-@import url(//fonts.googleapis.com/icon?family=Material+Icons);
+
+/* -------------------------------------
+  DEFAULT VARIABLES
+------------------------------------- */
+
+:root {
+  --ptp--preset--color--background: #1d201f;
+  --ptp--preset--color--foreground: #fff;
+  --ptp--preset--color--black: #000;
+  --ptp--preset--color--white: #fff;
+  --ptp--preset--color--primary: #ffde0d;
+  --ptp--preset--color--secondary: #909291;
+  --ptp--preset--color--tertiary: #3f4141;
+  --ptp--preset--color--quaternary: #282b2a;
+
+  --ptp--preset--color--cyan-bluish-gray: #abb8c3;
+  --ptp--preset--color--pale-pink: #f78da7;
+  --ptp--preset--color--vivid-red: #cf2e2e;
+  --ptp--preset--color--luminous-vivid-orange: #ff6900;
+  --ptp--preset--color--luminous-vivid-amber: #fcb900;
+  --ptp--preset--color--light-green-cyan: #7bdcb5;
+  --ptp--preset--color--vivid-green-cyan: #00d084;
+  --ptp--preset--color--pale-cyan-blue: #8ed1fc;
+  --ptp--preset--color--vivid-cyan-blue: #0693e3;
+  --ptp--preset--color--vivid-purple: #9b51e0;
+
+  --ptp--preset--font-family--default: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --ptp--preset--font-family--system-sans-serif: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --ptp--preset--font-family--system-serif: ui-serif, Georgia, serif;
+  --ptp--preset--font-family--system-monospace: ui-monospace, Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace;
+
+  --ptp--preset--font-size--tiny: 14px;
+  --ptp--preset--font-size--small: 16px;
+  --ptp--preset--font-size--medium: 18px;
+  --ptp--preset--font-size--large: 22px;
+  --ptp--preset--font-size--x-large: 24px;
+  --ptp--preset--font-size--huge: 36px;
+  --ptp--preset--font-size--gigantic: 64px;
+  --ptp--preset--font-size--heading-1: 34px;
+  --ptp--preset--font-size--heading-2: 32px;
+  --ptp--preset--font-size--heading-3: 28px;
+  --ptp--preset--font-size--heading-4: 24px;
+  --ptp--preset--font-size--heading-5: 22px;
+  --ptp--preset--font-size--heading-6: 20px;
+}
+
+/* -------------------------------------
+  BREAKPOINTS
+------------------------------------- */
+
+/* -------------------------------------
+  THEME BUGS & IDEAS
+------------------------------------- */
+
+/* -------------------------------------
+  HIDE ELEMENTS
+------------------------------------- */
+
+/* -------------------------------------
+  TYPOGRAPHY
+------------------------------------- */
+
+@font-face {
+  font-family: Inter;
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  font-display: fallback;
+  src: local(Inter), url(/assets/fonts/inter-var.woff2) format('woff2');
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v138/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+}
+
+body {
+  font-size: ;
+}
+
+/* -------------------------------------
+  COLORS
+------------------------------------- */
+
+/* -------------------------------------
+  DEFAULT VARIABLES
+------------------------------------- */
+
 .info {
-  color: #fff;
-  font-family: "Material Icons";
+  color: #ffffff;
+  font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -35,7 +116,7 @@ Profile url: https://passthepopcorn.me/user.php?id=53284
 
 .alert {
   color: DarkRed;
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -52,7 +133,7 @@ Profile url: https://passthepopcorn.me/user.php?id=53284
 
 .success {
   color: DarkGreen;
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -71,7 +152,7 @@ Profile url: https://passthepopcorn.me/user.php?id=53284
 /* @todo BEGIN HERE
 /* -------------------------------------------------------------------------- */
 #morecast:before, #toggle_add_similar_movies:before, #toggleaddtags:before {
-  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: var(--ptp--preset--font-family--default);
 }
 
 .discuss:before, .panel__heading__toggler:before, .toggle:before {
@@ -91,7 +172,7 @@ Profile url: https://passthepopcorn.me/user.php?id=53284
   text-transform: uppercase;
   border: 1px solid;
   border-radius: 2px;
-  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: var(--ptp--preset--font-family--default);
   font-weight: 400;
   white-space: nowrap;
   -webkit-transition: none;
@@ -136,7 +217,7 @@ Profile url: https://passthepopcorn.me/user.php?id=53284
   height: 36px;
   padding: 0 12px;
   line-height: 36px;
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
   font-weight: 400;
   text-transform: uppercase;
   white-space: nowrap;
@@ -185,7 +266,7 @@ body#forums .heading + .forum_index th, body#staff .thin > div:nth-of-type(2) h3
 }
 
 [class$=__tag-list] a, [class$=__tags] a {
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
   color: rgba(222, 209, 193, 0.6);
   margin-right: 6px;
 }
@@ -217,7 +298,7 @@ body#forums .heading + .forum_index th, body#staff .thin > div:nth-of-type(2) h3
   padding: 0 12px;
   line-height: 36px;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -278,7 +359,7 @@ html {
 }
 
 :before {
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   -webkit-transition: color 0.1s ease-out;
   transition: color 0.1s ease-out;
 }
@@ -290,9 +371,9 @@ body, html {
 }
 
 body {
-  background: #1a1a1a;
+  background: var(--ptp--preset--color--background);;
   color: #fff;
-  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: var(--ptp--preset--font-family--default);
   font-size: 14px;
   font-weight: 400;
 }
@@ -370,7 +451,7 @@ body#forums .pagination--bottom + .linkbox a, input[type=button], input[type=sub
   outline: none;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
   color: #fff;
   background: rgba(102, 163, 255, 0.6);
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
@@ -451,7 +532,7 @@ option:hover {
 }
 
 img, img:before {
-  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: var(--ptp--preset--font-family--default);
 }
 
 .preformatted-text--scrolled {
@@ -534,9 +615,9 @@ img, img:before {
 }
 
 #wrapper {
-  max-width: 1320px;
+  max-width: 1536px;
   margin: 0 auto;
-  padding: 0 28px;
+  padding: 0 48px;
 }
 
 #content {
@@ -669,7 +750,7 @@ img, img:before {
   height: 100%;
   width: 100%;
   text-align: center;
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -1040,7 +1121,7 @@ img, img:before {
 }
 
 .page__title ~ .linkbox:first-of-type a {
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
 }
 
 .linkbox #browse_settings {
@@ -1073,7 +1154,7 @@ img, img:before {
 
 .search-form__advanced-basic-toggler a:hover {
   background: #66a3ff;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .search-form__footer {
@@ -1105,7 +1186,7 @@ a[onclick*="#taglist"], a[onclick^=ToggleTagSelector] {
 
 a[onclick*="#taglist"]:hover, a[onclick^=ToggleTagSelector]:hover {
   background: #66a3ff;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .pagination {
@@ -1322,7 +1403,7 @@ img[title="Request time"], img[title="Seed time"], img[title="Upload time"], img
 
 [class$=__new]:hover:before {
   background: #ffff99;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 [class$=__bookmark] a {
@@ -1333,7 +1414,7 @@ img[title="Request time"], img[title="Seed time"], img[title="Upload time"], img
 
 [class$=__bookmark] a:hover {
   background: #3385ff;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);
 }
 
 [class$=__rate] a {
@@ -1344,7 +1425,7 @@ img[title="Request time"], img[title="Seed time"], img[title="Upload time"], img
 
 [class$=__rate] a:hover {
   background: #ff995c;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 [class$=__trailer] a {
@@ -1355,7 +1436,7 @@ img[title="Request time"], img[title="Seed time"], img[title="Upload time"], img
 
 [class$=__trailer] a:hover {
   background: #993deb;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 a[class*=link--seen] {
@@ -1501,7 +1582,7 @@ a[class*=link--seen]:after {
 }
 
 .huge-movie-list__movie__ratings__votes-column span {
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
 }
 
 .huge-movie-list__movie__synopsis {
@@ -1612,7 +1693,7 @@ a[class*=link--seen]:after {
   background: #54524e;
   color: #fff;
   font-weight: 600;
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
   text-align: center;
   width: 32px;
   height: 32px;
@@ -1670,7 +1751,7 @@ a[class*=link--seen]:after {
 
 .release-name-movie-list__movie__action:hover {
   background: #3385ff;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .release-name-movie-list__movie__ratings-and-tags {
@@ -1723,7 +1804,7 @@ img[title^="High quality"] {
 
 [id^=submanager] a:first-child:hover:before {
   background: #ffff99;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 [id^=submanager] a:nth-child(2) {
@@ -1740,7 +1821,7 @@ img[title^="High quality"] {
 
 [id^=submanager] a:nth-child(2):hover:before {
   background: #ff995c;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .torrent-info-link {
@@ -1818,7 +1899,7 @@ img[title^="High quality"] {
 
 .torrent_info_first_block + .linkbox a:first-of-type:hover {
   background: #99ff99;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .torrent_info_first_block + .linkbox a:nth-of-type(2) {
@@ -1828,7 +1909,7 @@ img[title^="High quality"] {
 
 .torrent_info_first_block + .linkbox a:nth-of-type(2):hover {
   background: #74ff5c;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .torrent_info_first_block + .linkbox a:nth-of-type(3) {
@@ -1838,7 +1919,7 @@ img[title^="High quality"] {
 
 .torrent_info_first_block + .linkbox a:nth-of-type(3):hover {
   background: #44cdca;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .torrent_info_first_block + .linkbox a:nth-of-type(4) {
@@ -1848,7 +1929,7 @@ img[title^="High quality"] {
 
 .torrent_info_first_block + .linkbox a:nth-of-type(4):hover {
   background: #66a3ff;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .torrent_info_first_block + .linkbox a:nth-of-type(4) {
@@ -1858,7 +1939,7 @@ img[title^="High quality"] {
 
 .torrent_info_first_block + .linkbox a:nth-of-type(4):hover {
   background: #3385ff;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .torrent_info_first_block + .linkbox a:nth-of-type(4) {
@@ -1868,7 +1949,7 @@ img[title^="High quality"] {
 
 .torrent_info_first_block + .linkbox a:nth-of-type(4):hover {
   background: #993deb;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .torrent_quick_edit_ignore ~ br:nth-of-type(3) {
@@ -1891,7 +1972,7 @@ body#torrents a[onclick^=RequestSeedingHelp]:before {
 
 body#torrents a[onclick^=RequestSeedingHelp]:hover:before {
   background: #ff331f;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .no-seeders {
@@ -1958,7 +2039,7 @@ body#torrents div[id^=trumpable] {
 }
 
 .group_torrent_header {
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
 }
 
 .group_torrent_header td:last-of-type, .group_torrent_header td:nth-last-of-type(2), .group_torrent_header td:nth-last-of-type(3) {
@@ -2038,7 +2119,7 @@ body#torrents div[id^=trumpable] {
 
 .screenshot-comparison__old-school-toggler-container a:hover {
   background: #66a3ff;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .screenshot-comparison__help {
@@ -2148,7 +2229,7 @@ body#torrents div[id^=trumpable] {
 
 .forum-post__edited {
   margin-top: 8px;
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
   font-weight: 400;
 }
 
@@ -2167,7 +2248,7 @@ body#torrents div[id^=trumpable] {
 }
 
 .forum-post__movie-vote {
-  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: var(--ptp--preset--font-family--default);
   background: rgba(0, 0, 0, 0.12) !important;
   padding: 2px 4px !important;
   border-radius: 2px !important;
@@ -2189,7 +2270,7 @@ body#torrents div[id^=trumpable] {
 
 .last5-movies__show-all-link:hover {
   background: #66a3ff;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 #last5-tab-control {
@@ -2198,7 +2279,7 @@ body#torrents div[id^=trumpable] {
 
 #last5-tab-control a {
   margin-right: 8px;
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
 }
 
 .js-latest-posts-tbody tr:last-of-type td {
@@ -2217,7 +2298,7 @@ body#torrents div[id^=trumpable] {
 
 .js-latest-posts-tbody tr:last-of-type a:hover {
   background: #66a3ff;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .film-club-discuss-link {
@@ -2238,7 +2319,7 @@ body#torrents div[id^=trumpable] {
 
 .film-club-discuss-link a:hover:before {
   background: #66a3ff;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 #vanityhouse blockquote {
@@ -2375,10 +2456,10 @@ body#artist [id^=role_] > br {
 }
 
 #jump_to_container:before {
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
   font-weight: 400;
   content: "JUMP TO";
-  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: var(--ptp--preset--font-family--default);
 }
 
 #jump_to_container a {
@@ -2392,7 +2473,7 @@ body#artist [id^=role_] > br {
 
 #jump_to_container a:first-of-type:hover {
   background: #ffff99;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 #jump_to_container a:nth-of-type(2) {
@@ -2402,7 +2483,7 @@ body#artist [id^=role_] > br {
 
 #jump_to_container a:nth-of-type(2):hover {
   background: #ff995c;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 #jump_to_container a:nth-of-type(3) {
@@ -2412,7 +2493,7 @@ body#artist [id^=role_] > br {
 
 #jump_to_container a:nth-of-type(3):hover {
   background: #ff331f;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 #jump_to_container a:nth-of-type(4) {
@@ -2422,7 +2503,7 @@ body#artist [id^=role_] > br {
 
 #jump_to_container a:nth-of-type(4):hover {
   background: #993deb;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 #jump_to_container a:nth-of-type(5) {
@@ -2432,7 +2513,7 @@ body#artist [id^=role_] > br {
 
 #jump_to_container a:nth-of-type(5):hover {
   background: #3385ff;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 body#user .sidebar-cover-image {
@@ -2475,7 +2556,7 @@ body#userhistory .tabs__panel > .linkbox {
 }
 
 body#userhistory .tabs__panel > .linkbox a {
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
 }
 
 body#collages .thin > .table td:last-child {
@@ -2498,7 +2579,7 @@ body#collages .thin > .table td:last-child {
 
 .subscribed_collages_table td span[style*=right] a:first-of-type:hover {
   background: #ff995c;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .subscribed_collages_table td span[style*=right] a:nth-of-type(2) {
@@ -2509,7 +2590,7 @@ body#collages .thin > .table td:last-child {
 
 .subscribed_collages_table td span[style*=right] a:nth-of-type(2):hover {
   background: #99ff99;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .subscribed_collages_table td span[style*=right] a:nth-of-type(3) {
@@ -2520,7 +2601,7 @@ body#collages .thin > .table td:last-child {
 
 .subscribed_collages_table td span[style*=right] a:nth-of-type(3):hover {
   background: #ff331f;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 .subscribed_collages_table td span[style*=right] a:nth-of-type(4) {
@@ -2531,7 +2612,7 @@ body#collages .thin > .table td:last-child {
 
 .subscribed_collages_table td span[style*=right] a:nth-of-type(4):hover {
   background: #3385ff;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 body#forums .page__title ~ .linkbox:nth-of-type(2) {
@@ -2573,7 +2654,7 @@ body#requests .page__title ~ .linkbox:first-of-type:not(:last-of-type) {
 }
 
 body#requests .page__title ~ .linkbox:first-of-type:not(:last-of-type) a {
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
 }
 
 body#requests .page__title ~ .linkbox:first-of-type:not(:last-of-type):before {
@@ -2586,14 +2667,14 @@ body#requests .page__title ~ .linkbox:nth-of-type(2) {
 }
 
 body#requests .page__title ~ .linkbox:nth-of-type(2) a {
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
 }
 
 .missing-torrent-status {
   text-align: center;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
 }
 
 .missing-torrent-status--no-source {
@@ -2635,7 +2716,7 @@ body#inbox #searchbox span[style^=float] a {
 
 body#inbox #searchbox span[style^=float] a:hover {
   background: #66a3ff;
-  color: #1a1a1a;
+  color: var(--ptp--preset--color--background);;
 }
 
 body#inbox #searchbox input[name=search] {
@@ -2735,7 +2816,7 @@ body#bprate .linkbox {
 }
 
 body#bprate .linkbox a {
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
 }
 
 body#staff .thin > div:nth-of-type(2) {
@@ -2794,7 +2875,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 }
 
 #userinfo_username a {
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
 }
 
 #userinfo_username:before {
@@ -3049,7 +3130,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   width: 100%;
   height: 100%;
   padding: 8px 12px;
-  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: var(--ptp--preset--font-family--default);
   -webkit-transition: none;
   transition: none;
 }
@@ -3098,7 +3179,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   line-height: 48px;
   text-transform: uppercase;
   color: #fff;
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
   font-weight: 400;
   -webkit-transition: none;
   transition: none;
@@ -3116,11 +3197,11 @@ body#staff .thin > div:nth-of-type(2) h3 {
 }
 
 #userinfo_minor a {
-  font-size: 13px;
+  font-size: var(--ptp--preset--font-size--tiny);
 }
 
 #userinfo_minor.user-info-bar__list--has-highlighted-item:before {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAHlBMVEUAAAD///////////////////////////////////8kfJuVAAAACXRSTlMABAwWQF5pb+idktP8AAAAKUlEQVQIW2MQLQeBQIbImSAwlaESTE8nk54GpZsZKh0YwKAEQjEoQCgAS70sUpAH/8UAAAAASUVORK5CYII=") no-repeat top 6px right 6px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAHlBMVEUAAAD///////////////////////////////////8kfJuVAAAACXRSTlMABAwWQF5pb+idktP8AAAAKUlEQVQIW2MQLQeBQIbImSAwlaESTE8nk54GpZsZKh0YwKAEQjEoQCgAS70sUpAH/8UAAAAASUVORK5CYII=) no-repeat top 6px right 6px;
   background-color: rgba(233, 228, 213, 0.2);
 }
 
