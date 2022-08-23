@@ -8,7 +8,7 @@
 
 ----------------------------------------------------------------------------- */
 
-#wrapper::before {
+#wrapper::before, #footer::before {
   content: 'You are using an outdated version of this stylesheet. Visit github.com/jimpalompa/ptp for new url.';
   color: #f2352e;
   display: block;
@@ -19,20 +19,6 @@
   line-height: 48px;
   padding: 24px;
 }
-
-.header {
-  padding-top: 146px !important;
-}
-
-.main-menu {
-  top: 296px !important;
-}
-
-.search-bar {
-  top: 333px !important;
-}
-
-
 
 /* -------------------------------------------------------------------------- */
 /* @ok BREAKPOINTS
