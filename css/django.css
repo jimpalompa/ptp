@@ -38,7 +38,7 @@
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
-  font-weight: var(--ptp--preset--font-weight--regular);
+  font-weight: 400;
   src: url(//jimpalompa.github.io/ptp/jules/assets/fonts/material-icons-v138.woff2) format('woff2');
 }
 
