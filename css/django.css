@@ -39,7 +39,7 @@
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: var(--ptp--preset--font-weight--regular);
-  src: url(//jimpalompa.github.io/ptp/jules/assets/fonts/material-icons-v138.woff2) format('woff2');
+  src: url(https://jimpalompa.github.io/ptp/jules/assets/fonts/material-icons-v138.woff2) format('woff2');
 }
 
 #morecast:before, #toggle_add_similar_movies:before, #toggleaddtags:before {
