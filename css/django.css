@@ -32,9 +32,16 @@
 /* @todo BEGIN HERE
 /* -------------------------------------------------------------------------- */
 
-@import url(https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700);
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Source+Sans+Pro);
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(//fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700);
+@import url(//fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Source+Sans+Pro);
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: var(--ptp--preset--font-weight--regular);
+  src: url(//jimpalompa.github.io/ptp/jules/assets/fonts/material-icons-v138.woff2) format('woff2');
+}
+
 #morecast:before, #toggle_add_similar_movies:before, #toggleaddtags:before {
   font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
 }
