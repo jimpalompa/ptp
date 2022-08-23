@@ -202,7 +202,7 @@ body#forums .heading + .forum_index th, body#staff .thin > div:nth-of-type(2) h3
 }
 
 #userinfo_minor::before, #userinfo_username::before, .page__title ~ .linkbox:first-of-type::before, body#bprate .linkbox::before, body#requests .page__title ~ .linkbox:not(:last-of-type):first-of-type::before, body#requests .page__title ~ .linkbox:nth-of-type(2)::before, body#userhistory .tabs__panel > .linkbox::before {
-  content: "";
+  content: '\e5d4';
   position: absolute;
   top: -36px;
   margin-top: 9999px;
