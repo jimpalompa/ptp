@@ -7,70 +7,24 @@
   Profile url: https://passthepopcorn.me/user.php?id=53284
 
 ----------------------------------------------------------------------------- */
+
 /* -------------------------------------------------------------------------- */
 /* @ok BREAKPOINTS
 /* -------------------------------------------------------------------------- */
+
 /* -------------------------------------------------------------------------- */
 /* @ok DEFAULT VARIABLES
 /* -------------------------------------------------------------------------- */
-@import url(//fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap);
-@import url(//fonts.googleapis.com/icon?family=Material+Icons);
-.info {
-  color: #fff;
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  text-rendering: optimizeLegibility;
-}
-
-.alert {
-  color: DarkRed;
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  text-rendering: optimizeLegibility;
-}
-
-.success {
-  color: DarkGreen;
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  text-rendering: optimizeLegibility;
-}
 
 /* -------------------------------------------------------------------------- */
 /* @todo BEGIN HERE
 /* -------------------------------------------------------------------------- */
+
+@import url(//fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700);
+@import url(//fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Source+Sans+Pro);
+@import url(//fonts.googleapis.com/icon?family=Material+Icons);
 #morecast:before, #toggle_add_similar_movies:before, #toggleaddtags:before {
-  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
 }
 
 .discuss:before, .panel__heading__toggler:before, .toggle:before {
@@ -90,7 +44,7 @@
   text-transform: uppercase;
   border: 1px solid;
   border-radius: 2px;
-  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
   font-weight: 400;
   white-space: nowrap;
   -webkit-transition: none;
@@ -126,7 +80,7 @@
 
 #content > p, #dnu_header + p, #related-topics-tab, .cover-movie-list__movie__undercover, .forum-post, .huge-movie-list__movie, .panel, .table--panel-like, .thin > p, body#inbox .pagination--top + div {
   width: 100%;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -144,7 +98,7 @@
 }
 
 #content > small, #top10 #content > h2, .heading--small-bottom-margin, .page__title, .sidebar > h3, .sidebar > p, .subscribed_collages_table td, .thin > small, body#artist [id^=role_] > h2, body#bprate #content > h2, body#torrents .thin > .page__title + h2.text--center {
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 }
 
 body#forums .heading + .forum_index th, body#staff .thin > div:nth-of-type(2) h3 + table th {
@@ -291,9 +245,9 @@ body, html {
 body {
   background: #1a1a1a;
   color: #fff;
-  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 a {
@@ -309,11 +263,11 @@ a:hover {
 }
 
 b, strong {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h1, h2, h3, h4 {
-  font-weight: 600;
+  font-weight: 300;
 }
 
 h1, h2, h3 {
@@ -450,7 +404,7 @@ option:hover {
 }
 
 img, img:before {
-  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
 }
 
 .preformatted-text--scrolled {
@@ -563,14 +517,13 @@ img, img:before {
 
 .page__title {
   text-align: center;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
 }
 
 .alert {
   padding: 12px;
   margin-bottom: 2px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   text-align: center;
 }
@@ -840,7 +793,7 @@ img, img:before {
   padding: 6px 8px;
   background: rgba(0, 0, 0, 0.24);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .mediainfo__section tr td:not(:last-of-type) {
@@ -1053,7 +1006,7 @@ img, img:before {
 }
 
 .toggleable-search-form {
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 }
 
 .search-form--narrow {
@@ -1089,7 +1042,7 @@ img, img:before {
   left: 0;
   bottom: 0;
   color: #ded1c1;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .search-form__footer__buttons input {
@@ -1491,7 +1444,7 @@ a[class*=link--seen]:after {
 }
 
 .huge-movie-list__movie__ratings__votes-column .rating {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .huge-movie-list__movie__ratings__votes-column .mid, .huge-movie-list__movie__ratings__votes-column .outof {
@@ -1566,7 +1519,7 @@ a[class*=link--seen]:after {
 }
 
 .cover-movie-list__movie__undercover {
-  padding: 16px 12px 16px;
+  padding: 12px 8px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1610,21 +1563,22 @@ a[class*=link--seen]:after {
 .cover-movie-list__movie__rating {
   background: #54524e;
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 13px;
   text-align: center;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
   border-radius: 50%;
   position: absolute;
-  top: -16px;
-  right: 8px;
+  top: -12px;
+  right: 6px;
+  -webkit-transition: background 0.1s ease-out;
+  transition: background 0.1s ease-out;
 }
 
 .cover-movie-list__movie__rating:hover {
-  -webkit-box-shadow: inset 0 0 0 2px rgba(222, 209, 193, 0.6);
-          box-shadow: inset 0 0 0 2px rgba(222, 209, 193, 0.6);
+  background: rgba(0, 0, 0, 0.12);
 }
 
 .small-cover-movie-list__container {
@@ -1643,7 +1597,7 @@ a[class*=link--seen]:after {
 }
 
 .small-cover-movie-list__movie__link {
-  height: 240px;
+  height: 192px;
 }
 
 .basic-movie-list .release-name-movie-list__details-row:nth-of-type(2n) {
@@ -2166,7 +2120,7 @@ body#torrents div[id^=trumpable] {
 }
 
 .forum-post__movie-vote {
-  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
   background: rgba(0, 0, 0, 0.12) !important;
   padding: 2px 4px !important;
   border-radius: 2px !important;
@@ -2264,7 +2218,7 @@ body#torrents div[id^=trumpable] {
 }
 
 body#torrents .thin > .page__title + h2.text--center {
-  font-weight: 600;
+  font-weight: 700;
   background: rgba(158, 255, 158, 0.436);
   color: #fff;
 }
@@ -2298,7 +2252,7 @@ body#torrents .thin > .page__title + h2.text--center {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: normal !important;
 }
 
@@ -2377,7 +2331,7 @@ body#artist [id^=role_] > br {
   font-size: 13px;
   font-weight: 400;
   content: "JUMP TO";
-  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
 }
 
 #jump_to_container a {
@@ -2658,7 +2612,7 @@ body#upload .thin > div[style*="width:700px"] {
   margin-bottom: 2px !important;
   padding-left: 150px;
   padding-right: 150px;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -2854,7 +2808,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 
 #userinfo_stats span {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 2px 6px;
   white-space: nowrap;
 }
@@ -3003,7 +2957,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 }
 
 .search-bar {
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 }
 
 .search-bar__list {
@@ -3048,7 +3002,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   width: 100%;
   height: 100%;
   padding: 8px 12px;
-  font-family: "Source Sans Pro", sans-serif, -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
   -webkit-transition: none;
   transition: none;
 }
@@ -3058,7 +3012,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 }
 
 .main-menu {
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 }
 
 .main-menu__list {
@@ -3150,7 +3104,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 }
 
 .user-info-bar__link--highlighted {
-  font-weight: 600;
+  font-weight: 700;
   background: -webkit-gradient(linear, left top, right top, from(rgba(233, 228, 213, 0.2)), to(rgba(233, 228, 213, 0.1)));
   background: linear-gradient(to right, rgba(233, 228, 213, 0.2), rgba(233, 228, 213, 0.1));
 }
@@ -3201,16 +3155,4 @@ body#staff .thin > div:nth-of-type(2) h3 {
   display: none;
 }
 
-/* =============================================================================
-  RESPONSIVE LAYOUT
-============================================================================= */
-/* @media only screen and (min-width: 1280px) {
-  #wrapper {
-    max-width: 1174px;
-  }
-
-  .cover-movie-list__movie__cover-link {
-    height: 330px;
-  }
-} */
 /* ------------ Before you go, will you tell Miss Lara goodbye? ------------- */
