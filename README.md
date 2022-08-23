@@ -5,10 +5,7 @@ https://jimpalompa.github.io/ptp/django/django.css
 ```
 <sup>No previews available yet : (</sup>
 
-
-
-
-
+<br>
 
 ## Marcel
 Standalone stylesheet
