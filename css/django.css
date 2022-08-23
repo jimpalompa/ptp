@@ -2770,7 +2770,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 }
 
 #userinfo_username::before {
-  content: "";
+  content: '\e853';
   top: -40px;
   width: 40px;
   height: 40px;
