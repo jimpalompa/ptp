@@ -3,10 +3,7 @@ Standalone stylesheet
 ```
 https://jimpalompa.github.io/ptp/css/django.css
 ```
-<details>
-  <summary>Screenshots</summary>
-  <sup>No previews available yet : (</sup>
-</details>
+<sup>No previews available yet : (</sup>
 <br>
 
 ## Marcel
