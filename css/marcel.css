@@ -1,4 +1,4 @@
-/* ---------------------- I like the way you die, boy --------------------------
+/* ----------- Like I said, what the fuck are we supposed to do? ---------------
 
   Marcel stylesheet for passthepopcorn
   by jimpalompa
@@ -8,3151 +8,2306 @@
 
 ----------------------------------------------------------------------------- */
 
-/* -------------------------------------------------------------------------- */
-/* @ok BREAKPOINTS
-/* -------------------------------------------------------------------------- */
-
-/* -------------------------------------------------------------------------- */
-/* @ok DEFAULT VARIABLES
-/* -------------------------------------------------------------------------- */
-
-/* -------------------------------------------------------------------------- */
-/* @todo BEGIN HERE
-/* -------------------------------------------------------------------------- */
-
-@import url(//fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700);
-@import url(//fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Source+Sans+Pro);
-@import url(//fonts.googleapis.com/icon?family=Material+Icons);
-#morecast:before, #toggle_add_similar_movies:before, #toggleaddtags:before {
-  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
-}
-
-.discuss:before, .panel__heading__toggler:before, .toggle:before {
-  -webkit-transition: color 0.1s ease-out;
-  transition: color 0.1s ease-out;
-}
-
-#content:after, .clearfix:after, .forum-post__buttons:after, .forum-post__heading:after, .huge-movie-list__movie:after, .qtip-content:after, .thin:after, .user-recommendation:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-#jump_to_container a:first-of-type, #jump_to_container a:nth-of-type(2), #jump_to_container a:nth-of-type(3), #jump_to_container a:nth-of-type(4), #jump_to_container a:nth-of-type(5), .film-club-discuss-link a:before, .js-latest-posts-tbody tr:last-of-type a, .last5-movies__show-all-link, .release-name-movie-list__movie__action, .screenshot-comparison__old-school-toggler-container a, .search-form__advanced-basic-toggler a, .subscribed_collages_table td span[style*=right] a:first-of-type, .subscribed_collages_table td span[style*=right] a:nth-of-type(2), .subscribed_collages_table td span[style*=right] a:nth-of-type(3), .subscribed_collages_table td span[style*=right] a:nth-of-type(4), .torrent_info_first_block + .linkbox a:first-of-type, .torrent_info_first_block + .linkbox a:nth-of-type(2), .torrent_info_first_block + .linkbox a:nth-of-type(3), .torrent_info_first_block + .linkbox a:nth-of-type(4), [class$=__bookmark] a, [class$=__new]:before, [class$=__rate] a, [class$=__trailer] a, [id^=submanager] a:first-child:before, [id^=submanager] a:nth-child(2):before, a[onclick*="#taglist"], a[onclick^=ToggleTagSelector], body#inbox #searchbox span[style^=float] a, body#torrents a[onclick^=RequestSeedingHelp]:before {
-  padding: 0 2px;
-  font-size: 12px;
-  text-transform: uppercase;
-  border: 1px solid;
-  border-radius: 2px;
-  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
-  font-weight: 400;
-  white-space: nowrap;
-  -webkit-transition: none;
-  transition: none;
-}
-
-.bvalidator_close_icon, .pagination__link--first, .pagination__link--last, .pagination__link--next, .pagination__link--previous {
-  font-size: 0;
-  display: inline-block;
-}
-
-.bvalidator_close_icon:before, .pagination__link--first:before, .pagination__link--last:before, .pagination__link--next:before, .pagination__link--previous:before {
-  font-size: 20px;
-}
-
-#morecast, #nav_donate a, #nav_invite a, #nav_upload a, #similar_movies li div a:first-child, #similar_movies li div a:nth-child(2), #stats_hnrs a, #stats_leeching a, #stats_ratio a, #stats_seeding a, #toggle_add_similar_movies, #toggleaddtags, .basic-torrent-list__movie__torrent-opener-link, .box_tags li div a:first-child, .box_tags li div a:nth-child(2), .discuss, .panel__heading__toggler, .toggle {
-  line-height: normal;
-  font-size: 0;
-  color: transparent;
-}
-
-#morecast:before, #nav_donate a:before, #nav_invite a:before, #nav_upload a:before, #similar_movies li div a:first-child:before, #similar_movies li div a:nth-child(2):before, #stats_hnrs a:before, #stats_leeching a:before, #stats_ratio a:before, #stats_seeding a:before, #toggle_add_similar_movies:before, #toggleaddtags:before, .basic-torrent-list__movie__torrent-opener-link:before, .box_tags li div a:first-child:before, .box_tags li div a:nth-child(2):before, .discuss:before, .panel__heading__toggler:before, .toggle:before {
-  color: #fff;
-}
-
-#morecast:before, #nav_donate a:before, #nav_invite a:before, #nav_upload a:before, #similar_movies li div a:first-child:before, #similar_movies li div a:nth-child(2):before, #stats_hnrs a:before, #stats_leeching a:before, #stats_ratio a:before, #stats_seeding a:before, #toggle_add_similar_movies:before, #toggleaddtags:before, .basic-torrent-list__movie__torrent-opener-link:before, .box_tags li div a:first-child:before, .box_tags li div a:nth-child(2):before, .discuss:before, .panel__heading__toggler:before, .toggle:before {
-  color: #ded1c1;
-}
-
-#morecast:hover:before, #nav_donate a:hover:before, #nav_invite a:hover:before, #nav_upload a:hover:before, #similar_movies li div a:first-child:hover:before, #similar_movies li div a:nth-child(2):hover:before, #stats_hnrs a:hover:before, #stats_leeching a:hover:before, #stats_ratio a:hover:before, #stats_seeding a:hover:before, #toggle_add_similar_movies:hover:before, #toggleaddtags:hover:before, .basic-torrent-list__movie__torrent-opener-link:hover:before, .box_tags li div a:first-child:hover:before, .box_tags li div a:nth-child(2):hover:before, .discuss:hover:before, .panel__heading__toggler:hover:before, .toggle:hover:before {
-  color: #fff;
-}
-
-#content > p, #dnu_header + p, #related-topics-tab, .cover-movie-list__movie__undercover, .forum-post, .huge-movie-list__movie, .panel, .table--panel-like, .thin > p, body#inbox .pagination--top + div {
-  width: 100%;
-  margin-bottom: 2px;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-#content > small, #dnu_header, #getmorenews, #top10 #content > h2, .forum-post__heading, .heading--small-bottom-margin, .huge-movie-list__movie__title-row, .page__title, .panel__heading, .sidebar > h3, .sidebar > p, .simplemodal-data h2, .subscribed_collages_table td, .table--panel-like > thead > tr > td, .table--panel-like > thead > tr > th, .thin > small, .toggleable-search-form__toggler-container, body#artist [id^=role_] > h2, body#bprate #content > h2, body#torrents .thin > .page__title + h2.text--center {
-  position: relative;
-  height: 36px;
-  padding: 0 12px;
-  line-height: 36px;
-  font-size: 13px;
-  font-weight: 400;
-  text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-#content > small, #top10 #content > h2, .heading--small-bottom-margin, .page__title, .sidebar > h3, .sidebar > p, .subscribed_collages_table td, .thin > small, body#artist [id^=role_] > h2, body#bprate #content > h2, body#torrents .thin > .page__title + h2.text--center {
-  margin-bottom: 2px;
-}
-
-body#forums .heading + .forum_index th, body#staff .thin > div:nth-of-type(2) h3 + table th {
-  height: 26px;
-  line-height: 26px;
-  font-size: 12px;
-  background: rgba(0, 0, 0, 0.1212);
-  border-bottom: rgba(255, 255, 255, 0.05);
-}
-
-#content > p, #dnu_header + p, #related-topics-tab, .forum-post__body, .panel__body, .simplemodal-data form, .thin > p, body#inbox #searchbox, body#upload .thin > div[style*="width:700px"] {
-  padding: 12px;
-}
-
-#userinfo_minor:before, #userinfo_username:before, .page__title ~ .linkbox:first-of-type:before, body#bprate .linkbox:before, body#forums .page__title ~ .linkbox:nth-of-type(2) a:before, body#requests .page__title ~ .linkbox:not(:last-of-type):first-of-type:before, body#requests .page__title ~ .linkbox:nth-of-type(2):before, body#userhistory .tabs__panel > .linkbox:before {
-  display: block;
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
-  text-align: center;
-}
-
-.huge-movie-list__movie__cover__link, .last5-movies__link, .small-cover-movie-list__movie__link, .user-page__recent-movie__link {
-  display: block;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.release-name-movie-list__movie__release-category + td, [class$=__title-row], body#collages .thin > .table td:nth-child(2) > a {
-  font-size: 14px;
-  font-weight: 400;
-}
-
-[class$=__tag-list], [class$=__tags] {
-  font-size: 0;
-}
-
-[class$=__tag-list] a, [class$=__tags] a {
-  font-size: 13px;
-  color: rgba(222, 209, 193, 0.6);
-  margin-right: 6px;
-}
-
-[class$=__tags] a:nth-child(n+4) {
-  display: none;
-}
-
-.basic-movie-list__movie__rating-container, [class$=__rating-container] {
-  display: inline-block;
-  background: rgba(0, 0, 0, 0.36);
-  padding: 3px 6px 2px;
-  border-radius: 2px;
-  margin-right: 8px;
-  font-weight: 400;
-}
-
-#userinfo_minor, #userinfo_username, .page__title ~ .linkbox:first-of-type, body#bprate .linkbox, body#requests .page__title ~ .linkbox:first-of-type:not(:last-of-type), body#requests .page__title ~ .linkbox:nth-of-type(2), body#userhistory .tabs__panel > .linkbox {
-  z-index: 100;
-  position: absolute;
-  top: -9999px;
-  background: rgba(66, 66, 66, 0.95);
-}
-
-#userinfo_minor a, #userinfo_username a, .page__title ~ .linkbox:first-of-type a, body#bprate .linkbox a, body#requests .page__title ~ .linkbox:first-of-type:not(:last-of-type) a, body#requests .page__title ~ .linkbox:nth-of-type(2) a, body#userhistory .tabs__panel > .linkbox a {
-  display: block;
-  height: 36px;
-  width: 200px;
-  padding: 0 12px;
-  line-height: 36px;
-  text-transform: uppercase;
-  font-size: 13px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-transition: none;
-  transition: none;
-}
-
-#userinfo_minor a:hover, #userinfo_username a:hover, .page__title ~ .linkbox:first-of-type a:hover, body#bprate .linkbox a:hover, body#requests .page__title ~ .linkbox:first-of-type:not(:last-of-type) a:hover, body#requests .page__title ~ .linkbox:nth-of-type(2) a:hover, body#userhistory .tabs__panel > .linkbox a:hover {
-  background: rgba(233, 228, 213, 0.2);
-}
-
-#userinfo_minor:before, #userinfo_username:before, .page__title ~ .linkbox:first-of-type:before, body#bprate .linkbox:before, body#requests .page__title ~ .linkbox:not(:last-of-type):first-of-type:before, body#requests .page__title ~ .linkbox:nth-of-type(2):before, body#userhistory .tabs__panel > .linkbox:before {
-  content: "";
-  position: absolute;
-  top: -36px;
-  margin-top: 9999px;
-  font-size: 16px;
-}
-
-#userinfo_minor:hover, #userinfo_username:hover, .page__title ~ .linkbox:hover:first-of-type, body#bprate .linkbox:hover, body#requests .page__title ~ .linkbox:hover:first-of-type:not(:last-of-type), body#requests .page__title ~ .linkbox:hover:nth-of-type(2), body#userhistory .tabs__panel > .linkbox:hover {
-  top: 0;
-}
-
-#userinfo_minor:hover:before, #userinfo_username:hover:before, .page__title ~ .linkbox:first-of-type:hover:before, body#bprate .linkbox:hover:before, body#requests .page__title ~ .linkbox:not(:last-of-type):first-of-type:hover:before, body#requests .page__title ~ .linkbox:nth-of-type(2):hover:before, body#userhistory .tabs__panel > .linkbox:hover:before {
-  margin-top: 0;
-  background: rgba(66, 66, 66, 0.95);
-}
-
-#userinfo_username, body#requests .page__title ~ .linkbox:first-of-type:not(:last-of-type) {
-  left: 0;
-}
-
-#userinfo_username:before, body#requests .page__title ~ .linkbox:not(:last-of-type):first-of-type:before {
-  left: 0;
-}
-
-#userinfo_minor, .page__title ~ .linkbox:first-of-type, body#bprate .linkbox, body#requests .page__title ~ .linkbox:nth-of-type(2), body#userhistory .tabs__panel > .linkbox {
-  right: 0;
-}
-
-#userinfo_minor:before, .page__title ~ .linkbox:first-of-type:before, body#bprate .linkbox:before, body#requests .page__title ~ .linkbox:nth-of-type(2):before, body#userhistory .tabs__panel > .linkbox:before {
-  right: 0;
-}
-
-html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-*, :after, :before {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-:before {
-  font-family: "Material Icons";
-  -webkit-transition: color 0.1s ease-out;
-  transition: color 0.1s ease-out;
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-body {
-  background: #1a1a1a;
-  color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-}
-
-a {
-  text-decoration: none;
-  outline: 0;
-  color: #ded1c1;
-  -webkit-transition: color 0.1s ease-out;
-  transition: color 0.1s ease-out;
-}
-
-a:hover {
-  color: #fff;
-}
-
-b, strong {
-  font-weight: 400;
-}
-
-h1, h2, h3, h4 {
-  font-weight: 300;
-}
-
-h1, h2, h3 {
-  color: #fff;
-}
-
-h2 {
-  font-size: 18px;
-}
-
-blockquote {
-  background: rgba(0, 0, 0, 0.12);
-  padding: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-textarea {
-  background: rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  outline: none;
-  color: #fff;
-  padding: 4px 8px;
-}
-
-code > br, kbd > br, pre > br, samp > br {
-  display: none;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border: none;
-}
-
-td, th {
-  border: none;
-  padding: 8px;
-  text-align: left;
-}
-
-ol, ul {
-  list-style-position: inside;
-}
-
-li {
-  padding: 3px 0;
-}
-
-body#forums .pagination--bottom + .linkbox a, input[type=button], input[type=submit] {
-  padding: 8px;
-  border-radius: 2px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-size: 13px;
-  color: #fff;
-  background: rgba(102, 163, 255, 0.6);
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-}
-
-body#forums .pagination--bottom + .linkbox a:hover, input[type=button]:hover, input[type=submit]:hover {
-  background: rgba(134, 182, 255, 0.58);
-  -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
-}
-
-body#forums .pagination--bottom + .linkbox a:active, input[type=button]:active, input[type=submit]:active {
-  background: rgba(157, 196, 255, 0.724);
-}
-
-input[type=password], input[type=text] {
-  text-decoration: none;
-  outline: none;
-  border-radius: 1px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(0, 0, 0, 0.12);
-  padding: 0 8px;
-  height: 28px;
-  color: #fff;
-  display: inline-block;
-  -webkit-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-}
-
-input[type=password]:hover, input[type=text]:hover {
-  background: rgba(0, 0, 0, 0.24);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-input[type=password]:focus, input[type=text]:focus {
-  background: rgba(0, 0, 0, 0.24);
-  border: 1px solid rgba(222, 209, 193, 0.4);
-}
-
-select {
-  text-decoration: none;
-  border-radius: 1px;
-  display: inline-block;
-  background: rgba(0, 0, 0, 0.12);
-  color: #fff;
-  padding: 0 8px;
-  outline: none;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  height: 28px;
-  -webkit-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-}
-
-select:hover {
-  background-color: rgba(0, 0, 0, 0.24);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-select:focus {
-  background-color: rgba(0, 0, 0, 0.24);
-  border: 1px solid rgba(153, 255, 153, 0.5);
-}
-
-option {
-  background: rgba(0, 0, 0, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1px;
-  text-decoration: none;
-  color: #fff;
-}
-
-option:hover {
-  background: rgba(0, 0, 0, 0.24);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-img, img:before {
-  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
-}
-
-.preformatted-text--scrolled {
-  overflow-x: auto;
-  background: rgba(0, 0, 0, 0.12);
-  padding: 4px 8px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-.hidden {
-  display: none !important;
-}
-
-.nobr, td[id^=formatted_bounty] {
-  white-space: nowrap;
-}
-
-.text--center {
-  text-align: center;
-}
-
-.text--right {
-  text-align: right;
-}
-
-.ratio-00 {
-  color: #ff331f;
-}
-
-.ratio-01 {
-  color: #f44324;
-}
-
-.ratio-02 {
-  color: #e95429;
-}
-
-.ratio-03 {
-  color: #de642e;
-}
-
-.ratio-04 {
-  color: #d37433;
-}
-
-.ratio-05 {
-  color: #c78537;
-}
-
-.ratio-06 {
-  color: #bc953c;
-}
-
-.ratio-07 {
-  color: #b1a541;
-}
-
-.ratio-08 {
-  color: #a6b646;
-}
-
-.ratio-09 {
-  color: #9bc64b;
-}
-
-.ratio-10 {
-  color: #90d650;
-}
-
-.ratio-20 {
-  color: #85e755;
-}
-
-.ratio-50 {
-  color: #7af75a;
-}
-
-.ratio-infinite {
-  color: #74ff5c;
-}
-
-#wrapper {
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 0 28px;
-}
-
-#content {
-  position: relative;
-}
-
-#content > small, .thin > small {
-  display: block;
-}
-
-.main-column {
-  width: 70%;
-  float: left;
-}
-
-.sidebar {
-  float: right;
-  width: 30%;
-  padding-left: 8px;
-}
-
-.sidebar-cover-image {
-  max-width: 100%;
-}
-
-.page__title {
-  text-align: center;
-  font-size: 16px;
-}
-
-.alert {
-  padding: 12px;
-  margin-bottom: 2px;
-  font-weight: 700;
-  font-size: 14px;
-  text-align: center;
-}
-
-.alert--warning {
-  background: #956244 !important;
-}
-
-.alert--error, body#upload .thin > div[style*="width:700px"] {
-  background: #952f25 !important;
-}
-
-.panel__heading__toggler {
-  position: absolute;
-  top: 14px;
-  right: 12px;
-}
-
-.panel__heading__toggler:before {
-  content: "";
-}
-
-.panel__heading__toggler:before {
-  font-size: 12px;
-}
-
-.toggle {
-  position: absolute;
-  top: 14px;
-  right: 12px;
-}
-
-.toggle:before {
-  content: "";
-}
-
-.toggle:before {
-  font-size: 12px;
-}
-
-.discuss {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-}
-
-.discuss:before {
-  content: "";
-}
-
-.discuss:before {
-  font-size: 16px;
-}
-
-.tabs__bar {
-  background: rgba(255, 255, 255, 0.05);
-  margin-bottom: 2px;
-}
-
-.tabs__bar__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  list-style: none;
-  height: 36px;
-  line-height: 36px;
-}
-
-.tabs__bar__item {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  padding: 0;
-  -webkit-transition: background 0.1s ease-out;
-  transition: background 0.1s ease-out;
-}
-
-.tabs__bar__item:hover {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.tabs__bar__item--active {
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.tabs__bar__item--active a {
-  color: #99ff99 !important;
-}
-
-.tabs__bar__link {
-  display: block;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  font-size: 13px;
-  text-transform: uppercase;
-  font-weight: 400;
-}
-
-.tabs__panel:not(.tabs__panel--active) {
-  display: none;
-}
-
-.simple-tabs__link--active {
-  color: #99ff99;
-}
-
-.grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  margin-bottom: 4px;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.grid__item {
-  padding: 0 4px;
-}
-
-.grid-u-1-10 {
-  -ms-flex-preferred-size: 10%;
-  flex-basis: 10%;
-}
-
-.grid-offset-u-1-10 {
-  margin-left: 10%;
-}
-
-.grid-u-2-10 {
-  -ms-flex-preferred-size: 20%;
-  flex-basis: 20%;
-}
-
-.grid-offset-u-2-10 {
-  margin-left: 20%;
-}
-
-.grid-u-3-10 {
-  -ms-flex-preferred-size: 30%;
-  flex-basis: 30%;
-}
-
-.grid-offset-u-3-10 {
-  margin-left: 30%;
-}
-
-.grid-u-4-10 {
-  -ms-flex-preferred-size: 40%;
-  flex-basis: 40%;
-}
-
-.grid-offset-u-4-10 {
-  margin-left: 40%;
-}
-
-.grid-u-5-10 {
-  -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
-}
-
-.grid-offset-u-5-10 {
-  margin-left: 50%;
-}
-
-.grid-u-6-10 {
-  -ms-flex-preferred-size: 60%;
-  flex-basis: 60%;
-}
-
-.grid-offset-u-6-10 {
-  margin-left: 60%;
-}
-
-.grid-u-7-10 {
-  -ms-flex-preferred-size: 70%;
-  flex-basis: 70%;
-}
-
-.grid-offset-u-7-10 {
-  margin-left: 70%;
-}
-
-.grid-u-8-10 {
-  -ms-flex-preferred-size: 80%;
-  flex-basis: 80%;
-}
-
-.grid-offset-u-8-10 {
-  margin-left: 80%;
-}
-
-.grid-u-9-10 {
-  -ms-flex-preferred-size: 90%;
-  flex-basis: 90%;
-}
-
-.grid-offset-u-9-10 {
-  margin-left: 90%;
-}
-
-.grid-u-10-10 {
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.grid-offset-u-10-10 {
-  margin-left: 100%;
-}
-
-.grid-u-1-3 {
-  width: 33.33333%;
-}
-
-.grid-u-2-3 {
-  width: 66.66667%;
-}
-
-.grid-u-1 {
-  width: 100%;
-}
-
-.table th, .table thead td {
-  background: rgba(0, 0, 0, 0.18);
-  padding: 8px;
-}
-
-.table--bordered tbody tr {
-  border: solid rgba(255, 255, 255, 0.05);
-  border-width: 0 0 1px 0;
-}
-
-#contest tr:nth-of-type(2n), #latest_posts tr:nth-of-type(2n), .mediainfo__section tr:nth-of-type(2n), .table--striped tr:nth-of-type(2n) {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.mediainfo {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.mediainfo--in-release-description {
-  margin: 12px 0;
-}
-
-.mediainfo > tbody > tr > td {
-  vertical-align: top;
-  padding: 0;
-  border: solid rgba(255, 255, 255, 0.07);
-  border-width: 1px 0 1px 1px;
-}
-
-.mediainfo > tbody > tr > td:last-of-type {
-  border-right-width: 1px;
-}
-
-.mediainfo tr:last-of-type {
-  border: none;
-}
-
-.mediainfo__section__caption {
-  padding: 6px 8px;
-  background: rgba(0, 0, 0, 0.24);
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.mediainfo__section tr td:not(:last-of-type) {
-  font-weight: 400;
-}
-
-.grid__item:not(.grid-u-1) .form__label {
-  float: right;
-}
-
-.form__radio-label {
-  margin-right: 8px;
-}
-
-.list--unstyled, .poll__list {
-  list-style: none;
-}
-
-.list--small-padding {
-  padding-left: 8px;
-}
-
-.list--inline {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 8px 0;
-}
-
-.list--inline-full-width li {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  text-align: center;
-}
-
-.list--form-column {
-  float: left;
-  margin-right: 8px;
-}
-
-.poll__title {
-  font-weight: 400;
-}
-
-.poll__list {
-  margin: 8px 0;
-}
-
-.poll__bar {
-  padding: 0;
-  margin-bottom: 4px;
-}
-
-.poll__bar__center {
-  display: block;
-  height: 4px;
-  background: #99ff99;
-}
-
-.star-rating {
-  margin: 0 auto;
-  width: 170px;
-  height: 20px;
-  list-style: none;
-  background: url(//static.passthepopcorn.me/static/common/stars/stars.png) repeat-x;
-}
-
-.star-rating-container {
-  cursor: pointer;
-}
-
-.star-rating--with-inline-rating-display {
-  display: inline-block;
-  margin-right: 8px;
-}
-
-.star-rating__inline-rating-display {
-  display: inline-block;
-  margin-top: 2px;
-  vertical-align: top;
-  font-weight: 400;
-}
-
-.star-rating--big {
-  width: 300px;
-  height: 40px;
-  background: url(//static.passthepopcorn.me/static/common/stars/stars2_big_light_v2.png) repeat-x;
-  background-image: url(//static.passthepopcorn.me/static/common/stars/stars2_big_v2.png);
-}
-
-.star-rating__current-user, .star-rating__site {
-  position: absolute;
-  display: block;
-  height: 20px;
-}
-
-.star-rating__current-user {
-  background: url(//static.passthepopcorn.me/static/common/stars/stars.png) left 125px;
-  z-index: 11;
-}
-
-.star-rating__current-user--big {
-  height: 40px;
-  background: url(//static.passthepopcorn.me/static/common/stars/stars2_big_light_v2.png) left 220px;
-  background-image: url(//static.passthepopcorn.me/static/common/stars/stars2_big_v2.png);
-}
-
-.star-rating__site {
-  z-index: 10;
-  background: url(//static.passthepopcorn.me/static/common/stars/stars.png) left 100px;
-}
-
-.bbcode-size-1 {
-  font-size: 0.8em;
-}
-
-.bbcode-size-2 {
-  font-size: 0.9em;
-}
-
-.bbcode-size-3 {
-  font-size: 1em;
-}
-
-.bbcode-size-4 {
-  font-size: 1.1em;
-}
-
-.bbcode-size-5 {
-  font-size: 1.2em;
-}
-
-.bbcode-size-6 {
-  font-size: 1.3em;
-}
-
-.bbcode-size-7 {
-  font-size: 1.4em;
-}
-
-.bbcode-size-8 {
-  font-size: 1.5em;
-}
-
-.bbcode-size-9 {
-  font-size: 1.6em;
-}
-
-.bbcode-size-10 {
-  font-size: 1.7em;
-}
-
-.bbcode__image {
-  max-width: 100%;
-}
-
-.bbcode-table-guard {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  word-wrap: break-word;
-}
-
-.bbcode-toolbar__button {
-  width: 16px;
-  height: 16px;
-  background: url(//static.passthepopcorn.me/static/common/bbcode_buttons5.png) no-repeat center center;
-  float: left;
-  margin-right: 7px;
-  cursor: pointer;
-}
-
-.bbcode-toolbar__color-popup-color {
-  cursor: pointer;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-}
-
-#Bbcode_Toolbar {
-  padding: 4px;
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-bottom: none;
-}
-
-#Bbcode_Toolbar + textarea {
-  width: 100% !important;
-  resize: vertical;
-}
-
-.page__title ~ .linkbox:first-of-type {
-  margin-top: 36px;
-  font-size: 0;
-}
-
-.page__title ~ .linkbox:first-of-type a {
-  font-size: 13px;
-}
-
-.linkbox #browse_settings {
-  position: absolute;
-  top: -36px;
-  right: 36px;
-  display: block;
-  height: 36px;
-  padding: 0 19px;
-  background-color: rgba(66, 66, 66, 0.95);
-}
-
-.toggleable-search-form {
-  margin-bottom: 2px;
-}
-
-.search-form--narrow {
-  padding: 0 100px;
-}
-
-.search-form__advanced-basic-toggler {
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-.search-form__advanced-basic-toggler a {
-  border-color: #66a3ff;
-  color: #66a3ff;
-}
-
-.search-form__advanced-basic-toggler a:hover {
-  background: #66a3ff;
-  color: #1a1a1a;
-}
-
-.search-form__footer {
-  position: relative;
-  margin-top: 12px;
-}
-
-.search-form__footer--right-aligned {
-  text-align: right;
-}
-
-.search-form__footer__results {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  color: #ded1c1;
-  font-weight: 700;
-}
-
-.search-form__footer__buttons input {
-  margin-left: 12px;
-}
-
-a[onclick*="#taglist"], a[onclick^=ToggleTagSelector] {
-  margin-left: 12px;
-  border-color: #66a3ff;
-  color: #66a3ff;
-}
-
-a[onclick*="#taglist"]:hover, a[onclick^=ToggleTagSelector]:hover {
-  background: #66a3ff;
-  color: #1a1a1a;
-}
-
-.pagination {
-  padding: 12px 8px;
-  text-align: right;
-  font-weight: 400;
-  color: transparent;
-  cursor: default;
-  vertical-align: middle;
-}
-
-.pagination:empty {
-  display: none;
-}
-
-.pagination__current-page {
-  color: #99ff99;
-  vertical-align: middle;
-}
-
-.pagination__link {
-  vertical-align: middle;
-}
-
-.pagination__link--first:before {
-  content: "";
-}
-
-.pagination__link--previous:before {
-  content: "";
-}
-
-.pagination__link--next:before {
-  content: "";
-}
-
-.pagination__link--last:before {
-  content: "";
-}
-
-#footer {
-  clear: both;
-  max-width: 1280px;
-  margin: 12px auto 0;
-  padding: 12px;
-  text-align: center;
-  font-size: 12px;
-}
-
-.footer__disclaimer {
-  padding: 0 12px;
-}
-
-.qtip {
-  position: absolute;
-  left: -9999px;
-  display: none;
-}
-
-.qtip-tip, .qtip-tip canvas {
-  display: none !important;
-}
-
-.qtip-content {
-  background: rgba(66, 66, 66, 0.95);
-  padding: 8px;
-}
-
-.qtip-content label {
-  display: block;
-  height: 20px;
-  white-space: nowrap;
-}
-
-.qtip-content br {
-  display: none;
-}
-
-.movie-tooltip__director-list, .movie-tooltip__title-row, .movie-tooltip__torrents, .movie-tooltip__trailer {
-  display: inline-block;
-}
-
-.movie-tooltip__director-list {
-  margin-left: 4px;
-}
-
-.movie-tooltip__ratings {
-  margin: 4px 0;
-}
-
-.movie-tooltip__tags {
-  margin-bottom: 8px;
-}
-
-.movie-tooltip__trailer {
-  vertical-align: top;
-}
-
-.movie-tooltip__trailer__play {
-  display: none;
-}
-
-.movie-tooltip__trailer + .movie-tooltip__synopsis {
-  display: inline-block;
-  width: 194px;
-  padding-left: 12px;
-}
-
-.movie-tooltip__synopsis {
-  margin-bottom: 8px;
-  padding: 0 4px;
-  text-align: justify;
-}
-
-.movie-tooltip__torrents {
-  margin-left: 4px;
-}
-
-.movie-tooltip__action-row {
-  font-size: 0;
-  margin: 8px 0 4px -2px;
-}
-
-.simplemodal-container {
-  width: auto !important;
-  left: 50% !important;
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  margin-top: 48px;
-}
-
-.simplemodal-data {
-  background: rgba(66, 66, 66, 0.95);
-}
-
-.simplemodal-data > .panel__body {
-  padding: 0;
-  background: none;
-}
-
-.simplemodal-data h2 {
-  background: rgba(0, 0, 0, 0.36);
-}
-
-.simplemodal-data textarea {
-  margin-bottom: 12px;
-}
-
-#artist_settings, #browse_settings {
-  width: 0;
-  height: 14px;
-  padding: 0 7px;
-  vertical-align: middle;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAS1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////+DmQsHAAAAGHRSTlMAAQQGBxATFBUXKyxJb3R1kpudwOjp+/12VgXkAAAAYklEQVQImV2P2w7CIABDz2DopkzRIZz//1IfZjTSpzZpegGA67Zd+OGpjw8NOa4vraeYA3D3ixsk1V5KV03Mu7YFlq77DFOzABTbxCgHc1JtpbQjaigi5HiuWtdjxjDy78IbrJwI83lOcEUAAAAASUVORK5CYII=) no-repeat center;
-  opacity: 0.7;
-  -webkit-transition: opacity 0.1s ease-out;
-  transition: opacity 0.1s ease-out;
-  position: absolute;
-  right: 12px;
-  top: 12px;
-}
-
-#artist_settings:hover, #browse_settings:hover {
-  opacity: 1;
-}
-
-.golden-popcorn-character {
-  color: #ffff99;
-}
-
-img[title=Snatched], img[title=Snatches] {
-  width: 0;
-  height: 12px;
-  padding: 0 6px;
-  vertical-align: middle;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAP1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////9Du/pqAAAAFHRSTlMAAgMICQsQGBkaLDRYnbnP2uDm9TKEtGkAAABASURBVAhbjcc7EoAgEAXBUVbFL6Dv/mc1oVbM6Kyh0zC3Gy/tv+kG2ELdswKHyvSNJJXFh2VJvnofWG4HdkZ6vFNzA2pvH6XYAAAAAElFTkSuQmCC) no-repeat center;
-}
-
-img[title=Seeders] {
-  width: 0;
-  height: 12px;
-  padding: 0 6px;
-  vertical-align: middle;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAJ1BMVEUAAAD///////////////////////////////////////////////+uPUo5AAAADHRSTlMAFyUmJ0FCd3u03N4K4Xz4AAAARUlEQVQIW2NgYGAwYAAD9hMQuuZMA5h75gxYQOfMmTMOIAbPGYg8Os19CkTOOZPAEHNmAsMZMDgApg8ePAAUB4EJDFAAACo4Hv6oWBL4AAAAAElFTkSuQmCC) no-repeat center;
-}
-
-img[title=Leechers] {
-  width: 0;
-  height: 12px;
-  padding: 0 6px;
-  vertical-align: middle;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAMFBMVEUAAAD///////////////////////////////////////////////////////////87TQQwAAAAD3RSTlMAAhckJSZNc3emqLS82tygO8DvAAAARklEQVQIW2NggAO+vxCa/z9W2v////8BQJr9//8fYIH6/w1gmh3M3f9/oeH8/xsY/v//k/P//wcg/f//p08fgOIgsAFmCQDlxSY4kYq/nAAAAABJRU5ErkJggg==) no-repeat center;
-}
-
-img[title="Request time"], img[title="Seed time"], img[title="Upload time"], img[title=Time] {
-  width: 0;
-  height: 12px;
-  padding: 0 6px;
-  vertical-align: middle;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAD1BMVEUAAAD///////////////+PQt5oAAAABHRSTlMAAW+d3oqUPAAAADRJREFUCFtjYGBSUlJSYGBgYHFxcXHAQjMDaQMgzWji4iwApBmEXQwZkGiYOEwdLnMg9gAAoMwMF8VfxG4AAAAASUVORK5CYII=) no-repeat center;
-}
-
-[class$=__new] {
-  margin-left: 6px;
-  font-size: 0;
-}
-
-[class$=__new]:before {
-  content: "NEW";
-  border-color: #ffff99;
-  font-size: 12px;
-  color: #ffff99;
-}
-
-[class$=__new]:hover:before {
-  background: #ffff99;
-  color: #1a1a1a;
-}
-
-[class$=__bookmark] a {
-  margin-left: 6px;
-  border-color: #3385ff;
-  color: #3385ff;
-}
-
-[class$=__bookmark] a:hover {
-  background: #3385ff;
-  color: #1a1a1a;
-}
-
-[class$=__rate] a {
-  margin-left: 6px;
-  border-color: #ff995c;
-  color: #ff995c;
-}
-
-[class$=__rate] a:hover {
-  background: #ff995c;
-  color: #1a1a1a;
-}
-
-[class$=__trailer] a {
-  margin-left: 6px;
-  border-color: #993deb;
-  color: #993deb;
-}
-
-[class$=__trailer] a:hover {
-  background: #993deb;
-  color: #1a1a1a;
-}
-
-a[class*=link--seen] {
-  position: relative;
-  display: block;
-}
-
-a[class*=link--seen]:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-image: url(//static.passthepopcorn.me/static/common/symbols/seen-overlay.png);
-  background-size: cover;
-  width: 22px;
-  height: 22px;
-}
-
-.basic-movie-list th.small {
-  padding: 0;
-}
-
-.basic-movie-list__details-row td {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 8px 12px;
-}
-
-.basic-movie-list__details-row:not(.compact-movie-list__details-row) td:first-of-type {
-  padding: 0 !important;
-  vertical-align: top;
-  background: none;
-}
-
-.basic-movie-list__torrent-edition {
-  background: rgba(0, 0, 0, 0.06);
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: rgba(169, 255, 169, 0.925);
-  letter-spacing: 0.5px;
-}
-
-.basic-movie-list__torrent__action {
-  float: right;
-}
-
-.basic-movie-list__movie__cover {
-  width: 120px;
-}
-
-.basic-movie-list__movie__ratings-and-tags {
-  margin-top: 4px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.basic-movie-list__movie__tags {
-  -webkit-box-ordinal-group: 0;
-  -ms-flex-order: -1;
-  order: -1;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-  margin-bottom: 4px;
-}
-
-.basic-movie-list__movie__rating-container {
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
-}
-
-.compact-movie-list__details-row--odd td {
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.huge-movie-list__movie__cover {
-  width: 200px;
-  float: left;
-}
-
-.huge-movie-list__movie__cover__link {
-  height: 300px;
-}
-
-.huge-movie-list__movie__details {
-  margin-left: 150px;
-  min-height: 225px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.huge-movie-list__movie__title-row {
-  text-transform: none;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.huge-movie-list__movie__tag-list {
-  width: 100%;
-  margin-top: 12px;
-  text-align: center;
-}
-
-.huge-movie-list__movie__ratings-and-synopsis > tbody > tr > td {
-  display: block;
-}
-
-.huge-movie-list__movie__ratings-and-synopsis td {
-  width: auto !important;
-}
-
-.huge-movie-list__movie__ratings {
-  text-align: center;
-}
-
-.huge-movie-list__movie__ratings tr {
-  display: inline-block;
-}
-
-.huge-movie-list__movie__ratings__votes-column {
-  padding: 0 12px 0 0;
-  text-align: center;
-  font-size: 0;
-  font-weight: 400;
-}
-
-.huge-movie-list__movie__ratings__votes-column .rating {
-  font-weight: 700;
-}
-
-.huge-movie-list__movie__ratings__votes-column .mid, .huge-movie-list__movie__ratings__votes-column .outof {
-  margin-left: 2px;
-  color: #ded1c1;
-}
-
-.huge-movie-list__movie__ratings__votes-column span {
-  font-size: 13px;
-}
-
-.huge-movie-list__movie__synopsis {
-  margin: 0 48px 12px;
-}
-
-.huge-movie-list__movie__action-row, .huge-movie-list__movie__torrent-summary {
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-  margin: 12px;
-}
-
-.huge-movie-list__movie__action-row {
-  font-size: 0;
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
-}
-
-.cover-movie-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 0 -8px;
-}
-
-.cover-movie-list__container + br, .small-cover-movie-list__container + br {
-  display: none;
-}
-
-.cover-movie-list--narrow {
-  margin-right: 6px;
-}
-
-.cover-movie-list--narrow .cover-movie-list__movie {
-  -ms-flex-preferred-size: 25%;
-  flex-basis: 25%;
-}
-
-.cover-movie-list--narrow .cover-movie-list__movie__cover-link {
-  height: 246px !important;
-}
-
-.cover-movie-list__movie {
-  -ms-flex-preferred-size: 20%;
-  flex-basis: 20%;
-  padding: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.cover-movie-list__movie__cover-link {
-  display: block;
-  width: 100%;
-  height: 360px;
-}
-
-.cover-movie-list__movie__undercover {
-  padding: 12px 8px 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  position: relative;
-}
-
-.cover-movie-list__movie__year {
-  color: rgba(222, 209, 193, 0.6);
-}
-
-.cover-movie-list__movie__rating-and-tags {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  margin-top: 8px;
-}
-
-.cover-movie-list__movie__tags {
-  -webkit-box-ordinal-group: 0;
-  -ms-flex-order: -1;
-  order: -1;
-}
-
-.cover-movie-list__movie__rating {
-  background: #54524e;
-  color: #fff;
-  font-weight: 700;
-  font-size: 13px;
-  text-align: center;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  border-radius: 50%;
-  position: absolute;
-  top: -12px;
-  right: 6px;
-  -webkit-transition: background 0.1s ease-out;
-  transition: background 0.1s ease-out;
-}
-
-.cover-movie-list__movie__rating:hover {
-  background: rgba(0, 0, 0, 0.12);
-}
-
-.small-cover-movie-list__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-left: -8px;
-}
-
-.small-cover-movie-list__movie {
-  -ms-flex-preferred-size: 20%;
-  flex-basis: 20%;
-  padding: 6px;
-}
-
-.small-cover-movie-list__movie__link {
-  height: 192px;
-}
-
-.basic-movie-list .release-name-movie-list__details-row:nth-of-type(2n) {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.release-name-movie-list__movie__release-category {
-  white-space: nowrap;
-  text-align: center;
-  padding-left: 12px;
-}
-
-.release-name-movie-list__movie__action-container {
-  float: right;
-  font-size: 0;
-}
-
-.release-name-movie-list__movie__action {
-  margin-left: 6px;
-  border-color: #3385ff;
-  color: #3385ff;
-}
-
-.release-name-movie-list__movie__action:hover {
-  background: #3385ff;
-  color: #1a1a1a;
-}
-
-.release-name-movie-list__movie__ratings-and-tags {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-top: 4px;
-}
-
-.release-name-movie-list__movie__tags {
-  -webkit-box-ordinal-group: 0;
-  -ms-flex-order: -1;
-  order: -1;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-  margin-bottom: 4px;
-}
-
-img[title^="High quality"], img[title^="Torrent has been"], img[title^="Torrent has not"] {
-  width: 0 !important;
-  height: 12px !important;
-  padding: 0 8px;
-  vertical-align: middle;
-}
-
-img[title^="Torrent has been"] {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAAOVBMVEUAAAAzwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzfjzN5/AAAAEnRSTlMAAQMGHjE8P0Bfi6Omt9Hi7/XCzsNoAAAAO0lEQVQI143HSxZAMBAAwQ5CfEPf/7AWHmZH7Qr+aMcmZHONcQa6PV9ZEnBofsKg1jtQ9A2UGOinxKcT2psCetpsGdwAAAAASUVORK5CYII=) no-repeat center;
-}
-
-img[title^="Torrent has not"] {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAATlBMVEUAAAD3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG8uuGoRAAAAGXRSTlMAAwUGGiQlJicoNjc6SmmGkbW8vsDB0eb94rl60gAAAGFJREFUCFs9zDkWgzAQwFAZSMAsYYfR/S9KYV7U/UZQTQmAZgDqyy0BOfzBqe6JHOrArHqMoUYDi2+R4c8CWFUdC7pQ9UgAbYHuCb6hxvryVqMrq4leoy3nq4L+/gAwnzUPVnMJp4HLt1gAAAAASUVORK5CYII=) no-repeat center;
-}
-
-img[title^="High quality"] {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAAe1BMVEUAAAD/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5CZBk5qjAAAAKHRSTlMAAgQGDQ4PEBQXGB4gIikqLC8yRlVhY3yClZ65uszP4uTm6Ovv8fP5ftFKkwAAAFtJREFUCB1dwY0SQlAURtF9qVBR9EsKhb73f8J05s5kWguz2TFTP/hJpRzPLW/SfeWYXBt5XQnRU96QAItWpo/5WstkmK1MgTlI40s6YS7vc+COY4XZh0yCgn8fisAJ2e+BVH0AAAAASUVORK5CYII=) no-repeat center;
-}
-
-[id^=submanager] a:first-child {
-  font-size: 0;
-}
-
-[id^=submanager] a:first-child:before {
-  content: "request sub";
-  border-color: #ffff99;
-  font-size: 12px;
-  color: #ffff99;
-}
-
-[id^=submanager] a:first-child:hover:before {
-  background: #ffff99;
-  color: #1a1a1a;
-}
-
-[id^=submanager] a:nth-child(2) {
-  margin-left: 4px;
-  font-size: 0;
-}
-
-[id^=submanager] a:nth-child(2):before {
-  content: "sub manager";
-  border-color: #ff995c;
-  font-size: 12px;
-  color: #ff995c;
-}
-
-[id^=submanager] a:nth-child(2):hover:before {
-  background: #ff995c;
-  color: #1a1a1a;
-}
-
-.torrent-info-link {
-  margin-left: 4px;
-}
-
-.torrent-info-link--user-snatched {
-  color: #66a3ff;
-}
-
-.torrent-info-link--user-leeching {
-  color: #ff331f;
-}
-
-.torrent-info-link--user-seeding {
-  color: #ffff99;
-}
-
-.torrent-info-link--user-downloaded {
-  color: #99ff99;
-}
-
-.torrent-info-link--user-uploaded {
-  color: #993deb;
-}
-
-.torrent-info__trumpable {
-  color: #ff995c;
-  font-weight: 400;
-}
-
-.torrent-info__reported {
-  color: #ff331f;
-  font-weight: 400;
-}
-
-.torrent-info__download-modifier {
-  font-weight: 400;
-}
-
-.torrent-info__download-modifier--free {
-  color: #74ff5c;
-}
-
-.torrent-info__download-modifier--half {
-  color: #ffff99;
-}
-
-.torrent_info_row {
-  background: rgba(0, 0, 0, 0.12);
-}
-
-.torrent_info_row > td {
-  padding: 12px 12px 0 !important;
-}
-
-.torrent_info_first_block {
-  position: relative;
-}
-
-.torrent_info_first_block + .linkbox {
-  text-align: center;
-  font-size: 0;
-  margin-bottom: 12px;
-}
-
-.torrent_info_first_block + .linkbox a {
-  margin: 0 4px;
-}
-
-.torrent_info_first_block + .linkbox a:first-of-type {
-  border-color: #99ff99;
-  color: #99ff99;
-}
-
-.torrent_info_first_block + .linkbox a:first-of-type:hover {
-  background: #99ff99;
-  color: #1a1a1a;
-}
-
-.torrent_info_first_block + .linkbox a:nth-of-type(2) {
-  border-color: #74ff5c;
-  color: #74ff5c;
-}
-
-.torrent_info_first_block + .linkbox a:nth-of-type(2):hover {
-  background: #74ff5c;
-  color: #1a1a1a;
-}
-
-.torrent_info_first_block + .linkbox a:nth-of-type(3) {
-  border-color: #44cdca;
-  color: #44cdca;
-}
-
-.torrent_info_first_block + .linkbox a:nth-of-type(3):hover {
-  background: #44cdca;
-  color: #1a1a1a;
-}
-
-.torrent_info_first_block + .linkbox a:nth-of-type(4) {
-  border-color: #66a3ff;
-  color: #66a3ff;
-}
-
-.torrent_info_first_block + .linkbox a:nth-of-type(4):hover {
-  background: #66a3ff;
-  color: #1a1a1a;
-}
-
-.torrent_info_first_block + .linkbox a:nth-of-type(4) {
-  border-color: #3385ff;
-  color: #3385ff;
-}
-
-.torrent_info_first_block + .linkbox a:nth-of-type(4):hover {
-  background: #3385ff;
-  color: #1a1a1a;
-}
-
-.torrent_info_first_block + .linkbox a:nth-of-type(4) {
-  border-color: #993deb;
-  color: #993deb;
-}
-
-.torrent_info_first_block + .linkbox a:nth-of-type(4):hover {
-  background: #993deb;
-  color: #1a1a1a;
-}
-
-.torrent_quick_edit_ignore ~ br:nth-of-type(3) {
-  display: none;
-}
-
-body#torrents a[onclick^=RequestSeedingHelp] {
-  font-size: 0;
-  position: absolute;
-  right: 12px;
-  top: 12px;
-}
-
-body#torrents a[onclick^=RequestSeedingHelp]:before {
-  content: "Request Seeding Help";
-  border-color: #ff331f;
-  font-size: 12px;
-  color: #ff331f;
-}
-
-body#torrents a[onclick^=RequestSeedingHelp]:hover:before {
-  background: #ff331f;
-  color: #1a1a1a;
-}
-
-.no-seeders {
-  color: #ff331f;
-}
-
-.basic-torrent-list__movie__torrent-opener-link {
-  text-align: center;
-  width: 30px;
-  border-radius: 3px;
-  margin-right: 8px;
-  background: rgba(0, 0, 0, 0.24);
-  padding: 0;
-}
-
-.basic-torrent-list__movie__torrent-opener-link:before {
-  content: "";
-}
-
-.basic-torrent-list__movie__torrent-opener-link:before {
-  color: #66a3ff;
-  font-size: 20px;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.basic-torrent-list__movie__torrent-opener-link:hover {
-  background: rgba(0, 0, 0, 0.12);
-}
-
-.basic-torrent-list__movie__torrent-opener-link:hover:before {
-  color: #99ff99;
-}
-
-.basic-torrent-list__movie__additional-info {
-  margin-top: 8px;
-  font-weight: 400;
-}
-
-.movie-page__torrent__panel {
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  margin-bottom: 12px;
-}
-
-.movie-page__torrent-report-date-and-reason {
-  margin: 12px 0 8px;
-}
-
-.movie-page__torrent-report-description {
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-body#torrents div[id^=reported] {
-  background: rgba(140, 0, 0, 0.208);
-}
-
-body#torrents div[id^=trumpable] {
-  background: rgba(162, 97, 58, 0.208);
-}
-
-.group_torrent_header {
-  font-size: 13px;
-}
-
-.group_torrent_header td:last-of-type, .group_torrent_header td:nth-last-of-type(2), .group_torrent_header td:nth-last-of-type(3) {
-  text-align: center;
-}
-
-.lightbox {
-  z-index: 1002;
-  position: fixed;
-  top: 5%;
-  left: 5%;
-  height: 90%;
-  width: 90%;
-  overflow: auto;
-  outline: none;
-  text-align: center;
-}
-
-.lightbox img {
-  max-height: 99%;
-  max-width: 99%;
-}
-
-.lightbox__shroud {
-  z-index: 1001;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.screenshot-comparison__container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
-  text-align: center;
-}
-
-.screenshot-comparison__row {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.screenshot-comparison__image-container {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-}
-
-.screenshot-comparison__label {
-  position: fixed;
-  top: 0;
-  z-index: 2000;
-  font-size: 20px;
-  font-weight: 400;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  pointer-events: none;
-}
-
-.screenshot-comparison__old-school-toggler-container {
-  margin: 8px 0;
-}
-
-.screenshot-comparison__old-school-toggler-container a {
-  border-color: #66a3ff;
-  color: #66a3ff;
-}
-
-.screenshot-comparison__old-school-toggler-container a:hover {
-  background: #66a3ff;
-  color: #1a1a1a;
-}
-
-.screenshot-comparison__help {
-  display: inline-block;
-  margin-bottom: 20px;
-  max-width: 1000px;
-}
-
-.forum-topic__go-to-last-read {
-  display: inline-block;
-  height: 14px;
-  margin-left: 6px;
-  line-height: 14px;
-  vertical-align: middle;
-  color: rgba(102, 163, 255, 0.7);
-}
-
-.forum-topic__go-to-last-read:before {
-  content: "";
-  font-size: 15px;
-}
-
-.forum-topic__go-to-last-read:hover {
-  color: #66a3ff;
-}
-
-.forum-topic--is-read {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAACVBMVEX///+QkJCQkJBzLNgEAAAAAnRSTlMAAHaTzTgAAAAtSURBVHhefYuhEQAwCMTetvv9Pl2CIfgpoSBwRORiguFKD4dMydeyqlZtrU8A6JMUKeHoG3AAAAAASUVORK5CYII=) center no-repeat;
-}
-
-.forum-topic--is-read-sticky {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAG1BMVEWQkJD///+QkJCQkJCQkJCQkJCQkJCQkJCQkJA3mkjtAAAACHRSTlMAAFFTUl5URdDB1TQAAABISURBVHhehcahEYAwEADBY0AgE4ekDCRlUAKSEp6oKxvmJwLHqqV2lBlgeOPO4V1ZbMCbsmlkRiWDrcdzzVwxRSaAv6j6Te0es5kZ6IK/EdsAAAAASUVORK5CYII=) center no-repeat;
-}
-
-.forum-topic--is-read-locked {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAD1BMVEX///+QkJCQkJCQkJCQkJAi+GD7AAAABHRSTlMAAFZXqn1YHwAAADxJREFUeF6VirERACAIxBxBmYCCERhAOPefyQc8KxtT5fLfHqxgQmyAFAT7Kj2LOZ0iwiXkMeGqyiH1uWz5Fw69ZPQ3OgAAAABJRU5ErkJggg==) center no-repeat;
-}
-
-.forum-topic--is-read-locked-sticky {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAIVBMVEX///+QkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJBBpNmTAAAACnRSTlMAAFZRUlNXVF5FRF9ofwAAAFxJREFUeF49zLEVgCAMBNDQWhmeNlbUdI7gGo7ACI5g5wYGu5vSkPC46r+7vNBI2FgzK3DwjZdowqeNIpyAGFbAG9at49oNjyxiEPvjqLE3OSdHrG0CpJTkaDcjPwJ6HWxMBPutAAAAAElFTkSuQmCC) center no-repeat;
-}
-
-.forum-topic--is-unread {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAACVBMVEX////g4ODg4ODBKPUMAAAAAnRSTlMAAHaTzTgAAAAtSURBVHhefYuhEQAwCMTetvv9Pl2CIfgpoSBwRORiguFKD4dMydeyqlZtrU8A6JMUKeHoG3AAAAAASUVORK5CYII=) center no-repeat;
-}
-
-.forum-topic--is-unread-sticky {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAG1BMVEXg4OD////g4ODg4ODg4ODg4ODg4ODg4ODg4OBQ7+XbAAAACHRSTlMAAFFTUl5URdDB1TQAAABISURBVHhehcahEYAwEADBY0AgE4ekDCRlUAKSEp6oKxvmJwLHqqV2lBlgeOPO4V1ZbMCbsmlkRiWDrcdzzVwxRSaAv6j6Te0es5kZ6IK/EdsAAAAASUVORK5CYII=) center no-repeat;
-}
-
-.forum-topic--is-unread-locked {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAD1BMVEX////g4ODg4ODg4ODg4OAMRpkCAAAABHRSTlMAAFZXqn1YHwAAADxJREFUeF6VirERACAIxBxBmYCCERhAOPefyQc8KxtT5fLfHqxgQmyAFAT7Kj2LOZ0iwiXkMeGqyiH1uWz5Fw69ZPQ3OgAAAABJRU5ErkJggg==) center no-repeat;
-}
-
-.forum-topic--is-unread-locked-sticky {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAIVBMVEX////g4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4OCDOE8QAAAACnRSTlMAAFZRUlNXVF5FRF9ofwAAAFxJREFUeF49zLEVgCAMBNDQWhmeNlbUdI7gGo7ACI5g5wYGu5vSkPC46r+7vNBI2FgzK3DwjZdowqeNIpyAGFbAG9at49oNjyxiEPvjqLE3OSdHrG0CpJTkaDcjPwJ6HWxMBPutAAAAAElFTkSuQmCC) center no-repeat;
-}
-
-[class^=forum-topic--is] + td {
-  padding-left: 4px !important;
-}
-
-.forum-post {
-  position: relative;
-}
-
-.forum-post__heading {
-  text-transform: none;
-}
-
-.forum-post__heading span[id^=bar] input {
-  margin-left: 4px;
-}
-
-.forum-post__avatar-and-body {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  min-height: 150px;
-}
-
-.forum-post__avatar {
-  display: table-cell;
-  width: 150px;
-}
-
-.forum-post__avatar[style*=hidden] {
-  display: none;
-}
-
-.forum-post__avatar__image {
-  height: auto;
-  min-width: 150px;
-  max-height: 400px;
-  max-width: 150px;
-  margin-bottom: -3px;
-}
-
-.forum-post__body {
-  display: table-cell;
-  vertical-align: top;
-}
-
-.forum-post__bodyguard > blockquote {
-  margin: 4px 0 8px;
-}
-
-.forum-post__edited {
-  margin-top: 8px;
-  font-size: 13px;
-  font-weight: 400;
-}
-
-.forum-post__textarea {
-  width: 100%;
-  resize: vertical;
-}
-
-.forum-post__buttons {
-  margin-top: 12px;
-  text-align: right;
-}
-
-.forum-post__buttons label {
-  float: left;
-}
-
-.forum-post__movie-vote {
-  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
-  background: rgba(0, 0, 0, 0.12) !important;
-  padding: 2px 4px !important;
-  border-radius: 2px !important;
-}
-
-.last5-movies__link {
-  height: 183px;
-}
-
-.last5-movies__show-all-row td {
-  text-align: center;
-  padding-top: 12px;
-}
-
-.last5-movies__show-all-link {
-  border-color: #66a3ff;
-  color: #66a3ff;
-}
-
-.last5-movies__show-all-link:hover {
-  background: #66a3ff;
-  color: #1a1a1a;
-}
-
-#last5-tab-control {
-  font-size: 0;
-}
-
-#last5-tab-control a {
-  margin-right: 8px;
-  font-size: 13px;
-}
-
-.js-latest-posts-tbody tr:last-of-type td {
-  padding: 12px;
-  text-align: center;
-}
-
-.js-latest-posts-tbody tr:last-of-type span {
-  float: none !important;
-}
-
-.js-latest-posts-tbody tr:last-of-type a {
-  border-color: #66a3ff;
-  color: #66a3ff;
-}
-
-.js-latest-posts-tbody tr:last-of-type a:hover {
-  background: #66a3ff;
-  color: #1a1a1a;
-}
-
-.film-club-discuss-link {
-  margin-top: 12px;
-  text-align: center;
-}
-
-.film-club-discuss-link a {
-  font-size: 0;
-}
-
-.film-club-discuss-link a:before {
-  content: "discuss this movie";
-  border-color: #66a3ff;
-  font-size: 12px;
-  color: #66a3ff;
-}
-
-.film-club-discuss-link a:hover:before {
-  background: #66a3ff;
-  color: #1a1a1a;
-}
-
-#vanityhouse blockquote {
-  margin-top: 12px;
-}
-
-.user-recommendation:not(:last-of-type) {
-  margin-bottom: 12px;
-}
-
-.user-recommendation__image-container {
-  width: 33.33333%;
-  float: left;
-}
-
-.user-recommendation__image {
-  width: 100%;
-}
-
-.user-recommendation__body {
-  float: right;
-  width: 66.66667%;
-  padding: 12px;
-}
-
-body#torrents .thin > .page__title + h2.text--center {
-  font-weight: 700;
-  background: rgba(158, 255, 158, 0.436);
-  color: #fff;
-}
-
-.movie-page__trailer {
-  margin-bottom: 12px;
-}
-
-.movie-page__actor-column {
-  text-align: right !important;
-  width: 50%;
-}
-
-#toggle_add_similar_movies:before, #toggleaddtags:before {
-  content: "ADD";
-}
-
-#morecast:before {
-  content: "MORE";
-}
-
-#similar_movies li a, .box_tags li a {
-  max-width: 65px;
-}
-
-#similar_movies li div, .box_tags li div {
-  width: 65px;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  font-weight: 700;
-  letter-spacing: normal !important;
-}
-
-#similar_movies li div a:first-child:before, .box_tags li div a:first-child:before {
-  content: "";
-  font-size: 14px;
-}
-
-#similar_movies li div a:nth-child(2):before, .box_tags li div a:nth-child(2):before {
-  content: "";
-  font-size: 14px;
-}
-
-#connections ul {
-  list-style: none;
-}
-
-#movie-ratings-table tr {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  padding: 8px 0;
-}
-
-#movie-ratings-table td {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  width: auto !important;
-  padding: 0;
-  text-align: center;
-  font-weight: 400;
-}
-
-#movie-ratings-table img {
-  width: 48px !important;
-  height: 48px !important;
-}
-
-#ptp_rating_td span[style*=hidden] {
-  display: none;
-}
-
-body#artist .main-column {
-  position: relative;
-}
-
-body#artist .main-column > br {
-  display: none;
-}
-
-body#artist .main-column > div:first-of-type {
-  z-index: 2;
-  position: absolute;
-  right: 12px;
-  height: 36px;
-  line-height: 36px;
-  vertical-align: middle;
-}
-
-body#artist [id^=role_] > br {
-  display: none;
-}
-
-#jump_to_container {
-  margin-right: 24px;
-  font-size: 0;
-}
-
-#jump_to_container:before {
-  font-size: 13px;
-  font-weight: 400;
-  content: "JUMP TO";
-  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
-}
-
-#jump_to_container a {
-  margin-left: 8px;
-}
-
-#jump_to_container a:first-of-type {
-  border-color: #ffff99;
-  color: #ffff99;
-}
-
-#jump_to_container a:first-of-type:hover {
-  background: #ffff99;
-  color: #1a1a1a;
-}
-
-#jump_to_container a:nth-of-type(2) {
-  border-color: #ff995c;
-  color: #ff995c;
-}
-
-#jump_to_container a:nth-of-type(2):hover {
-  background: #ff995c;
-  color: #1a1a1a;
-}
-
-#jump_to_container a:nth-of-type(3) {
-  border-color: #ff331f;
-  color: #ff331f;
-}
-
-#jump_to_container a:nth-of-type(3):hover {
-  background: #ff331f;
-  color: #1a1a1a;
-}
-
-#jump_to_container a:nth-of-type(4) {
-  border-color: #993deb;
-  color: #993deb;
-}
-
-#jump_to_container a:nth-of-type(4):hover {
-  background: #993deb;
-  color: #1a1a1a;
-}
-
-#jump_to_container a:nth-of-type(5) {
-  border-color: #3385ff;
-  color: #3385ff;
-}
-
-#jump_to_container a:nth-of-type(5):hover {
-  background: #3385ff;
-  color: #1a1a1a;
-}
-
-body#user .sidebar-cover-image {
-  display: block;
-  width: auto;
-  margin: 0 auto;
-}
-
-#recent-snatches__body, #recent-uploads__body {
-  padding: 6px;
-}
-
-#recent-snatches__body .grid__item, #recent-uploads__body .grid__item {
-  padding: 0;
-}
-
-.user-page__recent-movie {
-  padding: 6px;
-}
-
-.user-page__recent-movie__link {
-  height: 198px;
-}
-
-.user-page__recent-movie__rating {
-  display: block;
-  padding: 4px;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.24);
-  font-weight: 400;
-}
-
-body#userhistory .tabs__bar__list {
-  padding-right: 36px;
-}
-
-body#userhistory .tabs__panel > .linkbox {
-  margin-top: 36px;
-  font-size: 0;
-}
-
-body#userhistory .tabs__panel > .linkbox a {
-  font-size: 13px;
-}
-
-body#collages .thin > .table td:last-child {
-  white-space: nowrap;
-}
-
-#AddMultipleMoviesButton {
-  margin-top: 12px;
-}
-
-.subscribed_collages_table td span[style*=right] {
-  font-size: 0;
-}
-
-.subscribed_collages_table td span[style*=right] a:first-of-type {
-  margin-left: 4px;
-  border-color: #ff995c;
-  color: #ff995c;
-}
-
-.subscribed_collages_table td span[style*=right] a:first-of-type:hover {
-  background: #ff995c;
-  color: #1a1a1a;
-}
-
-.subscribed_collages_table td span[style*=right] a:nth-of-type(2) {
-  margin-left: 4px;
-  border-color: #99ff99;
-  color: #99ff99;
-}
-
-.subscribed_collages_table td span[style*=right] a:nth-of-type(2):hover {
-  background: #99ff99;
-  color: #1a1a1a;
-}
-
-.subscribed_collages_table td span[style*=right] a:nth-of-type(3) {
-  margin-left: 4px;
-  border-color: #ff331f;
-  color: #ff331f;
-}
-
-.subscribed_collages_table td span[style*=right] a:nth-of-type(3):hover {
-  background: #ff331f;
-  color: #1a1a1a;
-}
-
-.subscribed_collages_table td span[style*=right] a:nth-of-type(4) {
-  margin-left: 4px;
-  border-color: #3385ff;
-  color: #3385ff;
-}
-
-.subscribed_collages_table td span[style*=right] a:nth-of-type(4):hover {
-  background: #3385ff;
-  color: #1a1a1a;
-}
-
-body#forums .page__title ~ .linkbox:nth-of-type(2) {
-  position: absolute;
-  right: 36px;
-  top: 0;
-  font-size: 0;
-}
-
-body#forums .page__title ~ .linkbox:nth-of-type(2) a {
-  display: block;
-}
-
-body#forums .page__title ~ .linkbox:nth-of-type(2) a:before {
-  content: "";
-  font-size: 20px;
-}
-
-body#forums .heading {
-  margin-bottom: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-body#forums .heading + .forum_index th {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-body#forums .pagination--bottom + .linkbox {
-  position: absolute;
-  top: 12.5px;
-  left: 4px;
-  font-size: 0;
-}
-
-body#requests .page__title ~ .linkbox:first-of-type:not(:last-of-type) {
-  margin-top: 36px;
-  font-size: 0;
-  right: auto;
-}
-
-body#requests .page__title ~ .linkbox:first-of-type:not(:last-of-type) a {
-  font-size: 13px;
-}
-
-body#requests .page__title ~ .linkbox:first-of-type:not(:last-of-type):before {
-  content: "";
-}
-
-body#requests .page__title ~ .linkbox:nth-of-type(2) {
-  margin-top: 36px;
-  font-size: 0;
-}
-
-body#requests .page__title ~ .linkbox:nth-of-type(2) a {
-  font-size: 13px;
-}
-
-.missing-torrent-status {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.missing-torrent-status--no-source {
-  color: #3385ff;
-}
-
-.missing-torrent-status--dead-source {
-  color: #993deb;
-}
-
-.missing-torrent-status--missing {
-  color: #ff331f;
-}
-
-.missing-torrent-status--trumpable {
-  color: #ff995c;
-}
-
-.missing-torrent-status--exists {
-  color: #74ff5c;
-}
-
-.missing-torrent-status--exists img {
-  width: 0;
-  height: 12px;
-  padding: 0 6px;
-  vertical-align: middle;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAAe1BMVEUAAAD/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5CZBk5qjAAAAKHRSTlMAAgQGDQ4PEBQXGB4gIikqLC8yRlVhY3yClZ65uszP4uTm6Ovv8fP5ftFKkwAAAFtJREFUCB1dwY0SQlAURtF9qVBR9EsKhb73f8J05s5kWguz2TFTP/hJpRzPLW/SfeWYXBt5XQnRU96QAItWpo/5WstkmK1MgTlI40s6YS7vc+COY4XZh0yCgn8fisAJ2e+BVH0AAAAASUVORK5CYII=) no-repeat center;
-}
-
-body#inbox .pagination--top + div {
-  padding-bottom: 12px;
-}
-
-body#inbox #searchbox span[style^=float] a {
-  border-color: #66a3ff;
-  color: #66a3ff;
-}
-
-body#inbox #searchbox span[style^=float] a:hover {
-  background: #66a3ff;
-  color: #1a1a1a;
-}
-
-body#inbox #searchbox input[name=search] {
-  margin-top: 12px;
-}
-
-body#inbox #messageformtable {
-  margin-bottom: 12px;
-}
-
-body#inbox input[type=submit] {
-  margin-left: 12px;
-}
-
-body#upload #content > div:first-of-type {
-  width: auto !important;
-}
-
-body#upload .thin > div[style*="width:700px"] {
-  width: 100% !important;
-  margin-bottom: 2px !important;
-  padding-left: 150px;
-  padding-right: 150px;
-  font-weight: 700;
-  text-align: center;
-}
-
-body#upload .thin > div[style*="width:700px"] > br {
-  display: none;
-}
-
-body#upload .thin > p > br {
-  display: none;
-}
-
-.bvalidator_errmsg {
-  padding: 8px;
-  background: rgba(117, 48, 48, 0.9625);
-  white-space: nowrap;
-  margin: -14px 0 0 -4px;
-}
-
-.bvalidator_errmsg:after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 14px;
-  border-style: solid;
-  border-width: 8px 8px 0 8px;
-  border-color: rgba(117, 48, 48, 0.9625) transparent transparent transparent;
-}
-
-.bvalidator_close_icon {
-  cursor: pointer;
-  margin-left: 4px;
-  font-weight: bold;
-  vertical-align: middle;
-  margin-top: -2px;
-}
-
-.bvalidator_close_icon:before {
-  content: "";
-}
-
-.bvalidator_close_icon:before {
-  font-size: 14px;
-}
-
-.snatchlist-status--seeding {
-  color: #74ff5c;
-}
-
-.snatchlist-status--not-seeding {
-  color: #ff995c;
-}
-
-.snatchlist-status--hnr {
-  color: #ff331f;
-}
-
-.snatchlist-status--not-hnr {
-  color: #74ff5c;
-}
-
-body#bprate #content > p {
-  margin: 0;
-  padding-bottom: 0;
-}
-
-body#bprate #content > br {
-  display: none;
-}
-
-body#bprate .linkbox {
-  margin-top: 36px;
-  font-size: 0;
-}
-
-body#bprate .linkbox a {
-  font-size: 13px;
-}
-
-body#staff .thin > div:nth-of-type(2) {
-  background: none;
-}
-
-body#staff .thin > div:nth-of-type(2) > .panel__body {
-  padding: 0;
-}
-
-body#staff .thin > div:nth-of-type(2) h3 {
-  margin-bottom: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+#userinfo::before, #footer::before {
+    content: 'You are using an outdated version of this stylesheet. Visit github.com/jimpalompa/ptp for new url.';
+    color: #f2352e;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 48px;
+    padding: 24px;
 }
 
 .header {
-  position: relative;
-}
-
-.site-logo {
-  position: absolute;
-  width: 267px;
-  height: 36px;
-  margin-top: 17px;
-}
-
-.site-logo a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: url(//jimpalompa.github.io/ptp/images/django_logo_old.png) no-repeat center;
-}
-
-#userinfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 70px;
-  margin-bottom: 2px;
-  padding-left: 267px;
-}
-
-#userinfo ul {
-  list-style: none;
-}
-
-#userinfo li {
-  padding: 0;
-}
-
-#userinfo_username {
-  font-size: 0;
-  margin-left: 279px;
-  top: -1000px;
-}
-
-#userinfo_username a {
-  font-size: 13px;
-}
-
-#userinfo_username:before {
-  content: "";
-  top: -40px;
-  width: 40px;
-  height: 40px;
-  margin-top: 1055px;
-  line-height: 40px;
-  font-size: 20px;
-  color: #ded1c1;
-}
-
-#userinfo_username:hover {
-  top: 55px;
-}
-
-#userinfo_username:hover:before {
-  margin-top: 0;
-}
-
-#nav_logout a:hover {
-  background: rgba(255, 56, 36, 0.418);
-}
-
-#userinfo_stats {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 12px 0 64px;
-  color: #ded1c1;
-}
-
-#userinfo_stats li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 0;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0 8px;
-}
-
-#userinfo_stats span {
-  font-size: 14px;
-  font-weight: 700;
-  margin: 2px 6px;
-  white-space: nowrap;
-}
-
-@media (max-width: 855px) {
-  #userinfo_stats {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-  #userinfo_stats li {
-    margin: 0 12px;
-  }
-
-  #userinfo_stats span {
-    display: none;
-  }
-}
-#stats_seeding a:before {
-  content: "";
-  font-size: 21px;
-}
-
-#stats_leeching a:before {
-  content: "";
-  font-size: 21px;
-}
-
-#stats_ratio a:before {
-  content: "";
-  font-size: 21px;
-}
-
-#stats_hnrs a:before {
-  content: "";
-  font-size: 21px;
-}
-
-#userinfo_major {
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 200px;
-  flex: 0 0 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  padding-left: 53.33333px;
-}
-
-#nav_upload {
-  -webkit-box-ordinal-group: -1;
-  -ms-flex-order: -2;
-  order: -2;
-}
-
-#nav_bonus {
-  -webkit-box-ordinal-group: 0;
-  -ms-flex-order: -1;
-  order: -1;
-}
-
-#nav_upload a:before {
-  content: "";
-  font-size: 21px;
-}
-
-#nav_invite a:before {
-  content: "";
-  font-size: 21px;
-}
-
-#nav_bonus {
-  position: relative;
-  width: 21px;
-  height: 24px;
-}
-
-#nav_bonus a {
-  z-index: 200;
-  position: absolute;
-  right: -65px;
-  top: 28px;
-  display: none;
-  width: 150px;
-  padding: 12px;
-  text-align: center;
-  font-weight: 400;
-  background: rgba(66, 66, 66, 0.95);
-}
-
-#nav_bonus a:before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: 67px;
-  border-style: solid;
-  border-width: 0 8px 8px 8px;
-  border-color: transparent transparent rgba(66, 66, 66, 0.95) transparent;
-}
-
-#nav_bonus a:after {
-  content: "";
-  position: absolute;
-  left: 64.5px;
-  top: -28px;
-  display: block;
-  width: 21px;
-  height: 24px;
-}
-
-#nav_bonus:before {
-  content: "";
-  font-size: 21px;
-  color: rgba(255, 255, 153, 0.7);
-}
-
-#nav_bonus:hover a {
-  display: block;
-}
-
-#nav_bonus:hover:before {
-  color: #ffff99;
-}
-
-#nav_donate a:before {
-  content: "";
-  font-size: 21px;
-}
-
-#nav_donate a:before {
-  color: rgba(255, 51, 31, 0.7);
-}
-
-#nav_donate a:hover:before {
-  color: #ff331f;
-}
-
-.search-bar {
-  margin-bottom: 2px;
-}
-
-.search-bar__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  list-style: none;
-  padding: 6px 3px;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.search-bar__search-field {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  padding: 0 3px;
-}
-
-.search-bar__search-field__input {
-  display: block;
-  width: 100%;
-}
-
-.search-bar__results {
-  z-index: 100;
-  position: absolute;
-  list-style: none;
-  background: rgba(66, 66, 66, 0.95);
-  max-width: 250px;
-  min-width: 136px;
-}
-
-.search-bar__results li {
-  padding: 0;
-}
-
-.search-bar__results__link {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 8px 12px;
-  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
-  -webkit-transition: none;
-  transition: none;
-}
-
-.search-bar__results__link:hover {
-  background: rgba(233, 228, 213, 0.2);
+    padding-top: 146px !important;
 }
 
 .main-menu {
-  margin-bottom: 2px;
+    top: 296px !important;
 }
 
-.main-menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 48px;
-  padding-right: 48px;
-  list-style: none;
-  text-align: center;
+.search-bar {
+    top: 333px !important;
+}
+  
+  /* -------------------------------------
+  IMPORT WEBFONTS
+------------------------------------- */
+
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i);
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.eot?v=4.3.0');
+  src: url('//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'),
+       url('//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'),
+       url('//jimpalompa.github.io/ptp/marcel/assets/fonts//fontawesome-webfont.woff?v=4.3.0') format('woff'),
+       url('//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'),
+       url('//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.main-menu__item {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  padding: 0;
+.fa,
+.forum-topic__go-to-last-read:after,
+.torrent-info-link--user-snatched:after
+{
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
 }
 
-.main-menu__item:first-of-type,
-.main-menu__item:first-of-type a {
-  border-top-left-radius: 6px;
+.forum-topic__go-to-last-read:after {
+    content: "\f061";
 }
 
-.main-menu__item {
-  background: rgba(233, 228, 213, 0.2);
+/* -------------------------------------
+    BASIC STYLES
+------------------------------------- */
+
+html {
+    font-size: 62.5%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
-.main-menu a {
-  display: block;
-  width: 100%;
-  height: 48px;
-  line-height: 48px;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 400;
-  -webkit-transition: none;
-  transition: none;
+body {
+    font-size: 14px;
+    font-size: 1.4rem;
+    width: 100%;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    margin: 0 auto;
 }
 
-.main-menu a:hover {
-  background: #726f68;
+a {
+    text-decoration: none;
+    border: none;
 }
 
-#userinfo_minor {
-  font-size: 0;
-  z-index: 150;
-  top: -1000px;
-  background: #726f68;
+a:hover {
+    border: none;
+    text-decoration: none;
 }
 
-#userinfo_minor a {
-  font-size: 13px;
+a:focus, a:active, a:hover {
+    outline: 0;
 }
 
-#userinfo_minor.user-info-bar__list--has-highlighted-item:before {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAHlBMVEUAAAD///////////////////////////////////8kfJuVAAAACXRSTlMABAwWQF5pb+idktP8AAAAKUlEQVQIW2MQLQeBQIbImSAwlaESTE8nk54GpZsZKh0YwKAEQjEoQCgAS70sUpAH/8UAAAAASUVORK5CYII=") no-repeat top 6px right 6px;
-  background-color: rgba(233, 228, 213, 0.2);
+h1 {
+    font-size: 2.4rem;
 }
 
-#userinfo_minor a {
-  color: #fff;
+h2 {
+    font-size: 2rem;
 }
 
-#userinfo_minor:before {
-  content: "";
-  top: -50px;
-  width: 48px;
-  height: 48px;
-  margin-top: 1122px;
-  border-top-right-radius: 6px;
-  line-height: 48px;
-  font-size: 20px;
-  background-color: rgba(233, 228, 213, 0.2);
-  cursor: pointer;
+h3 {
+    font-size: 1.8rem;
 }
 
-#userinfo_minor:hover, #userinfo_minor:active {
-  top: 122px;
+h4 {
+    font-size: 1.4rem;
 }
 
-#userinfo_minor:hover:before {
-  margin-top: 0;
-  background-color: #726f68;
+h5 {
+    font-size: 1rem;
 }
 
-.user-info-bar__link--highlighted {
-  font-weight: 700;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(233, 228, 213, 0.2)), to(rgba(233, 228, 213, 0.1)));
-  background: linear-gradient(to right, rgba(233, 228, 213, 0.2), rgba(233, 228, 213, 0.1));
+h6 {
+    font-size: 0.9rem;
 }
 
-.user-info-bar__drop-down-menu {
-  position: absolute;
-  right: 200px;
-  display: none;
-  margin-top: -36px;
-  background: #726f68;
+abbr[title] {
+    border-bottom: 1px dotted;
 }
 
-#nav_more:hover ul {
-  display: block;
+dfn {
+    font-style: italic;
+}
+
+hr {
+    height: 2px;
+    box-sizing: content-box;
+    border: 0;
+    width: 90%;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+code, kbd, pre, samp {
+    font-family: monospace, serif;
+    font-size: 1rem;
+}
+
+pre {
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+q {
+    quotes: \201C \201D \2018 \2019;
+}
+
+small {
+    font-size: 0.8em;
+}
+
+sub, sup {
+    font-size: 0.75em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -.5em;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 0;
+}
+
+fieldset {
+    border-color: silver;
+    border-style: solid;
+    border-width: .0625em;
+    margin: 0 2px;
+    padding: .4625em .875em .9125em;
+}
+
+button, input, select, textarea {
+    border: 0;
+    font-family: inherit;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+button, input {
+    line-height: normal;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    padding: 6px;
+    background: #797979;
+    color: #fff;
+    font-weight: 600;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    padding: 0;
+}
+
+*, :before, :after {
+    box-sizing: border-box;
+}
+
+blockquote {
+    border-style: dashed;
+    border-width: 2px;
+    font-style: italic;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* -------------------------------------
+    HIDE ELEMENTS
+------------------------------------- */
+
+.huge-movie-list__movie__ratings__votes-column br,
+.huge-movie-list__movie__ratings__votes-column span.rating:nth-child(3n)
+{display: none !important;}
+
+[hidden], .hidden,
+.tabs__panel
+{display: none;}
+
+.huge-movie-list__movie__ratings__votes-column
+{color: transparent;}
+
+span.spoiler
+{background: #191919 !important; color: transparent !important;}
+
+span.spoiler:hover
+{background: transparent !important; color: inherit !important;}
+
+/* -------------------------------------
+    FONT SIZES
+------------------------------------- */
+
+/* Sizes */
+.huge-movie-list__movie__title
+{font-size: 2.4rem;}
+
+.huge-movie-list__movie__year
+{font-size: 2rem;}
+
+.huge-movie-list__movie__director-list,
+.huge-movie-list__movie__synopsis
+{font-size: 1.8rem;}
+
+blockquote,
+.sidebar,
+.alert-bar,
+.staff-toolbar,
+.qtip-content,
+.linkbox,
+.basic-movie-list__movie__tags
+{font-size: 1.3rem;}
+
+.search-bar__search-field__input,
+.search-bar__results,
+.footer,
+.cover-movie-list__movie__tags,
+.cover-movie-list__movie__year,
+.cover-movie-list__movie__new,
+.huge-movie-list__movie__torrent-summary,
+.basic-movie-list__movie__bookmark,
+.basic-movie-list__movie__rating-container,
+.basic-movie-list__torrent-row,
+.panel__heading__toggler
+{font-size: 1.2rem;}
+
+/* Weights & Styles */
+.main-menu,
+.cover-movie-list__movie__title,
+.cover-movie-list__movie__new,
+.huge-movie-list__movie__title,
+.huge-movie-list__movie__new,
+.basic-movie-list__movie__rating-container,
+.basic-torrent-list__movie__torrent-opener-link,
+.alert-bar,
+.staff-toolbar,
+.encoding-history-status--finished,
+.missing-torrent-status--exists,
+.encoding-history-status--canceled,
+.missing-torrent-status--trumpable,
+.torrent-info__trumpable,
+.torrent-info__reported,
+.table>thead>tr,
+.torrent-info-link--user-seeding,
+.torrent-info-link--user-leeching,
+.torrent-info-link--user-uploaded,
+.torrent-info-link--user-snatched,
+.torrent-info-link--user-downloaded,
+.panel__heading__title
+{font-weight: 600;}
+
+.alert--warning,
+.cover-movie-list__movie__tags,
+.huge-movie-list__movie__tag-list,
+.basic-movie-list__movie__tags
+{font-style: italic;}
+
+/* -------------------------------------
+    FONT COLORS
+------------------------------------- */
+
+/* Links & Headings */
+a,
+h2,
+.alert-bar,
+.alert-bar__link:hover,
+.alert--error,
+.alert--error .alert__link,
+.alert--error .alert__link:hover,
+.staff-toolbar,
+.search-bar__search-field__input:hover,
+.search-bar__search-field__input:focus,
+.cover-movie-list__movie__rating,
+.huge-movie-list__movie__ratings__votes-column span,
+.basic-movie-list__torrent-edition,
+.page__title,
+.table>thead>tr,
+.table>tbody>tr.inbox-message--unread>td,
+.bvalidator_errmsg,
+.main-menu__link, .main-menu__link:hover,
+.movie-tooltip__rating-container,
+.release-name-movie-list__movie__rating-container,
+.screenshot-comparison__label,
+.screenshot-comparison__help,
+.staff-toolbar__link--important,
+.inbox-message--unread a
+{color: #f7f7f7;}
+
+/* Body */
+body,
+h2 small a,
+.user-info-bar,
+.search-bar__search-field__input,
+.cover-movie-list__movie__tag,
+.huge-movie-list__movie__tag-list a,
+.basic-movie-list__movie__rating-container a,
+.basic-movie-list__movie__tag,
+.page__title a,
+.linkbox a,
+.torrent-info-link,
+.movie-tooltip__rating__title>a,
+.movie-tooltip__tag
+{color: #969696;}
+
+/* Accent */
+a:hover,
+a:focus,
+a:active,
+.cover-movie-list__movie__new,
+.huge-movie-list__movie__new,
+.huge-movie-list__movie__action-row a,
+.huge-movie-list__movie__torrent-summary a,
+.basic-movie-list__movie__new,
+.basic-torrent-list__movie__torrent-opener-link:focus,
+.release-name-movie-list__movie__new,
+.search-bar__results__list-item--is-highlighted .search-bar__results__link,
+.user-info-bar__link--highlighted,
+.forum-topic__new
+{color: #f7d584;}
+
+/* Red */
+.ratio-00,
+.ratio-01,
+.ratio-02,
+.ratio-03,
+.ratio-04,
+.bonus-point-history--sent,
+.no-seeders,
+.snatchlist-status--not-seeding,
+.snatchlist-status--hnr,
+.encoding-history-status--expired,
+.missing-torrent-status--missing,
+.torrent-info__reported,
+.torrent-info-link--user-leeching,
+.alert--error,
+.forum-post__id--staff-post
+{color: #d14841;}
+
+/* Orange */
+.ratio-05,
+.ratio-06,
+.ratio-07
+.snatchlist-status--removed-hnr,
+.encoding-history-status--canceled,
+.missing-torrent-status--trumpable,
+.torrent-info__trumpable
+{color: #f37934;}
+
+
+/* Yellow */
+.ratio-08,
+.ratio-09,
+.torrent-info-link--user-seeding
+{color: #f7da64;}
+
+/* Green */
+.ratio-10,
+.ratio-20,
+.ratio-50,
+.ratio-infinite,
+.bonus-point-history--received,
+.snatchlist-status--seeding,
+.snatchlist-status--not-hnr,
+.encoding-history-status--finished,
+.missing-torrent-status--exists,
+.torrent-info-link--user-downloaded
+{color: #41a85f;}
+
+/* Blue */
+a.torrent-info-link--user-snatched
+{color: #2c82c9;}
+
+/* Purple */
+a.torrent-info-link--user-uploaded
+{color: #9365b8;}
+
+/* -------------------------------------
+    CONTENT COLORS
+------------------------------------- */
+
+button, input, select, textarea
+{background: #f7f7f7;}
+
+body,
+.poll__bar,
+.tabs__bar__item--active>.tabs__bar__link,
+.tabs__bar__item--active>.tabs__bar__link:hover,
+.tabs__bar__item--active>.tabs__bar__link:active,
+.tabs__bar__item--active>.tabs__bar__link:focus
+{background: #191919;}
+
+.main-menu,
+.search-bar__search-field__input,
+.search-bar__results__list-item:hover,
+.search-bar__results__list-item--is-highlighted,
+.table__background-color--alternative,
+.forum-post,
+.cover-movie-list__movie,
+.huge-movie-list__movie,
+.site-debug,
+.panel,
+.qtip-ptp,
+.staff-toolbar,
+.user-info-bar__item--drop-down-menu-opener:hover,
+.user-info-bar__drop-down-menu__link:hover,
+.table>tbody>tr.basic-movie-list__details-row,
+.table>tbody>tr.release-name-movie-list__details-row,
+.table>tbody>tr,
+.footer,
+.mediainfo,
+.movie-page__torrent-report-description
+{background: #232323;}
+
+hr,
+blockquote,
+.alert-bar,
+.staff-toolbar,
+.movie-page__torrent__panel,
+.search-bar,
+.search-bar__results__list-item,
+.table--panel-like>thead>tr,
+.cover-movie-list__movie__cover-link,
+.cover-movie-list__movie__rating,
+.basic-movie-list__movie__rating-container,
+.forum-post__heading,
+.table>tbody>tr.inbox-message--unread>td,
+.main-menu__link:hover,
+.movie-tooltip__rating-container,
+.panel__heading,
+.release-name-movie-list__movie__release-category,
+.release-name-movie-list__movie__rating-container,
+.tabs__bar__link,
+.tabs__bar__link:hover,
+.tabs__bar__link:active,
+.tabs__bar__link:focus,
+.user-info-bar__drop-down-menu__item,
+.alert-bar,
+.staff-toolbar,
+.table>thead>tr,
+.poll__bar__center,
+.release-description-preview,
+#MovieTooltipVoteWindow
+{background: #323232;}
+
+.alert-bar,
+.js-basic-movie-list__table-body>tr.basic-movie-list__details-row,
+.panel__heading,
+.table--panel-like>thead>tr>td,
+.table--panel-like>thead>tr>th,
+.forum-post__heading
+{border-color: #191919;}
+
+blockquote
+{border-color: #232323;}
+
+.mediainfo,
+.movie-page__torrent-report-description,
+.tabs__bar__list,
+.tabs__bar__item--active>.tabs__bar__link,
+.tabs__bar__item--active>.tabs__bar__link:hover,
+.tabs__bar__item--active>.tabs__bar__link:active,
+.tabs__bar__item--active>.tabs__bar__link:focus
+{border-color: #323232;}
+
+.forum-post--unread
+{border-color: #f7d584;}
+
+/* -------------------------------------
+    MAIN DIVS
+------------------------------------- */
+
+.site-logo {
+    background: url(//jimpalompa.github.io/ptp/marcel/assets/images/logo_marcel.jpg) no-repeat;
+    background-size: 800px 125px;
+    width: 800px;
+    height: 125px;
+    margin: 0 auto;
+}
+
+.header {
+    padding-top: 50px;
+}
+
+.user-info-bar {
+    font-size: 1.2rem;
+    padding: 7px 0;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.main-menu {
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 200px;
 }
 
 .alert-bars {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -2px;
+    margin: 0 auto 20px;
+    text-align: center;
+    position: relative;
+    top: 120px;
+    width: 960px;
+}
+
+.alert-bar, .staff-toolbar {
+    display: inline-block;
+    min-width: 50%;
+}
+
+.alert-bar__link {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+}
+
+.search-bar {
+    padding: 4px 0;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 237px;
+}
+
+.page__main-content {
+    margin: 0 auto;
+    position: relative;
+    top: 130px;
+    width: 960px;
+}
+
+.main-column {
+    width: 74.5%;
+}
+
+.sidebar {
+    float: right;
+    width: 24.5%;
+}
+
+.footer {
+    clear: both;
+    text-align: center;
+    position: relative;
+    top: 200px;
+    padding: 15px 0;
+}
+
+/* -------------------------------------
+    SHADOWS
+------------------------------------- */
+
+.main-menu,
+.footer
+{box-shadow: 0 -1px 3px 0 rgba(0,0,0,.25);}
+
+.search-bar,
+.lightbox img
+{box-shadow: 0 2px 5px rgba(0,0,0,.25);}
+
+.panel,
+.table--panel-like,
+.cover-movie-list__movie,
+.huge-movie-list__movie,
+.forum-post
+{box-shadow: 0 1px 3px rgba(0,0,0,.25);}
+
+/* -------------------------------------
+    IMAGES
+------------------------------------- */
+
+/* Movies browser views */
+img#browse_settings {
+    position: relative;
+    right: 70px;
+}
+
+.cover-movie-list {
+    display: flow-root;
+}
+
+/* Cover view */
+.cover-movie-list__movie {
+    float: left;
+    width: 19%;
+    margin: 10px 0 10px 1.25%;
+}
+
+.cover-movie-list__movie:nth-of-type(6n+1) {
+    margin-left: 0;
+}
+
+.cover-movie-list__movie__cover-link {
+    box-shadow: inset 0 0 2px 1px rgba(0,0,0,.1);
+    display: block;
+    width: 100%;
+    height: 265px;
+}
+
+.cover-movie-list--narrow .cover-movie-list__movie {
+    width: 24%;
+    margin: 10px 0 10px 1.25%;
+}
+
+.cover-movie-list--narrow .cover-movie-list__movie__cover-link {
+    height: 250px;
+}
+
+.cover-movie-list--narrow .cover-movie-list__movie:nth-of-type(5n+1) {
+    margin-left: 0;
+}
+
+.cover-movie-list__movie__undercover {
+    font-size: 1.3rem;
+    padding: 8px;
+    position: relative;
+}
+
+.cover-movie-list__movie__title-row {
+    margin-bottom: 5px;
+}
+
+.cover-movie-list__movie__rating-and-tags {
+    margin-top: 2px;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cover-movie-list__movie__rating {
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Huge view */
+.huge-movie-list__movie {
+    margin: 25px 0;
+    position: relative;
+}
+
+.huge-movie-list__movie__cover {
+    float: left;
+    width: 270px;
+}
+
+.huge-movie-list__movie__cover__link {
+    display: block;
+    width: 100%;
+    height: 400px;
+}
+
+.huge-movie-list__movie__details {
+    margin-left: 270px;
+    padding: 25px;
+}
+
+.huge-movie-list__movie__title-row {
+    margin-bottom: 5px;
+}
+
+.huge-movie-list__movie__director-list {
+    display: block;
+}
+
+.huge-movie-list__movie__new {
+    position: absolute;
+    bottom: 80px;
+    right: 25px;
+}
+
+.huge-movie-list__movie__ratings-and-synopsis {
+    margin-top: 8px;
+}
+
+.huge-movie-list__movie__ratings-and-synopsis>tbody>tr>td {
+    float: left;
+    width: 100%;
+}
+
+.huge-movie-list__movie__ratings {
+}
+
+.huge-movie-list__movie__ratings tr {
+    float: left;
+    width: 100px;
+}
+
+.huge-movie-list__movie__ratings__icon-column {
+    padding-right: 3px;
+}
+
+.huge-movie-list__movie__ratings__icon-column img {
+}
+
+.huge-movie-list__movie__ratings__votes-column span {
+    display: inline-block;
+    line-height: 32px;
+}
+
+.huge-movie-list__movie__synopsis {
+    font-weight: 300;
+    margin-top: 1.5em;
+}
+
+.huge-movie-list__movie__action-row {
+    position: absolute;
+    bottom: 25px;
+}
+
+.huge-movie-list__movie__torrent-summary {
+    text-align: right;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+/* List view */
+.basic-movie-list {
+
+}
+
+.basic-movie-list__details-row {
+    vertical-align: top;
+}
+
+.js-basic-movie-list__table-body>tr.basic-movie-list__details-row {
+    border-top-width: 2px;
+    border-top-style: solid;
+    display: table-row;
+}
+
+.basic-movie-list__movie__cover {
+    width: 90px;
+}
+
+.basic-movie-list__movie__rating-container {
+    display: inline-block;
+    text-align: center;
+    padding: 1px 5px;
+    margin: 5px 5px 5px 0;
+}
+
+.basic-torrent-list__movie__torrent-opener-link {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.compact-movie-list__details-row .basic-torrent-list__movie__torrent-opener-link {
+    float: right;
+}
+
+.basic-movie-list__movie__category-icon {
+}
+
+.basic-movie-list__number {
+}
+
+.basic-movie-list__torrent-row {
+}
+
+.table>tbody>tr.basic-movie-list__torrent-row {
+}
+
+.basic-torrent-list__movie__additional-info {
+    margin-top: 25px;
+}
+
+/* Small view (user profile) */
+.small-cover-movie-list__movie {
+    float: left;
+    width: 19%;
+    margin: 10px 0 10px 1.25%;
+}
+
+.small-cover-movie-list__movie:nth-of-type(6n+1) {
+    margin-left: 0;
+}
+
+.small-cover-movie-list__movie__link {
+    display: block;
+    width: 100%;
+    height: 190px;
+}
+
+.small-cover-movie-list__movie__link--smaller {
+}
+
+.small-cover-movie-list__movie__title {
+    text-align: center;
+    padding: 5px 5px 0;
+}
+
+.small-cover-movie-list__movie__title:before {
+    content: '🏆';
+    padding-right: 2px;
+}
+
+/* Single movie */
+.movie-page__torrent__panel .bbcode__image {
+    margin: 0 auto;
+    display: block;
+}
+
+/* -------------------------------------
+    TABLES
+------------------------------------- */
+
+.table {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.panel__heading,
+.table--panel-like>thead>tr>td,
+.table--panel-like>thead>tr>th
+{
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    padding: 6px 15px;
+}
+
+.panel__heading__toggler {
+    float: right;
+}
+
+.panel__body {
+    padding: 15px;
+    margin-bottom: 20px;
+    overflow-wrap: break-word;
+}
+
+.table--bordered>tbody>tr>td {
+    padding: 5px 15px;
+}
+
+.last5-movies__link {
+    margin-bottom: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 95%;
+    height: 190px;
+}
+
+.table--bordered>tbody>tr.basic-movie-list__details-row>td {
+    padding: 10px 15px;
+}
+
+table#movie-ratings-table {
+    margin-bottom: 20px !important;
+}
+
+table#movie-ratings-table td {
+    width: 10% !important;
+}
+
+/* -------------------------------------
+    UGLY CSS
+------------------------------------- */
+
+.heading--no-margin {
+    margin: 0;
+}
+
+.table--bordered {
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+}
+
+.table thead:first-child tr:first-child th {
+    border-top: 0 none;
+}
+
+.table--panel-like>thead>tr>th {
+}
+
+.table--inplace-sortable>thead>tr>th {
+    cursor: pointer;
+}
+
+.table--inplace-sortable:last-child {
+    margin-bottom: 1em;
+}
+
+.sidebar img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 5px 0;
+}
+
+#top250 .panel__body, #bottom250 .panel__body {
+    padding-left: 5px;
+}
+
+#top250 img, #bottom250 img {
+    max-width: none;
+    margin-right: 5px;
+    padding: 0;
+}
+
+#userrecommended .user-recommendation {
+    background: #323232;
+    margin-bottom: 25px;
+}
+
+#userrecommended img {
+    padding: 0;
+}
+
+#userrecommended .user-recommendation__body {
+    padding: 5px;
+}
+
+/* -------------------------------------
+    ETC
+------------------------------------- */
+
+.list {
+    margin: 0 0 1em;
+}
+
+.list--unstyled {
+    list-style: none outside none;
+    padding-left: 0;
+}
+
+.list--max-count9 {
+    padding-left: 1em;
+}
+
+.list--max-count999 {
+    padding-left: 3em;
+}
+
+.list--max-count9999 {
+    padding-left: 4em;
+}
+
+.list--bulleted {
+    list-style-type: disc;
+}
+
+.list--form-column {
+    float: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 1.5em;
+}
+
+.list--inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list--inline>li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.list--inline>li:first-child {
+    padding-left: 0;
+}
+
+.list--inline-full-width {
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+
+.list--inline-full-width>li {
+    display: table-cell;
+}
+
+.list>li {
+    margin-top: 2px;
+}
+
+pre br {
+    display: none;
+    line-height: 0;
+}
+
+.preformatted-text--scrolled {
+    white-space: pre;
+    overflow-x: auto;
+    word-wrap: normal;
+}
+
+th {
+    text-align: left;
+}
+
+.nobr {
+    white-space: nowrap;
+}
+
+.clearfix:after, .forum-post__heading:after, .grid:after, .huge-movie-list__movie:after, .poll__bar:after, .sidebar:after, .tabs__bar__list:after {
+    content: "";
+    display: table;
+    clear: left;
+}
+
+.text--left {
+    text-align: left!important;
+}
+
+.text--center {
+    text-align: center!important;
+}
+
+.text--right {
+    text-align: right!important;
+}
+
+.alert {
+}
+
+.alert--warning {
+}
+
+.alert--error .alert__link {
+    font-weight: 600;
 }
 
 .alert-bar {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  margin: 0 2px 2px 0;
-  padding: 8px 12px;
-  text-align: center;
-  font-weight: 400;
-  background: rgba(70, 77, 68, 0.6);
+    border-style: dashed;
+    border-width: 2px;
+    margin: 5px;
 }
 
-.alert-bar a {
-  color: #fff;
+.table>tbody>tr.compact-movie-list__details-row--odd {
 }
 
-.alert-bar:first-of-type {
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-  background: #464d44;
+.cover-movie-list--narrow {
 }
 
-.alert-bar br {
-  display: none;
+.bbcode-size-1 {
+    font-size: .75rem;
 }
 
-/* ------------ Before you go, will you tell Miss Lara goodbye? ------------- */
+.bbcode-size-2 {
+    font-size: 1rem;
+}
+
+.bbcode-size-3 {
+    font-size: 1.25rem;
+}
+
+.bbcode-size-5 {
+    font-size: 1.75rem;
+}
+
+.bbcode-size-6 {
+    font-size: 2rem;
+}
+
+.bbcode-size-7 {
+    font-size: 2.25rem;
+}
+
+.bbcode-size-8 {
+    font-size: 2.5rem;
+}
+
+.bbcode-size-9 {
+    font-size: 2.75rem;
+}
+
+.bbcode-size-10 {
+    font-size: 3rem;
+}
+
+.bbcode__image {
+    max-width: 100%;
+    max-height: 720px;
+}
+
+.sidebar .bbcode__image {
+    max-width: 100%;
+}
+
+.bbcode-text-preview {
+    border: 1px solid #797979;
+    padding: .5em;
+}
+
+.bbcode-table-guard {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.bbcode-toolbar__button {
+    width: 24px;
+    height: 24px;
+    background: #ddd url(//static.passthepopcorn.me/static/common/bbcode_buttons5.png) no-repeat center center;
+    border: 4px solid #ddd;
+    float: left;
+}
+
+.bbcode-toolbar__button:hover {
+    background: #f7f7f7 url(//static.passthepopcorn.me/static/common/bbcode_buttons5.png) no-repeat top left;
+    border: 4px solid #f7f7f7;
+}
+
+.bbcode-toolbar__size-popup-row {
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.bbcode-toolbar__size-popup-row:hover {
+    background: #ffffe1;
+}
+
+.bbcode-toolbar__color-popup-color {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.bbcode-toolbar__emoticon-popup-item {
+    cursor: pointer;
+    display: inline-block;
+    border: solid 2px transparent;
+}
+
+.footer__disclaimer {
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.form__input, .form__checkbox-label, .form__radio-label {
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+.generic-form, .search-form {
+    margin: 0 auto;
+    width: 920px;
+}
+
+.generic-form--narrow, .search-form--narrow {
+    width: 65%;
+}
+
+.toggleable-search-form__toggler-container {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.toggleable-search-form__search-form {
+    margin-bottom: 15px;
+}
+
+.search-form__advanced-basic-toggler {
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+.generic-form__footer, .search-form__footer {
+    padding-top: 8px;
+}
+
+.generic-form__footer--no-border, .search-form__footer--no-border {
+    border-top-style: none;
+}
+
+.forum-post {
+    display: table;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.forum-post--unread {
+    border-top-width: 5px;
+    border-top-style: solid;
+}
+
+.forum-post--is-reply {
+    margin-top: 30px;
+}
+
+.forum-post__heading {
+    padding: 7px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.forum-post__heading input[type="button"] {
+  margin-left: 0.5em;
+  padding: 3px 6px;
+  position: relative;
+  top: -3px;
+}
+
+.forum-post__avatar {
+    position: relative;
+    display: table-cell;
+}
+
+.forum-post__avatar__image {
+    display: block;
+    width: 160px;
+    height: auto;
+    max-height: 420px;
+}
+
+.forum-post__body {
+    display: table-cell;
+    width: 100%;
+    vertical-align: top;
+    word-wrap: break-word;
+    padding: 15px;
+}
+
+.forum-post__bodyguard {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.forum-post__edited {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.forum-post__textarea {
+    width: 100%;
+    resize: vertical;
+    border-radius: 0 0 3px 3px;
+    margin-bottom: 1em;
+}
+
+.forum-post--is-previewing .forum-post__preview {
+    padding-bottom: 20px;
+}
+
+.forum-topic--is-read {
+    background: url(//static.passthepopcorn.me/static/forums/read.png) no-repeat center center;
+    background-image: url(//static.passthepopcorn.me/static/forums/read.png);
+}
+
+.forum-topic--is-unread {
+    background: url(//static.passthepopcorn.me/static/forums/unread.png) no-repeat center center;
+    background-image: url(//static.passthepopcorn.me/static/forums/unread.png);
+}
+
+.forum-topic--is-read-locked-sticky {
+    background: url(//static.passthepopcorn.me/static/forums/locked_sticky_read.png) no-repeat center center;
+}
+
+.forum-topic--is-read-sticky {
+    background: url(//static.passthepopcorn.me/static/forums/sticky_read.png) no-repeat center center;
+}
+
+.forum-topic--is-read-locked {
+    background: url(//static.passthepopcorn.me/static/forums/locked_read.png) no-repeat center center;
+}
+
+.forum-topic--is-unread-locked-sticky {
+    background: url(//static.passthepopcorn.me/static/forums/locked_sticky_unread.png) no-repeat center center;
+}
+
+.forum-topic--is-unread-sticky {
+    background: url(//static.passthepopcorn.me/static/forums/sticky_unread.png) no-repeat center center;
+}
+
+.forum-topic--is-unread-locked {
+    background: url(//static.passthepopcorn.me/static/forums/locked_unread.png) no-repeat center center;
+}
+
+.forum-topic__go-to-last-read {
+    float: left;
+    margin-left: 0.5em;
+}
+
+.grid {
+    margin-left: -1em;
+}
+
+.grid__item {
+    float: left;
+    padding-left: 1em;
+}
+
+.grid-u-1-3 {
+    width: 33.3%;
+}
+
+.grid-u-1-10 {
+    width: 10%;
+}
+
+.grid-u-3-10 {
+    width: 30%;
+}
+
+.grid-u-4-10 {
+    width: 40%;
+}
+
+.grid-u-5-10 {
+    width: 50%;
+}
+
+.grid-u-6-10 {
+    width: 60%;
+}
+
+.grid-u-7-10 {
+    width: 70%;
+}
+
+.grid-u-8-10 {
+    width: 80%;
+}
+
+.grid-u-9-10 {
+    width: 90%;
+}
+
+.grid-offset-u-1-10 {
+    margin-left: 10%;
+}
+
+.grid-offset-u-2-10 {
+    margin-left: 20%;
+}
+
+.grid-offset-u-3-10 {
+    margin-left: 30%;
+}
+
+.grid-offset-u-4-10 {
+    margin-left: 40%;
+}
+
+.grid-offset-u-5-10 {
+    margin-left: 50%;
+}
+
+.grid-offset-u-6-10 {
+    margin-left: 60%;
+}
+
+.grid-offset-u-7-10 {
+    margin-left: 70%;
+}
+
+.grid-offset-u-8-10 {
+    margin-left: 80%;
+}
+
+.grid-offset-u-9-10 {
+    margin-left: 90%;
+}
+
+.heading--small-bottom-margin {
+    margin-bottom: .25em;
+}
+
+.bvalidator_errmsg {
+    display: none;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    background: #d51111;
+    border: 3px solid #ddd;
+    padding: 4px 10px;
+}
+
+.bvalidator_errmsg:after, .bvalidator_errmsg:before {
+    top: 100%;
+    border: solid transparent;
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.bvalidator_errmsg:after {
+    border-top-color: #d51111;
+    left: 14px;
+    margin-left: -8px;
+    border-width: 8px;
+}
+
+.bvalidator_errmsg:before {
+    border-top-color: #ddd;
+    left: 14px;
+    margin-left: -12px;
+    border-width: 12px;
+}
+
+.bvalidator_errmsg .bvalidator_close_icon {
+    margin-left: 5px;
+    margin-top: -2px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bolder;
+    color: #000;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#simplemodal-overlay {
+    background-color: #000;
+    cursor: wait;
+}
+
+#simplemodal-overlay-pointer {
+    background-color: #000;
+    cursor: pointer;
+}
+
+#simplemodal-container a.modalCloseImg {
+    background: url(//static.passthepopcorn.me/static/common/simplemodal_close.png) no-repeat;
+    width: 25px;
+    height: 29px;
+    display: inline;
+    z-index: 3200;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    cursor: pointer;
+}
+
+.last5-movies {
+}
+
+.last5-movies__table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.last5-movies__table>tbody>tr>td {
+}
+
+.last5-movies__show-all-link {
+    display: inline-block;
+    margin: 15px 0;
+}
+
+.lightbox {
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    z-index: 1002;
+    overflow: auto;
+    top: 5%;
+    position: fixed;
+    text-align: center;
+}
+
+.lightbox__shroud {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1001;
+}
+
+.lightbox img {
+    max-width: 99%;
+    max-height: 99%;
+}
+
+.lightbox:focus {
+    outline: none;
+}
+
+html.lightbox__scroll-lock {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.light-youtube-embed {
+    display: inline-block;
+    position: relative;
+    width: 480px;
+    height: 360px;
+}
+
+.light-youtube-embed__image {
+    width: 480px;
+    height: 360px;
+}
+
+.light-youtube-embed::after, .light-youtube-embed:hover::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 56px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-image: url(//static.passthepopcorn.me/static/common/symbols/play-big.png);
+    margin: auto;
+}
+
+.light-youtube-embed:hover::after {
+    background-image: url(//static.passthepopcorn.me/static/common/symbols/play-big-hover.png);
+}
+
+.main-menu__list {
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu__item {
+    display: inline;
+    margin: 5px 15px;
+}
+
+.main-menu__link, .main-menu__link:hover {
+    padding: 10px;
+}
+
+.mediainfo {
+    width: auto;
+    margin: 10px 0;
+    border-style: dashed;
+    border-width: 2px;
+}
+
+.mediainfo>tbody>tr, .mediainfo__section>tbody>tr {
+    vertical-align: top;
+}
+
+.mediainfo>tbody>tr>td {
+    padding: 10px;
+}
+
+.mediainfo__section {
+    margin: 0;
+    width: 100%;
+}
+
+.mediainfo__section>tbody>td {
+    border: none;
+    padding: 2px;
+}
+
+html.busy-cursor, html.busy-cursor * {
+    cursor: wait!important;
+}
+
+.label {
+    font-weight: 600;
+    text-align: right;
+}
+
+.linkbox {
+    text-align: center;
+    margin: 5px 5px 10px;
+}
+
+.large-torrent-list-group-opener {
+    background: url(//static.passthepopcorn.me/static/styles/corntacular/images/show.png) no-repeat center center;
+    width: 28px;
+    height: 28px;
+}
+
+.large-torrent-list-group-opener__link {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: none;
+}
+
+.release-description-preview {
+    padding: 10px;
+}
+
+.film-club-discuss-link {
+    padding-top: .5em;
+    text-align: center;
+}
+
+.site-debug {
+    margin-bottom: 15px;
+}
+
+.movie-page__torrent__panel {
+    margin: 15px;
+    padding: 15px;
+}
+
+.table>tbody>tr.movie-page__torrent--highlighted {
+    background-color: #ffffe1;
+}
+
+.movie-page__torrent-report-container {
+    margin-top: 8px;
+}
+
+.movie-page__torrent-report-date-and-reason {
+    padding: 5px;
+}
+
+.movie-page__torrent-report-description {
+    padding: 5px 10px;
+    border-style: dashed;
+    border-width: 2px;
+}
+
+.movie-page__torrent-report-staff-comment {
+    border-top: 1px dotted #757575;
+    background-color: #e4e4e4;
+    padding: 5px 1rem;
+}
+
+.movie-page__trailer {
+    margin-bottom: 14px;
+}
+
+.movie-page__actor-column {
+    text-align: right;
+    width: 50%;
+}
+
+.movie-tooltip__title-row {
+    font-weight: 600;
+}
+
+.movie-tooltip__director-list {
+    margin-top: 3px;
+}
+
+.movie-tooltip__ratings {
+    margin: 3px 0;
+}
+
+.movie-tooltip__rating-container {
+    margin-right: 4px;
+    display: inline-block;
+    width: 70px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align: center;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.movie-tooltip__trailer {
+    position: relative;
+    margin-top: 10px;
+    width: 120px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.movie-tooltip__trailer__image {
+    cursor: pointer;
+    border-color: #303030;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.movie-tooltip__trailer__play {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.movie-tooltip__synopsis {
+    margin-top: 10px;
+    line-height: 12px;
+}
+
+.movie-tooltip__action-row {
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    font-weight: 600;
+    border-top: 2px solid silver;
+}
+
+.page__title {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.pagination {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.pagination__link.pagination__link--first,
+.pagination__link.pagination__link--last {
+    margin: 0 15px;
+}
+
+.poll__title {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.poll__list {
+    list-style: none outside none;
+    padding: 1.5em;
+    margin: 0;
+}
+
+.poll__option--blank {
+    margin-top: 1em;
+}
+
+.poll__bar {
+    margin: 0.25em 0 1em;
+}
+
+.poll__bar__center {
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 0.5em;
+}
+
+.qtip {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    display: none;
+    margin-top: 13px;
+}
+
+.qtip-content {
+    padding: 10px;
+    line-height: 1.5em;
+}
+
+.qtip:not(.ie9haxors) div.qtip-content, .qtip:not(.ie9haxors) div.qtip-titlebar {
+    filter: none;
+    -ms-filter: none;
+}
+
+.qtip .qtip-tip {
+    z-index: 10;
+    margin: 0 auto;
+}
+
+.qtip .qtip-tip, .qtip .qtip-tip * {
+    position: absolute;
+    background: transparent;
+    border: 0 dashed transparent;
+}
+
+.qtip .qtip-tip canvas {
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.qtip-ptp {
+    border: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,.75);
+}
+
+.release-name-movie-list__name {
+}
+
+.release-name-movie-list__movie__release-category {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.release-name-movie-list__movie__release-category__link {
+    white-space: nowrap;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(5, 5, 5, 0.5);
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.release-name-movie-list__movie__rating-container {
+    margin-right: 4px;
+    display: inline-block;
+    width: 60px;
+    margin-bottom: 8px;
+    text-align: center;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.screenshot-comparison__container {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    text-align: center;
+}
+
+.screenshot-comparison__row {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.screenshot-comparison__image-container {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.screenshot-comparison__image {
+    border: 4px solid #404;
+}
+
+.screenshot-comparison__label {
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-shadow: 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000;
+}
+
+.screenshot-comparison__old-school-toggler-container {
+    margin: 20px;
+}
+
+.screenshot-comparison__help {
+    display: inline-block;
+    margin-bottom: 20px;
+    max-width: 800px;
+    text-align: left;
+}
+
+.search-bar__list {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.search-bar__search-field {
+    position: relative;
+    display: inline;
+    margin: 0 1px;
+}
+
+.search-bar__search-field__input {
+    padding: 3px 5px;
+    width: 110px;
+}
+
+.search-bar__results {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    display: block;
+    width: 200px;
+    z-index: 1000;
+    margin: 10px 0 0;
+    padding: 0;
+    text-align: left;
+}
+
+.search-bar__results__list-item {
+    display: block;
+}
+
+.search-bar__results__link {
+    display: block;
+    padding: 6px 8px;
+}
+
+.site-logo__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.staff-toolbar {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: 600;
+    display: inline;
+    position: absolute;
+    top: 148px;
+    width: 40%;
+    left: 30%;
+    padding: 4px;
+}
+
+.staff-toolbar__link {
+    padding: 2px;
+}
+
+.staff-toolbar__link--important {
+    display: inline-block;
+    border-radius: 3px;
+    background-color: #ca2a43;
+    padding: 4px;
+}
+
+.star-rating-container {
+    display: inline-block;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.star-rating {
+    display: inline-block;
+    width: 170px;
+    height: 20px;
+    list-style: none;
+    background: url(//static.passthepopcorn.me/static/common/stars/stars.png) repeat-x;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.star-rating--popup-starter:hover {
+    transform: scale(1.02);
+}
+
+.star-rating--with-inline-rating-display {
+    vertical-align: middle;
+}
+
+.star-rating__current-user, .star-rating__site {
+    display: block;
+    position: absolute;
+    float: left;
+    width: 170px;
+    height: 20px;
+    text-indent: -9999px;
+    font-size: 1rem;
+    z-index: 20;
+    margin: 0;
+    padding: 0;
+}
+
+.star-rating__current-user {
+    background: url(//static.passthepopcorn.me/static/common/stars/stars.png) left 125px;
+    z-index: 19;
+}
+
+.star-rating__site {
+    background: url(//static.passthepopcorn.me/static/common/stars/stars.png) left 100px;
+    z-index: 18;
+}
+
+.star-rating--big {
+    width: 300px;
+    height: 40px;
+    background: url(//static.passthepopcorn.me/static/common/stars/stars2_big_light_v2.png) repeat-x;
+    background-image: url(//static.passthepopcorn.me/static/common/stars/stars2_big_v2.png);
+}
+
+.star-rating__current-user--big {
+    width: 300px;
+    height: 40px;
+    background: url(//static.passthepopcorn.me/static/common/stars/stars2_big_light_v2.png) left 220px;
+    background-image: url(//static.passthepopcorn.me/static/common/stars/stars2_big_v2.png);
+}
+
+.star-rating-container--big {
+    cursor: pointer;
+    padding: 4px;
+}
+
+.tabs__panel--active {
+    display: block;
+}
+
+.tabs__bar__list {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 14px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    list-style: none;
+    padding: 0;
+}
+
+.tabs__bar__item {
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+.tabs__bar__link, .tabs__bar__link:hover, .tabs__bar__link:active, .tabs__bar__link:focus {
+    display: block;
+    outline: 0;
+    padding: 8px;
+    margin-top: 6px;
+    border: 2px solid transparent;
+    border-bottom: none;
+}
+
+.tabs__bar__item--active>.tabs__bar__link, .tabs__bar__item--active>.tabs__bar__link:hover, .tabs__bar__item--active>.tabs__bar__link:active, .tabs__bar__item--active>.tabs__bar__link:focus {
+    margin-top: 0;
+    margin-bottom: -2px;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    cursor: default;
+}
+
+.user-info-bar__link, .user-info-bar__link:hover, .user-info-bar__drop-down-menu__link, .user-info-bar__drop-down-menu__link:hover {
+}
+
+.user-info-bar__link--highlighted, .user-info-bar__link--highlighted:hover {
+    font-weight: 600;
+}
+
+.user-info-bar__list {
+    display: inline;
+    position: relative;
+    margin: 0 10px;
+    padding: 0;
+}
+
+.user-info-bar__item {
+    display: inline;
+    margin: 0 2px;
+}
+
+.user-info-bar__drop-down-menu {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    z-index: 10;
+    right: 1px;
+    margin: -10px;
+    padding: 10px;
+}
+
+.user-info-bar__drop-down-menu__item {
+    display: block;
+    float: none;
+}
+
+.user-info-bar__item--drop-down-menu-opener:hover>.user-info-bar__drop-down-menu {
+    visibility: visible;
+    top: 100%;
+}
+
+.user-info-bar__drop-down-menu__link {
+    text-align: left;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: .4em 1.5em;
+}
+
+.user-page__recent-movie {
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.user-page__recent-movie__link {
+    height: 164px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 5px;
+}
+
+.wiki__diff--added {
+    color: green;
+    background: #dfd;
+}
+
+.wiki__diff--deleted {
+    color: red;
+    background: #fdd;
+}
+
+.missing-torrent-status--trumpable, .encoding-history-status--canceled {
+    color: #c07c00;
+}
+
+.list:last-child, p:last-child, .table:last-child, .alert:last-child, .search-form--toggleable, .forum-post--heading-only, .panel--no-margin, .poll__bar--no-margin {
+    margin-bottom: 0;
+}
+
+.list--max-count99, .list--small-padding {
+    padding-left: 2em;
+}
+
+p:first-child, .alert:first-child, .heading:first-child {
+    margin-top: 0;
+}
+
+.basic-movie-list__movie__bookmark, .basic-movie-list__torrent__action, .form--horizontal .form__label, .release-name-movie-list__movie__action-container {
+    float: right;
+}
+
+.basic-movie-list__movie__ratings-and-tags, .release-name-movie-list__movie__ratings-and-tags {
+    padding-top: 2px;
+}
+
+.basic-movie-list__movie__rating__title, .movie-tooltip__rating__title, .release-name-movie-list__movie__rating__title {
+    font-weight: 400;
+}
+
+.basic-movie-list__movie__tags, .release-name-movie-list__movie__tags {
+    display: block;
+}
+
+.bbcode-size-4 {
+    font-size: 1.5rem;
+}
+
+.bbcode-toolbar__color-popup-color:hover, .bbcode-toolbar__emoticon-popup-item:hover {
+    border: solid 2px #ff8040;
+}
+
+.generic-form--full-width, .grid-u-1, .mediainfo--in-release-description {
+    width: 100%;
+}
+
+.generic-form__footer--right-aligned, .search-form__footer--right-aligned, .last5-movies__show-all-row {
+    text-align: right;
+}
+
+.search-form__footer__results {
+    float: left;
+}
+
+.grid-u-2-10, .screenshot-comparison__old-school-image {
+    width: 20%;
+}
+
+.movie-tooltip__additional-info, .movie-tooltip__torrents {
+    margin-top: 10px;
+}
+
+.search-bar__search-field__form, .compact-movie-list__details-row .basic-movie-list__movie__tags {
+    display: inline;
+}
+
+.star-rating__inline-rating-display, .tabs__bar__item:first-child {
+    margin-left: 10px;
+}
+
+#Bbcode_Toolbar {
+    background: #ddd;
+}
+
+/* =============================================================================
+    RESPONSIVE LAYOUT
+============================================================================= */
+
+/* -----------------------------------------------
+    min-width 1280px, large screens
+----------------------------------------------- */
+@media only screen and (min-width: 1280px) {
+
+    .page__main-content,
+    .alert-bars
+    {
+        width: 1170px;
+    }
+
+    .last5-movies__link {
+        height: 236px;
+    }
+
+    .cover-movie-list__movie__cover-link {
+        height: 327px;
+    }
+
+    .cover-movie-list--narrow .cover-movie-list__movie__cover-link {
+        height: 308px;
+    }
+
+    .small-cover-movie-list__movie__link {
+        height: 235px;
+    }
+
+    .cover-movie-list__movie__undercover {
+        font-size: 1.4rem;
+    }
+
+    .cover-movie-list__movie__tags {
+        font-size: 1.3rem;
+    }
+
+}
+
+/* ------------------------ I think this just might be my masterpiece --------------------------- */
