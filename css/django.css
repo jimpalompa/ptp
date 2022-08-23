@@ -42,22 +42,22 @@
   src: url(https://jimpalompa.github.io/ptp/jules/assets/fonts/material-icons-v138.woff2) format('woff2');
 }
 
-#morecast:before, #toggle_add_similar_movies:before, #toggleaddtags:before {
+#morecast::before, #toggle_add_similar_movies::before, #toggleaddtags::before {
   font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
 }
 
-.discuss:before, .panel__heading__toggler:before, .toggle:before {
+.discuss::before, .panel__heading__toggler::before, .toggle::before {
   -webkit-transition: color 0.1s ease-out;
   transition: color 0.1s ease-out;
 }
 
-#content:after, .clearfix:after, .forum-post__buttons:after, .forum-post__heading:after, .huge-movie-list__movie:after, .qtip-content:after, .thin:after, .user-recommendation:after {
+#content::after, .clearfix::after, .forum-post__buttons::after, .forum-post__heading::after, .huge-movie-list__movie::after, .qtip-content::after, .thin::after, .user-recommendation::after {
   content: "";
   display: block;
   clear: both;
 }
 
-#jump_to_container a:first-of-type, #jump_to_container a:nth-of-type(2), #jump_to_container a:nth-of-type(3), #jump_to_container a:nth-of-type(4), #jump_to_container a:nth-of-type(5), .film-club-discuss-link a:before, .js-latest-posts-tbody tr:last-of-type a, .last5-movies__show-all-link, .release-name-movie-list__movie__action, .screenshot-comparison__old-school-toggler-container a, .search-form__advanced-basic-toggler a, .subscribed_collages_table td span[style*=right] a:first-of-type, .subscribed_collages_table td span[style*=right] a:nth-of-type(2), .subscribed_collages_table td span[style*=right] a:nth-of-type(3), .subscribed_collages_table td span[style*=right] a:nth-of-type(4), .torrent_info_first_block + .linkbox a:first-of-type, .torrent_info_first_block + .linkbox a:nth-of-type(2), .torrent_info_first_block + .linkbox a:nth-of-type(3), .torrent_info_first_block + .linkbox a:nth-of-type(4), [class$=__bookmark] a, [class$=__new]:before, [class$=__rate] a, [class$=__trailer] a, [id^=submanager] a:first-child:before, [id^=submanager] a:nth-child(2):before, a[onclick*="#taglist"], a[onclick^=ToggleTagSelector], body#inbox #searchbox span[style^=float] a, body#torrents a[onclick^=RequestSeedingHelp]:before {
+#jump_to_container a:first-of-type, #jump_to_container a:nth-of-type(2), #jump_to_container a:nth-of-type(3), #jump_to_container a:nth-of-type(4), #jump_to_container a:nth-of-type(5), .film-club-discuss-link a::before, .js-latest-posts-tbody tr:last-of-type a, .last5-movies__show-all-link, .release-name-movie-list__movie__action, .screenshot-comparison__old-school-toggler-container a, .search-form__advanced-basic-toggler a, .subscribed_collages_table td span[style*=right] a:first-of-type, .subscribed_collages_table td span[style*=right] a:nth-of-type(2), .subscribed_collages_table td span[style*=right] a:nth-of-type(3), .subscribed_collages_table td span[style*=right] a:nth-of-type(4), .torrent_info_first_block + .linkbox a:first-of-type, .torrent_info_first_block + .linkbox a:nth-of-type(2), .torrent_info_first_block + .linkbox a:nth-of-type(3), .torrent_info_first_block + .linkbox a:nth-of-type(4), [class$=__bookmark] a, [class$=__new]::before, [class$=__rate] a, [class$=__trailer] a, [id^=submanager] a:first-child::before, [id^=submanager] a:nth-child(2)::before, a[onclick*="#taglist"], a[onclick^=ToggleTagSelector], body#inbox #searchbox span[style^=float] a, body#torrents a[onclick^=RequestSeedingHelp]::before {
   padding: 0 2px;
   font-size: 12px;
   text-transform: uppercase;
@@ -75,7 +75,7 @@
   display: inline-block;
 }
 
-.bvalidator_close_icon:before, .pagination__link--first:before, .pagination__link--last:before, .pagination__link--next:before, .pagination__link--previous:before {
+.bvalidator_close_icon::before, .pagination__link--first::before, .pagination__link--last::before, .pagination__link--next::before, .pagination__link--previous::before {
   font-size: 20px;
 }
 
@@ -85,15 +85,15 @@
   color: transparent;
 }
 
-#morecast:before, #nav_donate a:before, #nav_invite a:before, #nav_upload a:before, #similar_movies li div a:first-child:before, #similar_movies li div a:nth-child(2):before, #stats_hnrs a:before, #stats_leeching a:before, #stats_ratio a:before, #stats_seeding a:before, #toggle_add_similar_movies:before, #toggleaddtags:before, .basic-torrent-list__movie__torrent-opener-link:before, .box_tags li div a:first-child:before, .box_tags li div a:nth-child(2):before, .discuss:before, .panel__heading__toggler:before, .toggle:before {
+#morecast::before, #nav_donate a::before, #nav_invite a::before, #nav_upload a::before, #similar_movies li div a:first-child::before, #similar_movies li div a:nth-child(2)::before, #stats_hnrs a::before, #stats_leeching a::before, #stats_ratio a::before, #stats_seeding a::before, #toggle_add_similar_movies::before, #toggleaddtags::before, .basic-torrent-list__movie__torrent-opener-link::before, .box_tags li div a:first-child::before, .box_tags li div a:nth-child(2)::before, .discuss::before, .panel__heading__toggler::before, .toggle::before {
   color: #fff;
 }
 
-#morecast:before, #nav_donate a:before, #nav_invite a:before, #nav_upload a:before, #similar_movies li div a:first-child:before, #similar_movies li div a:nth-child(2):before, #stats_hnrs a:before, #stats_leeching a:before, #stats_ratio a:before, #stats_seeding a:before, #toggle_add_similar_movies:before, #toggleaddtags:before, .basic-torrent-list__movie__torrent-opener-link:before, .box_tags li div a:first-child:before, .box_tags li div a:nth-child(2):before, .discuss:before, .panel__heading__toggler:before, .toggle:before {
+#morecast::before, #nav_donate a::before, #nav_invite a::before, #nav_upload a::before, #similar_movies li div a:first-child::before, #similar_movies li div a:nth-child(2)::before, #stats_hnrs a::before, #stats_leeching a::before, #stats_ratio a::before, #stats_seeding a::before, #toggle_add_similar_movies::before, #toggleaddtags::before, .basic-torrent-list__movie__torrent-opener-link::before, .box_tags li div a:first-child::before, .box_tags li div a:nth-child(2)::before, .discuss::before, .panel__heading__toggler::before, .toggle::before {
   color: #ded1c1;
 }
 
-#morecast:hover:before, #nav_donate a:hover:before, #nav_invite a:hover:before, #nav_upload a:hover:before, #similar_movies li div a:first-child:hover:before, #similar_movies li div a:nth-child(2):hover:before, #stats_hnrs a:hover:before, #stats_leeching a:hover:before, #stats_ratio a:hover:before, #stats_seeding a:hover:before, #toggle_add_similar_movies:hover:before, #toggleaddtags:hover:before, .basic-torrent-list__movie__torrent-opener-link:hover:before, .box_tags li div a:first-child:hover:before, .box_tags li div a:nth-child(2):hover:before, .discuss:hover:before, .panel__heading__toggler:hover:before, .toggle:hover:before {
+#morecast:hover::before, #nav_donate a:hover::before, #nav_invite a:hover::before, #nav_upload a:hover::before, #similar_movies li div a:first-child:hover::before, #similar_movies li div a:nth-child(2):hover::before, #stats_hnrs a:hover::before, #stats_leeching a:hover::before, #stats_ratio a:hover::before, #stats_seeding a:hover::before, #toggle_add_similar_movies:hover::before, #toggleaddtags:hover::before, .basic-torrent-list__movie__torrent-opener-link:hover::before, .box_tags li div a:first-child:hover::before, .box_tags li div a:nth-child(2):hover::before, .discuss:hover::before, .panel__heading__toggler:hover::before, .toggle:hover::before {
   color: #fff;
 }
 
@@ -132,7 +132,7 @@ body#forums .heading + .forum_index th, body#staff .thin > div:nth-of-type(2) h3
   padding: 12px;
 }
 
-#userinfo_minor:before, #userinfo_username:before, .page__title ~ .linkbox:first-of-type:before, body#bprate .linkbox:before, body#forums .page__title ~ .linkbox:nth-of-type(2) a:before, body#requests .page__title ~ .linkbox:not(:last-of-type):first-of-type:before, body#requests .page__title ~ .linkbox:nth-of-type(2):before, body#userhistory .tabs__panel > .linkbox:before {
+#userinfo_minor::before, #userinfo_username::before, .page__title ~ .linkbox:first-of-type::before, body#bprate .linkbox::before, body#forums .page__title ~ .linkbox:nth-of-type(2) a::before, body#requests .page__title ~ .linkbox:not(:last-of-type):first-of-type::before, body#requests .page__title ~ .linkbox:nth-of-type(2)::before, body#userhistory .tabs__panel > .linkbox::before {
   display: block;
   width: 36px;
   height: 36px;
@@ -201,7 +201,7 @@ body#forums .heading + .forum_index th, body#staff .thin > div:nth-of-type(2) h3
   background: rgba(233, 228, 213, 0.2);
 }
 
-#userinfo_minor:before, #userinfo_username:before, .page__title ~ .linkbox:first-of-type:before, body#bprate .linkbox:before, body#requests .page__title ~ .linkbox:not(:last-of-type):first-of-type:before, body#requests .page__title ~ .linkbox:nth-of-type(2):before, body#userhistory .tabs__panel > .linkbox:before {
+#userinfo_minor::before, #userinfo_username::before, .page__title ~ .linkbox:first-of-type::before, body#bprate .linkbox::before, body#requests .page__title ~ .linkbox:not(:last-of-type):first-of-type::before, body#requests .page__title ~ .linkbox:nth-of-type(2)::before, body#userhistory .tabs__panel > .linkbox::before {
   content: "";
   position: absolute;
   top: -36px;
@@ -213,7 +213,7 @@ body#forums .heading + .forum_index th, body#staff .thin > div:nth-of-type(2) h3
   top: 0;
 }
 
-#userinfo_minor:hover:before, #userinfo_username:hover:before, .page__title ~ .linkbox:first-of-type:hover:before, body#bprate .linkbox:hover:before, body#requests .page__title ~ .linkbox:not(:last-of-type):first-of-type:hover:before, body#requests .page__title ~ .linkbox:nth-of-type(2):hover:before, body#userhistory .tabs__panel > .linkbox:hover:before {
+#userinfo_minor:hover::before, #userinfo_username:hover::before, .page__title ~ .linkbox:first-of-type:hover::before, body#bprate .linkbox:hover::before, body#requests .page__title ~ .linkbox:not(:last-of-type):first-of-type:hover::before, body#requests .page__title ~ .linkbox:nth-of-type(2):hover::before, body#userhistory .tabs__panel > .linkbox:hover::before {
   margin-top: 0;
   background: rgba(66, 66, 66, 0.95);
 }
@@ -222,7 +222,7 @@ body#forums .heading + .forum_index th, body#staff .thin > div:nth-of-type(2) h3
   left: 0;
 }
 
-#userinfo_username:before, body#requests .page__title ~ .linkbox:not(:last-of-type):first-of-type:before {
+#userinfo_username::before, body#requests .page__title ~ .linkbox:not(:last-of-type):first-of-type::before {
   left: 0;
 }
 
@@ -230,7 +230,7 @@ body#forums .heading + .forum_index th, body#staff .thin > div:nth-of-type(2) h3
   right: 0;
 }
 
-#userinfo_minor:before, .page__title ~ .linkbox:first-of-type:before, body#bprate .linkbox:before, body#requests .page__title ~ .linkbox:nth-of-type(2):before, body#userhistory .tabs__panel > .linkbox:before {
+#userinfo_minor::before, .page__title ~ .linkbox:first-of-type::before, body#bprate .linkbox::before, body#requests .page__title ~ .linkbox:nth-of-type(2)::before, body#userhistory .tabs__panel > .linkbox::before {
   right: 0;
 }
 
@@ -239,7 +239,7 @@ html {
   box-sizing: border-box;
 }
 
-*, :after, :before {
+*, ::after, ::before {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
@@ -249,7 +249,7 @@ html {
   padding: 0;
 }
 
-:before {
+::before {
   font-family: "Material Icons";
   -webkit-transition: color 0.1s ease-out;
   transition: color 0.1s ease-out;
@@ -422,7 +422,7 @@ option:hover {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-img, img:before {
+img, img::before {
   font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, "Helvetica Neue", Verdana, sans-serif;
 }
 
@@ -561,11 +561,11 @@ img, img:before {
   right: 12px;
 }
 
-.panel__heading__toggler:before {
+.panel__heading__toggler::before {
   content: "";
 }
 
-.panel__heading__toggler:before {
+.panel__heading__toggler::before {
   font-size: 12px;
 }
 
@@ -575,11 +575,11 @@ img, img:before {
   right: 12px;
 }
 
-.toggle:before {
+.toggle::before {
   content: "";
 }
 
-.toggle:before {
+.toggle::before {
   font-size: 12px;
 }
 
@@ -589,11 +589,11 @@ img, img:before {
   right: 12px;
 }
 
-.discuss:before {
+.discuss::before {
   content: "";
 }
 
-.discuss:before {
+.discuss::before {
   font-size: 16px;
 }
 
@@ -1101,19 +1101,19 @@ a[onclick*="#taglist"]:hover, a[onclick^=ToggleTagSelector]:hover {
   vertical-align: middle;
 }
 
-.pagination__link--first:before {
+.pagination__link--first::before {
   content: "";
 }
 
-.pagination__link--previous:before {
+.pagination__link--previous::before {
   content: "";
 }
 
-.pagination__link--next:before {
+.pagination__link--next::before {
   content: "";
 }
 
-.pagination__link--last:before {
+.pagination__link--last::before {
   content: "";
 }
 
@@ -1284,14 +1284,14 @@ img[title="Request time"], img[title="Seed time"], img[title="Upload time"], img
   font-size: 0;
 }
 
-[class$=__new]:before {
+[class$=__new]::before {
   content: "NEW";
   border-color: #ffff99;
   font-size: 12px;
   color: #ffff99;
 }
 
-[class$=__new]:hover:before {
+[class$=__new]:hover::before {
   background: #ffff99;
   color: #1a1a1a;
 }
@@ -1334,7 +1334,7 @@ a[class*=link--seen] {
   display: block;
 }
 
-a[class*=link--seen]:after {
+a[class*=link--seen]::after {
   content: "";
   position: absolute;
   right: 0;
@@ -1686,14 +1686,14 @@ img[title^="High quality"] {
   font-size: 0;
 }
 
-[id^=submanager] a:first-child:before {
+[id^=submanager] a:first-child::before {
   content: "request sub";
   border-color: #ffff99;
   font-size: 12px;
   color: #ffff99;
 }
 
-[id^=submanager] a:first-child:hover:before {
+[id^=submanager] a:first-child:hover::before {
   background: #ffff99;
   color: #1a1a1a;
 }
@@ -1703,14 +1703,14 @@ img[title^="High quality"] {
   font-size: 0;
 }
 
-[id^=submanager] a:nth-child(2):before {
+[id^=submanager] a:nth-child(2)::before {
   content: "sub manager";
   border-color: #ff995c;
   font-size: 12px;
   color: #ff995c;
 }
 
-[id^=submanager] a:nth-child(2):hover:before {
+[id^=submanager] a:nth-child(2):hover::before {
   background: #ff995c;
   color: #1a1a1a;
 }
@@ -1854,14 +1854,14 @@ body#torrents a[onclick^=RequestSeedingHelp] {
   top: 12px;
 }
 
-body#torrents a[onclick^=RequestSeedingHelp]:before {
+body#torrents a[onclick^=RequestSeedingHelp]::before {
   content: "Request Seeding Help";
   border-color: #ff331f;
   font-size: 12px;
   color: #ff331f;
 }
 
-body#torrents a[onclick^=RequestSeedingHelp]:hover:before {
+body#torrents a[onclick^=RequestSeedingHelp]:hover::before {
   background: #ff331f;
   color: #1a1a1a;
 }
@@ -1879,11 +1879,11 @@ body#torrents a[onclick^=RequestSeedingHelp]:hover:before {
   padding: 0;
 }
 
-.basic-torrent-list__movie__torrent-opener-link:before {
+.basic-torrent-list__movie__torrent-opener-link::before {
   content: "";
 }
 
-.basic-torrent-list__movie__torrent-opener-link:before {
+.basic-torrent-list__movie__torrent-opener-link::before {
   color: #66a3ff;
   font-size: 20px;
   display: block;
@@ -1895,7 +1895,7 @@ body#torrents a[onclick^=RequestSeedingHelp]:hover:before {
   background: rgba(0, 0, 0, 0.12);
 }
 
-.basic-torrent-list__movie__torrent-opener-link:hover:before {
+.basic-torrent-list__movie__torrent-opener-link:hover::before {
   color: #99ff99;
 }
 
@@ -2028,7 +2028,7 @@ body#torrents div[id^=trumpable] {
   color: rgba(102, 163, 255, 0.7);
 }
 
-.forum-topic__go-to-last-read:before {
+.forum-topic__go-to-last-read::before {
   content: "";
   font-size: 15px;
 }
@@ -2201,14 +2201,14 @@ body#torrents div[id^=trumpable] {
   font-size: 0;
 }
 
-.film-club-discuss-link a:before {
+.film-club-discuss-link a::before {
   content: "discuss this movie";
   border-color: #66a3ff;
   font-size: 12px;
   color: #66a3ff;
 }
 
-.film-club-discuss-link a:hover:before {
+.film-club-discuss-link a:hover::before {
   background: #66a3ff;
   color: #1a1a1a;
 }
@@ -2251,11 +2251,11 @@ body#torrents .thin > .page__title + h2.text--center {
   width: 50%;
 }
 
-#toggle_add_similar_movies:before, #toggleaddtags:before {
+#toggle_add_similar_movies::before, #toggleaddtags::before {
   content: "ADD";
 }
 
-#morecast:before {
+#morecast::before {
   content: "MORE";
 }
 
@@ -2275,12 +2275,12 @@ body#torrents .thin > .page__title + h2.text--center {
   letter-spacing: normal !important;
 }
 
-#similar_movies li div a:first-child:before, .box_tags li div a:first-child:before {
+#similar_movies li div a:first-child::before, .box_tags li div a:first-child::before {
   content: "";
   font-size: 14px;
 }
 
-#similar_movies li div a:nth-child(2):before, .box_tags li div a:nth-child(2):before {
+#similar_movies li div a:nth-child(2)::before, .box_tags li div a:nth-child(2)::before {
   content: "";
   font-size: 14px;
 }
@@ -2346,7 +2346,7 @@ body#artist [id^=role_] > br {
   font-size: 0;
 }
 
-#jump_to_container:before {
+#jump_to_container::before {
   font-size: 13px;
   font-weight: 400;
   content: "JUMP TO";
@@ -2517,7 +2517,7 @@ body#forums .page__title ~ .linkbox:nth-of-type(2) a {
   display: block;
 }
 
-body#forums .page__title ~ .linkbox:nth-of-type(2) a:before {
+body#forums .page__title ~ .linkbox:nth-of-type(2) a::before {
   content: "";
   font-size: 20px;
 }
@@ -2548,7 +2548,7 @@ body#requests .page__title ~ .linkbox:first-of-type:not(:last-of-type) a {
   font-size: 13px;
 }
 
-body#requests .page__title ~ .linkbox:first-of-type:not(:last-of-type):before {
+body#requests .page__title ~ .linkbox:first-of-type:not(:last-of-type)::before {
   content: "";
 }
 
@@ -2650,7 +2650,7 @@ body#upload .thin > p > br {
   margin: -14px 0 0 -4px;
 }
 
-.bvalidator_errmsg:after {
+.bvalidator_errmsg::after {
   content: "";
   position: absolute;
   bottom: -8px;
@@ -2668,11 +2668,11 @@ body#upload .thin > p > br {
   margin-top: -2px;
 }
 
-.bvalidator_close_icon:before {
+.bvalidator_close_icon::before {
   content: "";
 }
 
-.bvalidator_close_icon:before {
+.bvalidator_close_icon::before {
   font-size: 14px;
 }
 
@@ -2769,7 +2769,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   font-size: 13px;
 }
 
-#userinfo_username:before {
+#userinfo_username::before {
   content: "";
   top: -40px;
   width: 40px;
@@ -2784,7 +2784,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   top: 55px;
 }
 
-#userinfo_username:hover:before {
+#userinfo_username:hover::before {
   margin-top: 0;
 }
 
@@ -2847,22 +2847,22 @@ body#staff .thin > div:nth-of-type(2) h3 {
     display: none;
   }
 }
-#stats_seeding a:before {
+#stats_seeding a::before {
   content: "";
   font-size: 21px;
 }
 
-#stats_leeching a:before {
+#stats_leeching a::before {
   content: "";
   font-size: 21px;
 }
 
-#stats_ratio a:before {
+#stats_ratio a::before {
   content: "";
   font-size: 21px;
 }
 
-#stats_hnrs a:before {
+#stats_hnrs a::before {
   content: "";
   font-size: 21px;
 }
@@ -2899,12 +2899,12 @@ body#staff .thin > div:nth-of-type(2) h3 {
   order: -1;
 }
 
-#nav_upload a:before {
+#nav_upload a::before {
   content: "";
   font-size: 21px;
 }
 
-#nav_invite a:before {
+#nav_invite a::before {
   content: "";
   font-size: 21px;
 }
@@ -2928,7 +2928,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   background: rgba(66, 66, 66, 0.95);
 }
 
-#nav_bonus a:before {
+#nav_bonus a::before {
   content: "";
   position: absolute;
   top: -8px;
@@ -2938,7 +2938,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   border-color: transparent transparent rgba(66, 66, 66, 0.95) transparent;
 }
 
-#nav_bonus a:after {
+#nav_bonus a::after {
   content: "";
   position: absolute;
   left: 64.5px;
@@ -2948,7 +2948,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   height: 24px;
 }
 
-#nav_bonus:before {
+#nav_bonus::before {
   content: "";
   font-size: 21px;
   color: rgba(255, 255, 153, 0.7);
@@ -2958,20 +2958,20 @@ body#staff .thin > div:nth-of-type(2) h3 {
   display: block;
 }
 
-#nav_bonus:hover:before {
+#nav_bonus:hover::before {
   color: #ffff99;
 }
 
-#nav_donate a:before {
+#nav_donate a::before {
   content: "";
   font-size: 21px;
 }
 
-#nav_donate a:before {
+#nav_donate a::before {
   color: rgba(255, 51, 31, 0.7);
 }
 
-#nav_donate a:hover:before {
+#nav_donate a:hover::before {
   color: #ff331f;
 }
 
@@ -3091,7 +3091,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   font-size: 13px;
 }
 
-#userinfo_minor.user-info-bar__list--has-highlighted-item:before {
+#userinfo_minor.user-info-bar__list--has-highlighted-item::before {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAHlBMVEUAAAD///////////////////////////////////8kfJuVAAAACXRSTlMABAwWQF5pb+idktP8AAAAKUlEQVQIW2MQLQeBQIbImSAwlaESTE8nk54GpZsZKh0YwKAEQjEoQCgAS70sUpAH/8UAAAAASUVORK5CYII=") no-repeat top 6px right 6px;
   background-color: rgba(233, 228, 213, 0.2);
 }
@@ -3100,7 +3100,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   color: #fff;
 }
 
-#userinfo_minor:before {
+#userinfo_minor::before {
   content: "";
   top: -50px;
   width: 48px;
@@ -3117,7 +3117,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   top: 122px;
 }
 
-#userinfo_minor:hover:before {
+#userinfo_minor:hover::before {
   margin-top: 0;
   background-color: #726f68;
 }
