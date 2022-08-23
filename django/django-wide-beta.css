@@ -1,6 +1,6 @@
-/* ---------- Oh man, I will never forgive your ass for this shit --------------
+/* ---------------------- I like the way you die, boy --------------------------
 
-  Jules stylesheet for passthepopcorn
+  Django Wide BETA stylesheet for passthepopcorn
   by jimpalompa
 
   Stylesheet url: https://github.com/jimpalompa/ptp
@@ -116,7 +116,7 @@
   font-style: oblique 0deg 10deg;
   font-weight: 100 900;
   font-display: fallback;
-  src: local(Inter), url(//jimpalompa.github.io/ptp/jules/assets/fonts/inter-var.woff2) format('woff2');
+  src: local(Inter), url(//jimpalompa.github.io/ptp/django/assets/fonts/inter-var.woff2) format('woff2');
   font-stretch: normal;
 }
 
@@ -124,7 +124,7 @@
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: var(--ptp--preset--font-weight--regular);
-  src: url(//jimpalompa.github.io/ptp/jules/assets/fonts/material-icons-v138.woff2) format('woff2');
+  src: url(//jimpalompa.github.io/ptp/django/assets/fonts/material-icons-v138.woff2) format('woff2');
 }
 
 /* -------------------------------------
@@ -3052,4 +3052,4 @@ body#staff .thin > div:nth-of-type(2) h3 {
   display: none;
 }
 
-/* ----------------- This is some fucked up repugnant shit ------------------ */
+/* ------------ Before you go, will you tell Miss Lara goodbye? ------------- */
