@@ -118,7 +118,7 @@
   font-style: oblique 0deg 0deg;
   font-weight: 500 700;
   font-display: fallback;
-  src: local(Inter), url(//jimpalompa.github.io/ptp/django/assets/fonts/inter_var.woff2) format('woff2');
+  src: local(Inter), url(assets/fonts/inter_var.woff2) format('woff2');
   font-stretch: normal;
 }
 
@@ -126,7 +126,7 @@
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: var(--preset--font-weight--regular);
-  src: local(Material Icons), url(//jimpalompa.github.io/ptp/django/assets/fonts/material_icons_v138.woff2) format('woff2');
+  src: local(Material Icons), url(assets/fonts/material_icons_v138.woff2) format('woff2');
 }
 
 /* -------------------------------------
