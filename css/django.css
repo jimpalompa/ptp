@@ -39,7 +39,7 @@
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(//jimpalompa.github.io/ptp/django/assets/fonts/material-icons-v138.woff2) format('woff2');
+  src: url(//jimpalompa.github.io/ptp/django/assets/fonts/material_icons_v138.woff2) format('woff2');
 }
 
 #morecast::before, #toggle_add_similar_movies::before, #toggleaddtags::before {
