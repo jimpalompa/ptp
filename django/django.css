@@ -341,13 +341,12 @@ img, img::before {
 }
 
 #jump_to_container a:first-of-type, #jump_to_container a:nth-of-type(2), #jump_to_container a:nth-of-type(3), #jump_to_container a:nth-of-type(4), #jump_to_container a:nth-of-type(5), .film-club-discuss-link a::before, .js-latest-posts-tbody tr:last-of-type a, .last5-movies__show-all-link, .release-name-movie-list__movie__action, .screenshot-comparison__old-school-toggler-container a, .search-form__advanced-basic-toggler a, .subscribed_collages_table td span[style*=right] a:first-of-type, .subscribed_collages_table td span[style*=right] a:nth-of-type(2), .subscribed_collages_table td span[style*=right] a:nth-of-type(3), .subscribed_collages_table td span[style*=right] a:nth-of-type(4), .torrent_info_first_block + .linkbox a:first-of-type, .torrent_info_first_block + .linkbox a:nth-of-type(2), .torrent_info_first_block + .linkbox a:nth-of-type(3), .torrent_info_first_block + .linkbox a:nth-of-type(4), [class$=__bookmark] a, [class$=__new]::before, [class$=__rate] a, [class$=__trailer] a, [id^=submanager] a:first-child::before, [id^=submanager] a:nth-child(2)::before, a[onclick*='#taglist'], a[onclick^=ToggleTagSelector], body#inbox #searchbox span[style^=float] a, body#torrents a[onclick^=RequestSeedingHelp]::before {
-  padding: 0 2px;
+  padding: 4px 8px;
   font-size: var(--preset--font-size--tiny);
+  font-weight: var(--preset--font-weight--bold);
   text-transform: uppercase;
-  border: 1px solid;
+  border: 2px solid;
   border-radius: 2px;
-  font-family: var(--preset--font-family--default);
-  font-weight: var(--preset--font-weight--regular);
   white-space: nowrap;
   transition: none;
 }
@@ -427,6 +426,8 @@ body#forums .heading + .forum_index th, body#staff .thin > div:nth-of-type(2) h3
 .huge-movie-list__movie__cover__link, .last5-movies__link, .small-cover-movie-list__movie__link, .user-page__recent-movie__link {
   display: block;
   width: 100%;
+  height: auto;
+  padding-bottom: 150%;
   background-size: cover;
   background-position: center;
 }
@@ -1293,7 +1294,7 @@ img[title='Request time'], img[title='Seed time'], img[title='Upload time'], img
 }
 
 [class$=__bookmark] a {
-  margin-left: 6px;
+  margin-left: 12px;
   border-color: #3385ff;
   color: #3385ff;
 }
@@ -1304,7 +1305,7 @@ img[title='Request time'], img[title='Seed time'], img[title='Upload time'], img
 }
 
 [class$=__rate] a {
-  margin-left: 6px;
+  margin-left: 12px;
   border-color: var(--preset--color--pale-orange);
   color: var(--preset--color--pale-orange);
 }
@@ -1315,7 +1316,7 @@ img[title='Request time'], img[title='Seed time'], img[title='Upload time'], img
 }
 
 [class$=__trailer] a {
-  margin-left: 6px;
+  margin-left: 12px;
   border-color: var(--preset--color--pale-purple);
   color: var(--preset--color--pale-purple);
 }
@@ -1369,7 +1370,7 @@ a[class*=link--seen]:after {
 }
 
 .basic-movie-list__movie__cover {
-  width: 120px;
+  width: 160px;
 }
 
 .basic-movie-list__movie__ratings-and-tags {
@@ -1393,17 +1394,13 @@ a[class*=link--seen]:after {
 }
 
 .huge-movie-list__movie__cover {
-  width: 200px;
+  width: 280px;
   float: left;
-}
-
-.huge-movie-list__movie__cover__link {
-  height: 300px;
 }
 
 .huge-movie-list__movie__details {
   margin-left: 150px;
-  min-height: 225px;
+  min-height: 420px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1502,7 +1499,7 @@ a[class*=link--seen]:after {
 .cover-movie-list__movie__cover-link {
   display: block;
   width: 100%;
-  height: 0;
+  height: auto;
   padding-bottom: 150%;
 }
 
@@ -2088,10 +2085,6 @@ body#torrents div[id^=trumpable].movie-page__torrent__panel {
   background: rgba(0, 0, 0, .12) !important;
   padding: 2px 4px !important;
   border-radius: 2px !important;
-}
-
-.last5-movies__link {
-  height: 183px;
 }
 
 .last5-movies__show-all-row td {
