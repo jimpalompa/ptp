@@ -160,7 +160,7 @@ body {
   font-family: 'Material Icons';
   font-size: var(--preset--font-size--huge);
   transition: color .1s ease-out;
-}  
+}
 
 a {
   text-decoration: none;
@@ -590,7 +590,7 @@ body#forums .pagination--bottom + .linkbox a:active, input[type=button]:active, 
 
 .sidebar .box_albumart .panel__heading {
   padding-bottom: 0;
-}  
+}
 
 .sidebar .box_albumart .panel__body {
   padding: 0;
@@ -999,11 +999,11 @@ body#forums .pagination--bottom + .linkbox a:active, input[type=button]:active, 
 .page__title ~ .linkbox:first-of-type {
   margin-top: 58px;
   font-size: 0;
-}  
+}
 
 .page__title ~ .linkbox:first-of-type a {
   font-size: var(--preset--font-size--small);
-}  
+}
 
 .linkbox #browse_settings {
   position: absolute;

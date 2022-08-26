@@ -4,9 +4,9 @@
   by jimpalompa
 
   Stylesheet url: github.com/jimpalompa/ptp
-  
------------------------------------------------------------------------------ */  
-  
+
+----------------------------------------------------------------------------- */
+
 /* -------------------------------------
   HIDE ELEMENTS
 ------------------------------------- */
@@ -31,7 +31,7 @@ span.spoiler:hover
 /* -------------------------------------
   TYPOGRAPHY
 ------------------------------------- */
-  
+
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
@@ -44,21 +44,21 @@ span.spoiler:hover
   font-style: italic;
   font-weight: 400;
   src: local('Source Sans Pro'), url(//jimpalompa.github.io/ptp/marcel/assets/fonts/source-sans-pro-italic-400.woff2) format('woff2');
-}  
+}
 
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 600;
   src: local('Source Sans Pro'), url(//jimpalompa.github.io/ptp/marcel/assets/fonts/source-sans-pro-600.woff2) format('woff2');
-}    
-  
+}
+
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: italic;
   font-weight: 600;
   src: local('Source Sans Pro'), url(//jimpalompa.github.io/ptp/marcel/assets/fonts/source-sans-pro-italic-600.woff2) format('woff2');
-}  
+}
 
 @font-face {
   font-family: 'Material Icons';
