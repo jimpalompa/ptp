@@ -38,11 +38,13 @@ https://jimpalompa.github.io/ptp/marcel/marcel.css
   <br>
 
   **Broomhilda**
+  Standalone theme
   ```
   https://jimpalompa.github.io/ptp/old/broomhilda/broomhilda.css
   ```
   
   **Shosanna**
+  Standalone theme
   ```
   https://jimpalompa.github.io/ptp/old/shosanna/shosanna.css
   ```
