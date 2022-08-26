@@ -8,7 +8,8 @@ https://jimpalompa.github.io/ptp/django/django.css
 <details>
   <summary>Preview</summary>
   <br>
-  No previews available yet : ()
+  
+  No previews available yet : (
   <br>
 
 </details>
