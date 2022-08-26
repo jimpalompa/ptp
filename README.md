@@ -39,12 +39,12 @@ https://jimpalompa.github.io/ptp/marcel/marcel.css
 
   **Broomhilda**
   ```
-  https://jimpalompa.github.io/ptp/_old/broomhilda/broomhilda.css
+  https://jimpalompa.github.io/ptp/old/broomhilda/broomhilda.css
   ```
   
   **Shosanna**
   ```
-  https://jimpalompa.github.io/ptp/_old/shosanna/shosanna.css
+  https://jimpalompa.github.io/ptp/old/shosanna/shosanna.css
   ```
   <br>
 
