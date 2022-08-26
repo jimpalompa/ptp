@@ -124,7 +124,6 @@ body#forums .heading + .forum_index th, body#staff .thin > div:nth-of-type(2) h3
   width: 38px;
   height: 38px;
   line-height: 38px;
-  vertical-align: middle;
   text-align: center;
 }
 
@@ -177,7 +176,6 @@ body#forums .heading + .forum_index th, body#staff .thin > div:nth-of-type(2) h3
   line-height: 38px;
   text-transform: uppercase;
   font-size: 11px;
-  vertical-align: middle;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -622,7 +620,6 @@ img, img:before {
 }
 
 .tabs__bar__link {
-  vertical-align: middle;
   display: block;
   height: 100%;
   width: 100%;
@@ -1387,7 +1384,6 @@ a[onclick^=ToggleTagSelector]:hover {
   height: 40px;
   margin-top: 1055px;
   line-height: 40px;
-  vertical-align: middle;
   text-align: center;
   font-size: 21px;
   color: rgba(255, 255, 255, 0.7);
