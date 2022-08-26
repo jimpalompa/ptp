@@ -21,7 +21,7 @@
 }
 
 .clearfix:after, #content:after, .thin:after, .qtip-content:after, .huge-movie-list__movie:after, .forum-post__heading:after, .forum-post__buttons:after, .user-recommendation:after {
-  content: "";
+  content: '';
   display: block;
   clear: both;
 }
@@ -30,8 +30,8 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.search-form__advanced-basic-toggler a, a[onclick*="#taglist"],
-a[onclick^=ToggleTagSelector], [class$=__new]:before, [class$=__bookmark] a, [class$=__rate] a, [class$=__trailer] a, .release-name-movie-list__movie__action, [id^=submanager] a:first-child:before, [id^=submanager] a:nth-child(2):before, .torrent_info_first_block + .linkbox a:nth-of-type(1), .torrent_info_first_block + .linkbox a:nth-of-type(2), .torrent_info_first_block + .linkbox a:nth-of-type(3), .torrent_info_first_block + .linkbox a:nth-of-type(4), .screenshot-comparison__old-school-toggler-container a, .last5-movies__show-all-link, .film-club-discuss-link a:before, #jump_to_container a:nth-of-type(1), #jump_to_container a:nth-of-type(2), #jump_to_container a:nth-of-type(3), #jump_to_container a:nth-of-type(4), #jump_to_container a:nth-of-type(5), .subscribed_collages_table td span[style*="right"] a:nth-of-type(1), .subscribed_collages_table td span[style*="right"] a:nth-of-type(2), .subscribed_collages_table td span[style*="right"] a:nth-of-type(3), .subscribed_collages_table td span[style*="right"] a:nth-of-type(4), body#inbox #searchbox span[style^=float] a {
+.search-form__advanced-basic-toggler a, a[onclick*='#taglist'],
+a[onclick^=ToggleTagSelector], [class$=__new]:before, [class$=__bookmark] a, [class$=__rate] a, [class$=__trailer] a, .release-name-movie-list__movie__action, [id^=submanager] a:first-child:before, [id^=submanager] a:nth-child(2):before, .torrent_info_first_block + .linkbox a:nth-of-type(1), .torrent_info_first_block + .linkbox a:nth-of-type(2), .torrent_info_first_block + .linkbox a:nth-of-type(3), .torrent_info_first_block + .linkbox a:nth-of-type(4), .screenshot-comparison__old-school-toggler-container a, .last5-movies__show-all-link, .film-club-discuss-link a:before, #jump_to_container a:nth-of-type(1), #jump_to_container a:nth-of-type(2), #jump_to_container a:nth-of-type(3), #jump_to_container a:nth-of-type(4), #jump_to_container a:nth-of-type(5), .subscribed_collages_table td span[style*='right'] a:nth-of-type(1), .subscribed_collages_table td span[style*='right'] a:nth-of-type(2), .subscribed_collages_table td span[style*='right'] a:nth-of-type(3), .subscribed_collages_table td span[style*='right'] a:nth-of-type(4), body#inbox #searchbox span[style^=float] a {
   padding: 0 2px;
   font-size: 10px;
   text-transform: uppercase;
@@ -549,7 +549,7 @@ img, img:before {
 }
 
 .panel__heading__toggler:before {
-  content: "";
+  content: '';
 }
 
 .panel__heading__toggler:before {
@@ -563,7 +563,7 @@ img, img:before {
 }
 
 .toggle:before {
-  content: "";
+  content: '';
 }
 
 .toggle:before {
@@ -577,7 +577,7 @@ img, img:before {
 }
 
 .discuss:before {
-  content: "";
+  content: '';
 }
 
 .discuss:before {
@@ -1067,14 +1067,14 @@ img, img:before {
   margin-left: 12px;
 }
 
-a[onclick*="#taglist"],
+a[onclick*='#taglist'],
 a[onclick^=ToggleTagSelector] {
   margin-left: 12px;
   border-color: #31DD93;
   color: #31DD93;
 }
 
-a[onclick*="#taglist"]:hover,
+a[onclick*='#taglist']:hover,
 a[onclick^=ToggleTagSelector]:hover {
   background: #31DD93;
   color: #1A1A1A;
@@ -1102,19 +1102,19 @@ a[onclick^=ToggleTagSelector]:hover {
 }
 
 .pagination__link--first:before {
-  content: "";
+  content: '';
 }
 
 .pagination__link--previous:before {
-  content: "";
+  content: '';
 }
 
 .pagination__link--next:before {
-  content: "";
+  content: '';
 }
 
 .pagination__link--last:before {
-  content: "";
+  content: '';
 }
 
 .header {
@@ -1242,22 +1242,22 @@ a[onclick^=ToggleTagSelector]:hover {
 }
 
 #stats_seeding a:before {
-  content: "";
+  content: '';
   font-size: 21px;
 }
 
 #stats_leeching a:before {
-  content: "";
+  content: '';
   font-size: 21px;
 }
 
 #stats_ratio a:before {
-  content: "";
+  content: '';
   font-size: 21px;
 }
 
 #stats_hnrs a:before {
-  content: "";
+  content: '';
   font-size: 21px;
 }
 
@@ -1294,12 +1294,12 @@ a[onclick^=ToggleTagSelector]:hover {
 }
 
 #nav_upload a:before {
-  content: "";
+  content: '';
   font-size: 21px;
 }
 
 #nav_invite a:before {
-  content: "";
+  content: '';
   font-size: 21px;
 }
 
@@ -1333,7 +1333,7 @@ a[onclick^=ToggleTagSelector]:hover {
 }
 
 #nav_bonus a:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 64.5px;
   top: -28px;
@@ -1357,7 +1357,7 @@ a[onclick^=ToggleTagSelector]:hover {
 }
 
 #nav_donate a:before {
-  content: "";
+  content: '';
   font-size: 21px;
 }
 
@@ -1404,7 +1404,7 @@ a[onclick^=ToggleTagSelector]:hover {
   color: #FFF;
 }
 
-.search-bar input[type="text"] {
+.search-bar input[type='text'] {
   width: 164px;
   background: none;
   border-width: 0 0 2px 0;
@@ -1414,7 +1414,7 @@ a[onclick^=ToggleTagSelector]:hover {
   font-size: 11px;
 }
 
-.search-bar input[type="text"]:focus {
+.search-bar input[type='text']:focus {
   text-transform: none;
   color: #FFF;
 }
@@ -1553,7 +1553,7 @@ a[onclick^=ToggleTagSelector]:hover {
 }
 
 #userinfo_minor.user-info-bar__list--has-highlighted-item:before {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAHlBMVEUAAAD///////////////////////////////////8kfJuVAAAACXRSTlMABAwWQF5pb+idktP8AAAAKUlEQVQIW2MQLQeBQIbImSAwlaESTE8nk54GpZsZKh0YwKAEQjEoQCgAS70sUpAH/8UAAAAASUVORK5CYII=") no-repeat top 6px right 6px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAHlBMVEUAAAD///////////////////////////////////8kfJuVAAAACXRSTlMABAwWQF5pb+idktP8AAAAKUlEQVQIW2MQLQeBQIbImSAwlaESTE8nk54GpZsZKh0YwKAEQjEoQCgAS70sUpAH/8UAAAAASUVORK5CYII=) no-repeat top 6px right 6px;
   background-color: #842f7a;
 }
 
@@ -1793,9 +1793,9 @@ img[title=Leechers] {
 }
 
 img[title=Time],
-img[title="Seed time"],
-img[title="Upload time"],
-img[title="Request time"] {
+img[title='Seed time'],
+img[title='Upload time'],
+img[title='Request time'] {
   width: 0;
   height: 12px;
   padding: 0 6px;
@@ -1809,7 +1809,7 @@ img[title="Request time"] {
 }
 
 [class$=__new]:before {
-  content: "NEW";
+  content: 'NEW';
   border-color: #FFE426;
   font-size: 10px;
   color: #FFE426;
@@ -1853,13 +1853,13 @@ img[title="Request time"] {
   color: #1A1A1A;
 }
 
-a[class*="link--seen"] {
+a[class*='link--seen'] {
   position: relative;
   display: block;
 }
 
-a[class*="link--seen"]:after {
-  content: "";
+a[class*='link--seen']:after {
+  content: '';
   position: absolute;
   right: 0;
   top: 0;
@@ -2187,22 +2187,22 @@ a[class*="link--seen"]:after {
   margin-bottom: 4px;
 }
 
-img[title^="Torrent has been"], img[title^="Torrent has not"], img[title^="High quality"] {
+img[title^='Torrent has been'], img[title^='Torrent has not'], img[title^='High quality'] {
   width: 0 !important;
   height: 12px !important;
   padding: 0 8px;
   vertical-align: middle;
 }
 
-img[title^="Torrent has been"] {
+img[title^='Torrent has been'] {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAAOVBMVEUAAAAzwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzczwzfjzN5/AAAAEnRSTlMAAQMGHjE8P0Bfi6Omt9Hi7/XCzsNoAAAAO0lEQVQI143HSxZAMBAAwQ5CfEPf/7AWHmZH7Qr+aMcmZHONcQa6PV9ZEnBofsKg1jtQ9A2UGOinxKcT2psCetpsGdwAAAAASUVORK5CYII=) no-repeat center;
 }
 
-img[title^="Torrent has not"] {
+img[title^='Torrent has not'] {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAATlBMVEUAAAD3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG/3cG8uuGoRAAAAGXRSTlMAAwUGGiQlJicoNjc6SmmGkbW8vsDB0eb94rl60gAAAGFJREFUCFs9zDkWgzAQwFAZSMAsYYfR/S9KYV7U/UZQTQmAZgDqyy0BOfzBqe6JHOrArHqMoUYDi2+R4c8CWFUdC7pQ9UgAbYHuCb6hxvryVqMrq4leoy3nq4L+/gAwnzUPVnMJp4HLt1gAAAAASUVORK5CYII=) no-repeat center;
 }
 
-img[title^="High quality"] {
+img[title^='High quality'] {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAAe1BMVEUAAAD/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5Cb/5CZBk5qjAAAAKHRSTlMAAgQGDQ4PEBQXGB4gIikqLC8yRlVhY3yClZ65uszP4uTm6Ovv8fP5ftFKkwAAAFtJREFUCB1dwY0SQlAURtF9qVBR9EsKhb73f8J05s5kWguz2TFTP/hJpRzPLW/SfeWYXBt5XQnRU96QAItWpo/5WstkmK1MgTlI40s6YS7vc+COY4XZh0yCgn8fisAJ2e+BVH0AAAAASUVORK5CYII=) no-repeat center;
 }
 
@@ -2211,7 +2211,7 @@ img[title^="High quality"] {
 }
 
 [id^=submanager] a:first-child:before {
-  content: "request sub";
+  content: 'request sub';
   border-color: #FFE426;
   font-size: 10px;
   color: #FFE426;
@@ -2228,7 +2228,7 @@ img[title^="High quality"] {
 }
 
 [id^=submanager] a:nth-child(2):before {
-  content: "sub manager";
+  content: 'sub manager';
   border-color: #FF9237;
   font-size: 10px;
   color: #FF9237;
@@ -2377,7 +2377,7 @@ img[title^="High quality"] {
 }
 
 .basic-torrent-list__movie__torrent-opener-link:before {
-  content: "";
+  content: '';
 }
 
 .basic-torrent-list__movie__torrent-opener-link:before {
@@ -2656,7 +2656,7 @@ img[title^="High quality"] {
 }
 
 .film-club-discuss-link a:before {
-  content: "discuss this movie";
+  content: 'discuss this movie';
   border-color: #31DD93;
   font-size: 10px;
   color: #31DD93;
@@ -2707,11 +2707,11 @@ body#torrents .thin > .page__title + h2.text--center {
 
 #toggleaddtags:before,
 #toggle_add_similar_movies:before {
-  content: "ADD";
+  content: 'ADD';
 }
 
 #morecast:before {
-  content: "MORE";
+  content: 'MORE';
 }
 
 .box_tags li a,
@@ -2734,13 +2734,13 @@ body#torrents .thin > .page__title + h2.text--center {
 
 .box_tags li div a:first-child:before,
 #similar_movies li div a:first-child:before {
-  content: "";
+  content: '';
   font-size: 12px;
 }
 
 .box_tags li div a:nth-child(2):before,
 #similar_movies li div a:nth-child(2):before {
-  content: "";
+  content: '';
   font-size: 12px;
 }
 
@@ -2776,7 +2776,7 @@ body#torrents .thin > .page__title + h2.text--center {
   height: 48px !important;
 }
 
-#ptp_rating_td span[style*="hidden"] {
+#ptp_rating_td span[style*='hidden'] {
   display: none;
 }
 
@@ -2920,50 +2920,50 @@ body#collages .thin > .table td:last-child {
   margin-top: 12px;
 }
 
-.subscribed_collages_table td span[style*="right"] {
+.subscribed_collages_table td span[style*='right'] {
   font-size: 0;
 }
 
-.subscribed_collages_table td span[style*="right"] a:nth-of-type(1) {
+.subscribed_collages_table td span[style*='right'] a:nth-of-type(1) {
   margin-left: 4px;
   border-color: #FF9237;
   color: #FF9237;
 }
 
-.subscribed_collages_table td span[style*="right"] a:nth-of-type(1):hover {
+.subscribed_collages_table td span[style*='right'] a:nth-of-type(1):hover {
   background: #FF9237;
   color: #1A1A1A;
 }
 
-.subscribed_collages_table td span[style*="right"] a:nth-of-type(2) {
+.subscribed_collages_table td span[style*='right'] a:nth-of-type(2) {
   margin-left: 4px;
   border-color: #B3E725;
   color: #B3E725;
 }
 
-.subscribed_collages_table td span[style*="right"] a:nth-of-type(2):hover {
+.subscribed_collages_table td span[style*='right'] a:nth-of-type(2):hover {
   background: #B3E725;
   color: #1A1A1A;
 }
 
-.subscribed_collages_table td span[style*="right"] a:nth-of-type(3) {
+.subscribed_collages_table td span[style*='right'] a:nth-of-type(3) {
   margin-left: 4px;
   border-color: #F7706F;
   color: #F7706F;
 }
 
-.subscribed_collages_table td span[style*="right"] a:nth-of-type(3):hover {
+.subscribed_collages_table td span[style*='right'] a:nth-of-type(3):hover {
   background: #F7706F;
   color: #1A1A1A;
 }
 
-.subscribed_collages_table td span[style*="right"] a:nth-of-type(4) {
+.subscribed_collages_table td span[style*='right'] a:nth-of-type(4) {
   margin-left: 4px;
   border-color: #40A8E6;
   color: #40A8E6;
 }
 
-.subscribed_collages_table td span[style*="right"] a:nth-of-type(4):hover {
+.subscribed_collages_table td span[style*='right'] a:nth-of-type(4):hover {
   background: #40A8E6;
   color: #1A1A1A;
 }
