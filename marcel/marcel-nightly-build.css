@@ -76,19 +76,14 @@ span.spoiler:hover
 
 .fa,
 .forum-topic__go-to-last-read::after,
-.torrent-info-link--user-snatched::after
-{
+.torrent-info-link--user-snatched::after {
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
+  font-family: 'Material Icons';
 }
 
 .forum-topic__go-to-last-read::after {
-  content: '\f061';
+  vertical-align: middle;
+  content: '\e5c8';
 }
 
 /* -------------------------------------
@@ -106,7 +101,7 @@ body {
   font-size: 1.4rem;
   font-weight: 400;
   width: 100%;
-  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  font-family: 'Source Sans Pro', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   margin: 0 auto;
 }
 
@@ -169,7 +164,7 @@ mark {
 }
 
 code, kbd, pre, samp {
-  font-family: monospace, serif;
+  font-family: ui-monospace, Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
   font-size: 1rem;
 }
 
@@ -873,8 +868,11 @@ img#browse_settings {
 }
 
 .small-cover-movie-list__movie__title::before {
-  content: '🏆';
+  font-family: 'Material Icons';
+  color: #f7d584;
   padding-right: 2px;
+  vertical-align: middle;
+  content: '\e838';
 }
 
 /* Single movie */
@@ -1072,9 +1070,9 @@ th {
 }
 
 .clearfix::after, .forum-post__heading::after, .grid::after, .huge-movie-list__movie::after, .poll__bar::after, .sidebar::after, .tabs__bar__list::after {
-  content: '';
   display: table;
   clear: left;
+  content: '';
 }
 
 .text--left {
@@ -1339,7 +1337,7 @@ th {
 
 .forum-topic__go-to-last-read {
   float: left;
-  margin-left: 0.5em;
+  margin-left: 4px;
 }
 
 .grid {
@@ -1441,11 +1439,11 @@ th {
 .bvalidator_errmsg::after, .bvalidator_errmsg::before {
   top: 100%;
   border: solid transparent;
-  content: '';
   width: 0;
   height: 0;
   position: absolute;
   pointer-events: none;
+  content: '';
 }
 
 .bvalidator_errmsg::after {
@@ -1465,11 +1463,10 @@ th {
 .bvalidator_errmsg .bvalidator_close_icon {
   margin-left: 5px;
   margin-top: -2px;
-  font-family: Verdana, Geneva, sans-serif;
   font-weight: bolder;
   color: #000;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 #simplemodal-overlay {
@@ -1553,7 +1550,6 @@ html.lightbox__scroll-lock {
 }
 
 .light-youtube-embed::after, .light-youtube-embed:hover::after {
-  content: '';
   position: absolute;
   width: 80px;
   height: 56px;
@@ -1564,6 +1560,7 @@ html.lightbox__scroll-lock {
   pointer-events: none;
   background-image: url(//static.passthepopcorn.me/static/common/symbols/play-big.png);
   margin: auto;
+  content: '';
 }
 
 .light-youtube-embed:hover::after {
