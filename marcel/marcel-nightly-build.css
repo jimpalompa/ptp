@@ -11,7 +11,15 @@
   IMPORT WEBFONTS
 ------------------------------------- */
 
-@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i);
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: oblique 0deg 0deg;
+  font-weight: 500 700;
+  font-display: fallback;
+  src: local(Source Sans Pro), url(//jimpalompa.github.io/ptp/marcel/assets/fonts/inter-var.woff2) format('woff2');
+  font-stretch: normal;
+}
+
 
 @font-face {
   font-family: 'FontAwesome';
@@ -540,7 +548,7 @@ blockquote
 ------------------------------------- */
 
 .site-logo {
-  background: url(assets/images/logo.jpg) no-repeat;
+  background: url(assets/images/logo.png) no-repeat;
   background-size: 800px 125px;
   width: 800px;
   height: 125px;
