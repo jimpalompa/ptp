@@ -334,7 +334,7 @@ img, img::before {
   transition: color .1s ease-out;
 }
 
-#content:after, .clearfix:after, .forum-post__buttons:after, .forum-post__heading:after, .huge-movie-list__movie:after, .qtip-content:after, .thin:after, .user-recommendation:after {
+#content::after, .clearfix::after, .forum-post__buttons::after, .forum-post__heading::after, .huge-movie-list__movie::after, .qtip-content::after, .thin::after, .user-recommendation::after {
   display: block;
   clear: both;
   content: '';
@@ -1332,7 +1332,7 @@ a[class*=link--seen] {
   display: block;
 }
 
-a[class*=link--seen]:after {
+a[class*=link--seen]::after {
   position: absolute;
   right: 0;
   top: 0;
@@ -2601,7 +2601,7 @@ body#upload .thin > p > br {
   margin: -14px 0 0 -4px;
 }
 
-.bvalidator_errmsg:after {
+.bvalidator_errmsg::after {
   position: absolute;
   bottom: -8px;
   left: 14px;
@@ -2838,7 +2838,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   border-bottom-color: var(--preset--color--background--quaternary);
 }
 
-#nav_bonus a:after {
+#nav_bonus a::after {
   display: block;
   width: 24px;
   height: 24px;
