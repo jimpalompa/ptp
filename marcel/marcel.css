@@ -4,46 +4,90 @@
   by jimpalompa
 
   Stylesheet url: github.com/jimpalompa/ptp
-
------------------------------------------------------------------------------ */
-
+  
+----------------------------------------------------------------------------- */  
+  
 /* -------------------------------------
-  IMPORT WEBFONTS
+  HIDE ELEMENTS
 ------------------------------------- */
 
-@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i);
+.huge-movie-list__movie__ratings__votes-column br,
+.huge-movie-list__movie__ratings__votes-column span.rating:nth-child(3n)
+{display: none !important;}
+
+[hidden], .hidden,
+.tabs__panel
+{display: none;}
+
+.huge-movie-list__movie__ratings__votes-column
+{color: transparent;}
+
+span.spoiler
+{background: #191919 !important; color: transparent !important;}
+
+span.spoiler:hover
+{background: transparent !important; color: inherit !important;}
+
+/* -------------------------------------
+  TYPOGRAPHY
+------------------------------------- */
+  
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), url(//jimpalompa.github.io/ptp/marcel/assets/fonts/source-sans-pro-400.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Source Sans Pro'), url(//jimpalompa.github.io/ptp/marcel/assets/fonts/source-sans-pro-italic-400.woff2) format('woff2');
+}  
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro'), url(//jimpalompa.github.io/ptp/marcel/assets/fonts/source-sans-pro-600.woff2) format('woff2');
+}    
+  
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Source Sans Pro'), url(//jimpalompa.github.io/ptp/marcel/assets/fonts/source-sans-pro-italic-600.woff2) format('woff2');
+}  
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), url(//jimpalompa.github.io/ptp/marcel/assets/fonts/material-icons.woff2) format('woff2');
+}
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url(//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.eot?v=4.3.0);
-  src: url(//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),
-       url(//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.woff2?v=4.3.0) format('woff2'),
-       url(//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.woff?v=4.3.0) format('woff'),
-       url(//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),
-       url(//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
+  src: url(//jimpalompa.github.io/ptp/marcel/assets/fonts/font-awesome.woff2) format('woff2');
 }
 
 .fa,
-.forum-topic__go-to-last-read:after,
-.torrent-info-link--user-snatched:after
-{
+.forum-topic__go-to-last-read::after,
+.torrent-info-link--user-snatched::after {
   display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
+  font-family: 'Material Icons';
 }
 
-.forum-topic__go-to-last-read:after {
-  content: '\f061';
+.forum-topic__go-to-last-read::after {
+  vertical-align: middle;
+  content: '\e5c8';
 }
 
 /* -------------------------------------
-  BASIC STYLES
+  DEAFULT STYLES
 ------------------------------------- */
 
 html {
@@ -55,8 +99,9 @@ html {
 body {
   font-size: 14px;
   font-size: 1.4rem;
+  font-weight: 400;
   width: 100%;
-  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  font-family: 'Source Sans Pro', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   margin: 0 auto;
 }
 
@@ -119,7 +164,7 @@ mark {
 }
 
 code, kbd, pre, samp {
-  font-family: monospace, serif;
+  font-family: ui-monospace, Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
   font-size: 1rem;
 }
 
@@ -224,7 +269,7 @@ td {
   padding: 0;
 }
 
-*, :before, :after {
+*, ::before, ::after {
   box-sizing: border-box;
 }
 
@@ -235,27 +280,6 @@ blockquote {
   margin: 10px;
   padding: 10px;
 }
-
-/* -------------------------------------
-  HIDE ELEMENTS
-------------------------------------- */
-
-.huge-movie-list__movie__ratings__votes-column br,
-.huge-movie-list__movie__ratings__votes-column span.rating:nth-child(3n)
-{display: none !important;}
-
-[hidden], .hidden,
-.tabs__panel
-{display: none;}
-
-.huge-movie-list__movie__ratings__votes-column
-{color: transparent;}
-
-span.spoiler
-{background: #191919 !important; color: transparent !important;}
-
-span.spoiler:hover
-{background: transparent !important; color: inherit !important;}
 
 /* -------------------------------------
   FONT SIZES
@@ -540,7 +564,7 @@ blockquote
 ------------------------------------- */
 
 .site-logo {
-  background: url(assets/images/logo.jpg) no-repeat;
+  background: url(assets/images/logo.png) no-repeat;
   background-size: 800px 125px;
   width: 800px;
   height: 125px;
@@ -755,9 +779,6 @@ img#browse_settings {
   width: 100%;
 }
 
-.huge-movie-list__movie__ratings {
-}
-
 .huge-movie-list__movie__ratings tr {
   float: left;
   width: 100px;
@@ -765,9 +786,6 @@ img#browse_settings {
 
 .huge-movie-list__movie__ratings__icon-column {
   padding-right: 3px;
-}
-
-.huge-movie-list__movie__ratings__icon-column img {
 }
 
 .huge-movie-list__movie__ratings__votes-column span {
@@ -793,10 +811,6 @@ img#browse_settings {
 }
 
 /* List view */
-.basic-movie-list {
-
-}
-
 .basic-movie-list__details-row {
   vertical-align: top;
 }
@@ -827,18 +841,6 @@ img#browse_settings {
   float: right;
 }
 
-.basic-movie-list__movie__category-icon {
-}
-
-.basic-movie-list__number {
-}
-
-.basic-movie-list__torrent-row {
-}
-
-.table>tbody>tr.basic-movie-list__torrent-row {
-}
-
 .basic-torrent-list__movie__additional-info {
   margin-top: 25px;
 }
@@ -860,17 +862,17 @@ img#browse_settings {
   height: 190px;
 }
 
-.small-cover-movie-list__movie__link--smaller {
-}
-
 .small-cover-movie-list__movie__title {
   text-align: center;
   padding: 5px 5px 0;
 }
 
-.small-cover-movie-list__movie__title:before {
-  content: '🏆';
+.small-cover-movie-list__movie__title::before {
+  font-family: 'Material Icons';
+  color: #f7d584;
   padding-right: 2px;
+  vertical-align: middle;
+  content: '\e838';
 }
 
 /* Single movie */
@@ -941,17 +943,8 @@ table#movie-ratings-table td {
   margin: 0;
 }
 
-.table--bordered {
-}
-
-.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
-}
-
 .table thead:first-child tr:first-child th {
   border-top: 0 none;
-}
-
-.table--panel-like>thead>tr>th {
 }
 
 .table--inplace-sortable>thead>tr>th {
@@ -1076,10 +1069,10 @@ th {
   white-space: nowrap;
 }
 
-.clearfix:after, .forum-post__heading:after, .grid:after, .huge-movie-list__movie:after, .poll__bar:after, .sidebar:after, .tabs__bar__list:after {
-  content: '';
+.clearfix::after, .forum-post__heading::after, .grid::after, .huge-movie-list__movie::after, .poll__bar::after, .sidebar::after, .tabs__bar__list::after {
   display: table;
   clear: left;
+  content: '';
 }
 
 .text--left {
@@ -1094,12 +1087,6 @@ th {
   text-align: right!important;
 }
 
-.alert {
-}
-
-.alert--warning {
-}
-
 .alert--error .alert__link {
   font-weight: 600;
 }
@@ -1108,12 +1095,6 @@ th {
   border-style: dashed;
   border-width: 2px;
   margin: 5px;
-}
-
-.table>tbody>tr.compact-movie-list__details-row--odd {
-}
-
-.cover-movie-list--narrow {
 }
 
 .bbcode-size-1 {
@@ -1356,7 +1337,7 @@ th {
 
 .forum-topic__go-to-last-read {
   float: left;
-  margin-left: 0.5em;
+  margin-left: 4px;
 }
 
 .grid {
@@ -1455,24 +1436,24 @@ th {
   padding: 4px 10px;
 }
 
-.bvalidator_errmsg:after, .bvalidator_errmsg:before {
+.bvalidator_errmsg::after, .bvalidator_errmsg::before {
   top: 100%;
   border: solid transparent;
-  content: '';
   width: 0;
   height: 0;
   position: absolute;
   pointer-events: none;
+  content: '';
 }
 
-.bvalidator_errmsg:after {
+.bvalidator_errmsg::after {
   border-top-color: #d51111;
   left: 14px;
   margin-left: -8px;
   border-width: 8px;
 }
 
-.bvalidator_errmsg:before {
+.bvalidator_errmsg::before {
   border-top-color: #ddd;
   left: 14px;
   margin-left: -12px;
@@ -1482,11 +1463,10 @@ th {
 .bvalidator_errmsg .bvalidator_close_icon {
   margin-left: 5px;
   margin-top: -2px;
-  font-family: Verdana, Geneva, sans-serif;
   font-weight: bolder;
   color: #000;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 #simplemodal-overlay {
@@ -1511,15 +1491,9 @@ th {
   cursor: pointer;
 }
 
-.last5-movies {
-}
-
 .last5-movies__table {
   width: 100%;
   margin-top: 10px;
-}
-
-.last5-movies__table>tbody>tr>td {
 }
 
 .last5-movies__show-all-link {
@@ -1576,7 +1550,6 @@ html.lightbox__scroll-lock {
 }
 
 .light-youtube-embed::after, .light-youtube-embed:hover::after {
-  content: '';
   position: absolute;
   width: 80px;
   height: 56px;
@@ -1587,6 +1560,7 @@ html.lightbox__scroll-lock {
   pointer-events: none;
   background-image: url(//static.passthepopcorn.me/static/common/symbols/play-big.png);
   margin: auto;
+  content: '';
 }
 
 .light-youtube-embed:hover::after {
@@ -1851,9 +1825,6 @@ html.busy-cursor, html.busy-cursor * {
   box-shadow: 0 1px 3px rgba(0,0,0,.75);
 }
 
-.release-name-movie-list__name {
-}
-
 .release-name-movie-list__movie__release-category {
   vertical-align: middle;
   text-align: center;
@@ -2101,9 +2072,6 @@ html.busy-cursor, html.busy-cursor * {
   cursor: default;
 }
 
-.user-info-bar__link, .user-info-bar__link:hover, .user-info-bar__drop-down-menu__link, .user-info-bar__drop-down-menu__link:hover {
-}
-
 .user-info-bar__link--highlighted, .user-info-bar__link--highlighted:hover {
   font-weight: 600;
 }
@@ -2249,9 +2217,9 @@ p:first-child, .alert:first-child, .heading:first-child {
   RESPONSIVE LAYOUT
 ============================================================================= */
 
-/* -----------------------------------------------
+/* -------------------------------------
   min-width 1280px, large screens
------------------------------------------------ */
+------------------------------------- */
 @media only screen and (min-width: 1280px) {
 
   .page__main-content, .alert-bars {
