@@ -137,7 +137,7 @@ html {
   box-sizing: border-box;
 }
 
-*, :after, ::before {
+*, ::before, ::after {
   box-sizing: inherit;
 }
 
@@ -156,7 +156,7 @@ body {
   letter-spacing: var(--custom--typography--letter-spacing--body)
 }
 
-::before {
+::before, ::after {
   font-family: 'Material Icons';
   font-size: var(--preset--font-size--huge);
   transition: color .1s ease-out;
