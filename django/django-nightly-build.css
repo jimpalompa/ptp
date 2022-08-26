@@ -335,9 +335,9 @@ img, img::before {
 }
 
 #content:after, .clearfix:after, .forum-post__buttons:after, .forum-post__heading:after, .huge-movie-list__movie:after, .qtip-content:after, .thin:after, .user-recommendation:after {
-  content: '';
   display: block;
   clear: both;
+  content: '';
 }
 
 #jump_to_container a:first-of-type, #jump_to_container a:nth-of-type(2), #jump_to_container a:nth-of-type(3), #jump_to_container a:nth-of-type(4), #jump_to_container a:nth-of-type(5), .film-club-discuss-link a::before, .js-latest-posts-tbody tr:last-of-type a, .last5-movies__show-all-link, .release-name-movie-list__movie__action, .screenshot-comparison__old-school-toggler-container a, .search-form__advanced-basic-toggler a, .subscribed_collages_table td span[style*=right] a:first-of-type, .subscribed_collages_table td span[style*=right] a:nth-of-type(2), .subscribed_collages_table td span[style*=right] a:nth-of-type(3), .subscribed_collages_table td span[style*=right] a:nth-of-type(4), .torrent_info_first_block + .linkbox a:first-of-type, .torrent_info_first_block + .linkbox a:nth-of-type(2), .torrent_info_first_block + .linkbox a:nth-of-type(3), .torrent_info_first_block + .linkbox a:nth-of-type(4), [class$=__bookmark] a, [class$=__new]::before, [class$=__rate] a, [class$=__trailer] a, [id^=submanager] a:first-child::before, [id^=submanager] a:nth-child(2)::before, a[onclick*='#taglist'], a[onclick^=ToggleTagSelector], body#inbox #searchbox span[style^=float] a, body#torrents a[onclick^=RequestSeedingHelp]::before {
@@ -486,10 +486,10 @@ body#forums .heading + .forum_index th, body#staff .thin > div:nth-of-type(2) h3
 }
 
 #userinfo_minor::before, #userinfo_username::before, .page__title ~ .linkbox:first-of-type::before, body#bprate .linkbox::before, body#requests .page__title ~ .linkbox:not(:last-of-type):first-of-type::before, body#requests .page__title ~ .linkbox:nth-of-type(2)::before, body#userhistory .tabs__panel > .linkbox::before {
-  content: '\e5d4';
   position: absolute;
   top: -36px;
   margin-top: 9999px;
+  content: '\e5d4';
 }
 
 #userinfo_minor:hover, #userinfo_username:hover, .page__title ~ .linkbox:hover:first-of-type, body#bprate .linkbox:hover, body#requests .page__title ~ .linkbox:hover:first-of-type:not(:last-of-type), body#requests .page__title ~ .linkbox:hover:nth-of-type(2), body#userhistory .tabs__panel > .linkbox:hover {
@@ -631,8 +631,8 @@ body#forums .pagination--bottom + .linkbox a:active, input[type=button]:active, 
 }
 
 .panel__heading__toggler::before {
-  content: '\e061';
   font-size: var(--preset--font-size--tiny);
+  content: '\e061';
 }
 
 .toggle {
@@ -656,8 +656,8 @@ body#forums .pagination--bottom + .linkbox a:active, input[type=button]:active, 
 }
 
 .discuss::before {
-  content: '\e0bf';
   font-size: var(--preset--font-size--x-large);
+  content: '\e0bf';
 }
 
 .tabs__bar {
@@ -1282,10 +1282,11 @@ img[title='Request time'], img[title='Seed time'], img[title='Upload time'], img
 }
 
 [class$=__new]::before {
-  content: 'NEW';
-  border-color: var(--preset--color--pale-yellow);
+  font-family: var(--preset--font-family--default);
   font-size: var(--preset--font-size--tiny);
   color: var(--preset--color--pale-yellow);
+  border-color: var(--preset--color--pale-yellow);
+  content: 'NEW';
 }
 
 [class$=__new]:hover::before {
@@ -1332,7 +1333,6 @@ a[class*=link--seen] {
 }
 
 a[class*=link--seen]:after {
-  content: '';
   position: absolute;
   right: 0;
   top: 0;
@@ -1340,6 +1340,7 @@ a[class*=link--seen]:after {
   background-size: cover;
   width: 22px;
   height: 22px;
+  content: '';
 }
 
 .basic-movie-list th.small {
@@ -1628,10 +1629,11 @@ img[title^='High quality'] {
 }
 
 [id^=submanager] a:first-child::before {
-  content: 'Request subtitles';
-  border-color: var(--preset--color--pale-yellow);
+  font-family: var(--preset--font-family--default);
   font-size: var(--preset--font-size--tiny);
   color: var(--preset--color--pale-yellow);
+  border-color: var(--preset--color--pale-yellow);
+  content: 'Request subtitles';
 }
 
 [id^=submanager] a:first-child:hover::before {
@@ -1645,10 +1647,11 @@ img[title^='High quality'] {
 }
 
 [id^=submanager] a:nth-child(2)::before {
-  content: 'Manage subtitles';
-  border-color: var(--preset--color--pale-orange);
+  font-family: var(--preset--font-family--default);
   font-size: var(--preset--font-size--tiny);
   color: var(--preset--color--pale-orange);
+  border-color: var(--preset--color--pale-orange);
+  content: 'Manage subtitles';
 }
 
 [id^=submanager] a:nth-child(2):hover::before {
@@ -1799,10 +1802,11 @@ body#torrents a[onclick^=RequestSeedingHelp] {
 }
 
 body#torrents a[onclick^=RequestSeedingHelp]::before {
-  content: 'Request Seeding Help';
-  border-color: var(--preset--color--pale-red);
+  font-family: var(--preset--font-family--default);
   font-size: var(--preset--font-size--tiny);
   color: var(--preset--color--pale-red);
+  border-color: var(--preset--color--pale-red);
+  content: 'Request Seeding Help';
 }
 
 body#torrents a[onclick^=RequestSeedingHelp]:hover::before {
@@ -1824,11 +1828,11 @@ body#torrents a[onclick^=RequestSeedingHelp]:hover::before {
 }
 
 .basic-torrent-list__movie__torrent-opener-link::before {
-  content: '\e5c5';
   color: var(--preset--color--pale-blue);
   display: block;
   width: 100%;
   height: 100%;
+  content: '\e5c5';
 }
 
 .basic-torrent-list__movie__torrent-opener-link:hover {
@@ -1970,8 +1974,8 @@ body#torrents div[id^=trumpable].movie-page__torrent__panel {
 }
 
 .forum-topic__go-to-last-read::before {
-  content: '\e154';
   font-size: var(--preset--font-size--x-large);
+  content: '\e154';
 }
 
 .forum-topic__go-to-last-read:hover {
@@ -2140,10 +2144,11 @@ body#torrents div[id^=trumpable].movie-page__torrent__panel {
 }
 
 .film-club-discuss-link a::before {
-  content: 'discuss this movie';
-  border-color: var(--preset--color--pale-blue);
+  font-family: var(--preset--font-family--default);
   font-size: var(--preset--font-size--tiny);
   color: var(--preset--color--pale-blue);
+  border-color: var(--preset--color--pale-blue);
+  content: 'Discuss this movie';
 }
 
 .film-club-discuss-link a:hover::before {
@@ -2201,16 +2206,18 @@ body#torrents .thin > .page__title + h2.text--center {
 }
 
 #toggle_add_similar_movies::before, #toggleaddtags::before {
-  content: 'Add';
+  font-family: var(--preset--font-family--default);
   font-size: var(--preset--font-size--small);
   line-height: var(--custom--typography--line-height--body);
+  content: 'Add';
 }
 
 #morecast::before {
-  content: 'More';
+  font-family: var(--preset--font-family--default);
   font-size: var(--preset--font-size--small);
-  line-height: var(--custom--typography--line-height--body);
   font-weight: var(--preset--font-weight--bold);
+  line-height: var(--custom--typography--line-height--body);
+  content: 'More';
 }
 
 #similar_movies li a, .box_tags li a {
@@ -2226,13 +2233,13 @@ body#torrents .thin > .page__title + h2.text--center {
 }
 
 #similar_movies li div a:first-child::before, .box_tags li div a:first-child::before {
-  content: '\e15b';
   font-size: var(--preset--font-size--small);
+  content: '\e15b';
 }
 
 #similar_movies li div a:nth-child(2)::before, .box_tags li div a:nth-child(2)::before {
-  content: '\e145';
   font-size: var(--preset--font-size--small);
+  content: '\e145';
 }
 
 #connections ul {
@@ -2290,10 +2297,10 @@ body#artist [id^=role_] > br {
 }
 
 #jump_to_container::before {
+  font-family: var(--preset--font-family--default);
   font-size: var(--preset--font-size--small);
   font-weight: var(--preset--font-weight--regular);
-  content: 'JUMP TO';
-  font-family: var(--preset--font-family--default);
+  content: 'Jump to';
 }
 
 #jump_to_container a {
@@ -2461,9 +2468,9 @@ body#forums .page__title ~ .linkbox:nth-of-type(2) a {
 }
 
 body#forums .page__title ~ .linkbox:nth-of-type(2) a::before {
-  content: '\e90e';
   font-size: var(--preset--font-size--x-large);
   margin-top: 18px;
+  content: '\e90e';
 }
 
 body#forums .heading {
@@ -2595,13 +2602,13 @@ body#upload .thin > p > br {
 }
 
 .bvalidator_errmsg:after {
-  content: '';
   position: absolute;
   bottom: -8px;
   left: 14px;
   border-style: solid;
   border-width: 8px 8px 0 8px;
   border-color: rgba(117, 48, 48, .9625) transparent transparent transparent;
+  content: '';
 }
 
 .bvalidator_close_icon {
@@ -2714,12 +2721,12 @@ body#staff .thin > div:nth-of-type(2) h3 {
 }
 
 #userinfo_username::before {
-  content: '\e853';
   top: -40px;
   width: 40px;
   height: 40px;
   margin-top: 1070px;
   color: var(--preset--color--foreground--primary);
+  content: '\e853';
 }
 
 #userinfo_username:hover {
@@ -2832,18 +2839,18 @@ body#staff .thin > div:nth-of-type(2) h3 {
 }
 
 #nav_bonus a:after {
-  content: '';
   display: block;
   width: 24px;
   height: 24px;
   position: absolute;
   top: -32px;
   left: 74px;
+  content: '';
 }
 
 #nav_bonus::before {
-  content: '\e8e0';
   color: rgba(255, 255, 153, .7);
+  content: '\e8e0';
 }
 
 #nav_bonus:hover a {
@@ -2965,7 +2972,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 }
 
 #userinfo_minor.user-info-bar__list--has-highlighted-item::before {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAHlBMVEUAAAD///////////////////////////////////8kfJuVAAAACXRSTlMABAwWQF5pb+idktP8AAAAKUlEQVQIW2MQLQeBQIbImSAwlaESTE8nk54GpZsZKh0YwKAEQjEoQCgAS70sUpAH/8UAAAAASUVORK5CYII=) no-repeat top 6px right 6px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAHlBMVEUAAAD///////////////////////////////////8kfJuVAAAACXRSTlMABAwWQF5pb+idktP8AAAAKUlEQVQIW2MQLQeBQIbImSAwlaESTE8nk54GpZsZKh0YwKAEQjEoQCgAS70sUpAH/8UAAAAASUVORK5CYII=) no-repeat top 8px right 8px;
   background-color: var(--preset--color--background--quinary);
 }
 
@@ -2974,14 +2981,14 @@ body#staff .thin > div:nth-of-type(2) h3 {
 }
 
 #userinfo_minor::before {
-  content: '\e5d2';
+  font-size: var(--preset--font-size--gigantic);
+  line-height: 64px;
   top: -64px;
   width: 64px;
   height: 64px;
   margin-top: 1162px;
-  line-height: 64px;
   background-color: var(--preset--color--background--tertiary);
-  font-size: var(--preset--font-size--gigantic);
+  content: '\e5d2';
 }
 
 #userinfo_minor:hover, #userinfo_minor:active {
@@ -2995,7 +3002,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 
 .user-info-bar__link--highlighted {
   font-weight: var(--preset--font-weight--bold);
-  background: linear-gradient(to right, rgba(233, 228, 213, .2), rgba(233, 228, 213, .1));
+  background: var(--preset--color--background--quinary);
 }
 
 .user-info-bar__drop-down-menu {
