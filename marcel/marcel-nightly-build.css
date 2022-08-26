@@ -1,41 +1,54 @@
 /* ----------- Like I said, what the fuck are we supposed to do? ---------------
 
-  Marcel stylesheet for ptp
-  by jimpalompa
+Marcel stylesheet for ptp
+by jimpalompa
 
   Stylesheet url: github.com/jimpalompa/ptp
-
------------------------------------------------------------------------------ */
-
-/* -------------------------------------
+  
+  ----------------------------------------------------------------------------- */  
+  
+  /* -------------------------------------
   IMPORT WEBFONTS
-------------------------------------- */
+  ------------------------------------- */  
+  
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//jimpalompa.github.io/ptp/marcel/assets/fonts/sourcesanspro-400.woff2) format('woff2');
+}
 
 @font-face {
   font-family: 'Source Sans Pro';
-  font-style: oblique 0deg 0deg;
-  font-weight: 500 700;
-  font-display: fallback;
-  src: local(Source Sans Pro), url(//jimpalompa.github.io/ptp/marcel/assets/fonts/inter-var.woff2) format('woff2');
-  font-stretch: normal;
-}
+  font-style: italic;
+  font-weight: 400;
+  src: url(//jimpalompa.github.io/ptp/marcel/assets/fonts/sourcesanspro-italic-400.woff2) format('woff2');
+}  
 
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url(//jimpalompa.github.io/ptp/marcel/assets/fonts/sourcesanspro-600.woff2) format('woff2');
+}    
+  
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 600;
+  src: url(//jimpalompa.github.io/ptp/marcel/assets/fonts/sourcesanspro-italic-600.woff2) format('woff2');
+}  
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url(//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.eot?v=4.3.0);
-  src: url(//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),
-       url(//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.woff2?v=4.3.0) format('woff2'),
-       url(//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.woff?v=4.3.0) format('woff'),
-       url(//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),
-       url(//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
+  src: url(//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.woff2) format('woff2');
 }
 
 .fa,
-.forum-topic__go-to-last-read:after,
-.torrent-info-link--user-snatched:after
+.forum-topic__go-to-last-read::after,
+.torrent-info-link--user-snatched::after
 {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -46,7 +59,7 @@
   transform: translate(0, 0);
 }
 
-.forum-topic__go-to-last-read:after {
+.forum-topic__go-to-last-read::after {
   content: '\f061';
 }
 
@@ -63,6 +76,7 @@ html {
 body {
   font-size: 14px;
   font-size: 1.4rem;
+  font-weight: 400;
   width: 100%;
   font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
   margin: 0 auto;
@@ -232,7 +246,7 @@ td {
   padding: 0;
 }
 
-*, :before, :after {
+*, ::before, ::after {
   box-sizing: border-box;
 }
 
@@ -876,7 +890,7 @@ img#browse_settings {
   padding: 5px 5px 0;
 }
 
-.small-cover-movie-list__movie__title:before {
+.small-cover-movie-list__movie__title::before {
   content: '🏆';
   padding-right: 2px;
 }
@@ -1084,7 +1098,7 @@ th {
   white-space: nowrap;
 }
 
-.clearfix:after, .forum-post__heading:after, .grid:after, .huge-movie-list__movie:after, .poll__bar:after, .sidebar:after, .tabs__bar__list:after {
+.clearfix::after, .forum-post__heading::after, .grid::after, .huge-movie-list__movie::after, .poll__bar::after, .sidebar::after, .tabs__bar__list::after {
   content: '';
   display: table;
   clear: left;
@@ -1463,7 +1477,7 @@ th {
   padding: 4px 10px;
 }
 
-.bvalidator_errmsg:after, .bvalidator_errmsg:before {
+.bvalidator_errmsg::after, .bvalidator_errmsg::before {
   top: 100%;
   border: solid transparent;
   content: '';
@@ -1473,14 +1487,14 @@ th {
   pointer-events: none;
 }
 
-.bvalidator_errmsg:after {
+.bvalidator_errmsg::after {
   border-top-color: #d51111;
   left: 14px;
   margin-left: -8px;
   border-width: 8px;
 }
 
-.bvalidator_errmsg:before {
+.bvalidator_errmsg::before {
   border-top-color: #ddd;
   left: 14px;
   margin-left: -12px;
