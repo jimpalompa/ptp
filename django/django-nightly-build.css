@@ -2679,27 +2679,26 @@ body#staff .thin > div:nth-of-type(2) h3 {
 }
 
 .site-logo {
-  width: 267px;
-  height: 36px;
+  width: 300px;
+  height: 50px;
   position: absolute;
   left: 0;
-  top: 30px;
+  top: 24px;
 }
 
 .site-logo a {
+  background: url(assets/images/logo.png) no-repeat center;
+  background-size: contain;
   display: block;
   width: 100%;
   height: 100%;
-  background: url(assets/images/logo.png) no-repeat center;
 }
 
 #userinfo {
   display: flex;
   width: 100%;
-  height: 96px;
-  margin-bottom: 2px;
-  padding-left: 267px;
-  line-height: 40px;
+  height: 100px;
+  padding-left: 280px;
 }
 
 #userinfo ul {
@@ -2712,7 +2711,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 
 #userinfo_username {
   font-size: 0;
-  margin-left: 279px;
+  margin-left: 316px;
   top: -1000px;
 }
 
@@ -2986,13 +2985,13 @@ body#staff .thin > div:nth-of-type(2) h3 {
   top: -64px;
   width: 64px;
   height: 64px;
-  margin-top: 1162px;
+  margin-top: 1164px;
   background-color: var(--preset--color--background--tertiary);
   content: '\e5d2';
 }
 
 #userinfo_minor:hover, #userinfo_minor:active {
-  top: 162px;
+  top: 164px;
 }
 
 #userinfo_minor:hover::before {
