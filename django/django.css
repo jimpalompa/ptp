@@ -1,9 +1,9 @@
 /* ---------------------- I like the way you die, boy --------------------------
 
-  Django BETA stylesheet for passthepopcorn
+  Django stylesheet for ptp
   by jimpalompa
 
-  Stylesheet url: https://github.com/jimpalompa/ptp
+  Stylesheet url: github.com/jimpalompa/ptp
 
 ----------------------------------------------------------------------------- */
 
@@ -2814,7 +2814,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
   text-align: center;
   padding: var(--custom--spacing--small);
   position: absolute;
-  top: 68px;
+  top: 66px;
   right: 18px;
   width: 180px;
   z-index: 200;
@@ -2837,8 +2837,8 @@ body#staff .thin > div:nth-of-type(2) h3 {
   width: 24px;
   height: 24px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -32px;
+  left: 74px;
 }
 
 #nav_bonus::before {
