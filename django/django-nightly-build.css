@@ -2973,7 +2973,7 @@ body#staff .thin > div:nth-of-type(2) h3 {
 
 #userinfo_minor.user-info-bar__list--has-highlighted-item::before {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAHlBMVEUAAAD///////////////////////////////////8kfJuVAAAACXRSTlMABAwWQF5pb+idktP8AAAAKUlEQVQIW2MQLQeBQIbImSAwlaESTE8nk54GpZsZKh0YwKAEQjEoQCgAS70sUpAH/8UAAAAASUVORK5CYII=) no-repeat top 8px right 8px;
-  background-color: var(--preset--color--background--quinary);
+  background-color: var(--preset--color--background--quaternary);
 }
 
 #userinfo_minor a {
@@ -3000,9 +3000,9 @@ body#staff .thin > div:nth-of-type(2) h3 {
   background-color: var(--preset--color--background--quaternary);
 }
 
-.user-info-bar__link--highlighted {
+#userinfo_minor .user-info-bar__link--highlighted {
+  color: var(--preset--color--accent--primary);
   font-weight: var(--preset--font-weight--bold);
-  background: var(--preset--color--background--quinary);
 }
 
 .user-info-bar__drop-down-menu {
