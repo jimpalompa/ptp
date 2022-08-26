@@ -37,14 +37,12 @@ https://jimpalompa.github.io/ptp/marcel/marcel.css
   <summary>Show more</summary>
   <br>
 
-  **Broomhilda**
-  Standalone theme
+  **Broomhilda** standalone theme
   ```
   https://jimpalompa.github.io/ptp/old/broomhilda/broomhilda.css
   ```
   
-  **Shosanna**
-  Standalone theme
+  **Shosanna** standalone theme
   ```
   https://jimpalompa.github.io/ptp/old/shosanna/shosanna.css
   ```
