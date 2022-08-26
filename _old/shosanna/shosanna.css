@@ -14,16 +14,16 @@
 @import url(//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 
 @font-face {
-font-family: 'FontAwesome';
-src: url('//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.eot?v=4.3.0');
-src: url('//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'),
-   url('//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'),
-   url('//jimpalompa.github.io/ptp/marcel/assets/fonts//fontawesome-webfont.woff?v=4.3.0') format('woff'),
-   url('//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'),
-       url('//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-family: 'FontAwesome';
+  src: url(//jimpalompa.github.io/ptp/_old/shosanna/assets/fonts/fontawesome-webfont.eot?v=4.3.0);
+  src: url(//jimpalompa.github.io/ptp/_old/shosanna/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),
+       url(//jimpalompa.github.io/ptp/_old/shosanna/assets/fonts/fontawesome-webfont.woff2?v=4.3.0) format('woff2'),
+       url(//jimpalompa.github.io/ptp/_old/shosanna/assets/fonts//fontawesome-webfont.woff?v=4.3.0) format('woff'),
+       url(//jimpalompa.github.io/ptp/_old/shosanna/assets/fonts/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),
+       url(//jimpalompa.github.io/ptp/_old/shosanna/assets/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');
   font-weight: normal;
   font-style: normal;
-  }
+}
 
 .fa,
 .forum-topic__go-to-last-read:after,
@@ -39,7 +39,7 @@ src: url('//jimpalompa.github.io/ptp/marcel/assets/fonts/fontawesome-webfont.eot
 }
 
 .forum-topic__go-to-last-read:after {
-  content: "\f061";
+  content: '\f061';
 }
 
 /* -------------------------------------
@@ -187,7 +187,7 @@ button, select {
   text-transform: none;
 }
 
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
+button, html input[type='button'], input[type='reset'], input[type='submit'] {
   -webkit-appearance: button;
   cursor: pointer;
   padding: 6px;
@@ -196,17 +196,17 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   font-weight: 700;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type='checkbox'], input[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-input[type="search"] {
+input[type='search'] {
   -webkit-appearance: textfield;
   box-sizing: content-box;
 }
 
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+input[type='search']::-webkit-search-cancel-button, input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -1009,7 +1009,7 @@ th {
 }
 
 .clearfix:after, .forum-post__heading:after, .grid:after, .huge-movie-list__movie:after, .poll__bar:after, .sidebar:after, .tabs__bar__list:after {
-  content: "";
+  content: '';
   display: table;
   clear: left;
 }
@@ -1202,7 +1202,7 @@ th {
   border-bottom-style: solid;
 }
 
-.forum-post__heading input[type="button"] {
+.forum-post__heading input[type='button'] {
   margin-left: 0.5em;
   padding: 3px 6px;
   position: relative;
@@ -1388,7 +1388,7 @@ th {
 .bvalidator_errmsg:after, .bvalidator_errmsg:before {
   top: 100%;
   border: solid transparent;
-  content: "";
+  content: '';
   width: 0;
   height: 0;
   position: absolute;
@@ -1506,7 +1506,7 @@ html.lightbox__scroll-lock {
 }
 
 .light-youtube-embed::after, .light-youtube-embed:hover::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 80px;
   height: 56px;
@@ -2189,9 +2189,7 @@ p:first-child, .alert:first-child, .heading:first-child {
 ----------------------------------------------- */
 @media only screen and (min-width: 1280px) {
 
-  .page__main-content,
-  .alert-bars
-  {
+  .page__main-content, .alert-bars {
     width: 1170px;
   }
 
