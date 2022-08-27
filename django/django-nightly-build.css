@@ -72,21 +72,22 @@
   --preset--font-family--system-serif: ui-serif, Georgia, serif;
   --preset--font-family--system-monospace: ui-monospace, Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
 
-  --preset--font-size--tiny: 13px;
-  --preset--font-size--small: 14px;
-  --preset--font-size--medium: 16px;
-  --preset--font-size--large: 18px;
-  --preset--font-size--x-large: 20px;
-  --preset--font-size--huge: 22px;
-  --preset--font-size--gigantic: 24px;
+  --preset--font-size--root: 16px; /* root html */
+  --preset--font-size--tiny: .8125rem; /* 13px */
+  --preset--font-size--small: .875rem; /* 14px */
+  --preset--font-size--medium: 1rem; /* 16px */
+  --preset--font-size--large: 1.125rem; /* 18px */
+  --preset--font-size--x-large: 1.25rem; /* 20px */
+  --preset--font-size--huge: 1.375rem; /* 22px */
+  --preset--font-size--gigantic: 1.5rem; /* 24px */
 
   --preset--font-weight--regular: 500;
   --preset--font-weight--bold: 700;
 
   --preset--typography--line-height--body: 1.5;
   --preset--typography--line-height--headings: 1.3;
-  --preset--typography--letter-spacing--body: .00625em;
-  --preset--typography--letter-spacing--heading: .025em;
+  --preset--typography--letter-spacing--body: .0125rem;
+  --preset--typography--letter-spacing--heading: .05rem;
 
   /* Layouts */
   --preset--border--radius--default: 12px;
@@ -139,7 +140,11 @@
 ------------------------------------- */
 
 html {
-  box-sizing: border-box;
+  font-size: var(--preset--font-size--root);
+  scroll-behavior: smooth;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -155,12 +160,10 @@ body {
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
 }
 
 a {
   text-decoration: none;
-  outline: 0;
   color: var(--preset--color--foreground--primary);
   transition: color .1s ease-out;
 }
@@ -238,6 +241,10 @@ hr {
   height: 1px;
   background: var(--preset--color--background--tertiary);
   margin: 1em 0;
+}
+
+input {
+  box-sizing: border-box;
 }
 
 input[type=password], input[type=text] {
@@ -335,10 +342,6 @@ img, img::before {
 /* -------------------------------------
   CONTENT
 ------------------------------------- */
-
-.panel {
-  border-radius: var(--preset--border--radius--default);
-}
 
 /* -------------------------------------
   MOVIES
@@ -874,7 +877,8 @@ input[type=submit]:active {
 .sidebar {
   float: right;
   width: 30%;
-  padding-left: var(--preset--spacing--medium)
+  padding-left: var(--preset--spacing--medium);
+  box-sizing: border-box;
 }
 
 .sidebar-cover-image {
@@ -921,7 +925,7 @@ body#upload .thin>div[style*='width:700px'] {
 .panel__heading__toggler {
   position: absolute;
   top: 28px;
-  right: var(--preset--spacing--huge);
+  right: var(--preset--spacing--x-large);
 }
 
 .panel__heading__toggler::before {
