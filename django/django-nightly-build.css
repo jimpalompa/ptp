@@ -68,8 +68,6 @@
 
   /* Theme fonts */
   --preset--font-family--default: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  --preset--font-family--system-sans-serif: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  --preset--font-family--system-serif: ui-serif, Georgia, serif;
   --preset--font-family--system-monospace: ui-monospace, Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
 
   --preset--font-size--root: 16px; /* root html */
@@ -78,8 +76,8 @@
   --preset--font-size--medium: 1rem; /* 16px */
   --preset--font-size--large: 1.125rem; /* 18px */
   --preset--font-size--x-large: 1.25rem; /* 20px */
-  --preset--font-size--huge: 1.375rem; /* 22px */
-  --preset--font-size--gigantic: 1.5rem; /* 24px */
+  --preset--font-size--huge: 1.5rem; /* 24px */
+  --preset--font-size--gigantic: 1.75rem; /* 28px */
 
   --preset--font-weight--regular: 500;
   --preset--font-weight--bold: 700;
@@ -101,6 +99,11 @@
   --preset--spacing--x-large: 24px;
   --preset--spacing--huge: 28px;
   --preset--spacing--gigantic: 32px;
+
+  --preset--transition--all: all .1s ease-out;
+  --preset--transition--background: background .1s ease-out;
+  --preset--transition--color: color .1s ease-out;
+  --preset--transition--opacity: opacity .1s ease-out;
 }
 
 /* -------------------------------------
@@ -108,6 +111,8 @@
 ------------------------------------- */
 
 .hidden,
+code > br, kbd > br, pre > br, samp > br,
+blockquote br + br,
 #synopsis-and-trailer .panel__heading,
 #synopsis-and-trailer+.panel .panel__heading,
 .box_albumart .panel__heading,
@@ -153,8 +158,8 @@ body {
   font-family: var(--preset--font-family--default);
   font-size: var(--preset--font-size--small);
   font-weight: var(--preset--font-weight--regular);
-  line-height: var(--preset--typography--line-height--body);
   letter-spacing: var(--preset--typography--letter-spacing--body);
+  line-height: var(--preset--typography--line-height--body);
 }
 
 * {
@@ -163,9 +168,9 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: var(--preset--color--foreground--primary);
-  transition: color .1s ease-out;
+  text-decoration: none;
+  transition: var(--preset--transition--color);
 }
 
 a:hover {
@@ -179,57 +184,35 @@ b, strong {
 h1, h2, h3, h4, h5, h6 {
   color: var(--preset--color--white);
   font-weight: var(--preset--font-weight--bold);
+  letter-spacing: var(--preset--typography--letter-spacing--heading);
   line-height: var(--preset--typography--line-height--headings);
   text-transform: uppercase;
-  letter-spacing: var(--preset--typography--letter-spacing--heading);
 }
 
 h1 {font-size: var(--preset--font-size--huge);}
-h2 {font-size: var(--preset--font-size--large);}
-h3 {font-size: var(--preset--font-size--medium);}
-h4 {font-size: var(--preset--font-size--small);}
-h5 {font-size: var(--preset--font-size--);}
-h6 {font-size: var(--preset--font-size--large);}
+h2 {font-size: var(--preset--font-size--x-large);}
+h3 {font-size: var(--preset--font-size--large);}
+h4 {font-size: var(--preset--font-size--medium);}
+h5 {font-size: var(--preset--font-size--small);}
+h6 {font-size: var(--preset--font-size--tiny);}
 
 small {
   font-size: .9em;
 }
 
-blockquote {
-  background: rgba(0, 0, 0, .12);
-  padding: 12px;
-  border: 1px solid rgba(255, 255, 255, .07);
+pre, code {
+  background-color: var(--preset--color--background--primary);
+  font-family: var(--preset--font-family--system-monospace);
+  padding: var(--preset--spacing--gigantic);
 }
 
-textarea {
-  background: var(--preset--color--background--primary);
-  border: 0;
-  outline: none;
-  color: var(--preset--color--white);
-  padding: var(--preset--spacing--medium);
-}
-
-code>br,
-kbd>br,
-pre>br,
-samp>br {
-  display: none;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border: none;
-}
-
-td, th {
-  border: none;
-  padding: var(--preset--spacing--tiny);
-  text-align: left;
+code {
+  display: block;
 }
 
 ol, ul {
   list-style-position: inside;
+  padding-left: var(--preset--spacing--small);
 }
 
 li {
@@ -240,56 +223,38 @@ hr {
   border: 0;
   height: 1px;
   background: var(--preset--color--background--tertiary);
-  margin: 1em 0;
+  margin: 2em 0 1em;
 }
 
-input {
-  box-sizing: border-box;
-}
-
-input[type=password], input[type=text] {
+input, textarea, select, option {
+  background: var(--preset--color--background--primary);
+  color: var(--preset--color--white);
+  font-family: var(--preset--font-family--default);
+  font-size: var(--preset--font-size--small);
+  letter-spacing: var(--preset--typography--letter-spacing--body);
+  line-height: var(--preset--typography--line-height--body);
   text-decoration: none;
-  outline: none;
   border: 2px solid transparent;
   border-radius: 2px;
-  background: rgba(0, 0, 0, .3);
-  padding: 12px 8px;
-  height: 32px;
-  color: var(--preset--color--white);
-  display: inline-block;
-  transition: all .1s ease-out;
-}
-
-input[type=password]:hover, input[type=text]:hover {
-  background: rgba(0, 0, 0, .6);
-}
-
-input[type=password]:focus, input[type=text]:focus {
-  background: rgba(0, 0, 0, .6);
-  border-color: var(--preset--color--background--quinary);
-}
-
-select {
-  text-decoration: none;
-  border-radius: 1px;
-  display: inline-block;
-  background: rgba(0, 0, 0, .12);
-  color: var(--preset--color--white);
-  padding: 0 8px;
   outline: none;
-  border: 1px solid rgba(255, 255, 255, .1);
-  height: 28px;
-  transition: all .1s ease-out;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  transition: var(--preset--transition--all);
 }
 
-select:hover {
-  background-color: rgba(0, 0, 0, .24);
-  border: 1px solid rgba(255, 255, 255, .2);
+input:hover, input:focus, textarea:hover, textarea:focus, select:hover, select:focus, option:hover, option:focus {
+  background: rgba(0, 0, 0, .6);
 }
 
-select:focus {
-  background-color: rgba(0, 0, 0, .24);
-  border: 1px solid rgba(153, 255, 153, .5);
+input:focus, textarea:focus, select:focus, option:focus {
+  background: rgba(0, 0, 0, .8);
+  border-color: var(--preset--color--accent--tertiary);
+}
+
+textarea {
+  width: 100%;
+  min-height: 200px;
+  resize: vertical;
 }
 
 option {
@@ -305,20 +270,64 @@ option:hover {
   border: 1px solid rgba(255, 255, 255, .2);
 }
 
-img, img::before {
-  font-family: var(--preset--font-family--default);
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
 }
 
-.preformatted-text--scrolled {
-  overflow-x: auto;
-  background: rgba(0, 0, 0, .12);
-  padding: 4px 8px;
-  border: 1px solid rgba(255, 255, 255, .07);
+td, th {
+  border: none;
+  padding: var(--preset--spacing--tiny);
+  text-align: left;
 }
 
-.nobr, td[id^=formatted_bounty] {
-  white-space: nowrap;
+blockquote {
+  background: var(--preset--color--background--primary);
+  color: rgba(255, 255, 255, .4);
+  font-style: italic;
+  margin: 4px 0;
+  padding: 24px 28px 28px 44px;
+  position: relative;
 }
+
+blockquote blockquote,
+blockquote blockquote blockquote blockquote {
+  background: var(--preset--color--background--secondary);
+}
+
+blockquote blockquote blockquote,
+blockquote blockquote blockquote blockquote blockquote blockquote {
+  background: var(--preset--color--background--primary);
+}
+
+blockquote a {
+  opacity: .6;
+}
+
+blockquote::before {
+  font-size: var(--preset--font-size--gigantic);
+  display: inline-block;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 0;
+  left: var(--preset--spacing--small);
+  content: '\e244';
+}
+
+::before, ::after {
+  font-family: 'Material Icons';
+  font-size: var(--preset--font-size--gigantic);
+  transition: var(--preset--transition--color);
+}
+
+::placeholder {
+  color: var(--preset--color--background--quaternary)
+}
+
+/* -------------------------------------
+  DEFAULT CLASSES
+------------------------------------- */
 
 .text--center {
   text-align: center;
@@ -328,10 +337,12 @@ img, img::before {
   text-align: right;
 }
 
-::before, ::after {
-  font-family: 'Material Icons';
-  font-size: var(--preset--font-size--huge);
-  transition: color .1s ease-out;
+.preformatted-text--scrolled {
+  overflow: auto;
+}
+
+.nobr, td[id^=formatted_bounty] {
+  white-space: nowrap;
 }
 
 /* -------------------------------------
@@ -344,11 +355,23 @@ img, img::before {
 ------------------------------------- */
 
 /* -------------------------------------
+  CONTENT / TEXT
+------------------------------------- */
+
+.spoiler {
+  padding: 4px 0;
+}
+
+/* -------------------------------------
   MOVIES
 ------------------------------------- */
 
 /* -------------------------------------
   MOVIES / SINGLE MOVIE
+------------------------------------- */
+
+/* -------------------------------------
+  FORUM
 ------------------------------------- */
 
 /* -------------------------------------
@@ -364,7 +387,7 @@ img, img::before {
 .discuss::before,
 .panel__heading__toggler::before,
 .toggle::before {
-  transition: color .1s ease-out;
+  transition: var(--preset--transition--color);
 }
 
 #content::after,
@@ -552,8 +575,8 @@ body#torrents .thin>.page__title+h2.text--center {
   font-size: var(--preset--font-size--medium);
   font-weight: var(--preset--font-weight--bold);
   letter-spacing: var(--preset--typography--letter-spacing--heading);
-  padding: var(--preset--spacing--x-large);
   text-transform: uppercase;
+  padding: var(--preset--spacing--x-large);
 }
 
 #content>small,
@@ -773,12 +796,12 @@ input[type=submit] {
   font-size: var(--preset--font-size--small);
   text-transform: uppercase;
   padding: 16px 24px;
-  border-radius: 2px;
   border: none;
+  border-radius: 2px;
   outline: none;
   cursor: pointer;
   box-shadow: var(--preset--box--shadow-small);
-  transition: all .1s ease-out;
+  transition: var(--preset--transition--all);
 }
 
 body#forums .pagination--bottom+.linkbox a:hover,
@@ -974,7 +997,7 @@ body#upload .thin>div[style*='width:700px'] {
 .tabs__bar__item {
   flex-grow: 1;
   padding: 0;
-  transition: background .1s ease-out;
+  transition: var(--preset--transition--background);
 }
 
 .tabs__bar__item:hover {
@@ -1568,8 +1591,8 @@ a[onclick^=ToggleTagSelector]:hover {
   padding: 0 7px;
   vertical-align: middle;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAS1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////+DmQsHAAAAGHRSTlMAAQQGBxATFBUXKyxJb3R1kpudwOjp+/12VgXkAAAAYklEQVQImV2P2w7CIABDz2DopkzRIZz//1IfZjTSpzZpegGA67Zd+OGpjw8NOa4vraeYA3D3ixsk1V5KV03Mu7YFlq77DFOzABTbxCgHc1JtpbQjaigi5HiuWtdjxjDy78IbrJwI83lOcEUAAAAASUVORK5CYII=) no-repeat center;
-  opacity: .7;
-  transition: opacity .1s ease-out;
+  opacity: .8;
+  transition: var(--preset--transition--opacity);
   position: absolute;
   right: 12px;
   top: 12px;
@@ -1704,10 +1727,10 @@ a[class*=link--seen]::after {
 
 .basic-movie-list__torrent-edition {
   background: var(--preset--color--background--primary);
-  font-weight: var(--preset--font-weight--bold);
-  text-transform: uppercase;
   color: var(--preset--color--accent--primary);
+  font-weight: var(--preset--font-weight--bold);
   letter-spacing: var(--preset--typography--letter-spacing--heading);
+  text-transform: uppercase;
 }
 
 .basic-movie-list__torrent__action {
@@ -1950,11 +1973,12 @@ a[class*=link--seen]::after {
 img[title^='High quality'],
 img[title^='Torrent has been'],
 img[title^='Torrent has not'] {
-  width: 14px !important;
-  height: 14px !important;
-  padding-left: 14px;
   background-repeat: no-repeat;
   background-size: contain;
+  width: 14px !important;
+  height: 14px !important;
+  box-sizing: border-box;
+  padding-left: 14px;
   position: relative;
 }
 
@@ -2436,20 +2460,10 @@ body#torrents div[id^=trumpable].movie-page__torrent__panel {
   vertical-align: top;
 }
 
-.forum-post__bodyguard>blockquote {
-  margin: 4px 0 8px;
-}
-
 .forum-post__edited {
   margin-top: 8px;
   font-size: var(--preset--font-size--small);
   font-weight: var(--preset--font-weight--regular);
-}
-
-.forum-post__textarea {
-  width: 100%;
-  min-height: 240px;
-  resize: vertical;
 }
 
 .forum-post__buttons {
@@ -2606,11 +2620,11 @@ body#torrents .thin>.page__title+h2.text--center {
 
 #similar_movies li div,
 .box_tags li div {
-  width: 65px;
   display: flex !important;
-  justify-content: space-between;
   font-weight: var(--preset--font-weight--bold);
   letter-spacing: normal !important;
+  width: 65px;
+  justify-content: space-between;
 }
 
 #similar_movies li div a:first-child::before,
@@ -3233,7 +3247,7 @@ body#staff .thin>div:nth-of-type(2) h3 {
 }
 
 #nav_bonus::before {
-  color: rgba(255, 255, 153, .7);
+  color: rgba(255, 255, 153, .8);
   content: '\e8e0';
 }
 
