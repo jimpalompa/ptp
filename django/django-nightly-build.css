@@ -14,15 +14,16 @@
 :root {
 
   /* Backgrounds */
+  --preset--color--background--initial: #181a19; /* shade 40% */
   --preset--color--background--primary: #1b1d1c; /* shade 33% */
   --preset--color--background--secondary: #282b2a;
   --preset--color--background--tertiary: #3f4141;
+  --preset--color--background--quaternary: #575959; /* tint 12.5% */
+  --preset--color--background--quinary: #6f7171; /* tint 25% */
 
   /* Colors */
   --preset--color--black: #000;
   --preset--color--white: #fff;
-  --preset--color--background--quaternary: #575959; /* tint 12.5% */
-  --preset--color--background--quinary: #6f7171; /* tint 25% */
   --preset--color--foreground--primary: #f0dcc5;
   --preset--color--foreground--secondary: #a19384; /* shade 33% */
   --preset--color--accent--primary: #7bdcb5;
@@ -160,11 +161,17 @@ body {
   font-weight: var(--preset--font-weight--regular);
   letter-spacing: var(--preset--typography--letter-spacing--body);
   line-height: var(--preset--typography--line-height--body);
+  box-sizing: border-box;
 }
 
-* {
+*, ::after, ::before {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
+  word-break: break-word;
+  overflow-anchor: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -227,27 +234,25 @@ hr {
 }
 
 input, textarea, select, option {
-  background: var(--preset--color--background--primary);
+  background: var(--preset--color--background--initial);
   color: var(--preset--color--white);
   font-family: var(--preset--font-family--default);
   font-size: var(--preset--font-size--small);
   letter-spacing: var(--preset--typography--letter-spacing--body);
-  line-height: var(--preset--typography--line-height--body);
+  line-height: 1.375rem;
   text-decoration: none;
   border: 2px solid transparent;
   border-radius: 2px;
   outline: none;
-  box-sizing: border-box;
   padding: 8px 12px;
   transition: var(--preset--transition--all);
 }
 
 input:hover, input:focus, textarea:hover, textarea:focus, select:hover, select:focus, option:hover, option:focus {
-  background: rgba(0, 0, 0, .6);
+  background: rgba(0, 0, 0, .8);
 }
 
-input:focus, textarea:focus, select:focus, option:focus {
-  background: rgba(0, 0, 0, .8);
+input:focus, select:focus, option:focus {
   border-color: var(--preset--color--accent--tertiary);
 }
 
@@ -256,6 +261,14 @@ textarea {
   min-height: 200px;
   resize: vertical;
 }
+
+select {
+  appearance: none;
+}
+
+
+/* ########################### TIDY UP FROM HERE ############################ */
+
 
 option {
   background: rgba(0, 0, 0, .12);
@@ -795,7 +808,7 @@ input[type=submit] {
   background: var(--preset--color--accent--tertiary);
   font-size: var(--preset--font-size--small);
   text-transform: uppercase;
-  padding: 16px 24px;
+  padding: 12px 20px;
   border: none;
   border-radius: 2px;
   outline: none;
@@ -901,7 +914,6 @@ input[type=submit]:active {
   float: right;
   width: 30%;
   padding-left: var(--preset--spacing--medium);
-  box-sizing: border-box;
 }
 
 .sidebar-cover-image {
@@ -1344,7 +1356,7 @@ body#upload .thin>div[style*='width:700px'] {
 
 #Bbcode_Toolbar {
   padding: var(--preset--spacing--medium);
-  background: var(--preset--color--background--quinary);
+  background: var(--preset--color--background--quaternary);
 }
 
 .linkbox::before {
@@ -1977,7 +1989,6 @@ img[title^='Torrent has not'] {
   background-size: contain;
   width: 14px !important;
   height: 14px !important;
-  box-sizing: border-box;
   padding-left: 14px;
   position: relative;
 }
