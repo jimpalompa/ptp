@@ -720,9 +720,6 @@ body#userhistory .tabs__panel>.linkbox::before {
   opacity: 1 !important;
 }
 
-.simplemodal-container {
-}
-
 /* -------------------------------------
   OLD CUSTOMIZATIONS
 ------------------------------------- */
@@ -3095,8 +3092,6 @@ body#staff .thin>div:nth-of-type(2) h3 {
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, .07);
 }
-
-[get-code-from-here] {*********************************************************}
 
 #userinfo_stats {
   flex-grow: 1;
