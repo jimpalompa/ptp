@@ -168,7 +168,8 @@ body {
 }
 
 #wrapper {
-  max-width: 1560px;
+  min-width: 1120px; /* 1024px without padding */
+  max-width: 1536px; /* 1440px without padding */
   margin: 0 auto;
   padding: 0 48px;
 }
@@ -237,7 +238,6 @@ code {
 
 ol, ul {
   list-style-position: inside;
-  padding: var(--preset--spacing--small);
 }
 
 li {
@@ -296,6 +296,7 @@ textarea {
   width: 100%;
   min-height: 200px;
   resize: vertical;
+  transition: var(--preset--transition--background);
 }
 
 select {
@@ -440,12 +441,11 @@ blockquote::before {
   display: flex;
   width: 100%;
   height: 100px;
-  padding-left: 360px;
+  padding-left: 420px;
 }
 
 #userinfo ul {
   list-style: none;
-  padding: 0;
 }
 
 #userinfo li {
@@ -474,10 +474,10 @@ body#requests .page__title~.linkbox:nth-of-type(2) a,
 body#userhistory .tabs__panel>.linkbox a {
   display: block;
   font-size: var(--preset--font-size--small);
-  line-height: 44px;
+  line-height: 40px;
   text-transform: uppercase;
   width: 200px;
-  height: 44px;
+  height: 40px;
   padding: 0 16px;
   white-space: nowrap;
   overflow: hidden;
@@ -504,7 +504,7 @@ body#requests .page__title~.linkbox:nth-of-type(2)::before,
 body#userhistory .tabs__panel>.linkbox::before {
   margin-top: 9999px;
   position: absolute;
-  top: -44px;
+  top: -40px;
   content: '\e5d4';
 }
 
@@ -568,15 +568,15 @@ body#userhistory .tabs__panel>.linkbox::before {
 
 #userinfo_username::before {
   color: var(--preset--color--foreground--primary);
-  width: 44px;
-  height: 44px;
-  margin-top: 1072px;
-  top: -44px;
+  width: 40px;
+  height: 40px;
+  margin-top: 1070px;
+  top: -40px;
   content: '\e853';
 }
 
 #userinfo_username:hover {
-  top: 72px;
+  top: 70px;
 }
 
 #userinfo_username:hover::before {
@@ -588,6 +588,26 @@ body#userhistory .tabs__panel>.linkbox::before {
 }
 
 /* -------------------------------------
+  SIDEBAR
+------------------------------------- */
+
+.sidebar {
+  float: right;
+  width: 31.25%;
+  padding-left: var(--preset--spacing--x-large);
+}
+
+.sidebar-cover-image {
+  max-width: 100%;
+}
+
+.sidebar .box_albumart .sidebar-cover-image {
+  display: block;
+  cursor: zoom-in;
+  width: 100%;
+}
+
+/* -------------------------------------
   CONTENT
 ------------------------------------- */
 
@@ -595,59 +615,60 @@ body#userhistory .tabs__panel>.linkbox::before {
   position: relative;
 }
 
-.panel {
+.main-column {
+  width: 68.75%;
+  float: left;
+}
+
+.main-column .panel__body ol,
+.main-column .panel__body ul {
+  padding: var(--preset--spacing--small);
+}
+
+.panel,
+.table--panel-like,
+.forum-post {
   background: var(--preset--color--background--secondary);
   margin-bottom: var(--preset--spacing--x-large);
   padding: var(--preset--spacing--gigantic);
+  box-shadow: var(--preset--box--shadow--large);
+}
+
+.table--panel-like {
+  border-collapse: separate;
+}
+
+.panel__body {
+  padding-top: var(--preset--spacing--gigantic);
 }
 
 /* -------------------------------------
-  CONTENT / MOVIES
+  MOVIES
+------------------------------------- */
+
+.box_albumart.panel,
+.box_albumart .panel__body,
+#movieinfo .panel__body,
+#synopsis-and-trailer .panel__body {
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------------------
+  SINGLE MOVIE
 ------------------------------------- */
 
 /* -------------------------------------
-  CONTENT / SINGLE MOVIE
+  FORUMS
 ------------------------------------- */
 
-/* -------------------------------------
-  CONTENT / FORUM
-------------------------------------- */
-
-#Bbcode_Toolbar {
-  background: var(--preset--color--background--quaternary);
-  padding: var(--preset--spacing--medium);
+.forum-post {
+  padding: 0;
 }
 
-.bbcode-toolbar__button {
-  background: url(assets/images/bbcode-buttons.png) no-repeat center center;
-  width: 16px;
-  height: 16px;
-  margin-right: var(--preset--spacing--large);
-  float: left;
-  cursor: pointer;
-}
-
-.bbcode-toolbar__color-popup-color {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
-
-.bbcode-size-1 {font-size: var(--preset--font-size--tiny);}
-.bbcode-size-2 {font-size: var(--preset--font-size--small);}
-.bbcode-size-3 {font-size: var(--preset--font-size--medium);}
-.bbcode-size-4 {font-size: var(--preset--font-size--large);}
-.bbcode-size-5 {font-size: 1.1875rem;}
-.bbcode-size-6 {font-size: var(--preset--font-size--x-large);}
-.bbcode-size-7 {font-size: 1.375rem;}
-.bbcode-size-8 {font-size: var(--preset--font-size--huge);}
-.bbcode-size-9 {font-size: 1.625rem;}
-.bbcode-size-10 {font-size: var(--preset--font-size--gigantic);}
-
-.bbcode__image {
-  max-width: 100%;
-  cursor: zoom-in;
+.forum-post__heading {
+  background-color: var(--preset--color--background--tertiary);
+  padding: 20px 32px;
 }
 
 .forum-post__edited {
@@ -690,6 +711,43 @@ body#userhistory .tabs__panel>.linkbox::before {
   background: var(--preset--color--background--quinary);
   height: 8px;
   border-radius: 4px;
+}
+
+#Bbcode_Toolbar {
+  background: var(--preset--color--background--quaternary);
+  padding: var(--preset--spacing--medium);
+}
+
+.bbcode-toolbar__button {
+  background: url(assets/images/bbcode-buttons.png) no-repeat center center;
+  width: 16px;
+  height: 16px;
+  margin-right: var(--preset--spacing--large);
+  float: left;
+  cursor: pointer;
+}
+
+.bbcode-toolbar__color-popup-color {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.bbcode-size-1 {font-size: var(--preset--font-size--tiny);}
+.bbcode-size-2 {font-size: var(--preset--font-size--small);}
+.bbcode-size-3 {font-size: var(--preset--font-size--medium);}
+.bbcode-size-4 {font-size: var(--preset--font-size--large);}
+.bbcode-size-5 {font-size: 1.1875rem;}
+.bbcode-size-6 {font-size: var(--preset--font-size--x-large);}
+.bbcode-size-7 {font-size: 1.375rem;}
+.bbcode-size-8 {font-size: var(--preset--font-size--huge);}
+.bbcode-size-9 {font-size: 1.625rem;}
+.bbcode-size-10 {font-size: var(--preset--font-size--gigantic);}
+
+.bbcode__image {
+  max-width: 100%;
+  cursor: zoom-in;
 }
 
 /* -------------------------------------
@@ -887,9 +945,7 @@ body#torrents a[onclick^=RequestSeedingHelp]::before {
 #dnu_header+p,
 #related-topics-tab,
 .cover-movie-list__movie__undercover,
-.forum-post,
 .huge-movie-list__movie,
-.table--panel-like,
 .thin>p,
 body#inbox .pagination--top+div {
   width: 100%;
@@ -946,8 +1002,7 @@ body#staff .thin>div:nth-of-type(2) h3+table th {
   height: 26px;
   line-height: 26px;
   font-size: var(--preset--font-size--tiny);
-  background: rgba(0, 0, 0, .1212);
-  border-bottom: rgba(255, 255, 255, .05);
+  background: var(--preset--color--background--tertiary);
 }
 
 #content>p,
@@ -970,9 +1025,9 @@ body#requests .page__title~.linkbox:not(:last-of-type):first-of-type::before,
 body#requests .page__title~.linkbox:nth-of-type(2)::before,
 body#userhistory .tabs__panel>.linkbox::before {
   display: block;
-  width: 44px;
-  height: 44px;
-  line-height: 44px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
 }
 
@@ -1020,7 +1075,7 @@ body#collages .thin>.table td:nth-child(2)>a {
 .basic-movie-list__movie__rating-container,
 [class$=__rating-container] {
   display: inline-block;
-  background: rgba(0, 0, 0, .36);
+  background: rgba(0, 0, 0, .3);
   padding: 3px 6px 2px;
   border-radius: 2px;
   margin-right: 8px;
@@ -1032,29 +1087,8 @@ body#collages .thin>.table td:nth-child(2)>a {
   display: block;
 }
 
-.main-column {
-  width: 70%;
-  float: left;
-}
-
 .torrent_table {
   margin-bottom: var(--preset--spacing--x-large);
-}
-
-.sidebar {
-  float: right;
-  width: 30%;
-  padding-left: var(--preset--spacing--x-large);
-}
-
-.sidebar-cover-image {
-  max-width: 100%;
-}
-
-.sidebar .box_albumart .sidebar-cover-image {
-  display: block;
-  cursor: zoom-in;
-  width: 100%;
 }
 
 .page__title {
@@ -1087,7 +1121,7 @@ body#upload .thin>div[style*='width:700px'] {
 }
 
 .panel__heading__toggler::before {
-  font-size: var(--preset--font-size--tiny);
+  font-size: var(--preset--font-size--medium);
   content: '\e061';
 }
 
@@ -1105,14 +1139,10 @@ body#upload .thin>div[style*='width:700px'] {
   font-size: var(--preset--font-size--tiny);
 }
 
-.discuss {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-}
-
 .discuss::before {
-  font-size: var(--preset--font-size--x-large);
+  font-size: var(--preset--font-size--huge);
+  position: absolute;
+  right: 0;
   content: '\e0bf';
 }
 
@@ -1140,7 +1170,7 @@ body#upload .thin>div[style*='width:700px'] {
 }
 
 .tabs__bar__item--active {
-  background: rgba(255, 255, 255, .06);
+  background: var(--preset--color--background--tertiary);
 }
 
 .tabs__bar__item--active a {
@@ -1316,7 +1346,7 @@ body#upload .thin>div[style*='width:700px'] {
 }
 
 .list--small-padding {
-  padding-left: 8px;
+  padding: 0 0 24px;
 }
 
 .list--inline {
@@ -1516,8 +1546,9 @@ a[onclick^=ToggleTagSelector]:hover {
 }
 
 .qtip-content {
-  background: var(--preset--color--background--secondary);
-  padding: 12px;
+  background: var(--preset--color--background--tertiary);
+  padding: var(--preset--spacing--medium);
+  box-shadow: var(--preset--box--shadow--medium);
 }
 
 .qtip-content label {
@@ -1568,16 +1599,15 @@ a[onclick^=ToggleTagSelector]:hover {
   display: none;
 }
 
-.movie-tooltip__trailer+.movie-tooltip__synopsis {
-  display: inline-block;
-  width: 194px;
-  padding-left: 12px;
-}
-
 .movie-tooltip__synopsis {
   margin-bottom: 8px;
   padding: 0 4px;
   text-align: justify;
+}
+
+.movie-tooltip__trailer + .movie-tooltip__synopsis {
+  display: inline-block;
+  width: 100%;
 }
 
 .movie-tooltip__torrents {
@@ -1787,7 +1817,7 @@ a[class*=link--seen]::after {
 }
 
 .compact-movie-list__details-row--odd td {
-  background: rgba(255, 255, 255, .06);
+  background: var(--preset--color--background--tertiary);
 }
 
 .huge-movie-list__movie__cover {
@@ -1869,7 +1899,7 @@ a[class*=link--seen]::after {
 .cover-movie-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -8px;
+  margin: 0 -10px;
 }
 
 .cover-movie-list__container+br,
@@ -1891,12 +1921,13 @@ a[class*=link--seen]::after {
 
 .cover-movie-list__movie {
   flex-basis: 20%;
-  padding: 8px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
 }
 
 .cover-movie-list__movie__cover-link {
+  background: var(--preset--color--background--tertiary);
   display: block;
   width: 100%;
   height: auto;
@@ -1904,10 +1935,10 @@ a[class*=link--seen]::after {
 }
 
 .cover-movie-list__movie__undercover {
-  padding: 16px 12px 16px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding: 16px 12px 16px;
   position: relative;
 }
 
@@ -2252,12 +2283,11 @@ body#torrents a[onclick^=RequestSeedingHelp]:hover::before {
   width: 30px;
   border-radius: 3px;
   margin-right: 8px;
-  background: rgba(0, 0, 0, .24);
-  padding: 0;
+  background: rgba(0, 0, 0, .3);
 }
 
 .basic-torrent-list__movie__torrent-opener-link::before {
-  color: var(--preset--color--pale-blue);
+  color: var(--preset--color--accent--secondary);
   display: block;
   width: 100%;
   height: 100%;
@@ -2265,11 +2295,11 @@ body#torrents a[onclick^=RequestSeedingHelp]:hover::before {
 }
 
 .basic-torrent-list__movie__torrent-opener-link:hover {
-  background: rgba(0, 0, 0, .12);
+  background: rgba(0, 0, 0, .5)
 }
 
 .basic-torrent-list__movie__torrent-opener-link:hover::before {
-  color: var(--preset--color--white);
+  color: var(--preset--color--accent--primary);
 }
 
 .basic-torrent-list__movie__additional-info {
@@ -2447,14 +2477,6 @@ body#torrents div[id^=trumpable].movie-page__torrent__panel {
   padding-left: 4px !important;
 }
 
-.forum-post {
-  position: relative;
-}
-
-.forum-post__heading {
-  text-transform: none;
-}
-
 .forum-post__heading span[id^=bar] input {
   margin-left: 4px;
 }
@@ -2463,12 +2485,12 @@ body#torrents div[id^=trumpable].movie-page__torrent__panel {
   display: table;
   table-layout: fixed;
   width: 100%;
-  min-height: 240px;
+  min-height: 160px;
 }
 
 .forum-post__avatar {
   display: table-cell;
-  width: 240px;
+  width: 160px;
 }
 
 .forum-post__avatar[style*=hidden] {
@@ -2476,20 +2498,18 @@ body#torrents div[id^=trumpable].movie-page__torrent__panel {
 }
 
 .forum-post__avatar__image {
+  width: 160px;
   height: auto;
-  min-width: 240px;
-  max-width: 240px;
-  max-height: 480px;
 }
 
 .forum-post__body {
   display: table-cell;
-  padding: 0 60px 48px 32px;
+  padding: 0 32px 32px;
   vertical-align: top;
 }
 
 .forum-post__buttons {
-  margin-top: 12px;
+  margin-top: var(--preset--spacing--medium);
   text-align: right;
 }
 
@@ -2499,7 +2519,7 @@ body#torrents div[id^=trumpable].movie-page__torrent__panel {
 
 .forum-post__movie-vote {
   font-family: var(--preset--font-family--default);
-  background: rgba(0, 0, 0, .12) !important;
+  background: rgba(0, 0, 0, .3) !important;
   padding: 2px 4px !important;
   border-radius: 2px !important;
 }
@@ -2635,18 +2655,19 @@ body#torrents .thin>.page__title+h2.text--center {
   content: 'More';
 }
 
-#similar_movies li a,
-.box_tags li a {
-  max-width: 65px;
+#similar_movies li > a,
+.box_tags li > a {
+  width: 75%;
 }
 
 #similar_movies li div,
 .box_tags li div {
   display: flex !important;
+  align-items: center;
+  justify-content: space-between;
   font-weight: var(--preset--font-weight--bold);
   letter-spacing: normal !important;
-  width: 65px;
-  justify-content: space-between;
+  width: 17.5%;
 }
 
 #similar_movies li div a:first-child::before,
@@ -2803,7 +2824,6 @@ body#user .sidebar-cover-image {
   display: block;
   padding: 4px;
   text-align: center;
-  background: rgba(0, 0, 0, .24);
   font-weight: var(--preset--font-weight--regular);
 }
 
@@ -2895,11 +2915,6 @@ body#forums .page__title~.linkbox:nth-of-type(2) a::before {
 
 body#forums .heading {
   margin-bottom: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, .07);
-}
-
-body#forums .heading+.forum_index th {
-  border-bottom: 1px solid rgba(255, 255, 255, .07);
 }
 
 body#forums .pagination--bottom+.linkbox {
@@ -3014,10 +3029,10 @@ body#upload .thin>p>br {
 }
 
 .bvalidator_errmsg {
-  padding: 8px;
-  background: rgba(117, 48, 48, .9625);
+  background: var(--preset--color--shade-red);
+  padding: var(--preset--spacing--medium);
   white-space: nowrap;
-  margin: -14px 0 0 -4px;
+  margin: -5px 0px 0 -5px;
 }
 
 .bvalidator_errmsg::after {
@@ -3026,7 +3041,7 @@ body#upload .thin>p>br {
   left: 14px;
   border-style: solid;
   border-width: 8px 8px 0 8px;
-  border-color: rgba(117, 48, 48, .9625) transparent transparent transparent;
+  border-color: var(--preset--color--shade-red) transparent transparent transparent;
   content: '';
 }
 
@@ -3090,7 +3105,6 @@ body#staff .thin>div:nth-of-type(2)>.panel__body {
 
 body#staff .thin>div:nth-of-type(2) h3 {
   margin-bottom: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, .07);
 }
 
 #userinfo_stats {
@@ -3098,7 +3112,6 @@ body#staff .thin>div:nth-of-type(2) h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 12px 0 64px;
   color: var(--preset--color--foreground--primary);
 }
 
@@ -3108,7 +3121,7 @@ body#staff .thin>div:nth-of-type(2) h3 {
   font-size: 0;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 16px;
+  margin: 16px;
 }
 
 #userinfo_stats a {
@@ -3142,12 +3155,11 @@ body#staff .thin>div:nth-of-type(2) h3 {
 }
 
 #userinfo_major {
-  order: 1;
-  flex: 0 0 200px;
   display: flex;
-  justify-content: space-between;
+  flex: 0 0 192px;
   align-items: center;
-  height: 100%;
+  justify-content: space-between;
+  order: 1;
 }
 
 #nav_upload {
@@ -3280,22 +3292,8 @@ body#staff .thin>div:nth-of-type(2) h3 {
   background: var(--preset--color--background--quinary);
 }
 
-.main-menu__list {
-  display: flex;
-  align-items: center;
-  height: 64px;
-  padding: 0 64px 0 0;
-  list-style: none;
-  text-align: center;
-}
-
-.main-menu__item {
-  flex-grow: 1;
-  padding: 0;
-}
-
-.main-menu__item {
-  background: var(--preset--color--background--tertiary)
+.main-menu {
+  background-color: var(--preset--color--background--tertiary);
 }
 
 .main-menu a {
@@ -3311,6 +3309,20 @@ body#staff .thin>div:nth-of-type(2) h3 {
 
 .main-menu a:hover {
   background: var(--preset--color--background--quaternary);
+}
+
+.main-menu__list {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0 64px 0 0;
+  list-style: none;
+  text-align: center;
+}
+
+.main-menu__item {
+  flex-grow: 1;
+  padding: 0;
 }
 
 #userinfo_minor {
@@ -3396,6 +3408,19 @@ body#staff .thin>div:nth-of-type(2) h3 {
 
 .alert-bar br {
   display: none;
+}
+
+/* -------------------------------------
+  RESPONSIVE BREAKPOINTS
+------------------------------------- */
+
+@media (max-width: 1365px) {
+  html {font-size: 14px;}
+  .site-logo {width: 320px;}
+  #userinfo {padding-left: 380px;}
+  #userinfo_username {margin-left: 340px;}
+  #userinfo_stats li {margin: 12px;}
+  #userinfo_stats span {display: none;}
 }
 
 /* ------------ Before you go, will you tell Miss Lara goodbye? ------------- */
