@@ -102,8 +102,8 @@
   --preset--spacing--medium: 16px;
   --preset--spacing--large: 20px;
   --preset--spacing--x-large: 24px;
-  --preset--spacing--huge: 28px;
-  --preset--spacing--gigantic: 32px;
+  --preset--spacing--huge: 32px;
+  --preset--spacing--gigantic: 48px;
 
   --preset--transition--all: all .1s ease-out;
   --preset--transition--background: background .1s ease-out;
@@ -231,7 +231,7 @@ pre, code {
   background: var(--preset--color--background--primary);
   color: rgba(255, 255, 255, .8);
   font-family: var(--preset--font-family--system-monospace);
-  padding: var(--preset--spacing--gigantic);
+  padding: var(--preset--spacing--huge);
 }
 
 code {
@@ -412,7 +412,7 @@ blockquote::before {
 .ratio-infinite {color: var(--preset--color--vivid-green);}
 
 /* -------------------------------------
-  HEADER / MENU [TIDY UP THIS]
+  HEADER / MENU [TIDY THIS]
 ------------------------------------- */
 
 #header {
@@ -627,7 +627,7 @@ body#userhistory .tabs__panel>.linkbox::before {
 .forum-post {
   background: var(--preset--color--background--secondary);
   margin-bottom: var(--preset--spacing--x-large);
-  padding: var(--preset--spacing--gigantic);
+  padding: var(--preset--spacing--huge);
   box-shadow: var(--preset--box--shadow--large);
 }
 
@@ -636,7 +636,7 @@ body#userhistory .tabs__panel>.linkbox::before {
 }
 
 .panel__heading + .panel__body {
-  padding-top: var(--preset--spacing--gigantic);
+  padding-top: var(--preset--spacing--huge);
 }
 
 /* -------------------------------------
@@ -702,7 +702,7 @@ body#userhistory .tabs__panel>.linkbox::before {
 
 .forum-post__body {
   flex-grow: 1;
-  padding: var(--preset--spacing--gigantic);
+  padding: var(--preset--spacing--huge);
 }
 
 .forum-post__edited {
@@ -1058,7 +1058,7 @@ body#staff .thin>div:nth-of-type(2) h3+table th {
 .thin>p,
 body#inbox #searchbox,
 body#upload .thin>div[style*='width:700px'] {
-  padding: var(--preset--spacing--gigantic);
+  padding: var(--preset--spacing--huge);
 }
 
 #userinfo_minor::before,
@@ -1145,7 +1145,7 @@ body#collages .thin>.table td:nth-child(2)>a {
   text-align: center;
   font-size: var(--preset--font-size--gigantic);
   margin-bottom: var(--preset--spacing--gigantic);
-  padding: 0 48px;
+  padding: 0 var(--preset--spacing--gigantic);
 }
 
 .alert {
@@ -1588,7 +1588,7 @@ a[onclick^=ToggleTagSelector]:hover {
 
 .qtip-content {
   background: var(--preset--color--background--secondary);
-  padding: var(--preset--spacing--gigantic);
+  padding: var(--preset--spacing--huge);
   box-shadow: var(--preset--box--shadow--medium);
 }
 
@@ -1704,28 +1704,29 @@ a[onclick^=ToggleTagSelector]:hover {
 }
 
 img[title=Snatched],
-img[title=Snatches] {
-  width: 0;
-  height: 12px;
-  padding: 0 6px;
+img[title=Snatches],
+img[title=Seeders],
+img[title=Leechers],
+img[title='Request time'],
+img[title='Seed time'],
+img[title='Upload time'],
+img[title=Time] {
+  width: 16px;
+  height: 16px;
+  padding-top: 16px;
   vertical-align: middle;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAP1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////9Du/pqAAAAFHRSTlMAAgMICQsQGBkaLDRYnbnP2uDm9TKEtGkAAABASURBVAhbjcc7EoAgEAXBUVbFL6Dv/mc1oVbM6Kyh0zC3Gy/tv+kG2ELdswKHyvSNJJXFh2VJvnofWG4HdkZ6vFNzA2pvH6XYAAAAAElFTkSuQmCC) no-repeat center;
+}
+
+img[title=Snatched], img[title=Snatches] {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" stroke="%23fff" stroke-width="1px" height="48" width="48"%3E%3Cpath d="M9.15 42v-4.7h29.7V42ZM19 31.5 6.45 18.95 9.8 15.6l9.2 9.2L38.25 5.55l3.35 3.4Z"/%3E%3C/svg%3E') no-repeat center / contain;
 }
 
 img[title=Seeders] {
-  width: 0;
-  height: 12px;
-  padding: 0 6px;
-  vertical-align: middle;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAJ1BMVEUAAAD///////////////////////////////////////////////+uPUo5AAAADHRSTlMAFyUmJ0FCd3u03N4K4Xz4AAAARUlEQVQIW2NgYGAwYAAD9hMQuuZMA5h75gxYQOfMmTMOIAbPGYg8Os19CkTOOZPAEHNmAsMZMDgApg8ePAAUB4EJDFAAACo4Hv6oWBL4AAAAAElFTkSuQmCC) no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" stroke="%23fff" stroke-width="1px" height="48" width="48"%3E%3Cpath d="M10.25 42.4q-1.95 0-3.325-1.4-1.375-1.4-1.375-3.35v-9.4h4.7v9.4H37.7v-9.4h4.7v9.4q0 1.95-1.4 3.35-1.4 1.4-3.3 1.4Zm11.4-11.1V13.5l-5.7 5.75-3.4-3.35L24 4.45 35.45 15.9l-3.4 3.35-5.7-5.75v17.8Z"/%3E%3C/svg%3E') no-repeat center / contain;
 }
 
 img[title=Leechers] {
-  width: 0;
-  height: 12px;
-  padding: 0 6px;
-  vertical-align: middle;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAMFBMVEUAAAD///////////////////////////////////////////////////////////87TQQwAAAAD3RSTlMAAhckJSZNc3emqLS82tygO8DvAAAARklEQVQIW2NggAO+vxCa/z9W2v////8BQJr9//8fYIH6/w1gmh3M3f9/oeH8/xsY/v//k/P//wcg/f//p08fgOIgsAFmCQDlxSY4kYq/nAAAAABJRU5ErkJggg==) no-repeat center;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" stroke="%23fff" stroke-width="1px" height="48" width="48"%3E%3Cpath d="M10.25 42.4q-1.95 0-3.325-1.4-1.375-1.4-1.375-3.35v-9.4h4.7v9.4H37.7v-9.4h4.7v9.4q0 1.95-1.4 3.35-1.4 1.4-3.3 1.4ZM24 31.3 12.55 19.9l3.4-3.35 5.7 5.75V4.45h4.7V22.3l5.7-5.75 3.4 3.35Z"/%3E%3C/svg%3E') no-repeat center / contain;
 }
 
 img[title='Request time'],
@@ -2435,7 +2436,7 @@ body#torrents div[id^=trumpable].movie-page__torrent__panel {
 }
 
 .screenshot-comparison__old-school-toggler-container {
-  margin: var(--preset--spacing--gigantic);
+  margin: var(--preset--spacing--huge);
 }
 
 .screenshot-comparison__old-school-toggler-container a {
@@ -3332,9 +3333,12 @@ body#staff .thin>div:nth-of-type(2) h3 {
   font-size: var(--preset--font-size--small);
 }
 
+/* [TIDY THIS] */
 #userinfo_minor.user-info-bar__list--has-highlighted-item::before {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAHlBMVEUAAAD///////////////////////////////////8kfJuVAAAACXRSTlMABAwWQF5pb+idktP8AAAAKUlEQVQIW2MQLQeBQIbImSAwlaESTE8nk54GpZsZKh0YwKAEQjEoQCgAS70sUpAH/8UAAAAASUVORK5CYII=) no-repeat top 8px right 8px;
   background-color: var(--preset--color--background--quaternary);
+  color: var(--preset--color--accent--primary);
+  content: '\e7f4';
 }
 
 #userinfo_minor a {
