@@ -692,9 +692,6 @@ body#userhistory .tabs__panel>.linkbox::before {
   display: flex;
 }
 
-.forum-post__avatar {
-}
-
 .forum-post__avatar__image {
   display: block;
   width: 176px;
