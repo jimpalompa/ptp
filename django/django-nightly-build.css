@@ -67,9 +67,9 @@
   --preset--color--dark-green: #30ba53;
   --preset--color--dark-blue: #0075f2;
 
-  --preset--box--shadow--small: rgba(0, 0, 0, .3) 0 2px 6px;
-  --preset--box--shadow--medium: rgba(0, 0, 0, .3) 0 4px 12px;
-  --preset--box--shadow--large: rgba(0, 0, 0, .3) 0 6px 18px;
+  --preset--box--shadow--small: rgba(0, 0, 0, .4) 0 2px 4px;
+  --preset--box--shadow--medium: rgba(0, 0, 0, .4) 0 3px 8px;
+  --preset--box--shadow--large: rgba(0, 0, 0, .4) 0 4px 12px;
 
   /* Theme fonts */
   --preset--font-family--default: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
@@ -320,7 +320,7 @@ td, th {
 
 blockquote {
   background: var(--preset--color--background--primary);
-  color: rgba(255, 255, 255, .3);
+  color: rgba(255, 255, 255, .4);
   font-style: italic;
   margin: 4px 0;
   padding: 24px 28px 28px 44px;
@@ -707,16 +707,16 @@ body#userhistory .tabs__panel>.linkbox::before {
 }
 
 .forum-post__edited {
-  color: rgba(255, 255, 255, .3);
+  color: rgba(255, 255, 255, .2);
   margin-top: 2em;
 }
 
 .forum-post__edited a {
-  opacity: .6;
+  opacity: .4;
 }
 
 .forum-post__movie-vote {
-  background: rgba(0, 0, 0, .5) !important;
+  background: rgba(0, 0, 0, .4) !important;
   padding: 3px 5px !important;
   border-radius: 2px !important;
   margin-bottom: 6px;
@@ -997,7 +997,7 @@ body#torrents a[onclick^=RequestSeedingHelp]::before {
 .thin>p,
 body#inbox .pagination--top+div {
   width: 100%;
-  margin-bottom: var(--preset--spacing--medium);
+  margin-bottom: var(--preset--spacing--x-large);
   background: var(--preset--color--background--secondary);
   box-shadow: var(--preset--box--shadow--large);
 }
@@ -1019,7 +1019,8 @@ body#inbox .pagination--top+div {
 .toggleable-search-form__toggler-container,
 body#artist [id^=role_]>h2,
 body#bprate #content>h2,
-body#torrents .thin>.page__title+h2.text--center {
+body#torrents .thin>.page__title+h2.text--center,
+.tabs__bar {
   position: relative;
   font-size: var(--preset--font-size--medium);
   font-weight: var(--preset--font-weight--bold);
@@ -1060,8 +1061,7 @@ body#staff .thin>div:nth-of-type(2) h3+table th {
 .thin>p,
 body#inbox #searchbox,
 body#upload .thin>div[style*='width:700px'] {
-  padding: var(--preset--spacing--x-large);
-  padding-top: 0;
+  padding: var(--preset--spacing--gigantic);
 }
 
 #userinfo_minor::before,
@@ -1123,7 +1123,7 @@ body#collages .thin>.table td:nth-child(2)>a {
 .basic-movie-list__movie__rating-container,
 [class$=__rating-container] {
   display: inline-block;
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, .4);
   padding: 3px 6px 2px;
   border-radius: 2px;
   margin-right: 8px;
@@ -1201,15 +1201,16 @@ body#upload .thin>div[style*='width:700px'] {
 
 .tabs__bar {
   background: var(--preset--color--background--secondary);
-  margin-bottom: 2px;
+  margin-bottom: var(--preset--spacing--x-large);
+  box-shadow: var(--preset--box--shadow--large);
 }
 
 .tabs__bar__list {
   display: flex;
   align-items: center;
+  line-height: 64px;
   list-style: none;
-  height: 36px;
-  line-height: 36px;
+  height: 64px;
 }
 
 .tabs__bar__item {
@@ -1219,15 +1220,12 @@ body#upload .thin>div[style*='width:700px'] {
 }
 
 .tabs__bar__item:hover {
-  background: var(--preset--color--background--secondary);
+  background: var(--preset--color--background--quaternary);
 }
 
-.tabs__bar__item--active {
+.tabs__bar__item--active, .tabs__bar__item--active a {
   background: var(--preset--color--background--tertiary);
-}
-
-.tabs__bar__item--active a {
-  color: var(--preset--color--white) !important;
+  color: var(--preset--color--white);
 }
 
 .tabs__bar__link {
@@ -1235,9 +1233,6 @@ body#upload .thin>div[style*='width:700px'] {
   height: 100%;
   width: 100%;
   text-align: center;
-  font-size: var(--preset--font-size--small);
-  text-transform: uppercase;
-  font-weight: var(--preset--font-weight--regular);
 }
 
 .tabs__panel:not(.tabs__panel--active) {
@@ -1599,22 +1594,23 @@ a[onclick^=ToggleTagSelector]:hover {
 }
 
 .qtip-content {
-  background: var(--preset--color--background--tertiary);
-  padding: var(--preset--spacing--medium);
+  background: var(--preset--color--background--secondary);
+  padding: var(--preset--spacing--gigantic);
   box-shadow: var(--preset--box--shadow--medium);
 }
 
 .qtip-content label {
   display: block;
-  height: 20px;
+  padding: 4px;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .qtip-content br {
   display: none;
 }
 
-.qtip-content input[type=button] {
+ input[type=button] {
   margin: 4px;
 }
 
@@ -1689,7 +1685,7 @@ a[onclick^=ToggleTagSelector]:hover {
 }
 
 .simplemodal-data h2 {
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, .4);
 }
 
 .simplemodal-data textarea {
@@ -2328,7 +2324,7 @@ body#torrents a[onclick^=RequestSeedingHelp]:hover::before {
   width: 30px;
   border-radius: 3px;
   margin-right: 8px;
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, .4);
 }
 
 .basic-torrent-list__movie__torrent-opener-link::before {
@@ -2340,7 +2336,7 @@ body#torrents a[onclick^=RequestSeedingHelp]:hover::before {
 }
 
 .basic-torrent-list__movie__torrent-opener-link:hover {
-  background: rgba(0, 0, 0, .5)
+  background: rgba(0, 0, 0, .6)
 }
 
 .basic-torrent-list__movie__torrent-opener-link:hover::before {
