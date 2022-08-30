@@ -14,6 +14,7 @@
 :root {
 
   /* Backgrounds */
+  --preset--color--background--black: #060606; /* shade 80% */
   --preset--color--background--initial: #181a19; /* shade 40% */
   --preset--color--background--primary: #1b1d1c; /* shade 33% */
   --preset--color--background--secondary: #282b2a;
@@ -120,7 +121,8 @@ blockquote br + br,
 #synopsis-and-trailer .panel__heading,
 #synopsis-and-trailer+.panel .panel__heading,
 .box_albumart .panel__heading,
-#movieinfo .panel__heading {
+#movieinfo .panel__heading,
+.forum-post__avatar[style*=hidden] {
   display: none !important;
 }
 
@@ -376,14 +378,10 @@ blockquote::before {
 }
 
 .spoiler {
-  background: var(--preset--color--background--initial) !important;
-  color: var(--preset--color--background--initial) !important;
+  background: var(--preset--color--background--black) !important;
+  color: var(--preset--color--background--black) !important;
   padding: 3px 0;
   transition: var(--preset--transition--color);
-}
-
-.spoiler::before {
-  content: none;
 }
 
 .spoiler-show {
@@ -431,8 +429,7 @@ blockquote::before {
 
 .site-logo__link {
   display: block;
-  background: url(assets/images/logo.png) no-repeat center;
-  background-size: contain;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 360 60"%3E%3Cpath d="M12.53,4.07H3.25v50.6H9V33.5h3.54A11.09,11.09,0,0,0,23.62,22.42V15.15A11.11,11.11,0,0,0,12.53,4.07Zm0,23.69H9v-18h3.54a5.28,5.28,0,0,1,5.34,5.34v7.27A5.3,5.3,0,0,1,12.53,27.76Z"/%3E%3Cpath d="M40.25,4.07h-8l-7.72,50.6h5.77l1.87-12.46h8.15l1.94,12.46H48Zm-.87,32.4H33l3.22-21Z"/%3E%3Cpath d="M71.49,20.65V13.71a10.36,10.36,0,1,0-20.72,0V17a11.4,11.4,0,0,0,2.39,6.69L64.6,37.24a5.58,5.58,0,0,1,1.14,3.11V45a4.62,4.62,0,1,1-9.24,0V36.35L50.76,37v8a10.36,10.36,0,0,0,20.72,0V40.35A11.65,11.65,0,0,0,69,33.51L57.57,19.9A5.08,5.08,0,0,1,56.51,17V13.71a4.62,4.62,0,1,1,9.24,0v7.6Z"/%3E%3Cpath d="M96.91,20.65V13.71a10.36,10.36,0,1,0-20.72,0V17a11.4,11.4,0,0,0,2.39,6.69L90,37.24a5.58,5.58,0,0,1,1.14,3.11V45a4.62,4.62,0,1,1-9.24,0V36.35L76.18,37v8A10.36,10.36,0,1,0,96.9,45V40.35a11.65,11.65,0,0,0-2.47-6.84L83,19.9A5.08,5.08,0,0,1,81.93,17V13.71a4.62,4.62,0,0,1,9.24,0v7.6Z"/%3E%3Cpath d="M101.52,5.07V8.81h6.77V53.67h3.82V8.81h6.69V5.07Z"/%3E%3Cpath d="M140.55,5.07V27.46H129.31V5.07h-3.74v48.6h3.74V31.2h11.24V53.67h3.74V5.07Z"/%3E%3Cpath d="M157,49.93V31.28h8.72V27.46H157V8.81h11.81V5.07H153.29v48.6h16.13V49.93Z"/%3E%3Cpath d="M184.61,4.07h-9.28v50.6h5.74V33.5h3.54a11.09,11.09,0,0,0,11.08-11.08V15.15A11.09,11.09,0,0,0,184.61,4.07Zm0,23.69h-3.54v-18h3.54A5.28,5.28,0,0,1,190,15.15v7.27A5.29,5.29,0,0,1,184.61,27.76Z"/%3E%3Cpath d="M210.82,3.35a10.37,10.37,0,0,0-10.36,10.36V45a10.36,10.36,0,0,0,20.72,0V13.71A10.37,10.37,0,0,0,210.82,3.35Zm0,46.3A4.63,4.63,0,0,1,206.2,45V13.71a4.62,4.62,0,0,1,9.24,0V45A4.64,4.64,0,0,1,210.82,49.65Z"/%3E%3Cpath d="M237.1,4.07h-9.28v50.6h5.74V33.5h3.54a11.09,11.09,0,0,0,11.08-11.08V15.15A11.09,11.09,0,0,0,237.1,4.07Zm0,23.69h-3.54v-18h3.54a5.28,5.28,0,0,1,5.34,5.34v7.27A5.29,5.29,0,0,1,237.1,27.76Z"/%3E%3Cpath d="M273.67,21.8V13.71a10.36,10.36,0,0,0-20.72,0V45a10.36,10.36,0,0,0,20.72,0V37.4h-5.74V45a4.62,4.62,0,0,1-9.24,0V13.71a4.62,4.62,0,1,1,9.24,0v8.75Z"/%3E%3Cpath d="M289.51,3.35a10.37,10.37,0,0,0-10.36,10.36V45a10.36,10.36,0,0,0,20.72,0V13.71A10.37,10.37,0,0,0,289.51,3.35ZM294.13,45a4.62,4.62,0,0,1-9.24,0V13.71a4.62,4.62,0,1,1,9.24,0Z"/%3E%3Cpath d="M326.87,15.15A11.09,11.09,0,0,0,315.79,4.07h-9.28v50.6h5.74V32.2h3.54a5.28,5.28,0,0,1,5.34,5.34V54.67h5.74V37.54a11.08,11.08,0,0,0-3.67-8.2,11.09,11.09,0,0,0,3.67-8.22ZM312.25,9.81h3.54a5.28,5.28,0,0,1,5.34,5.34v6a5.28,5.28,0,0,1-5.34,5.34h-3.54Z"/%3E%3Cpath d="M349.21,4.07V35.8L339.35,4.07h-6.27v50.6h5.74V20.84l10.65,33.83H355V4.07Z"/%3E%3C/svg%3E') no-repeat left center / contain;
   width: 100%;
   height: 100%;
 }
@@ -638,7 +635,7 @@ body#userhistory .tabs__panel>.linkbox::before {
   border-collapse: separate;
 }
 
-.panel__body {
+.panel__heading + .panel__body {
   padding-top: var(--preset--spacing--gigantic);
 }
 
@@ -662,22 +659,73 @@ body#userhistory .tabs__panel>.linkbox::before {
   FORUMS
 ------------------------------------- */
 
+.forum-post__buttons {
+  text-align: right;
+  margin-top: var(--preset--spacing--medium);
+}
+
+.forum-post__buttons label {
+  float: left;
+}
+
 .forum-post {
   padding: 0;
 }
 
 .forum-post__heading {
+  display: flex;
   background-color: var(--preset--color--background--tertiary);
   padding: 20px 32px;
 }
 
+.forum-post__heading span {
+  flex-grow: 1;
+}
+
+.forum-post__heading span:last-child {
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-left: var(--preset--spacing--x-large);
+}
+
+.forum-post__avatar-and-body {
+  display: flex;
+}
+
+.forum-post__avatar {
+}
+
+.forum-post__avatar__image {
+  display: block;
+  width: 176px;
+  height: auto;
+}
+
+.forum-post__body {
+  flex-grow: 1;
+  padding: var(--preset--spacing--gigantic);
+}
+
 .forum-post__edited {
   color: rgba(255, 255, 255, .3);
-  margin: 2em 0;
+  margin-top: 2em;
 }
 
 .forum-post__edited a {
   opacity: .6;
+}
+
+.forum-post__movie-vote {
+  background: rgba(0, 0, 0, .5) !important;
+  padding: 3px 5px !important;
+  border-radius: 2px !important;
+  margin-bottom: 6px;
+  position: relative;
+  top: -5px;
+}
+
+.forum-post__movie-vote img {
+  margin: 0 1px 1px 0;
 }
 
 #threadpoll {
@@ -719,10 +767,10 @@ body#userhistory .tabs__panel>.linkbox::before {
 }
 
 .bbcode-toolbar__button {
-  background: url(assets/images/bbcode-buttons.png) no-repeat center center;
+  background: url(//static.passthepopcorn.me/static/common/bbcode_buttons5.png) no-repeat center;
   width: 16px;
   height: 16px;
-  margin-right: var(--preset--spacing--large);
+  margin-right: var(--preset--spacing--medium);
   float: left;
   cursor: pointer;
 }
@@ -1088,7 +1136,12 @@ body#collages .thin>.table td:nth-child(2)>a {
 }
 
 .torrent_table {
+  border-collapse: collapse;
   margin-bottom: var(--preset--spacing--x-large);
+}
+
+.torrent_table th {
+  padding: 24px;
 }
 
 .page__title {
@@ -1143,7 +1196,7 @@ body#upload .thin>div[style*='width:700px'] {
   font-size: var(--preset--font-size--huge);
   position: absolute;
   right: 0;
-  content: '\e0bf';
+  content: '\e0b7';
 }
 
 .tabs__bar {
@@ -1636,25 +1689,23 @@ a[onclick^=ToggleTagSelector]:hover {
 }
 
 .simplemodal-data h2 {
-  background: rgba(0, 0, 0, .36);
+  background: rgba(0, 0, 0, .3);
 }
 
 .simplemodal-data textarea {
   margin-bottom: 12px;
 }
 
-#artist_settings,
-#browse_settings {
-  width: 0;
-  height: 14px;
-  padding: 0 7px;
-  vertical-align: middle;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAS1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////+DmQsHAAAAGHRSTlMAAQQGBxATFBUXKyxJb3R1kpudwOjp+/12VgXkAAAAYklEQVQImV2P2w7CIABDz2DopkzRIZz//1IfZjTSpzZpegGA67Zd+OGpjw8NOa4vraeYA3D3ixsk1V5KV03Mu7YFlq77DFOzABTbxCgHc1JtpbQjaigi5HiuWtdjxjDy78IbrJwI83lOcEUAAAAASUVORK5CYII=) no-repeat center;
+#artist_settings, #browse_settings {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" height="48" width="48"%3E%3Cpath d="m19.4 44-1-6.3q-.95-.35-2-.95t-1.85-1.25l-5.9 2.7L4 30l5.4-3.95q-.1-.45-.125-1.025Q9.25 24.45 9.25 24q0-.45.025-1.025T9.4 21.95L4 18l4.65-8.2 5.9 2.7q.8-.65 1.85-1.25t2-.9l1-6.35h9.2l1 6.3q.95.35 2.025.925Q32.7 11.8 33.45 12.5l5.9-2.7L44 18l-5.4 3.85q.1.5.125 1.075.025.575.025 1.075t-.025 1.05q-.025.55-.125 1.05L44 30l-4.65 8.2-5.9-2.7q-.8.65-1.825 1.275-1.025.625-2.025.925l-1 6.3ZM24 30.5q2.7 0 4.6-1.9 1.9-1.9 1.9-4.6 0-2.7-1.9-4.6-1.9-1.9-4.6-1.9-2.7 0-4.6 1.9-1.9 1.9-1.9 4.6 0 2.7 1.9 4.6 1.9 1.9 4.6 1.9Z"/%3E%3C/svg%3E') no-repeat center / contain;
+  width: 28px;
+  height: 0;
+  padding: 14px 0;
   opacity: .8;
   transition: var(--preset--transition--opacity);
   position: absolute;
-  right: 12px;
   top: 12px;
+  right: 12px;
 }
 
 #artist_settings:hover,
@@ -2033,27 +2084,25 @@ a[class*=link--seen]::after {
 img[title^='High quality'],
 img[title^='Torrent has been'],
 img[title^='Torrent has not'] {
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 14px !important;
-  height: 14px !important;
-  padding-left: 14px;
+  width: 16px !important;
+  height: 16px !important;
+  padding-top: 16px;
   position: relative;
 }
 
 img[title^='Torrent has been'] {
-  background-image: url(assets/images/icon-done.png);
-  top: 2px;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%238ad19b" height="48" width="48"%3E%3Cpath d="M18.9 36.9 6.5 24.5l3.4-3.4 9 9 19.15-19.15 3.4 3.4Z"/%3E%3C/svg%3E') no-repeat center / contain;
+  top: 3px;
 }
 
 img[title^='Torrent has not'] {
-  background-image: url(assets/images/icon-close.png);
-  top: 2px;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23ff9a96" height="48" width="48"%3E%3Cpath d="m12.45 38.85-3.3-3.3L20.7 24 9.15 12.45l3.3-3.3L24 20.7 35.55 9.15l3.3 3.3L27.3 24l11.55 11.55-3.3 3.3L24 27.3Z"/%3E%3C/svg%3E') no-repeat center / contain;
+  top: 3px;
 }
 
 img[title^='High quality'] {
-  background-image: url(assets/images/icon-star.png);
-  top: 1px;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23ffe566" height="48" width="48"%3E%3Cpath d="m11.65 44 3.25-14.05L4 20.5l14.4-1.25L24 6l5.6 13.25L44 20.5l-10.9 9.45L36.35 44 24 36.55Z"/%3E%3C/svg%3E') no-repeat center / contain;
+  top: 2px;
 }
 
 [id^=submanager] a:first-child {
@@ -2089,10 +2138,6 @@ img[title^='High quality'] {
 [id^=submanager] a:nth-child(2):hover::before {
   background: var(--preset--color--pale-orange);
   color: var(--preset--color--background--primary);
-}
-
-.torrent-info-link {
-  margin-left: 4px;
 }
 
 .torrent-info-link::after {
@@ -2481,49 +2526,6 @@ body#torrents div[id^=trumpable].movie-page__torrent__panel {
   margin-left: 4px;
 }
 
-.forum-post__avatar-and-body {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  min-height: 160px;
-}
-
-.forum-post__avatar {
-  display: table-cell;
-  width: 160px;
-}
-
-.forum-post__avatar[style*=hidden] {
-  display: none;
-}
-
-.forum-post__avatar__image {
-  width: 160px;
-  height: auto;
-}
-
-.forum-post__body {
-  display: table-cell;
-  padding: 0 32px 32px;
-  vertical-align: top;
-}
-
-.forum-post__buttons {
-  margin-top: var(--preset--spacing--medium);
-  text-align: right;
-}
-
-.forum-post__buttons label {
-  float: left;
-}
-
-.forum-post__movie-vote {
-  font-family: var(--preset--font-family--default);
-  background: rgba(0, 0, 0, .3) !important;
-  padding: 2px 4px !important;
-  border-radius: 2px !important;
-}
-
 .last5-movies__show-all-row td {
   text-align: center;
   padding-top: 12px;
@@ -2694,15 +2696,22 @@ body#torrents .thin>.page__title+h2.text--center {
 
 #movie-ratings-table td {
   flex-grow: 1;
+  text-align: center;
   width: auto !important;
   padding: 0;
-  text-align: center;
-  font-weight: var(--preset--font-weight--regular);
+}
+
+#movie-ratings-table td:last-child {
+  flex-grow: 2;
+}
+
+#movie-ratings-table td center {
+  text-align: right;
 }
 
 #movie-ratings-table img {
-  width: 48px !important;
-  height: 48px !important;
+  width: 32px !important;
+  height: 32px !important;
 }
 
 #ptp_rating_td span[style*=hidden] {
