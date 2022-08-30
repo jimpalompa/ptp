@@ -67,9 +67,9 @@
   --preset--color--dark-green: #30ba53;
   --preset--color--dark-blue: #0075f2;
 
-  --preset--box--shadow--small: rgba(0, 0, 0, .4) 0 2px 4px;
-  --preset--box--shadow--medium: rgba(0, 0, 0, .4) 0 3px 8px;
-  --preset--box--shadow--large: rgba(0, 0, 0, .4) 0 4px 12px;
+  --preset--box--shadow--small: rgba(0, 0, 0, .3) 0 2px 4px;
+  --preset--box--shadow--medium: rgba(0, 0, 0, .3) 0 3px 8px;
+  --preset--box--shadow--large: rgba(0, 0, 0, .3) 0 4px 12px;
 
   /* Theme fonts */
   --preset--font-family--default: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
@@ -456,7 +456,7 @@ body#bprate .linkbox,
 body#requests .page__title~.linkbox:first-of-type:not(:last-of-type),
 body#requests .page__title~.linkbox:nth-of-type(2),
 body#userhistory .tabs__panel>.linkbox {
-  background: var(--preset--color--background--secondary);
+  background: var(--preset--color--background--tertiary);
   position: absolute;
   top: -9999px;
   z-index: 100;
@@ -522,7 +522,7 @@ body#bprate .linkbox:hover::before,
 body#requests .page__title~.linkbox:not(:last-of-type):first-of-type:hover::before,
 body#requests .page__title~.linkbox:nth-of-type(2):hover::before,
 body#userhistory .tabs__panel>.linkbox:hover::before {
-  background: var(--preset--color--background--secondary);
+  background: var(--preset--color--background--tertiary);
   margin-top: 0;
 }
 
@@ -675,6 +675,8 @@ body#userhistory .tabs__panel>.linkbox::before {
 .forum-post__heading {
   display: flex;
   background-color: var(--preset--color--background--tertiary);
+  font-weight: var(--preset--font-weight--bold);
+  text-transform: uppercase;
   padding: 20px 32px;
 }
 
@@ -1002,7 +1004,6 @@ body#inbox .pagination--top+div {
 #content>small,
 #dnu_header,
 #getmorenews,
-.forum-post__heading,
 .heading--small-bottom-margin,
 .huge-movie-list__movie__title-row,
 .panel__heading,
@@ -1026,9 +1027,8 @@ body#torrents .thin>.page__title+h2.text--center,
 }
 
 #content>small,
-#top10 #content>h2,
+#top10 #content>h2:not(.page__title),
 .heading--small-bottom-margin,
-.page__title,
 .sidebar>h3,
 .sidebar>p,
 .subscribed_collages_table td,
@@ -1144,7 +1144,8 @@ body#collages .thin>.table td:nth-child(2)>a {
 .page__title {
   text-align: center;
   font-size: var(--preset--font-size--gigantic);
-  padding: var(--preset--spacing--x-large);
+  margin-bottom: var(--preset--spacing--gigantic);
+  padding: 0 48px;
 }
 
 .alert {
@@ -1463,35 +1464,30 @@ body#upload .thin>div[style*='width:700px'] {
   background: url(//static.passthepopcorn.me/static/common/stars/stars.png) left 100px;
 }
 
-.linkbox::before {
-  font-size: 28px;
-}
-
 .page__title~.linkbox:first-of-type {
-  margin-top: 58px;
+  margin-top: 38px;
   font-size: 0;
 }
 
 .page__title~.linkbox:first-of-type a {
+  background: transparent;
   font-size: var(--preset--font-size--small);
 }
 
 .linkbox #browse_settings {
-  position: absolute;
-  top: -36px;
-  right: 36px;
+  background-color: var(--preset--color--background--tertiary);
+  background-size: 24px;
   display: block;
-  height: 36px;
-  padding: 0 19px;
-  background: var(--preset--color--background--secondary);
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  position: absolute;
+  top: -40px;
+  right: 40px;
 }
 
 .toggleable-search-form {
   margin-bottom: 8px;
-}
-
-.search-form--narrow {
-  padding: 64px 15% 24px 5%;
 }
 
 .search-form__advanced-basic-toggler {
@@ -1691,14 +1687,11 @@ a[onclick^=ToggleTagSelector]:hover {
 
 #artist_settings, #browse_settings {
   background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" height="48" width="48"%3E%3Cpath d="m19.4 44-1-6.3q-.95-.35-2-.95t-1.85-1.25l-5.9 2.7L4 30l5.4-3.95q-.1-.45-.125-1.025Q9.25 24.45 9.25 24q0-.45.025-1.025T9.4 21.95L4 18l4.65-8.2 5.9 2.7q.8-.65 1.85-1.25t2-.9l1-6.35h9.2l1 6.3q.95.35 2.025.925Q32.7 11.8 33.45 12.5l5.9-2.7L44 18l-5.4 3.85q.1.5.125 1.075.025.575.025 1.075t-.025 1.05q-.025.55-.125 1.05L44 30l-4.65 8.2-5.9-2.7q-.8.65-1.825 1.275-1.025.625-2.025.925l-1 6.3ZM24 30.5q2.7 0 4.6-1.9 1.9-1.9 1.9-4.6 0-2.7-1.9-4.6-1.9-1.9-4.6-1.9-2.7 0-4.6 1.9-1.9 1.9-1.9 4.6 0 2.7 1.9 4.6 1.9 1.9 4.6 1.9Z"/%3E%3C/svg%3E') no-repeat center / contain;
-  width: 28px;
+  width: 24px;
   height: 0;
-  padding: 14px 0;
+  padding: 12px;
   opacity: .8;
   transition: var(--preset--transition--opacity);
-  position: absolute;
-  top: 12px;
-  right: 12px;
 }
 
 #artist_settings:hover,
@@ -3243,7 +3236,7 @@ body#staff .thin>div:nth-of-type(2) h3 {
 }
 
 .search-bar {
-  margin-bottom: var(--preset--spacing--medium);
+  margin-bottom: var(--preset--spacing--gigantic);
 }
 
 .search-bar__list {
