@@ -716,12 +716,12 @@ body#userhistory .tabs__panel>.linkbox::before {
 }
 
 .forum-post__edited {
-  color: rgba(255, 255, 255, .2);
+  color: rgba(255, 255, 255, .4);
   margin-top: 2em;
 }
 
 .forum-post__edited a {
-  opacity: .4;
+  opacity: .6;
 }
 
 .forum-post__movie-vote {
@@ -776,12 +776,17 @@ body#userhistory .tabs__panel>.linkbox::before {
 }
 
 .bbcode-toolbar__button {
-  background: url(//static.passthepopcorn.me/static/common/bbcode_buttons5.png) no-repeat center;
+  background: url('data:image/png;base64,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') no-repeat center;
+  background-size: auto 16px;
   width: 16px;
   height: 16px;
-  margin-right: var(--spacing--medium);
+  margin-right: var(--spacing--large);
   float: left;
   cursor: pointer;
+}
+
+.bbcode-toolbar__button:last-of-type {
+  margin-right: 0;
 }
 
 .bbcode-toolbar__color-popup-color {
