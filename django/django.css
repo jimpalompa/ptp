@@ -645,6 +645,15 @@ body#userhistory .tabs__panel>.linkbox::before {
 }
 
 /* -------------------------------------
+  PROFILE
+------------------------------------- */
+
+img#actualAvatar {
+  width: 176px !important;
+  max-width: 176px !important;
+}
+
+/* -------------------------------------
   MOVIES
 ------------------------------------- */
 
