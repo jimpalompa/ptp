@@ -91,9 +91,6 @@
   --transition--opacity: opacity .2s ease-out;
 }
 
-.user-info-bar__link  {
-  font-variation-settings: 'FILL' 0;}
-
 /* -------------------------------------
   HIDE ELEMENTS
 ------------------------------------- */
@@ -128,13 +125,6 @@ blockquote br + br,
   font-style: normal;
   font-weight: 400;
   src: local('Material Icons'), url(//jimpalompa.github.io/ptp/django/assets/material-icons.woff2) format('woff2');
-}
-
-@font-face {
-  font-family: 'Material Icons Outlined';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Material Icons Outlined'), url(//jimpalompa.github.io/ptp/django/assets/material-icons-outlined.woff2) format('woff2');
 }
 
 /* -------------------------------------
@@ -344,6 +334,17 @@ blockquote::before {
 ::before, ::after {
   font-family: 'Material Icons';
   font-size: var(--font-size--gigantic);
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
   transition: var(--transition--color);
 }
 
@@ -632,7 +633,7 @@ body#bprate .linkbox a:hover,
 body#requests .page__title~.linkbox:first-of-type:not(:last-of-type) a:hover,
 body#requests .page__title~.linkbox:nth-of-type(2) a:hover,
 body#userhistory .tabs__panel>.linkbox a:hover {
-  background: var(--color--foreground--tertiary);
+  background: var(--color--foreground--vivid);
 }
 
 #userinfo_minor::before,
