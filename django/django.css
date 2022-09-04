@@ -15,24 +15,23 @@
 
   /* Backgrounds */
   --color--background--black: #060606; /* shade 80% */
-  --color--background--initial: #181a19; /* shade 40% */
+  --color--background--input: #181a19; /* shade 40% */
   --color--background--primary: #1b1d1c; /* shade 33% */
-  --color--background--secondary: #282b2a;
-  --color--background--tertiary: #3f4141;
+  --color--background--secondary: #282b2a; /* base ↑ */
+  --color--background--tertiary: #3f4141; /* base ↓ */
   --color--background--quaternary: #575959; /* tint 12.5% */
-  --color--background--quinary: #6f7171; /* tint 25% */
 
   /* Colors */
   --color--black: #000;
   --color--white: #fff;
-  --color--foreground--primary: #f0dcc5;
-  --color--foreground--secondary: #c0b09e; /* shade 20% */
-  --color--foreground--tertiary: #908476; /* shade 40% */
-  --color--foreground--quaternary: #60584f; /* shade 60% */
-  --color--accent--primary: #7bdcb5;
-  --color--accent--secondary: #62b091; /* shade 20% */
-  --color--accent--tertiary: #4a846d; /* shade 40% */
-  --color--accent--quaternary: #315848; /* shade 60% */
+
+  --color--foreground--primary: #f2debd; /* base ↓ */
+  --color--foreground--secondary: #c2b297; /* shade 20% */
+  --color--foreground--tertiary: #918571; /* shade 40% */
+
+  --color--accent--primary: #b0976d; /* base ↓ */
+  --color--accent--secondary: #8d7957; /* shade 20% */
+  --color--accent--tertiary: #7b6a4c; /* shade 30% */
 
   --color--vivid-red: #f2352e;
   --color--pale-red: #ff9a96;
@@ -58,14 +57,6 @@
   --color--vivid-pink: #f25e7c;
   --color--pale-pink: #ffc9d5;
   --color--shade-pink: #ab878f; /* shade 33% */
-  --color--vivid-brown: #a87332;
-  --color--pale-brown: #c2a888;
-  --color--shade-brown: #82715b; /* shade 33% */
-
-  --color--dark-orange: #f28d00;
-  --color--dark-yellow: #f2ca00;
-  --color--dark-green: #30ba53;
-  --color--dark-blue: #0075f2;
 
   --box--shadow--small: rgba(0, 0, 0, .3) 0 2px 4px;
   --box--shadow--medium: rgba(0, 0, 0, .3) 0 3px 8px;
@@ -100,7 +91,7 @@
   --border--radius--small--top: 2px 2px 0 0;
   --border--radius--small--bottom: 0 0 2px 2px;
 
-  --spacing--tiny: 10px;
+  --spacing--tiny: 8px;
   --spacing--small: 12px;
   --spacing--medium: 16px;
   --spacing--large: 20px;
@@ -108,7 +99,6 @@
   --spacing--huge: 32px;
   --spacing--gigantic: 48px;
 
-  --transition--all: all .1s ease-out;
   --transition--background: background .1s ease-out;
   --transition--color: color .1s ease-out;
   --transition--opacity: opacity .1s ease-out;
@@ -200,7 +190,7 @@ a:hover {
 }
 
 a:focus {
-  color: var(--color--foreground--tertiary);
+  color: var(--color--foreground--secondary);
 }
 
 b, strong {
@@ -257,7 +247,7 @@ hr {
 }
 
 input, textarea, select, option, input[type=button], input[type=submit], .linkbox a {
-  background: var(--color--background--initial);
+  background: var(--color--background--input);
   color: var(--color--white);
   font-family: var(--font-family--default);
   font-size: var(--font-size--small);
@@ -276,23 +266,23 @@ input:hover, input:focus, textarea:hover, textarea:focus, select:hover, select:f
 }
 
 input:focus, select:focus, option:focus {
-  border-color: var(--color--accent--tertiary);
+  border-color: var(--color--accent--secondary);
 }
 
-input[type=button], input[type=submit], .linkbox a {
-  background: var(--color--accent--tertiary);
+input[type=button], input[type=submit] {
+  background: var(--color--accent--secondary);
   font-weight: var(--font-weight--bold);
   text-transform: uppercase;
   padding: 8px 16px;
 }
 
-input[type=button]:hover, input[type=submit]:hover, .linkbox a:hover {
-  background: var(--color--accent--secondary);
+input[type=button]:hover, input[type=submit]:hover {
+  background: var(--color--accent--primary);
   cursor: pointer;
 }
 
-input[type=button]:focus, input[type=submit]:focus, .linkbox a:focus {
-  background: var(--color--accent--quaternary);
+input[type=button]:focus, input[type=submit]:focus {
+  background: var(--color--accent--tertiary);
   border-color: transparent;
   box-shadow: var(--box--shadow--small);
 }
@@ -492,7 +482,7 @@ body#bprate .linkbox a:hover,
 body#requests .page__title~.linkbox:first-of-type:not(:last-of-type) a:hover,
 body#requests .page__title~.linkbox:nth-of-type(2) a:hover,
 body#userhistory .tabs__panel>.linkbox a:hover {
-  background: var(--color--background--quinary);
+  background: var(--color--accent--secondary);
 }
 
 #userinfo_minor::before,
@@ -766,7 +756,7 @@ img#actualAvatar {
 }
 
 .poll__bar {
-  background: var(--color--background--tertiary);
+  background: var(--color--background--input);
   margin-bottom: var(--spacing--medium);
   padding: 0;
   border-radius: 4px;
@@ -774,14 +764,14 @@ img#actualAvatar {
 
 .poll__bar__center {
   display: block;
-  background: var(--color--background--quinary);
+  background: var(--color--accent--primary);
   height: 8px;
   border-radius: 4px;
 }
 
 #Bbcode_Toolbar {
   background: var(--color--background--quaternary);
-  padding: var(--spacing--medium);
+  padding: var(--spacing--tiny) var(--spacing--medium);
 }
 
 .bbcode-toolbar__button {
@@ -789,7 +779,7 @@ img#actualAvatar {
   background-size: auto 16px;
   width: 16px;
   height: 16px;
-  margin-right: var(--spacing--large);
+  margin: 8px 20px 8px 0;
   float: left;
   cursor: pointer;
 }
@@ -1843,7 +1833,7 @@ a[class*=link--seen] {
 a[class*=link--seen]::before {
   width: 0;
   height: 0;
-  border-top: 40px solid var(--color--accent--tertiary);
+  border-top: 40px solid var(--color--accent--secondary);
   border-left: 40px solid transparent;
   position: absolute;
   top: 0;
@@ -1852,7 +1842,9 @@ a[class*=link--seen]::before {
 }
 
 a[class*=link--seen]::after {
+  color: var(--color--white);
   font-size: 18px;
+  font-weight: var(--font-weight--bold);
   line-height: 1;
   position: absolute;
   top: 3px;
@@ -1877,7 +1869,7 @@ a[class*=link--seen]::after {
 
 .basic-movie-list__torrent-edition {
   background: var(--color--background--primary);
-  color: var(--color--accent--primary);
+  color: var(--color--foreground--tertiary);
   font-weight: var(--font-weight--bold);
   letter-spacing: var(--typography--letter-spacing--heading);
   text-transform: uppercase;
@@ -2373,7 +2365,7 @@ body#torrents a[onclick^=RequestSeedingHelp]:hover::before {
 }
 
 .basic-torrent-list__movie__torrent-opener-link::before {
-  color: var(--color--accent--secondary);
+  color: var(--color--accent--primary);
   display: block;
   width: 100%;
   height: 100%;
@@ -2510,7 +2502,7 @@ body#torrents div[id^=trumpable].movie-page__torrent__panel {
 }
 
 .forum-topic__go-to-last-read {
-  color: var(--color--accent--secondary);
+  color: var(--color--accent--primary);
   margin-left: 8px;
   line-height: 12px;
   vertical-align: middle;
@@ -2656,7 +2648,7 @@ body#torrents div[id^=trumpable].movie-page__torrent__panel {
 }
 
 body#torrents .thin>.page__title+h2.text--center {
-  background: var(--color--accent--quaternary);
+  background: var(--color--accent--tertiary);
   padding: var(--spacing--small);
 }
 
@@ -3346,7 +3338,7 @@ body#staff .thin>div:nth-of-type(2) h3 {
 }
 
 .search-bar__results__link:hover {
-  background: var(--color--background--quinary);
+  background: var(--color--accent--secondary);
 }
 
 .search-bar__results__list-item:first-of-type .search-bar__results__link:hover {
