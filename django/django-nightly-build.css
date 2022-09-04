@@ -60,7 +60,7 @@
   --color--pink-dark:    #b35376; /* shade 30% */
 
   /* Typography */
-  --font-family--default: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --font-family--default: FBook;
   --font-family--monospace: ui-monospace, Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
 
   --font-size--root: 16px; /* root html */
@@ -141,6 +141,75 @@ blockquote br + br,
   font-weight: 400;
   src: local('Material Icons'), url(//jimpalompa.github.io/ptp/django/assets/material-icons.woff2) format('woff2');
 }
+
+/* -------------------------------------
+  TYPOGRAPHY NEW TEST
+------------------------------------- */
+
+@font-face {
+  font-family: 'FDCompacted';
+  src: url('assets/ITCFranklinGothicStd-DmCp.woff2') format('woff2');
+  src: url('assets/fg-itc-std-demi-cp.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'FBook';
+  src: url('assets/ITCFranklinGothicStd-Book.woff2') format('woff2');
+  src: url('assets/fg-itc-std-book.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FBookCondensed';
+  src: url('assets/ITCFranklinGothicStd-BkCd.woff2') format('woff2');
+  src: url('assets/fg-itc-std-book-cd.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FDCondensed';
+  src: url('assets/ITCFranklinGothicStd-DmCd.woff2') format('woff2');
+  src: url('assets/fg-itc-std-demi-cd.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FBold';
+  src: url('assets/ILPFranklinGothic-Bold.woff2') format('woff2');
+  src: url('assets/fg-ilp-bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'FBoldd';
+  src: url('assets/ILPFranklinGothic-Bold-2.woff2') format('woff2');
+  src: url('assets/fg-ilp-bold-2.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FDemi';
+  src: url('assets/ITCFranklinGothicStd-Demi.woff2') format('woff2');
+  src: url('assets/fg-itc-std-demi.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 /* -------------------------------------
   DEFAULTS
