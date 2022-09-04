@@ -2692,14 +2692,15 @@ body#torrents .thin>.page__title+h2.text--center {
 
 #toggle_add_similar_movies::before,
 #toggleaddtags::before {
-  font-family: var(--font-family--default);
   font-size: var(--font-size--small);
+  font-weight: var(--font-weight--bold);
   line-height: var(--line-height--body);
   content: 'Add';
+  text-transform: uppercase;
 }
 
 #morecast::before {
-  font-size: var(--font-size--medium);
+  font-size: var(--font-size--small);
   font-weight: var(--font-weight--bold);
   line-height: var(--line-height--body);
   content: 'More';
