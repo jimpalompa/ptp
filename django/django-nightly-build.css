@@ -96,8 +96,8 @@
   --border-radius--small--top: 2px 2px 0 0;
   --border-radius--small--bottom: 0 0 2px 2px;
 
-  --box-shadow--small: rgba(0, 0, 0, .3) 0 2px 4px;
-  --box-shadow--medium: rgba(0, 0, 0, .3) 0 3px 8px;
+  --box-shadow--small: rgba(0, 0, 0, .3) 0 1px 3px;
+  --box-shadow--medium: rgba(0, 0, 0, .3) 0 2px 6px;
   --box-shadow--large: rgba(0, 0, 0, .3) 0 4px 12px;
 
   --transition--all: all .1s ease-out;
@@ -276,11 +276,12 @@ input[type='button'], input[type='submit'] {
   font-weight: var(--font-weight--bold);
   text-transform: uppercase;
   padding: 8px 16px;
+  box-shadow: var(--box-shadow--medium);
+  cursor: pointer;
 }
 
 input[type='button']:hover, input[type='submit']:hover {
   background: var(--color--accent--primary);
-  cursor: pointer;
 }
 
 input[type='button']:focus, input[type='submit']:focus {
@@ -414,6 +415,57 @@ blockquote::before {
   BUTTONS
 ------------------------------------- */
 
+/* Typography */
+.last5-movies__show-all-link,
+.film-club-discuss-link a::before,
+.js-latest-posts-tbody tr:last-of-type a,
+.search-form__advanced-basic-toggler a,
+a[onclick^='ToggleTagSelector'],
+[class$='__new'] {
+  font-family: var(--font-family--default);
+  font-size: var(--font-size--tiny);
+  font-weight: var(--font-weight--bold);
+  text-transform: uppercase;
+  padding: 6px 12px;
+  margin-top: var(--spacing--medium);
+  border: 2px solid;
+  border-radius: var(--border-radius--small);
+}
+
+.last5-movies__show-all-row td,
+.js-latest-posts-tbody tr:last-of-type td,
+.film-club-discuss-link {
+  padding-top: var(--spacing--large);
+  text-align: center;
+}
+
+.search-form__advanced-basic-toggler {
+  text-align: center;
+  margin-bottom: var(--spacing--x-large);
+  padding: var(--spacing--tiny);
+}
+
+.search-form__advanced-basic-toggler > a {
+  margin-top: -6px;
+  padding: 4px 10px;
+  position: absolute;
+  right: 36px;
+}
+
+.js-latest-posts-tbody tr:last-of-type span {
+  float: none !important;
+}
+
+/* Content */
+.film-club-discuss-link a,
+[class$='__new'] {
+  font-size: 0;
+}
+
+.film-club-discuss-link a::before {content: 'Discuss this movie';}
+[class$='__new']::before {content: 'New';}
+
+/* Blue */
 .last5-movies__show-all-link,
 .js-latest-posts-tbody tr:last-of-type a,
 .film-club-discuss-link a::before,
@@ -444,6 +496,24 @@ a[onclick^='ToggleTagSelector']:focus {
   background: var(--color--blue-dark);
   color: var(--color--background--primary);
   border-color: var(--color--blue-dark);
+}
+
+/* Yellow */
+[class$='__new']::before {
+  color: var(--color--yellow-light);
+  border-color: var(--color--yellow-light);
+}
+
+[class$='__new']:hover::before {
+  background: var(--color--yellow-light);
+  color: var(--color--background--primary);
+  border-color: var(--color--yellow-light);
+}
+
+[class$='__new']:focus::before {
+  background: var(--color--yellow-dark);
+  color: var(--color--background--primary);
+  border-color: var(--color--yellow-dark);
 }
 
 /* -------------------------------------
@@ -596,6 +666,10 @@ body#userhistory .tabs__panel>.linkbox::before {
 
 #userinfo_username a {
   font-size: var(--font-size--small);
+}
+
+#userinfo_username a:hover {
+  color: var(--color--white);
 }
 
 #userinfo_username::before {
@@ -915,12 +989,8 @@ img#actualAvatar {
 #jump_to_container a:nth-of-type(3),
 #jump_to_container a:nth-of-type(4),
 #jump_to_container a:nth-of-type(5),
-.film-club-discuss-link a::before,
-.js-latest-posts-tbody tr:last-of-type a,
-.last5-movies__show-all-link,
 .release-name-movie-list__movie__action,
 .screenshot-comparison__old-school-toggler-container a,
-.search-form__advanced-basic-toggler a,
 .subscribed_collages_table td span[style*='right'] a:first-of-type,
 .subscribed_collages_table td span[style*='right'] a:nth-of-type(2),
 .subscribed_collages_table td span[style*='right'] a:nth-of-type(3),
@@ -936,7 +1006,6 @@ img#actualAvatar {
 [id^='submanager'] a:first-child::before,
 [id^='submanager'] a:nth-child(2)::before,
 a[onclick*='#taglist'],
-a[onclick^='ToggleTagSelector'],
 body#inbox #searchbox span[style^='float'] a,
 body#torrents a[onclick^='RequestSeedingHelp']::before {
   padding: 4px 8px;
@@ -1133,7 +1202,6 @@ body#userhistory .tabs__panel>.linkbox::before {
 }
 
 .huge-movie-list__movie__cover__link,
-.last5-movies__link,
 .small-cover-movie-list__movie__link,
 .user-page__recent-movie__link {
   display: block;
@@ -1564,11 +1632,6 @@ body#upload .thin>div[style*='width:700px'] {
   margin-bottom: var(--spacing--gigantic);
 }
 
-.search-form__advanced-basic-toggler {
-  text-align: center;
-  margin-bottom: 12px;
-}
-
 .search-form__footer {
   position: relative;
   margin-top: 12px;
@@ -1793,24 +1856,6 @@ img[title='Time'] {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAD1BMVEUAAAD///////////////+PQt5oAAAABHRSTlMAAW+d3oqUPAAAADRJREFUCFtjYGBSUlJSYGBgYHFxcXHAQjMDaQMgzWji4iwApBmEXQwZkGiYOEwdLnMg9gAAoMwMF8VfxG4AAAAASUVORK5CYII=) no-repeat center;
 }
 
-[class$='__new'] {
-  margin-left: 6px;
-  font-size: 0;
-}
-
-[class$='__new']::before {
-  font-family: var(--font-family--default);
-  font-size: var(--font-size--tiny);
-  color: var(--color--yellow-light);
-  border-color: var(--color--yellow-light);
-  content: 'New';
-}
-
-[class$='__new']:hover::before {
-  background: var(--color--yellow-light);
-  color: var(--color--background--primary);
-}
-
 [class$='__bookmark'] a {
   margin-left: 12px;
   border-color: #3385ff;
@@ -1852,7 +1897,7 @@ a[class*='link--seen'] {
 a[class*='link--seen']::before {
   width: 0;
   height: 0;
-  border-top: 40px solid var(--color--accent--secondary);
+  border-top: 40px solid var(--color--blue-dark);
   border-left: 40px solid transparent;
   position: absolute;
   top: 0;
@@ -2029,7 +2074,7 @@ a[class*='link--seen']::after {
 }
 
 .cover-movie-list__movie__cover-link {
-  background: var(--color--background--tertiary);
+  background-color: var(--color--background--tertiary) !important;
   display: block;
   width: 100%;
   height: auto;
@@ -2578,11 +2623,6 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
   margin-left: 4px;
 }
 
-.last5-movies__show-all-row td {
-  text-align: center;
-  padding-top: 12px;
-}
-
 #last5-tab-control {
   font-size: 0;
 }
@@ -2590,30 +2630,6 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
 #last5-tab-control a {
   margin-right: 8px;
   font-size: var(--font-size--small);
-}
-
-.js-latest-posts-tbody tr:last-of-type td {
-  padding: 12px;
-  text-align: center;
-}
-
-.js-latest-posts-tbody tr:last-of-type span {
-  float: none !important;
-}
-
-.film-club-discuss-link {
-  margin-top: 12px;
-  text-align: center;
-}
-
-.film-club-discuss-link a {
-  font-size: 0;
-}
-
-.film-club-discuss-link a::before {
-  font-family: var(--font-family--default);
-  font-size: var(--font-size--tiny);
-  content: 'Discuss this movie';
 }
 
 #vanityhouse blockquote {
