@@ -61,8 +61,8 @@
   --font-size--huge: 1.5rem;      /* 24px */
   --font-size--gigantic: 1.75rem; /* 28px */
 
-  --font-weight--regular: 400;
-  --font-weight--bold: 700;
+  --font-weight--regular: 900;
+  --font-weight--bold: 600;
   --line-height--body: 1.375;
   --line-height--headings: 1.25;
 
@@ -101,7 +101,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(//jimpalompa.github.io/ptp/django/assets/son-400.woff2) format('woff2'),
+  src: url(//jimpalompa.github.io/ptp/django/assets/son-400.woff2) format('woff2');
 }
 
 @font-face {
@@ -109,7 +109,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(//jimpalompa.github.io/ptp/django/assets/son-400-italic.woff2) format('woff2'),
+  src: url(//jimpalompa.github.io/ptp/django/assets/son-400-italic.woff2) format('woff2');
 }
 
 @font-face {
@@ -117,7 +117,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(//jimpalompa.github.io/ptp/django/assets/son-500.woff2) format('woff2'),
+  src: url(//jimpalompa.github.io/ptp/django/assets/son-500.woff2) format('woff2');
 }
 
 @font-face {
@@ -125,15 +125,15 @@
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: url(//jimpalompa.github.io/ptp/django/assets/son-500-italic.woff2) format('woff2'),
+  src: url(//jimpalompa.github.io/ptp/django/assets/son-500-italic.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: Söhne Mono;
+  font-family: 'Söhne Mono';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(//jimpalompa.github.io/ptp/django/assets/sonmon-400.woff2) format('woff2'),
+  src: url(//jimpalompa.github.io/ptp/django/assets/sonmon-400.woff2) format('woff2');
 }
 
 @font-face {
