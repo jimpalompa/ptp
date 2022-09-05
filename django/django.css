@@ -2288,7 +2288,7 @@ img[title^='High quality'] {
 }
 
 .torrent-info-link--user-downloaded {
-  color: var(--color--pink);
+  color: var(--color--cyan);
 }
 
 .torrent-info-link--user-uploaded {
