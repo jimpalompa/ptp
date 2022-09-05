@@ -278,7 +278,7 @@ input, textarea, select, option, input[type='button'], input[type='submit'], .li
 }
 
 input:hover, input:focus, textarea:hover, textarea:focus, select:hover, select:focus, option:hover, option:focus {
-  background: var(--color--background--black);
+  background: var(--color--background--base);
 }
 
 input:focus, select:focus, option:focus {
@@ -402,8 +402,8 @@ blockquote::before {
 }
 
 .spoiler {
-  background: var(--color--background--black) !important;
-  color: var(--color--background--black) !important;
+  background: var(--color--background--base) !important;
+  color: var(--color--background--base) !important;
   padding: 3px 0;
   transition: var(--transition--color);
 }
