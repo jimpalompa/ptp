@@ -49,8 +49,8 @@
   --color--pink-dark:    #ae5666; /* shade 30% */
 
   /* Fonts */
-  --font-family--default: Söhne, system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
-  --font-family--monospace: 'Söhne Mono', ui-monospace, Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
+  --font-family--default: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
+  --font-family--monospace: ui-monospace, Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
 
   --font-size--root: 16px;
   --font-size--tiny: .8125rem;    /* 13px */
@@ -61,7 +61,7 @@
   --font-size--huge: 1.5rem;      /* 24px */
   --font-size--gigantic: 1.75rem; /* 28px */
 
-  --font-weight--regular: 400;
+  --font-weight--regular: 500;
   --font-weight--bold: 700;
   --line-height--body: 1.375;
   --line-height--headings: 1.25;
@@ -97,50 +97,19 @@
 ----------------------------------------------------------------------------- */
 
 @font-face {
-  font-family: Söhne;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(//jimpalompa.github.io/ptp/django/assets/son-400.woff2) format('woff2'),
-}
-
-@font-face {
-  font-family: Söhne;
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url(//jimpalompa.github.io/ptp/django/assets/son-400-italic.woff2) format('woff2'),
-}
-
-@font-face {
-  font-family: Söhne;
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(//jimpalompa.github.io/ptp/django/assets/son-500.woff2) format('woff2'),
-}
-
-@font-face {
-  font-family: Söhne;
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url(//jimpalompa.github.io/ptp/django/assets/son-500-italic.woff2) format('woff2'),
-}
-
-@font-face {
-  font-family: Söhne Mono;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(//jimpalompa.github.io/ptp/django/assets/sonmon-400.woff2) format('woff2'),
+  font-family: 'Inter';
+  font-style: oblique 0deg;
+  font-weight: 500 700;
+  font-display: fallback;
+  font-stretch: normal;
+  src: local('Inter'), url(//jimpalompa.github.io/ptp/django/assets/inter-variable.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url(//jimpalompa.github.io/ptp/django/assets/material-icons.woff2) format('woff2');
+  src: local('Material Icons'), url(//jimpalompa.github.io/ptp/django/assets/material-icons.woff2) format('woff2');
 }
 
 /* -----------------------------------------------------------------------------
