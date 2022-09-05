@@ -7,58 +7,132 @@
 
 ----------------------------------------------------------------------------- */
 
-@import './assets/css-variables-django.css';
+/* -----------------------------------------------------------------------------
+  VARIABLES
+----------------------------------------------------------------------------- */
+
+:root {
+  /* Colors */
+  --color--background--base:       #050505; /* shade 80% */
+  --color--background--input:      #141414; /* shade 20% */
+  --color--background--primary:    #181a19;
+  --color--background--secondary:  #242525; /* tint 5% */
+  --color--background--tertiary:   #3b3c3c; /* tint 15% */
+  --color--background--quaternary: #525353; /* tint 25% */
+  --color--background--quinary:    #696a6a; /* tint 35% */
+
+  --color--foreground--vivid:      #b29a7d;
+  --color--foreground--primary:    #f2e4c7;
+  --color--foreground--secondary:  #a9a08b; /* shade 30% */
+  --color--foreground--tertiary:   #797264; /* shade 50% */
+  --color--foreground--quaternary: #615b50; /* shade 60% */
+
+  --color--black:        #000;
+  --color--white:        #fff;
+  --color--gray:         #a2a2a7;
+  --color--gray-dark:    #717175; /* shade 30% */
+  --color--red:          #eb5656;
+  --color--red-dark:     #a53c3c; /* shade 30% */
+  --color--orange:       #f39e59;
+  --color--orange-dark:  #aa6f3e; /* shade 30% */
+  --color--yellow:       #fde154;
+  --color--yellow-dark:  #b19e3b; /* shade 30% */
+  --color--green:        #7cd885;
+  --color--green-dark:   #57975d; /* shade 30% */
+  --color--cyan:         #6fcfe2;
+  --color--cyan-dark:    #4e919e; /* shade 30% */
+  --color--blue:         #63a6ef;
+  --color--blue-dark:    #4574a7; /* shade 30% */
+  --color--purple:       #ca8eeb;
+  --color--purple-dark:  #8d63a5; /* shade 30% */
+  --color--pink:         #f87b92;
+  --color--pink-dark:    #ae5666; /* shade 30% */
+
+  /* Fonts */
+  --font-family--default: Son, system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
+  --font-family--monospace: ui-monospace, Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
+
+  --font-size--root: 16px;
+  --font-size--tiny: .8125rem;    /* 13px */
+  --font-size--small: .875rem;    /* 14px */
+  --font-size--medium: 1rem;      /* 16px */
+  --font-size--large: 1.125rem;   /* 18px */
+  --font-size--x-large: 1.25rem;  /* 20px */
+  --font-size--huge: 1.5rem;      /* 24px */
+  --font-size--gigantic: 1.75rem; /* 28px */
+
+  --font-weight--regular: 400;
+  --font-weight--bold: 600;
+  --line-height--body: 1.5;
+  --line-height--headings: 1.25;
+
+  /* Layout */
+  --spacing--tiny: 8px;
+  --spacing--small: 12px;
+  --spacing--medium: 16px;
+  --spacing--large: 20px;
+  --spacing--x-large: 24px;
+  --spacing--huge: 32px;
+  --spacing--gigantic: 48px;
+
+  --border-radius--default: 4px;
+  --border-radius--default--top: 4px 4px 0 0;
+  --border-radius--default--bottom: 0 0 4px 4px;
+  --border-radius--small: 2px;
+  --border-radius--small--top: 2px 2px 0 0;
+  --border-radius--small--bottom: 0 0 2px 2px;
+
+  --box-shadow--small: rgba(0, 0, 0, .3) 0 1px 3px;
+  --box-shadow--medium: rgba(0, 0, 0, .3) 0 2px 6px;
+  --box-shadow--large: rgba(0, 0, 0, .3) 0 4px 12px;
+
+  --transition--all: all .2s ease-out;
+  --transition--background: background .2s ease-out;
+  --transition--color: color .2s ease-out;
+  --transition--opacity: opacity .2s ease-out;
+}
 
 /* -----------------------------------------------------------------------------
   FONTS
 ----------------------------------------------------------------------------- */
 
 @font-face {
-  font-family: 'Inter';
-  font-style: oblique 0deg;
-  font-weight: 500 700;
-  font-display: fallback;
-  font-stretch: normal;
-  src: local('Inter'), url(//jimpalompa.github.io/ptp/django/assets/inter-variable.woff2) format('woff2');
+  font-family: Son;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(//jimpalompa.github.io/ptp/django/assets/son-400.woff2) format('woff2'),
+}
+
+@font-face {
+  font-family: Son;
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(//jimpalompa.github.io/ptp/django/assets/son-italic-400.woff2) format('woff2'),
+}
+
+@font-face {
+  font-family: Son;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(//jimpalompa.github.io/ptp/django/assets/son-600.woff2) format('woff2'),
+}
+
+@font-face {
+  font-family: Son;
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(//jimpalompa.github.io/ptp/django/assets/son-italic-600.woff2) format('woff2'),
 }
 
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: local('Material Icons'), url(//jimpalompa.github.io/ptp/django/assets/material-icons.woff2) format('woff2');
-}
-
-@font-face {
-	font-family: Söhne;
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: local('Söhne'), url(//jimpalompa.github.io/ptp/django/assets/sne-400.woff2) format('woff2'),
-}
-
-@font-face {
-	font-family: Söhne;
-	font-style: italic;
-	font-weight: 400;
-	font-display: swap;
-	src: local('Söhne'), url(//jimpalompa.github.io/ptp/django/assets/sne-italic-400.woff2) format('woff2'),
-}
-
-@font-face {
-	font-family: Söhne;
-	font-style: normal;
-	font-weight: 600;
-	font-display: swap;
-	src: local('Söhne'), url(//jimpalompa.github.io/ptp/django/assets/sne-600.woff2) format('woff2'),
-}
-
-@font-face {
-	font-family: Söhne;
-	font-style: italic;
-	font-weight: 600;
-	font-display: swap;
-	src: local('Söhne'), url(//jimpalompa.github.io/ptp/django/assets/sne-italic-600.woff2) format('woff2'),
+  src: url(//jimpalompa.github.io/ptp/django/assets/material-icons.woff2) format('woff2');
 }
 
 /* -----------------------------------------------------------------------------
@@ -1540,7 +1614,7 @@ body#upload .thin>div[style*='width:700px'] {
 }
 
 .star-rating {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAACWCAMAAACMwqqTAAAAY1BMVEX///8UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1grLT31gAAAAIXRSTlMAYNAw/6AQcOBQsECAwPCQIGDQMP+gEHDgULBAgMDwkCBvgCBCAAABXElEQVR4Ae2VB67rIBRE3Rs4xd2+OMn+V/kNCRGmWeW/fo86OinDjESAbIThoRJFR0acJPGBkiZJ6jeyZCPzKjlXcq9ScKXwGWUiKD1K9VQqa1ZCckrr5EVNaU6Ikr5OnNQyaeQyonf+rHZ8R7a7VAPjmqlpUGMEumEZBTmpwonYS1ZI3f1ICtcOFDJ3hRxXlee9cjYE2VRESCTbMRBRczE9Ed80CN/JJRBc+G6IZbWFckgKy4IrrRJaBQiCfBzX66HSNEdG23XtgdJ3Xe83hm5j8CojV0avMnFl8hlzJ5g9yvJUFmtWgJGxtXuxMjYCKOnXzskqkzYuo3nnH1bHdwy7SzUwrpmZBjNGoBuWUcBNFW5gL1mhd/cjmRw7UBncFXJcVd73yt0QZFMNQCPbMRBRRzE9Ed80gO/kEQgefDdgWe2kHMJkWfCiVcKWAEEQfNXwVcNXDV815PfyD5WnQZWdvta+AAAAAElFTkSuQmCC') repeat-x;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAACWCAMAAACMwqqTAAAAY1BMVEX///8UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1grLT31gAAAAIXRSTlMAYNAw/6AQcOBQsECAwPCQIGDQMP+gEHDgULBAgMDwkCBvgCBCAAABXElEQVR4Ae2VB67rIBRE3Rs4xd2+OMn+V/kNCRGmWeW/fo86OinDjESAbIThoRJFR0acJPGBkiZJ6jeyZCPzKjlXcq9ScKXwGWUiKD1K9VQqa1ZCckrr5EVNaU6Ikr5OnNQyaeQyonf+rHZ8R7a7VAPjmqlpUGMEumEZBTmpwonYS1ZI3f1ICtcOFDJ3hRxXlee9cjYE2VRESCTbMRBRczE9Ed80CN/JJRBc+G6IZbWFckgKy4IrrRJaBQiCfBzX66HsondG23XtgdJ3Xe83hm5j8CojV0avMnFl8hlzJ5g9yvJUFmtWgJGxtXuxMjYCKOnXzskqkzYuo3nnH1bHdwy7SzUwrpmZBjNGoBuWUcBNFW5gL1mhd/cjmRw7UBncFXJcVd73yt0QZFMNQCPbMRBRRzE9Ed80gO/kEQgefDdgWe2kHMJkWfCiVcKWAEEQfNXwVcNXDV815PfyD5WnQZWdvta+AAAAAElFTkSuQmCC') repeat-x;
   background-size: 17px;
   width: 170px;
   height: 20px;
@@ -1579,7 +1653,7 @@ body#upload .thin>div[style*='width:700px'] {
 }
 
 .star-rating__current-user {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAACWCAMAAACMwqqTAAAAY1BMVEX///8UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1grLT31gAAAAIXRSTlMAYNAw/6AQcOBQsECAwPCQIGDQMP+gEHDgULBAgMDwkCBvgCBCAAABXElEQVR4Ae2VB67rIBRE3Rs4xd2+OMn+V/kNCRGmWeW/fo86OinDjESAbIThoRJFR0acJPGBkiZJ6jeyZCPzKjlXcq9ScKXwGWUiKD1K9VQqa1ZCckrr5EVNaU6Ikr5OnNQyaeQyonf+rHZ8R7a7VAPjmqlpUGMEumEZBTmpwonYS1ZI3f1ICtcOFDJ3hRxXlee9cjYE2VRESCTbMRBRczE9Ed80CN/JJRBc+G6IZbWFckgKy4IrrRJaBQiCfBzX66HSNEdG23XtgdJ3Xe83hm5j8CojV0avMnFl8hlzJ5g9yvJUFmtWgJGxtXuxMjYCKOnXzskqkzYuo3nnH1bHdwy7SzUwrpmZBjNGoBuWUcBNFW5gL1mhd/cjmRw7UBncFXJcVd73yt0QZFMNQCPbMRBRRzE9Ed80gO/kEQgefDdgWe2kHMJkWfCiVcKWAEEQfNXwVcNXDV815PfyD5WnQZWdvta+AAAAAElFTkSuQmCC') left 125px;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAACWCAMAAACMwqqTAAAAY1BMVEX///8UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1grLT31gAAAAIXRSTlMAYNAw/6AQcOBQsECAwPCQIGDQMP+gEHDgULBAgMDwkCBvgCBCAAABXElEQVR4Ae2VB67rIBRE3Rs4xd2+OMn+V/kNCRGmWeW/fo86OinDjESAbIThoRJFR0acJPGBkiZJ6jeyZCPzKjlXcq9ScKXwGWUiKD1K9VQqa1ZCckrr5EVNaU6Ikr5OnNQyaeQyonf+rHZ8R7a7VAPjmqlpUGMEumEZBTmpwonYS1ZI3f1ICtcOFDJ3hRxXlee9cjYE2VRESCTbMRBRczE9Ed80CN/JJRBc+G6IZbWFckgKy4IrrRJaBQiCfBzX66HsondG23XtgdJ3Xe83hm5j8CojV0avMnFl8hlzJ5g9yvJUFmtWgJGxtXuxMjYCKOnXzskqkzYuo3nnH1bHdwy7SzUwrpmZBjNGoBuWUcBNFW5gL1mhd/cjmRw7UBncFXJcVd73yt0QZFMNQCPbMRBRRzE9Ed80gO/kEQgefDdgWe2kHMJkWfCiVcKWAEEQfNXwVcNXDV815PfyD5WnQZWdvta+AAAAAElFTkSuQmCC') left 125px;
   background-size: 17px;
   z-index: 11;
 }
@@ -1592,7 +1666,7 @@ body#upload .thin>div[style*='width:700px'] {
 
 .star-rating__site {
   z-index: 10;
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAACWCAMAAACMwqqTAAAAY1BMVEX///8UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1grLT31gAAAAIXRSTlMAYNAw/6AQcOBQsECAwPCQIGDQMP+gEHDgULBAgMDwkCBvgCBCAAABXElEQVR4Ae2VB67rIBRE3Rs4xd2+OMn+V/kNCRGmWeW/fo86OinDjESAbIThoRJFR0acJPGBkiZJ6jeyZCPzKjlXcq9ScKXwGWUiKD1K9VQqa1ZCckrr5EVNaU6Ikr5OnNQyaeQyonf+rHZ8R7a7VAPjmqlpUGMEumEZBTmpwonYS1ZI3f1ICtcOFDJ3hRxXlee9cjYE2VRESCTbMRBRczE9Ed80CN/JJRBc+G6IZbWFckgKy4IrrRJaBQiCfBzX66HSNEdG23XtgdJ3Xe83hm5j8CojV0avMnFl8hlzJ5g9yvJUFmtWgJGxtXuxMjYCKOnXzskqkzYuo3nnH1bHdwy7SzUwrpmZBjNGoBuWUcBNFW5gL1mhd/cjmRw7UBncFXJcVd73yt0QZFMNQCPbMRBRRzE9Ed80gO/kEQgefDdgWe2kHMJkWfCiVcKWAEEQfNXwVcNXDV815PfyD5WnQZWdvta+AAAAAElFTkSuQmCC') left 100px;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAACWCAMAAACMwqqTAAAAY1BMVEX///8UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1gr/1grLT31gAAAAIXRSTlMAYNAw/6AQcOBQsECAwPCQIGDQMP+gEHDgULBAgMDwkCBvgCBCAAABXElEQVR4Ae2VB67rIBRE3Rs4xd2+OMn+V/kNCRGmWeW/fo86OinDjESAbIThoRJFR0acJPGBkiZJ6jeyZCPzKjlXcq9ScKXwGWUiKD1K9VQqa1ZCckrr5EVNaU6Ikr5OnNQyaeQyonf+rHZ8R7a7VAPjmqlpUGMEumEZBTmpwonYS1ZI3f1ICtcOFDJ3hRxXlee9cjYE2VRESCTbMRBRczE9Ed80CN/JJRBc+G6IZbWFckgKy4IrrRJaBQiCfBzX66HsondG23XtgdJ3Xe83hm5j8CojV0avMnFl8hlzJ5g9yvJUFmtWgJGxtXuxMjYCKOnXzskqkzYuo3nnH1bHdwy7SzUwrpmZBjNGoBuWUcBNFW5gL1mhd/cjmRw7UBncFXJcVd73yt0QZFMNQCPbMRBRRzE9Ed80gO/kEQgefDdgWe2kHMJkWfCiVcKWAEEQfNXwVcNXDV815PfyD5WnQZWdvta+AAAAAElFTkSuQmCC') left 100px;
   background-size: 17px;
 }
 

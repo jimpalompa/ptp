@@ -1,0 +1,14 @@
+/* -----------------------------------------------------------------------------
+
+  Wotan color schemed child theme for ptp
+  by jimpalompa
+
+  Stylesheet url: github.com/jimpalompa/ptp
+
+----------------------------------------------------------------------------- */
+
+@import url(django-nightly-build.css);
+@import url(django-nightly-build.css) (prefers-color-scheme: dark);
+@import url(broomhilda.css) (prefers-color-scheme: light);
+
+/* -------------------------------------------------------------------------- */
