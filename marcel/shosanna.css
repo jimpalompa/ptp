@@ -1,0 +1,36 @@
+/* ------- Fill the cinema with nazis and burn it down to the ground -----------
+
+  Shosanna child theme for ptp
+  by jimpalompa
+
+  Stylesheet url: github.com/jimpalompa/ptp
+
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+  IMPORT PARENT THEME
+----------------------------------------------------------------------------- */
+
+@import url(marcel.css);
+
+/* -----------------------------------------------------------------------------
+  VARIABLES
+----------------------------------------------------------------------------- */
+
+:root {
+  --color--background--black:      #050505; /* shade 80% */
+  --color--background--input:      #141414; /* shade 20% */
+  --color--background--primary:    #191919;
+  --color--background--secondary:  #252525; /* tint 5% */
+  --color--background--tertiary:   #3c3c3c; /* tint 15% */
+  --color--background--quaternary: #535353; /* tint 25% */
+  --color--background--quinary:    #6a6a6a; /* tint 35% */
+
+  --color--foreground--vivid:      #fff;
+  --color--foreground--primary:    #fff;
+  --color--foreground--secondary:  #fff; /* shade 30% */
+  --color--foreground--tertiary:   #fff; /* shade 50% */
+  --color--foreground--quaternary: #fff; /* shade 60% */
+}
+
+/* ------------------------------ Arriverderci ------------------------------ */
