@@ -52,7 +52,7 @@
   --font-family--default: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   --font-family--monospace: ui-monospace, Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
 
-  --font-size--root: 16px;        /* root html */
+  --font-size--root: 16px;
   --font-size--tiny: .8125rem;    /* 13px */
   --font-size--small: .875rem;    /* 14px */
   --font-size--medium: 1rem;      /* 16px */
@@ -64,7 +64,7 @@
   --font-weight--regular: 500;
   --font-weight--bold: 700;
   --line-height--body: 1.5;
-  --line-height--headings: 1.3;
+  --line-height--headings: 1.25;
 
   /* Layouts */
   --spacing--tiny: 8px;
@@ -93,23 +93,7 @@
 }
 
 /* -------------------------------------
-  HIDE ELEMENTS
-------------------------------------- */
-
-.hidden,
-code>br, kbd>br, pre>br, samp>br,
-blockquote br+br,
-#synopsis-and-trailer .panel__heading,
-#synopsis-and-trailer+.panel .panel__heading,
-.box_albumart .panel__heading,
-#movieinfo .panel__heading,
-.forum-post__avatar[style*='hidden'],
-.nobr br {
-  display: none !important;
-}
-
-/* -------------------------------------
-  TYPOGRAPHY
+  FONTS
 ------------------------------------- */
 
 @font-face {
@@ -126,6 +110,21 @@ blockquote br+br,
   font-style: normal;
   font-weight: 400;
   src: local('Material Icons'), url(//jimpalompa.github.io/ptp/django/assets/material-icons.woff2) format('woff2');
+}
+
+/* -------------------------------------
+  HIDE ELEMENTS
+------------------------------------- */
+
+.hidden,
+code>br, kbd>br, pre>br, samp>br,
+blockquote br+br,
+#synopsis-and-trailer .panel__heading,
+#synopsis-and-trailer+.panel .panel__heading,
+.box_albumart .panel__heading,
+#movieinfo .panel__heading,
+.forum-post__avatar[style*='hidden'],
+.nobr br {display: none !important;
 }
 
 /* -------------------------------------
