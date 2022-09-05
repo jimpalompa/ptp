@@ -65,6 +65,8 @@
   --font-weight--bold: 700;
   --line-height--body: 1.375;
   --line-height--headings: 1.25;
+  --letter-spacing--less: -.5px;
+  --letter-spacing--more: .5px;
 
   /* Layout */
   --spacing--tiny: 8px;
@@ -1204,10 +1206,6 @@ body#torrents .thin>.page__title+h2.text--center {
   margin-bottom: var(--spacing--x-large)
 }
 
-#torrent-table>thead>tr>th:nth-child(2) {
-  padding-left: var(--spacing--tiny);
-}
-
 body#forums .heading+.forum_index th,
 body#staff .thin>div:nth-of-type(2) h3+table th {
   height: 26px;
@@ -1301,13 +1299,32 @@ body#collages .thin>.table td:nth-child(2)>a {
   margin-bottom: var(--spacing--x-large);
 }
 
+.torrent_table>thead>tr>th:nth-child(2) {
+  text-align: right;
+  padding: 24px 16px 24px 36px;
+  white-space: nowrap;
+}
+
 .torrent_table th {
   padding: 24px;
+}
+
+.group_torrent_header {
+  letter-spacing: var(--letter-spacing--less);
+}
+
+.group_torrent_header>td:nth-child(2) {
+  padding-right: 16px;
+}
+
+.group_torrent_header>td:nth-child(2) span {
+  float: right !important;
 }
 
 .page__title {
   text-align: center;
   font-size: var(--font-size--gigantic);
+  letter-spacing: var(--letter-spacing--more);
   margin-bottom: var(--spacing--gigantic);
   padding: 0 var(--spacing--gigantic);
 }
@@ -2102,10 +2119,11 @@ a[class*='link--seen']::after {
 }
 
 .cover-movie-list__movie {
-  flex-basis: 20%;
-  padding: 10px;
   display: flex;
   flex-direction: column;
+  flex-basis: 20%;
+  letter-spacing: var(--letter-spacing--less);
+  padding: 10px;
 }
 
 .cover-movie-list__movie__cover-link {
