@@ -63,7 +63,7 @@
 
   --font-weight--regular: 400;
   --font-weight--bold: 600;
-  --line-height--body: 1.5;
+  --line-height--body: 1.375;
   --line-height--headings: 1.25;
 
   /* Layout */
@@ -372,11 +372,12 @@ blockquote::before {
 }
 
 ::placeholder {
-  color: var(--color--background--quaternary)
+  color: var(--color--background--quaternary);
 }
 
-[style='text-decoration: line-through'] {
-  color: rgba(255, 255, 255, .4);
+::selection {
+	background: var(--color--white);
+	color: var(--color--black);
 }
 
 /* -----------------------------------------------------------------------------
@@ -404,6 +405,10 @@ blockquote::before {
 
 .preformatted-text--scrolled {
   overflow: auto;
+}
+
+[style='text-decoration: line-through'] {
+  color: rgba(255, 255, 255, .4);
 }
 
 [class^='ratio-'] {
