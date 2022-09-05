@@ -27,6 +27,9 @@
   --color--foreground--tertiary:   #797264; /* shade 50% */
   --color--foreground--quaternary: #615b50; /* shade 60% */
 
+  --color--invert--primary:        #000;
+  --color--invert--secondary:      #fff;
+
   --color--black:        #000;
   --color--white:        #fff;
   --color--gray:         #a2a2a7;
@@ -62,6 +65,7 @@
   --font-size--gigantic: 1.75rem; /* 28px */
 
   --font-weight--regular: 500;
+  --font-weight--medium: 600;
   --font-weight--bold: 700;
   --line-height--body: 1.375;
   --line-height--headings: 1.25;
