@@ -10,10 +10,11 @@
 @import url(django-nightly-build.css);
 
 /* -----------------------------------------------------------------------------
-  BROOMHILDA VARIABLES
+  BROMHILDA VARIABLES
 ----------------------------------------------------------------------------- */
 
 :root {
+  /* Colors */
   --color--background--base:       #fff;
   --color--background--input:      #faf9f8; /* tint 40% */
   --color--background--primary:    #f7f5f3;
@@ -28,8 +29,11 @@
   --color--foreground--tertiary:   #797264; /* tint 50% */
   --color--foreground--quaternary: #615b50; /* tint 60% */
 
-  --color--black:        #fff;
-  --color--white:        #5d5c5a;
+  --color--invert--primary:        #000;
+  --color--invert--secondary:      #fff;
+
+  --color--black:        #000;
+  --color--white:        #fff;
   --color--gray:         #717175; /* shade 30% */
   --color--gray-dark:    #a2a2a7;
   --color--red:          #a53c3c; /* shade 30% */
