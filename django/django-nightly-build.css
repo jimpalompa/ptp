@@ -34,7 +34,7 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: local('Söhne'), url(assets/sne-400.woff2) format('woff2'),
+	src: local('Söhne'), url(//jimpalompa.github.io/ptp/django/assets/sne-400.woff2) format('woff2'),
 }
 
 @font-face {
@@ -42,7 +42,7 @@
 	font-style: italic;
 	font-weight: 400;
 	font-display: swap;
-	src: local('Söhne'), url(assets/sne-italic-400.woff2) format('woff2'),
+	src: local('Söhne'), url(//jimpalompa.github.io/ptp/django/assets/sne-italic-400.woff2) format('woff2'),
 }
 
 @font-face {
@@ -50,7 +50,7 @@
 	font-style: normal;
 	font-weight: 600;
 	font-display: swap;
-	src: local('Söhne'), url(assets/sne-600.woff2) format('woff2'),
+	src: local('Söhne'), url(//jimpalompa.github.io/ptp/django/assets/sne-600.woff2) format('woff2'),
 }
 
 @font-face {
@@ -58,7 +58,7 @@
 	font-style: italic;
 	font-weight: 600;
 	font-display: swap;
-	src: local('Söhne'), url(assets/sne-italic-600.woff2) format('woff2'),
+	src: local('Söhne'), url(//jimpalompa.github.io/ptp/django/assets/sne-italic-600.woff2) format('woff2'),
 }
 
 /* -----------------------------------------------------------------------------
