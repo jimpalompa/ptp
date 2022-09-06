@@ -13,7 +13,7 @@
 
 :root {
   /* Colors */
-  --color--background--black:      #050505; /* shade 80% */
+  --color--background--initial:    #050505; /* shade 80% */
   --color--background--input:      #141414; /* shade 20% */
   --color--background--primary:    #191919;
   --color--background--secondary:  #252525; /* tint 5% */
@@ -21,11 +21,18 @@
   --color--background--quaternary: #535353; /* tint 25% */
   --color--background--quinary:    #6a6a6a; /* tint 35% */
 
-  --color--foreground--vivid:      #fff;
-  --color--foreground--primary:    #fff;
-  --color--foreground--secondary:  #fff; /* shade 30% */
-  --color--foreground--tertiary:   #fff; /* shade 50% */
-  --color--foreground--quaternary: #fff; /* shade 60% */
+  --color--foreground--primary:    #f9f9f9;
+  --color--foreground--secondary:  #e0e0e0; /* shade 10% */
+  --color--foreground--tertiary:   #a2a2a2; /* shade 35% */
+  --color--foreground--quaternary: #646464; /* shade 60% */
+  --color--foreground--quinary:    #4b4b4b; /* shade 70% */
+
+  --color--accent-light:   #f9dd9d; /* tint 20% */
+  --color--accent:         #f7d584;
+  --color--accent-dark:    #c6aa6a; /* shade 20% */
+
+  --color--black-to-white: #000;
+  --color--white-to-black: #fff;
 
   --color--black:        #000;
   --color--white:        #fff;
@@ -51,10 +58,11 @@
   /* Typography */
   --font-family--default: 'Source Sans Pro', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   --font-family--monospace: ui-monospace, Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
+  --font-family--icons: 'Material Icons';
 
   --font-size--root: 16px;
-  --font-size--tiny: .75rem;      /* 12px */
-  --font-size--small: .8125rem;   /* 13px */
+  --font-size--tiny: .8125rem;    /* 13px */
+  --font-size--small: .875rem;    /* 14px */
   --font-size--medium: .9375rem;  /* 15px */
   --font-size--large: 1rem;       /* 16px */
   --font-size--x-large: 1.125rem; /* 18px */
@@ -62,18 +70,24 @@
   --font-size--gigantic: 1.5rem;  /* 24px */
 
   --font-weight--regular: 400;
+  --font-weight--medium: 500;
   --font-weight--bold: 600;
-  --line-height--body: 1.5;
+  --line-height--body: 1.375;
   --line-height--headings: 1.25;
+  --letter-spacing--less: -.25px;
+  --letter-spacing--more: .25px;
 
-  /* Layouts */
+  /* Layout */
+  --content-width--small: 928px; /* 1024px with padding */
+  --content-width--large: 1264px; /* 1360px with padding */
+
   --spacing--tiny: 4px;
   --spacing--small: 8px;
   --spacing--medium: 12px;
   --spacing--large: 16px;
-  --spacing--x-large: 20px;
-  --spacing--huge: 24px;
-  --spacing--gigantic: 32px;
+  --spacing--x-large: 24px;
+  --spacing--huge: 32px;
+  --spacing--gigantic: 40px;
 
   --border-radius--default: 4px;
   --border-radius--default--top: 4px 4px 0 0;
@@ -135,7 +149,7 @@
 .forum-topic__go-to-last-read::after,
 .torrent-info-link--user-snatched::after {
   display: inline-block;
-  font-family: 'Material Icons';
+  font-family: var(--font-family--icons);
 }
 
 .forum-topic__go-to-last-read::after {
@@ -158,15 +172,18 @@
   display: none;
 }
 
-.huge-movie-list__movie__ratings__votes-column {color: transparent;
+.huge-movie-list__movie__ratings__votes-column {
+  color: transparent;
 }
 
 span.spoiler {
-  background: #191919 !important; color: transparent !important;
+  background: var(--color--background--input) !important;
+  color: transparent !important;
 }
 
 span.spoiler:hover {
-  background: transparent !important; color: inherit !important;
+  background: transparent !important;
+  color: inherit !important;
 }
 
 /* -----------------------------------------------------------------------------
@@ -182,10 +199,10 @@ html {
 }
 
 body {
-  font-size: 14px;
-  font-weight: 400;
+  font-family: var(--font-family--default);
+  font-size: var(--font-size--medium);
+  font-weight: var(--font-weight--regular);
   width: 100%;
-  font-family: 'Source Sans Pro', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   margin: 0 auto;
 }
 
@@ -199,33 +216,16 @@ a:hover {
   text-decoration: none;
 }
 
-a:focus, a:active, a:hover {
+a:hover, a:focus, a:active {
   outline: 0;
 }
 
-h1 {
-  font-size: 1.5rem;
-}
-
-h2 {
-  font-size: 1.25rem;
-}
-
-h3 {
-  font-size: 1.125rem;
-}
-
-h4 {
-  font-size: .875rem;
-}
-
-h5 {
-  font-size: .625rem;
-}
-
-h6 {
-  font-size: .5625rem;
-}
+h1 {font-size: var(--font-size--gigantic);}
+h2 {font-size: var(--font-size--huge);}
+h3 {font-size: var(--font-size--x-large);}
+h4 {font-size: var(--font-size--large);}
+h5 {font-size: var(--font-size--medium);}
+h6 {font-size: var(--font-size--small);}
 
 abbr[title] {
   border-bottom: 1px dotted;
@@ -243,13 +243,13 @@ hr {
 }
 
 mark {
-  background: #ff0;
-  color: #000;
+  background: var(--color--yellow);
+  color: var(--color--black);
 }
 
 code, kbd, pre, samp {
-  font-family: ui-monospace, Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
-  font-size: .625rem;
+  font-family: var(--font-family--monospace);
+  font-size: var(--font-size--small);
 }
 
 pre {
@@ -262,11 +262,11 @@ q {
 }
 
 small {
-  font-size: .8em;
+  font-size: var(--font-size--tiny);
 }
 
 sub, sup {
-  font-size: .75em;
+  font-size: var(--font-size--tiny);
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -317,12 +317,13 @@ button, select {
 }
 
 button, html input[type='button'], input[type='reset'], input[type='submit'] {
-  -webkit-appearance: button;
-  cursor: pointer;
+  background: var(--color--foreground--quaternary);
+  color: var(--color--white);
+  font-size: var(--font-size--small);
+  font-weight: var(--font-weight--bold);
   padding: 6px;
-  background: #797979;
-  color: #fff;
-  font-weight: 600;
+  cursor: pointer;
+  -webkit-appearance: button;
 }
 
 input[type='checkbox'], input[type='radio'] {
@@ -371,16 +372,19 @@ blockquote {
 
 /* Sizes */
 .huge-movie-list__movie__title {
-  font-size: 1.5rem;
+  font-size: var(--font-size--gigantic);
 }
 
 .huge-movie-list__movie__year {
-  font-size: 1.25rem;
+  font-size: var(--font-size--huge);
 }
 
-.huge-movie-list__movie__director-list,
+.huge-movie-list__movie__director-list {
+  font-size: var(--font-size--x-large);
+}
+
 .huge-movie-list__movie__synopsis {
-  font-size: 1.125rem;
+  font-size: var(--font-size--large);
 }
 
 blockquote,
@@ -390,21 +394,18 @@ blockquote,
 .qtip-content,
 .linkbox,
 .basic-movie-list__movie__tags {
-  font-size: .8125rem;
+  font-size: var(--font-size--small);
 }
 
 .search-bar__search-field__input,
 .search-bar__results,
 .footer,
-.cover-movie-list__movie__tags,
-.cover-movie-list__movie__year,
-.cover-movie-list__movie__new,
 .huge-movie-list__movie__torrent-summary,
 .basic-movie-list__movie__bookmark,
 .basic-movie-list__movie__rating-container,
 .basic-movie-list__torrent-row,
 .panel__heading__toggler {
-  font-size: .75rem;
+  font-size: var(--font-size--small);
 }
 
 /* Weights & Styles */
@@ -430,7 +431,7 @@ blockquote,
 .torrent-info-link--user-snatched,
 .torrent-info-link--user-downloaded,
 .panel__heading__title {
-  font-weight: 600;
+  font-weight: var(--font-weight--bold);
 }
 
 .alert--warning,
@@ -469,7 +470,7 @@ h2,
 .screenshot-comparison__help,
 .staff-toolbar__link--important,
 .inbox-message--unread a {
-  color: #f7f7f7;
+  color: var(--color--foreground--primary);
 }
 
 /* Body */
@@ -486,7 +487,7 @@ h2 small a,
 .torrent-info-link,
 .movie-tooltip__rating__title>a,
 .movie-tooltip__tag {
-  color: #969696;
+  color: var(--color--foreground--tertiary);
 }
 
 /* Accent */
@@ -503,7 +504,7 @@ a:active,
 .search-bar__results__list-item--is-highlighted .search-bar__results__link,
 .user-info-bar__link--highlighted,
 .forum-topic__new {
-  color: #f7d584;
+  color: var(--color--accent);
 }
 
 /* Red */
@@ -519,10 +520,9 @@ a:active,
 .encoding-history-status--expired,
 .missing-torrent-status--missing,
 .torrent-info__reported,
-.torrent-info-link--user-leeching,
 .alert--error,
 .forum-post__id--staff-post {
-  color: #d14841;
+  color: var(--color--red);
 }
 
 /* Orange */
@@ -533,15 +533,15 @@ a:active,
 .encoding-history-status--canceled,
 .missing-torrent-status--trumpable,
 .torrent-info__trumpable {
-  color: #f37934;
+  color: var(--color--orange);
 }
 
 
 /* Yellow */
 .ratio-08,
 .ratio-09,
-.torrent-info-link--user-seeding {
-  color: #f7da64;
+a.torrent-info-link--user-leeching {
+  color: var(--color--yellow);
 }
 
 /* Green */
@@ -554,18 +554,23 @@ a:active,
 .snatchlist-status--not-hnr,
 .encoding-history-status--finished,
 .missing-torrent-status--exists,
-.torrent-info-link--user-downloaded {
-  color: #41a85f;
+a.torrent-info-link--user-seeding,
+[class$='__new'] {
+  color: var(--color--green);
+}
+
+a.torrent-info-link--user-downloaded {
+  color: var(--color--cyan);
 }
 
 /* Blue */
 a.torrent-info-link--user-snatched {
-  color: #2c82c9;
+  color: var(--color--blue);
 }
 
 /* Purple */
 a.torrent-info-link--user-uploaded {
-  color: #9365b8;
+  color: var(--color--purple);
 }
 
 /* -----------------------------------------------------------------------------
@@ -573,7 +578,7 @@ a.torrent-info-link--user-uploaded {
 ----------------------------------------------------------------------------- */
 
 button, input, select, textarea {
-  background: #f7f7f7;
+  background: var(--color--white);
 }
 
 body,
@@ -582,7 +587,7 @@ body,
 .tabs__bar__item--active>.tabs__bar__link:hover,
 .tabs__bar__item--active>.tabs__bar__link:active,
 .tabs__bar__item--active>.tabs__bar__link:focus {
-  background: #191919;
+  background: var(--color--background--primary);
 }
 
 .main-menu,
@@ -605,7 +610,7 @@ body,
 .footer,
 .mediainfo,
 .movie-page__torrent-report-description {
-  background: #232323;
+  background: var(--color--background--secondary);
 }
 
 hr,
@@ -637,7 +642,7 @@ blockquote,
 .poll__bar__center,
 .release-description-preview,
 #MovieTooltipVoteWindow {
-  background: #323232;
+  background: var(--color--background--tertiary);
 }
 
 .alert-bar,
@@ -646,11 +651,11 @@ blockquote,
 .table--panel-like>thead>tr>td,
 .table--panel-like>thead>tr>th,
 .forum-post__heading {
-  border-color: #191919;
+  border-color: var(--color--background--primary);
 }
 
 blockquote {
-  border-color: #232323;
+  border-color: var(--color--background--secondary);
 }
 
 .mediainfo,
@@ -660,11 +665,11 @@ blockquote {
 .tabs__bar__item--active>.tabs__bar__link:hover,
 .tabs__bar__item--active>.tabs__bar__link:active,
 .tabs__bar__item--active>.tabs__bar__link:focus {
-  border-color: #323232;
+  border-color: var(--color--background--tertiary);
 }
 
 .forum-post--unread {
-  border-color: #f7d584;
+  border-color: var(--color--green);
 }
 
 /* -----------------------------------------------------------------------------
@@ -683,7 +688,7 @@ blockquote {
 }
 
 .user-info-bar {
-  font-size: .75rem;
+  font-size: var(--font-size--small);
   padding: 7px 0;
   text-align: center;
   width: 100%;
@@ -691,12 +696,16 @@ blockquote {
   top: 0;
 }
 
+.user-info-bar ul {
+  display: inline-block;
+}
+
 .main-menu {
   padding: 10px 0;
   text-align: center;
   width: 100%;
   position: absolute;
-  top: 192px;
+  top: 188px;
 }
 
 .alert-bars {
@@ -704,7 +713,7 @@ blockquote {
   text-align: center;
   position: relative;
   top: 120px;
-  width: 960px;
+  width: var(--content-width--small);
 }
 
 .alert-bar, .staff-toolbar {
@@ -719,18 +728,19 @@ blockquote {
 }
 
 .search-bar {
-  padding: 4px 0;
+  padding: 6px 0;
   text-align: center;
   width: 100%;
   position: absolute;
-  top: 229px;
+  top: 228px;
 }
 
-.page__main-content {
+#content {
   margin: 0 auto;
+  padding: 0 48px;
   position: relative;
   top: 128px;
-  width: 960px;
+  width: var(--content-width--small);
 }
 
 .main-column {
@@ -747,7 +757,7 @@ blockquote {
   text-align: center;
   position: relative;
   top: 200px;
-  padding: 15px 0;
+  padding: 16px 48px;
 }
 
 /* -----------------------------------------------------------------------------
@@ -798,10 +808,17 @@ img#browse_settings {
 }
 
 .cover-movie-list__movie__cover-link {
-  box-shadow: inset 0 0 2px 1px rgba(0,0,0,.1);
   display: block;
+  background-color: var(--color--background--tertiary) !important;
   width: 100%;
-  height: 265px;
+  padding-bottom: 150%;
+  box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, .1);
+}
+
+.cover-movie-list__movie__year,
+.cover-movie-list__movie__tags,
+.cover-movie-list__movie__new {
+  font-size: var(--font-size--tiny);
 }
 
 .cover-movie-list--narrow .cover-movie-list__movie {
@@ -809,16 +826,12 @@ img#browse_settings {
   margin: 10px 0 10px 1.25%;
 }
 
-.cover-movie-list--narrow .cover-movie-list__movie__cover-link {
-  height: 250px;
-}
-
 .cover-movie-list--narrow .cover-movie-list__movie:nth-of-type(5n+1) {
   margin-left: 0;
 }
 
 .cover-movie-list__movie__undercover {
-  font-size: .8125rem;
+  font-size: var(--font-size--small);
   padding: 8px;
   position: relative;
 }
@@ -827,21 +840,22 @@ img#browse_settings {
   margin-bottom: 5px;
 }
 
-.cover-movie-list__movie__rating-and-tags {
-  margin-top: 2px;
-  width: 80%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .cover-movie-list__movie__rating {
   display: inline-block;
+  font-size: var(--font-size--tiny);
   text-align: center;
-  padding: 5px;
+  padding: 6px;
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.cover-movie-list__movie__rating-and-tags {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+  margin-top: 2px;
 }
 
 /* Huge view */
@@ -851,23 +865,24 @@ img#browse_settings {
 }
 
 .huge-movie-list__movie__cover {
+  background-color: var(--color--background--tertiary);
   float: left;
-  width: 270px;
+  width: 240px;
 }
 
 .huge-movie-list__movie__cover__link {
   display: block;
   width: 100%;
-  height: 400px;
+  padding-bottom: 150%;
 }
 
 .huge-movie-list__movie__details {
-  margin-left: 270px;
-  padding: 25px;
+  margin-left: 240px;
+  padding: var(--spacing--gigantic)
 }
 
 .huge-movie-list__movie__title-row {
-  margin-bottom: 5px;
+  margin: 0 48px 8px 0;
 }
 
 .huge-movie-list__movie__director-list {
@@ -876,8 +891,8 @@ img#browse_settings {
 
 .huge-movie-list__movie__new {
   position: absolute;
-  bottom: 80px;
-  right: 25px;
+  top: 40px;
+  right: 40px;
 }
 
 .huge-movie-list__movie__ratings-and-synopsis {
@@ -910,18 +925,19 @@ img#browse_settings {
 
 .huge-movie-list__movie__action-row {
   position: absolute;
-  bottom: 25px;
+  bottom: 40px;
 }
 
 .huge-movie-list__movie__torrent-summary {
   text-align: right;
   position: absolute;
-  bottom: 25px;
-  right: 25px;
+  bottom: 40px;
+  right: 40px;
 }
 
 /* List view */
 .basic-movie-list__details-row {
+  border-top: 2px solid var(--color--background--primary);
   vertical-align: top;
 }
 
@@ -932,7 +948,8 @@ img#browse_settings {
 }
 
 .basic-movie-list__movie__cover {
-  width: 90px;
+  background-color: var(--color--background--tertiary);
+  width: 96px;
 }
 
 .basic-movie-list__movie__rating-container {
@@ -968,8 +985,9 @@ img#browse_settings {
 
 .small-cover-movie-list__movie__link {
   display: block;
+  background-color: var(--color--background--tertiary) !important;
   width: 100%;
-  height: 190px;
+  padding-bottom: 150%;
 }
 
 .small-cover-movie-list__movie__title {
@@ -978,10 +996,11 @@ img#browse_settings {
 }
 
 .small-cover-movie-list__movie__title::before {
-  font-family: 'Material Icons';
-  color: #f7d584;
+  color: var(--color--accent);
+  font-family: var(--font-family--icons);
   padding-right: 2px;
-  vertical-align: middle;
+  position: relative;
+  top: 2px;
   content: '\e838';
 }
 
@@ -1024,13 +1043,14 @@ img#browse_settings {
 }
 
 .last5-movies__link {
-  margin-bottom: 5px;
+  background-color: var(--color--background--tertiary);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
   width: 95%;
-  height: 190px;
+  margin-bottom: 5px;
+  padding-bottom: 150%;
 }
 
 .table--bordered>tbody>tr.basic-movie-list__details-row>td {
@@ -1083,7 +1103,7 @@ table#movie-ratings-table td {
 }
 
 #userrecommended .user-recommendation {
-  background: #323232;
+  background: var(--color--background--tertiary);
   margin-bottom: 25px;
 }
 
@@ -1198,7 +1218,7 @@ th {
 }
 
 .alert--error .alert__link {
-  font-weight: 600;
+  font-weight: var(--font-weight--bold);
 }
 
 .alert-bar {
@@ -1207,41 +1227,16 @@ th {
   margin: 5px;
 }
 
-.bbcode-size-1 {
-  font-size: .75rem;
-}
-
-.bbcode-size-2 {
-  font-size: .625rem;
-}
-
-.bbcode-size-3 {
-  font-size: 1.25rem;
-}
-
-.bbcode-size-5 {
-  font-size: 1.75rem;
-}
-
-.bbcode-size-6 {
-  font-size: 1.25rem;
-}
-
-.bbcode-size-7 {
-  font-size: 2.25rem;
-}
-
-.bbcode-size-8 {
-  font-size: 2.5rem;
-}
-
-.bbcode-size-9 {
-  font-size: 2.75rem;
-}
-
-.bbcode-size-10 {
-  font-size: 3rem;
-}
+.bbcode-size-1 {font-size: var(--font-size--small);}
+.bbcode-size-2 {font-size: var(--font-size--medium);}
+.bbcode-size-3 {font-size: var(--font-size--large);}
+.bbcode-size-4 {font-size: var(--font-size--x-large);}
+.bbcode-size-5 {font-size: 19px;}
+.bbcode-size-6 {font-size: var(--font-size--huge);}
+.bbcode-size-7 {font-size: 21px;}
+.bbcode-size-8 {font-size: 22px;}
+.bbcode-size-9 {font-size: 23px;}
+.bbcode-size-10 {font-size: var(--font-size--gigantic);}
 
 .bbcode__image {
   max-width: 100%;
@@ -1252,8 +1247,12 @@ th {
   max-width: 100%;
 }
 
+#Bbcode_Toolbar {
+  background: #d2d0cf;
+}
+
 .bbcode-text-preview {
-  border: 1px solid #797979;
+  border: 1px solid var(--color--foreground--quaternary);
   padding: .5em;
 }
 
@@ -1267,14 +1266,13 @@ th {
 .bbcode-toolbar__button {
   width: 24px;
   height: 24px;
-  background: #ddd url(//static.passthepopcorn.me/static/common/bbcode_buttons5.png) no-repeat center center;
-  border: 4px solid #ddd;
+  background: url(//static.passthepopcorn.me/static/common/bbcode_buttons5.png) no-repeat center center;
+  border: 4px solid transparent;
   float: left;
 }
 
 .bbcode-toolbar__button:hover {
-  background: #f7f7f7 url(//static.passthepopcorn.me/static/common/bbcode_buttons5.png) no-repeat top left;
-  border: 4px solid #f7f7f7;
+  background: var(--color--foreground--primary) url(//static.passthepopcorn.me/static/common/bbcode_buttons5.png) no-repeat top left;
 }
 
 .bbcode-toolbar__size-popup-row {
@@ -1283,7 +1281,8 @@ th {
 }
 
 .bbcode-toolbar__size-popup-row:hover {
-  background: #ffffe1;
+  background: var(--color--background--tertiary);
+  color: var(--color--white);
 }
 
 .bbcode-toolbar__color-popup-color {
@@ -1301,7 +1300,7 @@ th {
 
 .footer__disclaimer {
   display: inline-block;
-  width: 90%;
+  width: var(--content-width--small);
   margin-bottom: 10px;
 }
 
@@ -1538,11 +1537,11 @@ th {
 .bvalidator_errmsg {
   display: none;
   white-space: nowrap;
-  font-size: .75rem;
-  font-weight: 600;
+  font-size: var(--font-size--small);
+  font-weight: var(--font-weight--bold);
   position: relative;
-  background: #d51111;
-  border: 3px solid #ddd;
+  background: var(--color--red-dark);
+  border: 3px solid var(--color--white);
   padding: 4px 10px;
 }
 
@@ -1557,14 +1556,14 @@ th {
 }
 
 .bvalidator_errmsg::after {
-  border-top-color: #d51111;
+  border-top-color: var(--color--red-dark);
   left: 14px;
   margin-left: -8px;
   border-width: 8px;
 }
 
 .bvalidator_errmsg::before {
-  border-top-color: #ddd;
+  border-top-color: var(--color--white);
   left: 14px;
   margin-left: -12px;
   border-width: 12px;
@@ -1573,18 +1572,18 @@ th {
 .bvalidator_errmsg .bvalidator_close_icon {
   margin-left: 5px;
   margin-top: -2px;
-  font-weight: bolder;
-  color: #000;
+  font-weight: var(--font-weight--bold);
+  color: var(--color--white);
   cursor: pointer;
-  font-size: .875rem;
+  font-size: var(--font-size--medium);
 }
 
 #simplemodal-overlay {
-  background-color: #000;
+  background-color: var(--color--black);
 }
 
 #simplemodal-overlay-pointer {
-  background-color: #000;
+  background-color: var(--color--black);
   cursor: pointer;
 }
 
@@ -1683,11 +1682,12 @@ html.lightbox__scroll-lock {
 
 .main-menu__item {
   display: inline;
+  font-size: var(--font-size--large);
   margin: 5px 15px;
 }
 
 .main-menu__link, .main-menu__link:hover {
-  padding: 10px;
+  padding: 10px 8px;
 }
 
 .mediainfo {
@@ -1716,7 +1716,7 @@ html.lightbox__scroll-lock {
 }
 
 .label {
-  font-weight: 600;
+  font-weight: var(--font-weight--bold);
   text-align: right;
 }
 
@@ -1757,7 +1757,7 @@ html.lightbox__scroll-lock {
 }
 
 .table>tbody>tr.movie-page__torrent--highlighted {
-  background-color: #ffffe1;
+  background-color: var(--color--foreground--secondary);
 }
 
 .movie-page__torrent-report-container {
@@ -1775,8 +1775,8 @@ html.lightbox__scroll-lock {
 }
 
 .movie-page__torrent-report-staff-comment {
-  border-top: 1px dotted #757575;
-  background-color: #e4e4e4;
+  border-top: 1px dotted var(--color--foreground--quaternary);
+  background-color: var(--color--foreground--secondary);
   padding: 5px .625rem;
 }
 
@@ -1790,7 +1790,7 @@ html.lightbox__scroll-lock {
 }
 
 .movie-tooltip__title-row {
-  font-weight: 600;
+  font-weight: var(--font-weight--bold);
 }
 
 .movie-tooltip__director-list {
@@ -1822,7 +1822,7 @@ html.lightbox__scroll-lock {
 
 .movie-tooltip__trailer__image {
   cursor: pointer;
-  border-color: #303030;
+  border-color: var(--color--background--tertiary);
   border-style: solid;
   border-width: 1px;
 }
@@ -1843,14 +1843,15 @@ html.lightbox__scroll-lock {
   margin-top: 5px;
   padding-top: 10px;
   padding-bottom: 4px;
-  font-weight: 600;
+  font-weight: var(--font-weight--bold);
   border-top: 2px solid silver;
 }
 
 .page__title {
   display: block;
+  font-size: var(--font-size--gigantic);
   text-align: center;
-  margin-top: 5px;
+  margin: var(--spacing--small) 0 var(--spacing--x-large);
 }
 
 .pagination {
@@ -1866,7 +1867,7 @@ html.lightbox__scroll-lock {
 .poll__title {
   display: inline-block;
   margin-bottom: 10px;
-  font-weight: 600;
+  font-weight: var(--font-weight--bold);
 }
 
 .poll__list {
@@ -1927,7 +1928,7 @@ html.lightbox__scroll-lock {
 
 .qtip-ptp {
   border: 0;
-  box-shadow: 0 1px 3px rgba(0,0,0,.75);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .75);
 }
 
 .release-name-movie-list__movie__release-category {
@@ -1937,8 +1938,8 @@ html.lightbox__scroll-lock {
 
 .release-name-movie-list__movie__release-category__link {
   white-space: nowrap;
-  font-size: .75rem;
-  font-weight: 600;
+  font-size: var(--font-size--small);
+  font-weight: var(--font-weight--bold);
   text-shadow: 1px 1px 1px rgba(5, 5, 5, .5);
   margin-left: 3px;
   margin-right: 3px;
@@ -1961,7 +1962,7 @@ html.lightbox__scroll-lock {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: var(--color--black);
   text-align: center;
 }
 
@@ -1980,7 +1981,7 @@ html.lightbox__scroll-lock {
 }
 
 .screenshot-comparison__image {
-  border: 4px solid #404;
+  border: 4px solid var(--color--blue-dark);
 }
 
 .screenshot-comparison__label {
@@ -1988,8 +1989,8 @@ html.lightbox__scroll-lock {
   top: 0;
   z-index: 2000;
   font-size: 1.125rem;
-  font-weight: 600;
-  text-shadow: 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000;
+  font-weight: var(--font-weight--bold);
+  text-shadow: 0 0 3px var(--color--black);
 }
 
 .screenshot-comparison__old-school-toggler-container {
@@ -2017,8 +2018,8 @@ html.lightbox__scroll-lock {
 }
 
 .search-bar__search-field__input {
-  padding: 3px 5px;
-  width: 110px;
+  padding: 3px 6px;
+  width: 120px;
 }
 
 .search-bar__results {
@@ -2053,7 +2054,7 @@ html.lightbox__scroll-lock {
   margin-right: auto;
   margin-bottom: 5px;
   text-align: center;
-  font-weight: 600;
+  font-weight: var(--font-weight--bold);
   display: inline;
   position: absolute;
   top: 148px;
@@ -2069,7 +2070,7 @@ html.lightbox__scroll-lock {
 .staff-toolbar__link--important {
   display: inline-block;
   border-radius: 3px;
-  background-color: #ca2a43;
+  background-color: var(--color--red-dark);
   padding: 4px;
 }
 
@@ -2178,13 +2179,13 @@ html.lightbox__scroll-lock {
 }
 
 .user-info-bar__link--highlighted, .user-info-bar__link--highlighted:hover {
-  font-weight: 600;
+  font-weight: var(--font-weight--bold);
 }
 
 .user-info-bar__list {
   display: inline;
   position: relative;
-  margin: 0 10px;
+  margin: 0 8px 2px;
   padding: 0;
 }
 
@@ -2237,17 +2238,17 @@ html.lightbox__scroll-lock {
 }
 
 .wiki__diff--added {
-  color: green;
-  background: #dfd;
+  color: var(--color--green);
+  background: var(--color--foreground--secondary);
 }
 
 .wiki__diff--deleted {
-  color: red;
-  background: #fdd;
+  color: var(--color--red);
+  background: var(--color--foreground--secondary);
 }
 
 .missing-torrent-status--trumpable, .encoding-history-status--canceled {
-  color: #c07c00;
+  color: var(--color--orange-dark);
 }
 
 .list:last-child, p:last-child, .table:last-child, .alert:last-child, .search-form--toggleable, .forum-post--heading-only, .panel--no-margin, .poll__bar--no-margin {
@@ -2271,19 +2272,15 @@ p:first-child, .alert:first-child, .heading:first-child {
 }
 
 .basic-movie-list__movie__rating__title, .movie-tooltip__rating__title, .release-name-movie-list__movie__rating__title {
-  font-weight: 400;
+  font-weight: var(--font-weight--regular);
 }
 
 .basic-movie-list__movie__tags, .release-name-movie-list__movie__tags {
   display: block;
 }
 
-.bbcode-size-4 {
-  font-size: 1.5rem;
-}
-
 .bbcode-toolbar__color-popup-color:hover, .bbcode-toolbar__emoticon-popup-item:hover {
-  border: solid 2px #ff8040;
+  border: solid 2px var(--color--orange);
 }
 
 .generic-form--full-width, .grid-u-1, .mediainfo--in-release-description {
@@ -2314,10 +2311,6 @@ p:first-child, .alert:first-child, .heading:first-child {
   margin-left: 10px;
 }
 
-#Bbcode_Toolbar {
-  background: #ddd;
-}
-
 /* =============================================================================
   RESPONSIVE LAYOUT
 ============================================================================= */
@@ -2325,36 +2318,21 @@ p:first-child, .alert:first-child, .heading:first-child {
 /* -----------------------------------------------------------------------------
   min-width 1280px, large screens
 ----------------------------------------------------------------------------- */
+
 @media only screen and (min-width: 1280px) {
-
-  .page__main-content, .alert-bars {
-    width: 1170px;
-  }
-
-  .last5-movies__link {
-    height: 236px;
-  }
-
-  .cover-movie-list__movie__cover-link {
-    height: 327px;
-  }
-
-  .cover-movie-list--narrow .cover-movie-list__movie__cover-link {
-    height: 308px;
-  }
-
-  .small-cover-movie-list__movie__link {
-    height: 235px;
+  #content, .alert-bars {
+    width: var(--content-width--large);
   }
 
   .cover-movie-list__movie__undercover {
-    font-size: .875rem;
+    font-size: var(--font-size--medium);
   }
 
-  .cover-movie-list__movie__tags {
-    font-size: .8125rem;
+  .cover-movie-list__movie__year,
+  .cover-movie-list__movie__tags,
+  .cover-movie-list__movie__new {
+    font-size: var(--font-size--small);
   }
-
 }
 
 /* --------------- I think this just might be my masterpiece ---------------- */
