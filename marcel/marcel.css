@@ -13,7 +13,7 @@
 
 :root {
   /* Colors */
-  --color--background--initial:    #050505; /* shade 80% */
+  --color--background--initial:    #0f0f0f; /* shade 40% */
   --color--background--input:      #141414; /* shade 20% */
   --color--background--primary:    #191919;
   --color--background--secondary:  #252525; /* tint 5% */
@@ -179,7 +179,7 @@
 }
 
 span.spoiler {
-  background: var(--color--background--input) !important;
+  background: var(--color--background--initial) !important;
   color: transparent !important;
 }
 
@@ -1762,6 +1762,20 @@ html.lightbox__scroll-lock {
   background-color: var(--color--foreground--secondary);
 }
 
+body#torrents div[id^='reported'] .movie-page__torrent__panel {
+  background: var(--color--red-dark);
+  color: var(--color--white);
+}
+
+body#torrents div[id^='reported'] .movie-page__torrent-report-description {
+  border: 2px dashed var(--color--red-dark);
+}
+
+body#torrents div[id^='trumpable'].movie-page__torrent__panel {
+  background: var(--color--orange-dark);
+  color: var(--color--white);
+}
+
 .movie-page__torrent-report-container {
   margin-top: 8px;
 }
@@ -1771,9 +1785,8 @@ html.lightbox__scroll-lock {
 }
 
 .movie-page__torrent-report-description {
+  color: var(--color--foreground--primary);
   padding: 5px 10px;
-  border-style: dashed;
-  border-width: 2px;
 }
 
 .movie-page__torrent-report-staff-comment {
