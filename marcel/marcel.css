@@ -96,9 +96,9 @@
   --border-radius--small--top: 2px 2px 0 0;
   --border-radius--small--bottom: 0 0 2px 2px;
 
-  --box-shadow--small: rgba(0, 0, 0, .3) 0 1px 3px;
-  --box-shadow--medium: rgba(0, 0, 0, .3) 0 2px 6px;
-  --box-shadow--large: rgba(0, 0, 0, .3) 0 4px 12px;
+  --box-shadow--small: 0 2px 5px rgba(0, 0, 0, .15);
+  --box-shadow--medium: 0 3px 8px 2px rgba(0, 0, 0, .15);
+  --box-shadow--large: 0 6px 12px rgba(0, 0, 0, .15);
 
   --transition--all: all .2s ease-out;
   --transition--background: background .2s ease-out;
@@ -766,12 +766,12 @@ blockquote {
 
 .main-menu,
 .footer {
-  box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, .25);
+  box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, .15);
 }
 
 .search-bar,
 .lightbox img {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+  box-shadow: var(--box-shadow--small);
 }
 
 .panel,
@@ -779,7 +779,7 @@ blockquote {
 .cover-movie-list__movie,
 .huge-movie-list__movie,
 .forum-post {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+  box-shadow:var(--box-shadow--medium);
 }
 
 /* -----------------------------------------------------------------------------
@@ -812,7 +812,6 @@ img#browse_settings {
   background-color: var(--color--background--tertiary) !important;
   width: 100%;
   padding-bottom: 150%;
-  box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, .1);
 }
 
 .cover-movie-list__movie__year,
@@ -1928,7 +1927,7 @@ html.lightbox__scroll-lock {
 
 .qtip-ptp {
   border: 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .75);
+  box-shadow: var(--box-shadow--medium);
 }
 
 .release-name-movie-list__movie__release-category {
