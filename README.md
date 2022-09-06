@@ -1,32 +1,34 @@
 <br>
 
-# Django <sup>`BETA`</sup>
-Standalone theme
+# Django
+Django (dark version)
 ```
 https://jimpalompa.github.io/ptp/django/django.css
 ```
 
+Broomhilda (light version)
+```
+workinonit..
+```
+
+Wotan (dark/light OS version)
+```
+workinonit..
+```
+
 # Marcel
-Standalone theme
+Marcel (dark version)
 ```
 https://jimpalompa.github.io/ptp/marcel/marcel.css
 ```
 
-### Deprecated themes
-<details>
-  <summary>Show more</summary>
-  <br>
+Shosanna (light version)
+```
+https://jimpalompa.github.io/ptp/marcel/shosanna.css
+```
 
-  **Broomhilda** standalone theme
-  ```
-  https://jimpalompa.github.io/ptp/old/broomhilda/broomhilda.css
-  ```
-
-  **Shosanna** standalone theme
-  ```
-  https://jimpalompa.github.io/ptp/old/shosanna/shosanna.css
-  ```
-  <br>
-
-</details>
+Gamaar (dark/light OS version)
+```
+https://jimpalompa.github.io/ptp/marcel/gamaar.css
+```
 <br>
