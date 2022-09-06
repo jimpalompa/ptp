@@ -79,7 +79,7 @@
 
   /* Layout */
   --content-width--small: 928px;    /* 1024px with padding */
-  --content-width--medium: 1024px;  /* 1120px with padding */
+  --content-width--medium: 984px;  /* 1080px with padding */
   --content-width--large: 1184px;   /* 1280px with padding */
   --content-width--x-large: 1344px; /* 1440px with padding */
 
@@ -2316,13 +2316,13 @@ p:first-child, .alert:first-child, .heading:first-child {
   RESPONSIVE LAYOUT
 ============================================================================= */
 
-@media only screen and (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
   #content, .alert-bars {
     width: var(--content-width--medium);
   }
 }
 
-@media only screen and (min-width: 1367px) {
+@media screen and (min-width: 1367px) {
   #content, .alert-bars {
     width: var(--content-width--large);
   }
@@ -2342,7 +2342,7 @@ p:first-child, .alert:first-child, .heading:first-child {
   }
 }
 
-@media only screen and (min-width: 1537px) {
+@media screen and (min-width: 1920px) {
   #content, .alert-bars {
     width: var(--content-width--x-large);
   }
