@@ -1268,12 +1268,13 @@ th {
   width: 24px;
   height: 24px;
   background: url(//static.passthepopcorn.me/static/common/bbcode_buttons5.png) no-repeat center center;
-  border: 4px solid transparent;
+  border: 4px solid #d2d0cf;
   float: left;
 }
 
 .bbcode-toolbar__button:hover {
-  background: var(--color--foreground--primary) url(//static.passthepopcorn.me/static/common/bbcode_buttons5.png) no-repeat top left;
+  background: #b9b8b6 url(//static.passthepopcorn.me/static/common/bbcode_buttons5.png) no-repeat top left;
+  border: 4px solid #b9b8b6;
 }
 
 .bbcode-toolbar__size-popup-row {
