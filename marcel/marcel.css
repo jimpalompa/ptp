@@ -78,8 +78,10 @@
   --letter-spacing--more: .25px;
 
   /* Layout */
-  --content-width--small: 928px; /* 1024px with padding */
-  --content-width--large: 1264px; /* 1360px with padding */
+  --content-width--small: 928px;    /* 1024px with padding */
+  --content-width--medium: 1024px;  /* 1120px with padding */
+  --content-width--large: 1184px;   /* 1280px with padding */
+  --content-width--x-large: 1344px; /* 1440px with padding */
 
   --spacing--tiny: 4px;
   --spacing--small: 8px;
@@ -200,7 +202,7 @@ html {
 
 body {
   font-family: var(--font-family--default);
-  font-size: var(--font-size--medium);
+  font-size: var(--font-size--small);
   font-weight: var(--font-weight--regular);
   width: 100%;
   margin: 0 auto;
@@ -2314,13 +2316,19 @@ p:first-child, .alert:first-child, .heading:first-child {
   RESPONSIVE LAYOUT
 ============================================================================= */
 
-/* -----------------------------------------------------------------------------
-  min-width 1280px, large screens
------------------------------------------------------------------------------ */
+@media only screen and (min-width: 1025px) {
+  #content, .alert-bars {
+    width: var(--content-width--medium);
+  }
+}
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1367px) {
   #content, .alert-bars {
     width: var(--content-width--large);
+  }
+
+  body {
+    font-size: var(--font-size--medium);
   }
 
   .cover-movie-list__movie__undercover {
@@ -2331,6 +2339,12 @@ p:first-child, .alert:first-child, .heading:first-child {
   .cover-movie-list__movie__tags,
   .cover-movie-list__movie__new {
     font-size: var(--font-size--small);
+  }
+}
+
+@media only screen and (min-width: 1537px) {
+  #content, .alert-bars {
+    width: var(--content-width--x-large);
   }
 }
 
