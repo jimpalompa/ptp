@@ -79,7 +79,7 @@
 
   /* Layout */
   --content-width--small: 928px;    /* 1024px with padding */
-  --content-width--medium: 984px;  /* 1080px with padding */
+  --content-width--medium: 984px;   /* 1080px with padding */
   --content-width--large: 1184px;   /* 1280px with padding */
   --content-width--x-large: 1344px; /* 1440px with padding */
 
