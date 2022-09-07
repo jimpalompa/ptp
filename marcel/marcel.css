@@ -2363,4 +2363,12 @@ p:first-child, .alert:first-child, .heading:first-child {
   }
 }
 
+/*
+Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1280px) { ... }
+@media (min-width: 1600px) { ... }
+@media (min-width: 1920px) { ... }
+*/
+
+
 /* --------------- I think this just might be my masterpiece ---------------- */
