@@ -690,7 +690,7 @@ blockquote {
 }
 
 .user-info-bar {
-  font-size: var(--font-size--small);
+  font-size: var(--font-size--tiny);
   padding: 7px 0;
   text-align: center;
   width: 100%;
@@ -2200,7 +2200,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
 .user-info-bar__list {
   display: inline;
   position: relative;
-  margin: 0 8px 2px;
+  margin: 0 4px 2px;
   padding: 0;
 }
 
