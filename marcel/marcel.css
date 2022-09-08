@@ -151,7 +151,8 @@
 [hidden],
 .nobr br,
 .tabs__panel,
-hr+br+br {
+hr+br+br,
+[class$='__tags'] a:nth-child(n+4) {
   display: none;
 }
 

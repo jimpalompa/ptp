@@ -258,7 +258,7 @@ input, textarea, select, option, input[type='button'], input[type='submit'], .li
   text-decoration: none;
   border: 2px solid transparent;
   border-radius: 2px;
-  outline: none;
+  outline: 0;
   margin-bottom: 8px;
   padding: 8px 12px;
   transition: var(--transition--all);
