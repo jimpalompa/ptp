@@ -82,10 +82,6 @@
   /* Layout */
   --content-width: 1024px;
 
-  --content-width--medium: 1280px;
-  --content-width--large: 1600px;
-  --content-width--x-large: 1920px;
-
   --spacing--tiny: 8px;
   --spacing--small: 12px;
   --spacing--medium: 16px;
@@ -94,12 +90,9 @@
   --spacing--huge: 28px;
   --spacing--gigantic: 32px;
 
-  --border-radius--default: 4px;
-  --border-radius--default--top: 4px 4px 0 0;
-  --border-radius--default--bottom: 0 0 4px 4px;
-  --border-radius--small: 2px;
-  --border-radius--small--top: 2px 2px 0 0;
-  --border-radius--small--bottom: 0 0 2px 2px;
+  --border-radius: 2px;
+  --border-radius--top: 2px 2px 0 0;
+  --border-radius--bottom: 0 0 2px 2px;
 
   --box-shadow--small: 0 2px 5px rgba(0, 0, 0, .15);
   --box-shadow--medium: 0 3px 8px 2px rgba(0, 0, 0, .15);
@@ -282,7 +275,7 @@ button, input, select, textarea {
   border: 0;
   font-family: inherit;
   padding: 6px;
-  border-radius: var(--border-radius--default);
+  border-radius: var(--border-radius);
 }
 
 textarea {
@@ -398,9 +391,7 @@ blockquote,
 /* Weights & Styles */
 .main-menu,
 .cover-movie-list__movie__title,
-.cover-movie-list__movie__new,
 .huge-movie-list__movie__title,
-.huge-movie-list__movie__new,
 .basic-movie-list__movie__rating-container,
 .basic-torrent-list__movie__torrent-opener-link,
 .alert-bar,
@@ -417,7 +408,9 @@ blockquote,
 .torrent-info-link--user-uploaded,
 .torrent-info-link--user-snatched,
 .torrent-info-link--user-downloaded,
-.panel__heading__title {
+.panel__heading__title,
+[class$='__new'],
+.pagination__current-page {
   font-weight: var(--font-weight--bold);
 }
 
@@ -438,7 +431,7 @@ blockquote,
 
 .forum-topic__go-to-last-read::after {
   vertical-align: middle;
-  content: '\e5c8';
+  content: '\e154';
 }
 
 /* -----------------------------------------------------------------------------
@@ -447,7 +440,7 @@ blockquote,
 
 /* Foreground primary */
 a,
-h2,
+h1, h2, h3, h4, h5, h6,
 .alert-bar,
 .alert-bar__link:hover,
 .alert--error,
@@ -494,16 +487,14 @@ h2 small a,
 a:hover,
 a:focus,
 a:active,
-.cover-movie-list__movie__new,
-.huge-movie-list__movie__new,
-.huge-movie-list__movie__action-row a,
-.huge-movie-list__movie__torrent-summary a,
-.basic-movie-list__movie__new,
 .basic-torrent-list__movie__torrent-opener-link:focus,
-.release-name-movie-list__movie__new,
-.search-bar__results__list-item--is-highlighted .search-bar__results__link,
-.forum-topic__new {
+.search-bar__results__list-item--is-highlighted .search-bar__results__link {
   color: var(--color--accent--primary);
+}
+
+.huge-movie-list__movie__action-row a,
+.huge-movie-list__movie__torrent-summary a {
+  color: var(--color--accent--secondary);
 }
 
 /* Red */
@@ -548,14 +539,14 @@ a.torrent-info-link--user-leeching {
 .ratio-20,
 .ratio-50,
 .ratio-infinite,
+[class$='__new'],
 .bonus-point-history--received,
 .user-info-bar__link--highlighted,
 .snatchlist-status--seeding,
 .snatchlist-status--not-hnr,
 .encoding-history-status--finished,
 .missing-torrent-status--exists,
-a.torrent-info-link--user-seeding,
-[class$='__new'] {
+a.torrent-info-link--user-seeding {
   color: var(--color--green);
 }
 
@@ -619,7 +610,6 @@ blockquote,
 .movie-page__torrent__panel,
 .search-bar,
 .search-bar__results__list-item,
-.table--panel-like>thead>tr,
 .cover-movie-list__movie__cover-link,
 .cover-movie-list__movie__rating,
 .basic-movie-list__movie__rating-container,
@@ -864,6 +854,7 @@ img#browse_settings {
   float: left;
   width: 19%;
   margin: 12px 0 12px 1.25%;
+  border-radius: var(--border-radius);
 }
 
 .cover-movie-list__movie:nth-of-type(6n+1) {
@@ -875,6 +866,7 @@ img#browse_settings {
   background-color: var(--color--background--tertiary) !important;
   width: 100%;
   padding-bottom: 150%;
+  border-radius: var(--border-radius--top);
 }
 
 .cover-movie-list__movie__year,
@@ -894,7 +886,7 @@ img#browse_settings {
 
 .cover-movie-list__movie__undercover {
   font-size: var(--font-size--small);
-  padding: 8px;
+  padding: var(--spacing--tiny);
   position: relative;
 }
 
@@ -910,6 +902,7 @@ img#browse_settings {
   position: absolute;
   bottom: 0;
   right: 0;
+  border-bottom-right-radius: 2px;
 }
 
 .cover-movie-list__movie__rating-and-tags {
@@ -925,18 +918,21 @@ img#browse_settings {
 .huge-movie-list__movie {
   margin: var(--spacing--x-large) 0;
   position: relative;
+  border-radius: var(--border-radius);
 }
 
 .huge-movie-list__movie__cover {
   background-color: var(--color--background--tertiary);
   float: left;
   width: 240px;
+  border-radius: 2px 0 0 2px;
 }
 
 .huge-movie-list__movie__cover__link {
   display: block;
   width: 100%;
   padding-bottom: 150%;
+  border-radius: 2px 0 0 2px;
 }
 
 .huge-movie-list__movie__details {
@@ -1025,7 +1021,7 @@ img#browse_settings {
   text-align: center;
   padding: 2px 6px;
   margin: 4px 4px 4px 0;
-  border-radius: var(--border-radius--small);
+  border-radius: var(--border-radius);
 }
 
 .basic-torrent-list__movie__torrent-opener-link {
@@ -1087,16 +1083,24 @@ img#browse_settings {
   background: var(--color--background--secondary);
   margin-bottom: 20px;
   width: 100%;
-  border-bottom: 10px solid transparent;
+  border-radius: var(--border-radius--bottom);
+}
+
+.panel {
+  border-radius: var(--border-radius);
 }
 
 .panel__heading,
 .table--panel-like>thead>tr>td,
 .table--panel-like>thead>tr>th {
   color: var(--color--foreground--secondary);
+  padding: var(--spacing--tiny) var(--spacing--medium);
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  padding: var(--spacing--tiny) var(--spacing--medium);
+}
+
+.panel__heading {
+  border-radius: var(--border-radius--top);
 }
 
 .panel__heading__toggler {
@@ -1110,11 +1114,7 @@ img#browse_settings {
 }
 
 .table--bordered>tbody>tr>td {
-  padding: 6px var(--spacing--medium);
-}
-
-.table--panel-like>thead+tbody>tr:first-child>td {
-  padding-top: var(--spacing--medium);
+  padding: 4px var(--spacing--medium);
 }
 
 .last5-movies__link {
@@ -1164,15 +1164,11 @@ img#browse_settings {
 }
 
 /* -----------------------------------------------------------------------------
-  UGLY CSS
+  OLD CSS
 ----------------------------------------------------------------------------- */
 
 .heading--no-margin {
   margin: 0;
-}
-
-.table thead:first-child tr:first-child th {
-  border-top: 0 none;
 }
 
 .table--inplace-sortable>thead>tr>th {
@@ -1446,6 +1442,7 @@ th {
   display: table;
   width: 100%;
   margin-bottom: 20px;
+  border-radius: var(--border-radius--bottom);
 }
 
 .forum-post--unread {
@@ -1467,6 +1464,7 @@ th {
   padding: var(--spacing--tiny) var(--spacing--medium);
   border-bottom-width: 2px;
   border-bottom-style: solid;
+  border-radius: var(--border-radius--top);
 }
 
 .forum-post__heading input[type='button'] {
@@ -1511,7 +1509,7 @@ th {
 .forum-post__textarea {
   width: 100%;
   resize: vertical;
-  border-radius: var(--border-radius--default--bottom);
+  border-radius: var(--border-radius--bottom);
   margin-bottom: 1em;
 }
 
@@ -1521,12 +1519,10 @@ th {
 
 .forum-topic--is-read {
   background: url(//static.passthepopcorn.me/static/forums/read.png) no-repeat center center;
-  background-image: url(//static.passthepopcorn.me/static/forums/read.png);
 }
 
 .forum-topic--is-unread {
   background: url(//static.passthepopcorn.me/static/forums/unread.png) no-repeat center center;
-  background-image: url(//static.passthepopcorn.me/static/forums/unread.png);
 }
 
 .forum-topic--is-read-locked-sticky {
@@ -1926,7 +1922,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
   margin-top: 2px;
   margin-bottom: 2px;
   text-align: center;
-  border-radius: var(--border-radius--default);
+  border-radius: var(--border-radius);
   padding: 4px;
 }
 
@@ -2069,7 +2065,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
   width: 60px;
   margin-bottom: 8px;
   text-align: center;
-  border-radius: var(--border-radius--default);
+  border-radius: var(--border-radius);
   padding: 4px;
 }
 
@@ -2188,7 +2184,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
 
 .staff-toolbar__link--important {
   display: inline-block;
-  border-radius: var(--border-radius--default);
+  border-radius: var(--border-radius);
   background-color: var(--color--red-dark);
   padding: 4px;
 }
