@@ -15,44 +15,33 @@
 
 :root {
   /* Colors */
-  --color--background--base:       #fff;
-  --color--background--input:      #faf9f8; /* tint 40% */
+  --color--background--initial:    #fff;
+  --color--background--input:      #fafafa; /* tint 20% */
   --color--background--primary:    #f7f5f3;
   --color--background--secondary:  #ebe9e7; /* shade 5% */
   --color--background--tertiary:   #d2d0cf; /* shade 15% */
   --color--background--quaternary: #b9b8b6; /* shade 25% */
   --color--background--quinary:    #a19f9e; /* shade 35% */
 
-  --color--foreground--vivid:      #b29a7d;
+  --color--foreground--initial:    #000;
+  --color--foreground--input:      #242422; /* shade 30% */
   --color--foreground--primary:    #343331;
-  --color--foreground--secondary:  #a9a08b; /* tint 30% */
-  --color--foreground--tertiary:   #797264; /* tint 50% */
-  --color--foreground--quaternary: #615b50; /* tint 60% */
+  --color--foreground--secondary:  #71706f; /* tint 30% */
+  --color--foreground--tertiary:   #858583; /* tint 40% */
+  --color--foreground--quaternary: #9a9998; /* tint 50% */
+  --color--foreground--quinary:    #aeadad; /* tint 60% */
 
-  --color--invert--primary:        #000;
-  --color--invert--secondary:      #fff;
+  --color--accent--primary:        #aa896e;
 
-  --color--black:        #000;
-  --color--white:        #fff;
-  --color--gray:         #717175; /* shade 30% */
-  --color--gray-dark:    #a2a2a7;
-  --color--red:          #a53c3c; /* shade 30% */
-  --color--red-dark:     #eb5656;
-  --color--orange:       #aa6f3e; /* shade 30% */
-  --color--orange-dark:  #f39e59;
-  --color--yellow:       #b19e3b; /* shade 30% */
-  --color--yellow-dark:  #fde154;
-  --color--green:        #57975d; /* shade 30% */
-  --color--green-dark:   #7cd885;
-  --color--cyan:         #4e919e; /* shade 30% */
-  --color--cyan-dark:    #6fcfe2;
-  --color--blue:         #4574a7; /* shade 30% */
-  --color--blue-dark:    #63a6ef;
-  --color--purple:       #8d63a5; /* shade 30% */
-  --color--purple-dark:  #ca8eeb;
-  --color--pink:         #ae5666; /* shade 30% */
-  --color--pink-dark:    #f87b92;
-
+  --color--gray:         #6e7a86;
+  --color--red:          #c43333;
+  --color--orange:       #cc682a;
+  --color--yellow:       #cc9b19;
+  --color--green:        #6aa229;
+  --color--cyan:         #26b19d;
+  --color--blue:         #4777cc;
+  --color--purple:       #8259cc;
+  --color--pink:         #cc3285;
 }
 
 .site-logo__link {

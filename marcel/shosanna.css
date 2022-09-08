@@ -24,12 +24,12 @@
   --color--background--quinary:    #a19f9e; /* shade 35% */
 
   --color--foreground--initial:    #000;
-  --color--foreground--input:      #1a1a1a; /* between */
+  --color--foreground--input:      #242422; /* shade 30% */
   --color--foreground--primary:    #343331;
-  --color--foreground--secondary:  #525250; /* tint 15% */
-  --color--foreground--tertiary:   #71706f; /* tint 30% */
-  --color--foreground--quaternary: #aeadad; /* tint 60% */
-  --color--foreground--quinary:    #c2c2c1; /* tint 70% */
+  --color--foreground--secondary:  #71706f; /* tint 30% */
+  --color--foreground--tertiary:   #858583; /* tint 40% */
+  --color--foreground--quaternary: #9a9998; /* tint 50% */
+  --color--foreground--quinary:    #aeadad; /* tint 60% */
 
   --color--accent--primary:        #aa896e;
 

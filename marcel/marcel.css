@@ -22,24 +22,22 @@
   --color--background--quinary:    #696866; /* tint 35% */
 
   --color--foreground--initial:    #fff;
-  --color--foreground--input:      #fcfcfc; /* between */
+  --color--foreground--input:      #fcfcfc; /* tint 30% */
   --color--foreground--primary:    #fafafa;
-  --color--foreground--secondary:  #d5d5d5; /* shade 15% */
-  --color--foreground--tertiary:   #afafaf; /* shade 30% */
-  --color--foreground--quaternary: #646464; /* shade 60% */
-  --color--foreground--quinary:    #4b4b4b; /* shade 70% */
+  --color--foreground--secondary:  #afafaf; /* shade 30% */
+  --color--foreground--tertiary:   #969696; /* shade 40% */
+  --color--foreground--quaternary: #7d7d7d; /* shade 50% */
+  --color--foreground--quinary:    #646464; /* shade 60% */
 
+  --color--accent--initial:        #f4d8bf; /* tint 30% */
   --color--accent--primary:        #efc7a4;
-  --color--accent--secondary:      #cba98b; /* shade 15% */
-  --color--accent--tertiary:       #a78b73; /* shade 30% */
-  --color--accent--quaternary:     #8f7762; /* shade 40% */
-  --color--accent--quinary:        #786452; /* shade 50% */
+  --color--accent--secondary:      #bf9f83; /* shade 20% */
+  --color--accent--tertiary:       #8f7762; /* shade 40% */
+  --color--accent--quaternary:     #786452; /* shade 50% */
+  --color--accent--quinary:        #605042; /* shade 60% */
 
-  --color--spoiler--background:    #0f0f0f;
-  --color--spoiler--foreground:    #fafafa;
-
-  --color--black:        #000;
-  --color--white:        #fff;
+  --color--black:        #0f0f0f;
+  --color--white:        #fafafa;
   --color--gray:         #8c98a4;
   --color--gray-dark:    #5e676f;
   --color--red:          #e75858;
@@ -65,13 +63,13 @@
   --font-family--icons: 'Material Icons';
 
   --font-size--root: 16px;
-  --font-size--tiny: .8125rem;    /* 13px */
-  --font-size--small: .875rem;    /* 14px */
-  --font-size--medium: .9375rem;  /* 15px */
-  --font-size--large: 1rem;       /* 16px */
-  --font-size--x-large: 1.125rem; /* 18px */
-  --font-size--huge: 1.25rem;     /* 20px */
-  --font-size--gigantic: 1.5rem;  /* 24px */
+  --font-size--tiny: .8125rem;     /* 13px */
+  --font-size--small: .875rem;     /* 14px */
+  --font-size--medium: .9375rem;   /* 15px */
+  --font-size--large: 1rem;        /* 16px */
+  --font-size--x-large: 1.125rem;  /* 18px */
+  --font-size--huge: 1.25rem;      /* 20px */
+  --font-size--gigantic: 1.375rem; /* 22px */
 
   --font-weight--regular: 400;
   --font-weight--medium: 500;
@@ -88,13 +86,13 @@
   --content-width--large: 1600px;
   --content-width--x-large: 1920px;
 
-  --spacing--tiny: 4px;
-  --spacing--small: 8px;
-  --spacing--medium: 12px;
-  --spacing--large: 16px;
+  --spacing--tiny: 8px;
+  --spacing--small: 12px;
+  --spacing--medium: 16px;
+  --spacing--large: 20px;
   --spacing--x-large: 24px;
-  --spacing--huge: 32px;
-  --spacing--gigantic: 40px;
+  --spacing--huge: 28px;
+  --spacing--gigantic: 32px;
 
   --border-radius--default: 4px;
   --border-radius--default--top: 4px 4px 0 0;
@@ -156,13 +154,9 @@
   HIDE ELEMENTS
 ----------------------------------------------------------------------------- */
 
-.huge-movie-list__movie__ratings__votes-column br,
-.huge-movie-list__movie__ratings__votes-column span.rating:nth-child(3n) {
-  display: none !important;
-}
-
-[hidden],
 .hidden,
+[hidden],
+.nobr br,
 .tabs__panel,
 hr+br+br {
   display: none;
@@ -173,13 +167,13 @@ hr+br+br {
 }
 
 span.spoiler {
-  background: var(--color--spoiler--background) !important;
+  background: var(--color--black) !important;
   color: transparent !important;
   transition: var(--transition--all);
 }
 
 span.spoiler:hover {
-  color: var(--color--spoiler--foreground) !important;
+  color: var(--color--white) !important;
 }
 
 /* -----------------------------------------------------------------------------
@@ -250,11 +244,11 @@ q {
 }
 
 small {
-  font-size: var(--font-size--tiny);
+  font-size: .9em;
 }
 
 sub, sup {
-  font-size: var(--font-size--tiny);
+  font-size: .75em;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -304,21 +298,22 @@ button, select {
 }
 
 button, input[type='button'], input[type='reset'], input[type='submit'] {
-  background: var(--color--accent--tertiary);
+  background: var(--color--accent--quaternary);
   color: var(--color--white);
   font-size: var(--font-size--small);
   font-weight: var(--font-weight--bold);
   padding: 6px 8px;
+  transition: var(--transition--background);
   cursor: pointer;
   -webkit-appearance: button;
 }
 
 button, input[type='button']:hover, input[type='reset']:hover, input[type='submit']:hover {
-  background: var(--color--accent--secondary);
+  background: var(--color--accent--tertiary);
 }
 
 button, input[type='button']:focus, input[type='reset']:focus, input[type='submit']:focus {
-  background: var(--color--accent--quaternary);
+  background: var(--color--accent--quinary);
 }
 
 input[type='checkbox'], input[type='radio'] {
@@ -366,12 +361,12 @@ blockquote {
 ----------------------------------------------------------------------------- */
 
 /* Sizes */
-h1 {font-size: var(--font-size--x-large);}
-h2 {font-size: var(--font-size--huge);}
-h3 {font-size: var(--font-size--x-large);}
-h4 {font-size: var(--font-size--large);}
-h5 {font-size: var(--font-size--medium);}
-h6 {font-size: var(--font-size--small);}
+h1 {font-size: var(--font-size--huge);}
+h2 {font-size: var(--font-size--x-large);}
+h3 {font-size: var(--font-size--large);}
+h4 {font-size: var(--font-size--medium);}
+h5 {font-size: var(--font-size--small);}
+h6 {font-size: var(--font-size--tiny);}
 
 .huge-movie-list__movie__title {font-size: var(--font-size--huge);}
 .huge-movie-list__movie__year {font-size: var(--font-size--x-large);}
@@ -918,6 +913,7 @@ img#browse_settings {
 }
 
 .cover-movie-list__movie__rating-and-tags {
+  color: transparent;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -927,7 +923,7 @@ img#browse_settings {
 
 /* Huge view */
 .huge-movie-list__movie {
-  margin: 24px 0;
+  margin: var(--spacing--x-large) 0;
   position: relative;
 }
 
@@ -958,8 +954,8 @@ img#browse_settings {
 
 .huge-movie-list__movie__new {
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: var(--spacing--gigantic);
+  right: var(--spacing--gigantic);
 }
 
 .huge-movie-list__movie__ratings-and-synopsis {
@@ -985,21 +981,25 @@ img#browse_settings {
   line-height: 32px;
 }
 
+.huge-movie-list__movie__ratings__votes-column br+span {
+  margin-left: 3px;
+}
+
 .huge-movie-list__movie__synopsis {
-  font-weight: 300;
+  color: var(--color--foreground--primary);
   margin-top: 1.5em;
 }
 
 .huge-movie-list__movie__action-row {
   position: absolute;
-  bottom: 40px;
+  bottom: var(--spacing--gigantic);
 }
 
 .huge-movie-list__movie__torrent-summary {
   text-align: right;
   position: absolute;
-  bottom: 40px;
-  right: 40px;
+  bottom: var(--spacing--gigantic);
+  right: var(--spacing--gigantic);
 }
 
 /* List view */
@@ -1021,9 +1021,11 @@ img#browse_settings {
 
 .basic-movie-list__movie__rating-container {
   display: inline-block;
+  color: var(--color--foreground--primary);
   text-align: center;
   padding: 2px 6px;
   margin: 4px 4px 4px 0;
+  border-radius: var(--border-radius--small);
 }
 
 .basic-torrent-list__movie__torrent-opener-link {
@@ -1082,17 +1084,19 @@ img#browse_settings {
 ----------------------------------------------------------------------------- */
 
 .table {
+  background: var(--color--background--secondary);
   margin-bottom: 20px;
   width: 100%;
+  border-bottom: 10px solid transparent;
 }
 
 .panel__heading,
 .table--panel-like>thead>tr>td,
-.table--panel-like>thead>tr>th
-{
+.table--panel-like>thead>tr>th {
+  color: var(--color--foreground--secondary);
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  padding: 6px 16px;
+  padding: var(--spacing--tiny) var(--spacing--medium);
 }
 
 .panel__heading__toggler {
@@ -1100,13 +1104,17 @@ img#browse_settings {
 }
 
 .panel__body {
-  padding: 16px;
-  margin-bottom: 20px;
+  padding: var(--spacing--medium);
+  margin-bottom: var(--spacing--large);
   overflow-wrap: break-word;
 }
 
 .table--bordered>tbody>tr>td {
-  padding: 6px 16px;
+  padding: 6px var(--spacing--medium);
+}
+
+.table--panel-like>thead+tbody>tr:first-child>td {
+  padding-top: var(--spacing--medium);
 }
 
 .last5-movies__link {
@@ -1125,7 +1133,20 @@ img#browse_settings {
 }
 
 #movie-ratings-table {
+  color: var(--color--foreground--primary);
   margin-bottom: 20px !important;
+}
+
+#movie-ratings-table a {
+  color: var(--color--foreground--tertiary);
+}
+
+#movie-ratings-table a:hover {
+  color: var(--color--accent);
+}
+
+#movie-ratings-table a {
+  color: var(--color--foreground--tertiary);
 }
 
 #movie-ratings-table td {
@@ -1166,7 +1187,6 @@ img#browse_settings {
   display: block;
   margin: 0 auto;
   max-width: 100%;
-  padding: 4px 0;
 }
 
 #top250 .panel__body, #bottom250 .panel__body {
@@ -1181,7 +1201,8 @@ img#browse_settings {
 
 #userrecommended .user-recommendation {
   background: var(--color--background--tertiary);
-  margin-bottom: 24px;
+  color: var(--color--foreground--secondary);
+  margin-bottom: var(--spacing--large);
 }
 
 #userrecommended img {
@@ -1189,7 +1210,7 @@ img#browse_settings {
 }
 
 #userrecommended .user-recommendation__body {
-  padding: 4px;
+  padding: var(--spacing--tiny);
 }
 
 /* -----------------------------------------------------------------------------
@@ -1389,11 +1410,14 @@ th {
 
 .generic-form, .search-form {
   margin: 0 auto;
-  width: 920px;
 }
 
 .generic-form--narrow, .search-form--narrow {
-  width: 65%;
+  width: 75%;
+}
+
+.search-form .panel__body {
+  margin-bottom: var(--spacing--x-large);
 }
 
 .toggleable-search-form__toggler-container {
@@ -1433,8 +1457,14 @@ th {
   margin-top: 30px;
 }
 
+#reply_box .forum-post__heading {
+  color: var(--color--foreground--primary);
+  font-weight: var(--font-weight--bold);
+}
+
 .forum-post__heading {
-  padding: 7px;
+  color: var(--color--foreground--secondary);
+  padding: var(--spacing--tiny) var(--spacing--medium);
   border-bottom-width: 2px;
   border-bottom-style: solid;
 }
@@ -1461,9 +1491,9 @@ th {
 .forum-post__body {
   display: table-cell;
   width: 100%;
-  vertical-align: top;
   word-wrap: break-word;
-  padding: 16px;
+  vertical-align: top;
+  padding: var(--spacing--medium);
 }
 
 .forum-post__bodyguard {
@@ -1524,8 +1554,9 @@ th {
 }
 
 .forum-topic__go-to-last-read {
+  color: var(--color--green);
   float: left;
-  margin-left: 4px;
+  margin: -1px 0 0 4px;
 }
 
 .grid {
@@ -1680,12 +1711,11 @@ th {
 
 .last5-movies__table {
   width: 100%;
-  margin-top: 12px;
 }
 
 .last5-movies__show-all-link {
   display: inline-block;
-  margin: 16px 0;
+  margin-top: var(--spacing--large);
 }
 
 .lightbox {
@@ -1863,7 +1893,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
 }
 
 .movie-page__torrent-report-staff-comment {
-  border-top: 1px dotted var(--color--foreground--quaternary);
+  border-top: 1px dotted var(--color--foreground--tertiary);
   background-color: var(--color--foreground--secondary);
   padding: 4px .625rem;
 }
@@ -1939,7 +1969,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
   display: block;
   font-size: var(--font-size--gigantic);
   text-align: center;
-  margin: var(--spacing--small) 0 var(--spacing--huge);
+  margin: var(--spacing--tiny) 0 var(--spacing--huge);
 }
 
 .pagination {
@@ -2408,34 +2438,16 @@ p:first-child, .alert:first-child, .heading:first-child {
 @media screen and (min-width: 1440px) {
   :root {
     --content-width: 1280px;
-    --font-size--tiny: .875rem;     /* 14px */
-    --font-size--small: .9375rem;   /* 15px */
-    --font-size--medium: 1rem;      /* 16px */
-    --font-size--large: 1.125rem;   /* 18px */
-    --font-size--x-large: 1.25rem;  /* 20px */
-    --font-size--huge: 1.5rem;      /* 24px */
-    --font-size--gigantic: 1.75rem; /* 28px */
+    --font-size--tiny: .875rem;    /* 14px */
+    --font-size--small: .9375rem;  /* 15px */
+    --font-size--medium: 1rem;     /* 16px */
+    --font-size--large: 1.125rem;  /* 18px */
+    --font-size--x-large: 1.25rem; /* 20px */
+    --font-size--huge: 1.375rem;   /* 22px */
+    --font-size--gigantic: 1.5rem; /* 24px */
     }
 }
 
 @media screen and (min-width: 1920px) {:root {--content-width: 1440px;}}
-@media screen and (min-width: 2560px) {:root {--content-width: 1600px;}}
-
-/* -----------------------------------------------------------------------------
-  COLOR TEST
------------------------------------------------------------------------------ */
-
-/*
-https://passthepopcorn.me/torrents.php?id=7810
-
-#group_torrent_header_90022 a {color: var(--color--blue); font-weight: var(--font-weight--bold);}
-#group_torrent_header_1069865 a {color: var(--color--cyan); font-weight: var(--font-weight--bold)}
-#group_torrent_header_234969 a {color: var(--color--purple); font-weight: var(--font-weight--bold)}
-#group_torrent_header_261773 a {color: var(--color--pink); font-weight: var(--font-weight--bold)}
-#group_torrent_header_1069665 a {color: var(--color--red); font-weight: var(--font-weight--bold)}
-#group_torrent_header_297018 a {color: var(--color--orange); font-weight: var(--font-weight--bold)}
-#group_torrent_header_1069297 a {color: var(--color--yellow); font-weight: var(--font-weight--bold)}
-#group_torrent_header_1069255 a {color: var(--color--green); font-weight: var(--font-weight--bold)}
-*/
 
 /* --------------- I think this just might be my masterpiece ---------------- */
