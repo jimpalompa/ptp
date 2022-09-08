@@ -2134,6 +2134,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
 .search-bar__search-field__input {
   padding: 3px 6px;
   width: 120px;
+  outline: 0;
 }
 
 .search-bar__results {
