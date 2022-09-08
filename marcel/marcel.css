@@ -2417,26 +2417,8 @@ p:first-child, .alert:first-child, .heading:first-child {
     }
 }
 
-@media screen and (min-width: 1920px) {
-  :root {--content-width: 1440px;}
-}
-
-@media screen and (min-width: 2560px) {
-  :root {
-    --content-width: 1600px;
-    --font-size--tiny: .9375rem;   /* 15px */
-    --font-size--small: 1rem;      /* 16px */
-    --font-size--medium: 1.125rem; /* 18px */
-    --font-size--large: 1.25rem;   /* 20px */
-    --font-size--x-large: 1.5rem;  /* 24px */
-    --font-size--huge: 1.75rem;    /* 28px */
-    --font-size--gigantic: 2rem;   /* 32px */
-  }
-
-  .main-menu__link {
-    padding: 9px 24px 11px;
-  }
-}
+@media screen and (min-width: 1920px) {:root {--content-width: 1440px;}}
+@media screen and (min-width: 2560px) {:root {--content-width: 1600px;}}
 
 /* -----------------------------------------------------------------------------
   COLOR TEST
@@ -2444,7 +2426,7 @@ p:first-child, .alert:first-child, .heading:first-child {
 
 /*
 https://passthepopcorn.me/torrents.php?id=7810
-*/
+
 #group_torrent_header_90022 a {color: var(--color--blue); font-weight: var(--font-weight--bold);}
 #group_torrent_header_1069865 a {color: var(--color--cyan); font-weight: var(--font-weight--bold)}
 #group_torrent_header_234969 a {color: var(--color--purple); font-weight: var(--font-weight--bold)}
@@ -2453,5 +2435,6 @@ https://passthepopcorn.me/torrents.php?id=7810
 #group_torrent_header_297018 a {color: var(--color--orange); font-weight: var(--font-weight--bold)}
 #group_torrent_header_1069297 a {color: var(--color--yellow); font-weight: var(--font-weight--bold)}
 #group_torrent_header_1069255 a {color: var(--color--green); font-weight: var(--font-weight--bold)}
+*/
 
 /* --------------- I think this just might be my masterpiece ---------------- */
