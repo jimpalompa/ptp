@@ -507,7 +507,6 @@ a:active,
 .basic-torrent-list__movie__torrent-opener-link:focus,
 .release-name-movie-list__movie__new,
 .search-bar__results__list-item--is-highlighted .search-bar__results__link,
-.user-info-bar__link--highlighted,
 .forum-topic__new {
   color: var(--color--accent--primary);
 }
@@ -555,6 +554,7 @@ a.torrent-info-link--user-leeching {
 .ratio-50,
 .ratio-infinite,
 .bonus-point-history--received,
+.user-info-bar__link--highlighted,
 .snatchlist-status--seeding,
 .snatchlist-status--not-hnr,
 .encoding-history-status--finished,
