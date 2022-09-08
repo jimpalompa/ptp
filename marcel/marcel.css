@@ -275,6 +275,7 @@ button, input, select, textarea {
   border: 0;
   font-family: inherit;
   padding: 6px;
+  outline: 0;
   border-radius: var(--border-radius);
 }
 
@@ -1104,6 +1105,8 @@ img#browse_settings {
 }
 
 .panel__heading__toggler {
+  font-size: .9em;
+  font-weight: 400;
   float: right;
 }
 
@@ -2134,7 +2137,6 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
 .search-bar__search-field__input {
   padding: 3px 6px;
   width: 120px;
-  outline: 0;
 }
 
 .search-bar__results {
