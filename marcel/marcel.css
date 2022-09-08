@@ -711,7 +711,6 @@ blockquote {
   text-align: center;
   position: relative;
   top: 120px;
-  width: var(--content-width);
 }
 
 .alert-bar, .staff-toolbar {
@@ -735,10 +734,9 @@ blockquote {
 
 #content {
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0 var(--spacing--gigantic);
   position: relative;
   top: 128px;
-  width: var(--content-width);
 }
 
 .main-column {
