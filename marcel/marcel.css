@@ -1473,8 +1473,9 @@ th {
 }
 
 .forum-post__edited {
-  margin-top: 20px;
   font-style: italic;
+  margin-top: 20px;
+  opacity: .4;
 }
 
 .forum-post__textarea {
