@@ -681,6 +681,7 @@ blockquote {
 }
 
 .header {
+  min-width: var(--content-width);
   padding-top: 40px;
 }
 
@@ -689,6 +690,7 @@ blockquote {
   text-align: center;
   padding: 6px;
   width: 100%;
+  min-width: var(--content-width);
   position: absolute;
   top: 0;
 }
@@ -701,6 +703,7 @@ blockquote {
   line-height: 19px;
   text-align: center;
   width: 100%;
+  min-width: var(--content-width);
   padding: 11px 0;
   position: absolute;
   top: 184px;
@@ -729,6 +732,7 @@ blockquote {
   padding: 6px;
   text-align: center;
   width: 100%;
+  min-width: var(--content-width);
   position: absolute;
   top: 226px;
 }
@@ -753,9 +757,11 @@ blockquote {
 .footer {
   clear: both;
   text-align: center;
+  width: 100%;
+  min-width: var(--content-width);
+  padding: 16px 48px;
   position: relative;
   top: 200px;
-  padding: 16px 48px;
 }
 
 /* -----------------------------------------------------------------------------
