@@ -532,7 +532,8 @@ a:active,
 /* Yellow */
 .ratio-08,
 .ratio-09,
-a.torrent-info-link--user-leeching {
+a.torrent-info-link--user-leeching,
+.golden-popcorn-character {
   color: var(--color--yellow);
 }
 
@@ -854,20 +855,25 @@ img#browse_settings {
 }
 
 .cover-movie-list {
-  display: flow-root;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* Cover view */
 .cover-movie-list__movie {
-  float: left;
+  display: flex;
+  flex-direction: column;
   width: 19%;
-  margin: 12px 0 12px 1.25%;
+  margin-bottom: var(--spacing--medium);
   border-radius: var(--border-radius);
 }
 
-.cover-movie-list__movie:nth-of-type(6n+1) {
-  margin-left: 0;
+.cover-movie-list.clearfix::after,
+.cover-movie-list [style^='clear'] {
+  display: none;
 }
+
 
 .cover-movie-list__movie__cover-link {
   display: block;
@@ -893,6 +899,7 @@ img#browse_settings {
 }
 
 .cover-movie-list__movie__undercover {
+  flex-grow: 1;
   font-size: var(--font-size--small);
   padding: var(--spacing--tiny);
   position: relative;
@@ -1046,14 +1053,21 @@ img#browse_settings {
 }
 
 /* Small view (user profile) */
-.small-cover-movie-list__movie {
-  float: left;
-  width: 19%;
-  margin: 12px 0 12px 1.25%;
+.small-cover-movie-list__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.small-cover-movie-list__movie:nth-of-type(6n+1) {
-  margin-left: 0;
+.small-cover-movie-list__container.clearfix::after,
+.small-cover-movie-list__container [style^='clear'] {
+  display: none;
+}
+
+.small-cover-movie-list__movie {
+  width: 19%;
+  margin-bottom: var(--spacing--medium);
 }
 
 .small-cover-movie-list__movie__link {
