@@ -122,17 +122,17 @@
   --br--left: 4px 4px 0 0;
   --br--small: 2px;
   --br--small--top: 2px 2px 0 0;
-  --br--small--right: 0 2px 2px 0;
-  --br--small--bottom: 0 0 2px 2px;
+  --br--small--right: 0 1px 2px 0;
+  --br--small--bottom: 0 0 1px 2px;
   --br--small--left: 2px 2px 0 0;
 
   /* Box-shadow */
   --bs--small: rgba(0, 0, 0, .3) 0 1px 3px;
-  --bs--medium: rgba(0, 0, 0, .3) 0 2px 6px;
+  --bs--medium: rgba(0, 0, 0, .3) 0 1px 6px;
   --bs--large: rgba(0, 0, 0, .3) 0 4px 12px;
   --bs--g--small: rgba(255, 255, 255, .3) 0 1px 3px;
-  --bs--g--medium: rgba(255, 255, 255, .3) 0 2px 6px;
-  --bs--g--large: rgba(255, 255, 255, .3) 0 4px 12px;
+  --bs--g--medium: rgba(255, 255, 255, .3) 0 1px 6px;
+  --bs--g--large: rgba(229, 210, 194, .3) 0 4px 12px;
 
   /* Transition */
   --tr--all: all .1s ease-out;
@@ -140,7 +140,6 @@
   --tr--color: color .1s ease-out;
   --tr--opacity: opacity .1s ease-out;
 }
-
 /* -----------------------------------------------------------------------------
   WEB FONTS
 ----------------------------------------------------------------------------- */
@@ -903,6 +902,20 @@ img#actualAvatar {
 
 #movieinfo.panel {
   border-radius: var(--br--bottom);
+}
+
+#top250_text {
+  color: var(--c--fg--primary);
+  animation: glow 6s infinite;
+  animation-direction: alternate;
+  text-shadow: 0px 1px 20px var(--c--red), 1px 1px 30px var(--c--red), 2px 1px 40px var(--c--red), 3px 1px 50px var(--c--red), 2px 1px 60px var(--c--red), 1px 1px 70px var(--c--red);}
+
+@keyframes glow {
+  20% {text-shadow: 0 1px 10px var(--c--orange), -2px 1px 20px var(--c--orange), -4px 1px 30px var(--c--orange), -6px 1px 40px var(--c--orange), -4px 1px 50px var(--c--orange), -2px 1px 60px var(--c--orange);}
+  40% {text-shadow: 0px 1px 20px var(--c--yellow), 2px 1px 30px var(--c--yellow), 4px 1px 40px var(--c--yellow), 6px 1px 50px var(--c--yellow), 4px 1px 60px var(--c--yellow), 2px 1px 70px var(--c--yellow);}
+  60% {text-shadow: 0px 1px 10px var(--c--green), -2px 1px 20px var(--c--green), -4px 1px 30px var(--c--green), -6px 1px 40px var(--c--green), -4px 1px 50px var(--c--green), -2px 1px 60px var(--c--green);}
+  80% {text-shadow: 0 1px 20px var(--c--blue), 2px 1px 30px var(--c--blue), 4px 1px 40px var(--c--blue), 6px 1px 50px var(--c--blue), 4px 1px 60px var(--c--blue), 2px 1px 70px var(--c--blue);}
+ 100% {text-shadow: 0 1px 10px var(--c--purple),  -2px 1px 20px var(--c--purple), -4px 1px 30px var(--c--purple), -6px 1px 40px var(--c--purple), -4px 1px 50px var(--c--purple), -2px 1px 60px var(--c--purple);}
 }
 
 /* -----------------------------------------------------------------------------
