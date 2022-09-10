@@ -166,6 +166,7 @@
 ----------------------------------------------------------------------------- */
 
 .hidden,
+hr+br+br,
 code>br, kbd>br, pre>br, samp>br,
 blockquote br+br,
 #synopsis-and-trailer .panel__heading,
