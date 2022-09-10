@@ -8,12 +8,12 @@ https://jimpalompa.github.io/ptp/django/django.css
 
 Broomhilda (light version)
 ```
-workinonit..
+https://jimpalompa.github.io/ptp/django/broomhilda.css
 ```
 
 Wotan (dark/light OS version)
 ```
-workinonit..
+https://jimpalompa.github.io/ptp/django/wotan.css
 ```
 
 # Marcel
