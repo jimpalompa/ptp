@@ -7,7 +7,6 @@
 
 ----------------------------------------------------------------------------- */
 
-@import url(marcel.css);
 @import url(marcel.css) (prefers-color-scheme: dark);
 @import url(shosanna.css) (prefers-color-scheme: light);
 
