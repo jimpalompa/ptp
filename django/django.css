@@ -2771,7 +2771,7 @@ body#torrents .thin>.page__title+h2.text--center {
 }
 
 .movie-page__trailer iframe.youtube-player {
-  height: 540px;
+  height: 480px;
 }
 
 #synopsis-and-trailer~.table--bordered {
