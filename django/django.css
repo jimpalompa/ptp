@@ -74,9 +74,6 @@
   --c--pink:         #d92c8d;
   --c--pink-shade:   #a03067;
 
-  /* Layout */
-  --co--width: 1120px;
-
   /* Font family */
   --ff--default: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
   --ff--monospace: ui-monospace, Menlo, Consolas, Monaco, 'Liberation Mono', 'Lucida Console', monospace;
@@ -100,8 +97,13 @@
   /* Line-height */
   --lh--body: 1.375;
   --lh--headings: 1.25;
+
+  /* Letter-spacing */
   --ls--less: -.5px;
   --ls--more: .5px;
+
+  /* Layout */
+  --co--width: 1120px;
 
   /* Spacing */
   --sp--tiny: 8px;
@@ -573,9 +575,9 @@ body#forums .pagination--bottom+.linkbox a:hover {
 
 [class$='__new']:focus::before,
 body#forums .pagination--bottom+.linkbox a:focus {
-  background: var(--c--green-shade);
-  color: var(--c--bg--primary);
-  border-color: var(--c--green-shade);
+  background: var(--c--ac--fg--shade);
+  color: var(--c--black);
+  border-color: var(--c--ac--fg--shade);
 }
 
 /* Blue */
