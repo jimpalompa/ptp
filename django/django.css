@@ -295,7 +295,7 @@ input, textarea, select, option, input[type='button'], input[type='submit'], .li
   border-radius: 2px;
   outline: 0;
   margin-bottom: 8px;
-  padding: 8px 12px;
+  padding: 6px 12px;
   transition: var(--tr--all);
 }
 
@@ -312,7 +312,7 @@ input[type='button'], input[type='submit'] {
   color: var(--c--white);
   font-weight: var(--fw--bold);
   text-transform: uppercase;
-  padding: 8px 16px;
+  padding: 6px 12px;
   box-shadow: var(--bs--medium);
   cursor: pointer;
 }
@@ -343,7 +343,8 @@ textarea {
 }
 
 select {
-  height: 42px;
+  height: 38px;
+  padding-left: 8px;
 }
 
 table {
@@ -494,7 +495,7 @@ body#forums .pagination--bottom+.linkbox a {
   font-size: var(--fs--tiny);
   font-weight: var(--fw--bold);
   text-transform: uppercase;
-  padding: 6px 12px;
+  padding: 4px 8px;
   margin-top: var(--sp--medium);
   border: 2px solid;
   border-radius: var(--br--small);
@@ -1370,7 +1371,7 @@ body#collages .thin>.table td:nth-child(2)>a {
   color: var(--c--fg--tertiary);
 }
 
-[class$='__tags'] a:nth-child(n+4) {
+[class$='__tags'] a:nth-child(n+3) {
   display: none;
 }
 
