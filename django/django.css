@@ -356,7 +356,7 @@ table {
 td, th {
   text-align: left;
   border: none;
-  padding: var(--sp--tiny);
+  padding: var(--sp--puny);
 }
 
 blockquote {
