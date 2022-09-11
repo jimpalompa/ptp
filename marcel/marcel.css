@@ -181,8 +181,7 @@
   Hide elemes
 ----------------------------------------------------------------------------- */
 
-.hidden,
-[hidden],
+.hidden, [hidden],
 .nobr br,
 .tabs__panel,
 hr+br+br,
