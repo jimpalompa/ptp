@@ -1412,12 +1412,12 @@ body#collages .thin>.table td:nth-child(2)>a {
   padding-right: var(--sp--x-large);
 }
 
-.group_torrent+.group_torrent_header>td {
-  padding-top: 12px;
+.group_torrent:not(.group_torrent_header) {
+  border-bottom: var(--sp--tiny) solid var(--c--bg--secondary);
 }
 
 .group_torrent_header~.group_torrent:not(.group_torrent_header) {
-  border-top: 8px solid var(--c--bg--secondary);
+  border-top: var(--sp--tiny) solid var(--c--bg--secondary);
 }
 
 .group_torrent_header {
