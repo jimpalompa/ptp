@@ -2098,7 +2098,7 @@ a[class*='link--seen']::after {
   color: var(--c--fg--primary);
   font-weight: var(--fw--bold);
   text-transform: uppercase;
-  padding: var(--sp--small) var(--sp--x-large);
+  padding: var(--sp--tiny) var(--sp--x-large);
 }
 
 .basic-movie-list__torrent__action {
@@ -2373,6 +2373,7 @@ img[title^='Torrent has been'],
 img[title^='Torrent has not'] {
   width: 12px !important;
   height: 12px !important;
+  margin-right: 1px;
   padding-top: 12px;
   position: relative;
   opacity: .8;
