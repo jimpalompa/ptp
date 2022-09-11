@@ -143,35 +143,39 @@
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 400;
-  src: local('Source Sans Pro'), url(//jimpalompa.github.io/ptp/assets/fonts/source-sans-pro-400.woff2) format('woff2');
+  font-display: swap;
+  src: url(//jimpalompa.github.io/ptp/assets/fonts/source-sans-pro-400.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: italic;
   font-weight: 400;
-  src: local('Source Sans Pro'), url(//jimpalompa.github.io/ptp/assets/fonts/source-sans-pro-400-italic.woff2) format('woff2');
+  font-display: swap;
+  src: url(//jimpalompa.github.io/ptp/assets/fonts/source-sans-pro-400-italic.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 600;
-  src: local('Source Sans Pro'), url(//jimpalompa.github.io/ptp/assets/fonts/source-sans-pro-600.woff2) format('woff2');
+  font-display: swap;
+  src: url(//jimpalompa.github.io/ptp/assets/fonts/source-sans-pro-600.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: italic;
   font-weight: 600;
-  src: local('Source Sans Pro'), url(//jimpalompa.github.io/ptp/assets/fonts/source-sans-pro-600-italic.woff2) format('woff2');
+  font-display: swap;
+  src: url(//jimpalompa.github.io/ptp/assets/fonts/source-sans-pro-600-italic.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: local('Material Icons'), url(//jimpalompa.github.io/ptp/assets/fonts/material-icons.woff2) format('woff2');
+  src: url(//jimpalompa.github.io/ptp/assets/fonts/material-icons.woff2) format('woff2');
 }
 
 /* -----------------------------------------------------------------------------
