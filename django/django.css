@@ -1390,7 +1390,6 @@ body#collages .thin>.table td:nth-child(2)>a {
 
 .torrent_table {
   border-collapse: collapse;
-  margin-bottom: var(--sp--large);
   border-bottom: var(--sp--tiny) solid transparent;
 }
 
@@ -1414,11 +1413,8 @@ body#collages .thin>.table td:nth-child(2)>a {
 }
 
 .group_torrent:not(.group_torrent_header) {
-  border-bottom: var(--sp--tiny) solid transparent;
-}
-
-.group_torrent_header~.group_torrent:not(.group_torrent_header) {
   border-top: var(--sp--tiny) solid transparent;
+  border-bottom: var(--sp--tiny) solid transparent;
 }
 
 .group_torrent_header {
