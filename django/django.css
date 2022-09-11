@@ -3558,6 +3558,7 @@ body#staff .thin>div:nth-of-type(2) h3 {
 
 .main-menu .main-menu__item:first-of-type a {
   border-top-left-radius: 4px;
+  padding-left: 8px;
 }
 
 .main-menu__list {
@@ -3660,6 +3661,7 @@ body#staff .thin>div:nth-of-type(2) h3 {
 ----------------------------------------------------------------------------- */
 @media screen and (min-width: 1280px) {
   #stats_seeding span, #stats_leeching span {display: block;}
+  .main-menu .main-menu__item:first-of-type a {padding: 0;}
 }
 
 @media screen and (min-width: 1360px) {
