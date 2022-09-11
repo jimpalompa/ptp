@@ -1412,9 +1412,9 @@ body#collages .thin>.table td:nth-child(2)>a {
   padding-right: var(--sp--x-large);
 }
 
-.group_torrent+.group_torrent_header>td {
+/* .group_torrent+.group_torrent_header>td {
   padding-top: var(--sp--medium);
-}
+} */
 
 .group_torrent_header {
   font-size: var(--fs--tiny);
@@ -1439,9 +1439,9 @@ body#collages .thin>.table td:nth-child(2)>a {
   padding-right: var(--sp--huge);
 }
 
-.group_torrent+.group_torrent_header:last-of-type>td {
+/* .group_torrent+.group_torrent_header:last-of-type>td {
   padding-bottom: var(--sp--medium);
-}
+} */
 
 .page__title {
   color: var(--c--fg--secondary);
