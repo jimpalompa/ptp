@@ -2154,7 +2154,7 @@ a[class*='link--seen']::after {
 
 .huge-movie-list__movie__title-row [class$='__new']::before {
   position: relative;
-  top: -3px;
+  top: -2px;
 }
 
 .huge-movie-list__movie__tag-list {
@@ -3572,7 +3572,7 @@ body#staff .thin>div:nth-of-type(2) h3 {
   display: flex;
   align-items: center;
   height: 60px;
-  padding-right: 68px;
+  padding-right: 60px;
   list-style: none;
   text-align: center;
 }
@@ -3609,7 +3609,7 @@ body#staff .thin>div:nth-of-type(2) h3 {
   font-size: var(--fs--gigantic);
   line-height: 60px;
   top: -60px;
-  width: 68px;
+  width: 60px;
   height: 60px;
   margin-top: 1160px;
   content: '\e5d2';
