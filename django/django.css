@@ -2803,7 +2803,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel a {
 }
 
 body#torrents .thin>.page__title+h2.text--center {
-  background: var(--c--fg--quaternary);
+  background: var(--c--ac--bg--secondary);
   padding: var(--sp--small);
 }
 
