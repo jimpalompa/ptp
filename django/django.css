@@ -148,16 +148,16 @@
   font-family: 'Inter';
   font-style: oblique 0deg;
   font-weight: 500 700;
-  font-display: fallback;
+  font-display: swap;
   font-stretch: normal;
-  src: local('Inter'), url(//jimpalompa.github.io/ptp/assets/fonts/inter-variable.woff2) format('woff2');
+  src: url(//jimpalompa.github.io/ptp/assets/fonts/inter-variable.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: local('Material Icons'), url(//jimpalompa.github.io/ptp/assets/fonts/material-icons.woff2) format('woff2');
+  src: url(//jimpalompa.github.io/ptp/assets/fonts/material-icons.woff2) format('woff2');
 }
 
 /* -----------------------------------------------------------------------------
