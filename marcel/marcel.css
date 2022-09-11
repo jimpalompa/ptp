@@ -101,10 +101,8 @@
   --ls--less: -.25px;
   --ls--more: .25px;
 
-  /* Layout */
-  --co--width: 1024px;
-
   /* Spacing */
+  --sp--puny: 4px;
   --sp--tiny: 8px;
   --sp--small: 12px;
   --sp--medium: 16px;
@@ -112,6 +110,7 @@
   --sp--x-large: 24px;
   --sp--huge: 28px;
   --sp--gigantic: 32px;
+  --sp--enormous: 48px;
 
   /* Border-radius */
   --br: 2px;
@@ -225,6 +224,14 @@ body {
   margin: 0 auto;
 }
 
+#wrapper {
+  width: 80%;
+  min-width: 1024px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
 a {
   text-decoration: none;
   border: none;
@@ -305,6 +312,10 @@ fieldset {
   border-width: .0625em;
   margin: 0 2px;
   padding: .4625em .875em .9125em;
+}
+
+input+input, select+input {
+  margin: 0 0 2px 2px;
 }
 
 button, input, select, textarea {
@@ -635,7 +646,6 @@ body,
 .table>tbody>tr.basic-movie-list__details-row,
 .table>tbody>tr.release-name-movie-list__details-row,
 .table>tbody>tr,
-.footer,
 .mediainfo,
 .movie-page__torrent-report-description {
   background: var(--c--bg--secondary);
@@ -702,7 +712,7 @@ blockquote {
 }
 
 .forum-post--unread {
-  border-color: var(--c--green);
+  border-color: var(--c--ac--fg);
 }
 
 /* -----------------------------------------------------------------------------
@@ -717,7 +727,7 @@ blockquote {
 }
 
 .header {
-  min-width: var(--co--width);
+  min-width: 960px;
   padding-top: 40px;
 }
 
@@ -726,9 +736,10 @@ blockquote {
   text-align: center;
   padding: 6px;
   width: 100%;
-  min-width: var(--co--width);
+  min-width: 1024px;
   position: absolute;
   top: 0;
+  left: 0;
 }
 
 .user-info-bar ul {
@@ -739,18 +750,18 @@ blockquote {
   line-height: 19px;
   text-align: center;
   width: 100%;
-  min-width: var(--co--width);
+  min-width: 1024px;
   padding: 11px 0;
   position: absolute;
   top: 184px;
+  left: 0;
 }
 
 .alert-bars {
   margin: 0 auto 20px;
   text-align: center;
   position: relative;
-  top: 120px;
-  min-width: var(--co--width);
+  top: 124px;
 }
 
 .alert-bar, .staff-toolbar {
@@ -768,17 +779,15 @@ blockquote {
   padding: 6px;
   text-align: center;
   width: 100%;
-  min-width: var(--co--width);
+  min-width: 1024px;
   position: absolute;
   top: 226px;
+  left: 0;
 }
 
 #content {
-  margin: 0 auto;
-  padding: 0 var(--sp--gigantic);
   position: relative;
   top: 128px;
-  width: var(--co--width);
 }
 
 .main-column {
@@ -794,18 +803,33 @@ blockquote {
   clear: both;
   text-align: center;
   width: 100%;
-  min-width: var(--co--width);
-  padding: 16px 48px;
+  min-width: 1024px;
+  padding: 12px 32px;
   position: relative;
   top: 200px;
+}
+
+.footer__disclaimer, .footer__last-activity, .footer__load {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.footer__last-activity {
+  margin-bottom: 4px;
+}
+
+.footer__disclaimer {
+  color: var(--c--red);
+  border: 1.5px dashed;
+  margin-bottom: 1em;
+  padding: .5em;
 }
 
 /* -----------------------------------------------------------------------------
   SHADOWS
 ----------------------------------------------------------------------------- */
 
-.main-menu,
-.footer {
+.main-menu {
   box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, .15);
 }
 
@@ -975,14 +999,14 @@ img#browse_settings {
   background-color: var(--c--bg--tertiary);
   float: left;
   width: 240px;
-  border-radius: 2px 0 0 2px;
+  border-radius: var(--br--left);
 }
 
 .huge-movie-list__movie__cover__link {
   display: block;
   width: 100%;
   padding-bottom: 150%;
-  border-radius: 2px 0 0 2px;
+  border-radius: var(--br--left);
 }
 
 .huge-movie-list__movie__details {
@@ -1417,9 +1441,18 @@ th {
 }
 
 .alert-bar {
+  background: var(--c--ac--bg--secondary);
   border-style: dashed;
   border-width: 2px;
-  margin: 4px;
+  margin: var(--sp--small);
+}
+
+.alert--warning {
+  background: var(--c--orange);
+}
+
+.alert--error {
+  background: var(--c--red-shade)
 }
 
 .bbcode-size-1 {font-size: var(--fs--small);}
@@ -1494,15 +1527,8 @@ th {
   border: solid 2px transparent;
 }
 
-.footer__disclaimer {
-  display: inline-block;
-  min-width: var(--co--width);
-  margin-bottom: 12px;
-}
-
 .form__input, .form__checkbox-label, .form__radio-label {
-  margin-bottom: 1em;
-  margin-right: 1em;
+  margin: 0 2px 6px 0;
 }
 
 .generic-form, .search-form {
@@ -2082,6 +2108,10 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
   margin-bottom: 2em;
 }
 
+.pagination__current-page {
+  color: var(--c--ac--fg--shade);
+}
+
 .pagination__link.pagination__link--first,
 .pagination__link.pagination__link--last {
   margin: 0 16px;
@@ -2540,11 +2570,8 @@ p:first-child, .alert:first-child, .heading:first-child {
   BREAKPOINTS
 ----------------------------------------------------------------------------- */
 
-@media screen and (min-width: 1360px) {:root {--co--width: 1120px;}}
-
 @media screen and (min-width: 1440px) {
   :root {
-    --co--width: 1280px;
     --fs--tiny: .875rem;    /* 14px */
     --fs--small: .9375rem;  /* 15px */
     --fs--medium: 1rem;     /* 16px */
@@ -2554,7 +2581,5 @@ p:first-child, .alert:first-child, .heading:first-child {
     --fs--gigantic: 1.5rem; /* 24px */
     }
 }
-
-@media screen and (min-width: 1920px) {:root {--co--width: 1440px;}}
 
 /* --------------- I think this just might be my masterpiece ---------------- */
