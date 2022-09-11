@@ -1528,9 +1528,9 @@ body#upload .thin>div[style*='width:700px'] {
 .tabs__bar__list {
   display: flex;
   align-items: center;
-  line-height: 64px;
+  line-height: 60px;
   list-style: none;
-  height: 64px;
+  height: 60px;
 }
 
 .tabs__bar__item {
@@ -3571,8 +3571,8 @@ body#staff .thin>div:nth-of-type(2) h3 {
 .main-menu__list {
   display: flex;
   align-items: center;
-  height: 60px;
-  padding-right: 60px;
+  height: 52px;
+  padding-right: 52px;
   list-style: none;
   text-align: center;
 }
@@ -3607,16 +3607,16 @@ body#staff .thin>div:nth-of-type(2) h3 {
 #userinfo_minor::before {
   color: var(--c--fg--primary);
   font-size: var(--fs--gigantic);
-  line-height: 60px;
-  top: -60px;
-  width: 60px;
-  height: 60px;
-  margin-top: 1160px;
+  line-height: 52px;
+  top: -52px;
+  width: 52px;
+  height: 52px;
+  margin-top: 1152px;
   content: '\e5d2';
 }
 
 #userinfo_minor:hover {
-  top: 160px;
+  top: 152px;
 }
 
 #userinfo_minor:hover::before {
@@ -3699,6 +3699,9 @@ body#staff .thin>div:nth-of-type(2) h3 {
     --sp--gigantic: 34px;
     --sp--enormous: 52px;
   }
+  .main-menu__list {height: 60px; padding-right: 60px;}
+  #userinfo_minor::before {line-height: 60px; top: -60px; width: 60px; height: 60px; margin-top: 1160px;}
+  #userinfo_minor:hover {top: 160px;}
 }
 
 @media screen and (min-width: 1920px) {
