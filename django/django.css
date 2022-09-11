@@ -1412,9 +1412,13 @@ body#collages .thin>.table td:nth-child(2)>a {
   padding-right: var(--sp--x-large);
 }
 
-/* .group_torrent+.group_torrent_header>td {
-  padding-top: var(--sp--medium);
-} */
+.group_torrent+.group_torrent_header>td {
+  padding-top: 12px;
+}
+
+.group_torrent_header~.group_torrent:not(.group_torrent_header) {
+  border-top: 8px solid var(--c--bg--secondary);
+}
 
 .group_torrent_header {
   font-size: var(--fs--tiny);
@@ -2804,7 +2808,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel a {
 
 body#torrents .thin>.page__title+h2.text--center {
   background: var(--c--ac--bg--secondary);
-  padding: var(--sp--small);
+  padding: var(--sp--medium);
 }
 
 .movie-page__trailer {
