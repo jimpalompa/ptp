@@ -690,7 +690,6 @@ blockquote,
 .alert-bar,
 .staff-toolbar,
 .table>thead>tr,
-.poll__bar__center,
 .release-description-preview,
 #MovieTooltipVoteWindow {
   background: var(--c--bg--tertiary);
@@ -700,7 +699,6 @@ blockquote,
 .search-bar__results__list-item:hover {
   background: var(--c--bg--quaternary);
 }
-
 
 .alert-bar,
 .js-basic-movie-list__table-body>tr.basic-movie-list__details-row,
@@ -2179,6 +2177,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
 }
 
 .poll__bar__center {
+  background: var(--c--ac--fg--shade);
   float: left;
   margin: 0;
   padding: 0;
