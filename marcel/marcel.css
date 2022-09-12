@@ -1410,7 +1410,7 @@ img#browse_settings {
 }
 
 .small-cover-movie-list__movie__title::before {
-  color: var(--c--purple-shade);
+  color: var(--c--purple);
   font-family: var(--ff--icons);
   padding-right: 2px;
   position: relative;
