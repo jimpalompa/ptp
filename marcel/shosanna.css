@@ -22,6 +22,7 @@
   --c--fg--tertiary:   #727170; /* tint 30% */
   --c--fg--quaternary: #868584; /* tint 40% */
   --c--fg--quinary:    #9a9998; /* tint 50% */
+
   /* Color background */
   --c--bg--initial:    #fff;
   --c--bg--input:      #fafafa; /* between */
@@ -30,18 +31,22 @@
   --c--bg--tertiary:   #d2d0cf; /* shade 15% */
   --c--bg--quaternary: #b9b8b6; /* shade 25% */
   --c--bg--quinary:    #a19f9e; /* shade 35% */
+
   /* Color accent foreground */
   --c--ac--fg--tint:   #baafa6; /* tint 40% */
   --c--ac--fg:         #8c796a;
   --c--ac--fg--shade:  #62554a; /* shade 30% */
+
   /* Color accent background */
-  --c--ac--bg--primary:   #8c796a;
-  --c--ac--bg--secondary: #7e6d5f; /* shade 10% */
-  --c--ac--bg--tertiary:  #706155; /* shade 20% */
+  --c--ac--bg--tint:   #8c796a;
+  --c--ac--bg:         #7e6d5f; /* shade 10% */
+  --c--ac--bg--shade:  #706155; /* shade 20% */
+
   /* Color transparent foreground */
   --c--tr--fg--less: rgba(0, 0, 0, .8);
   --c--tr--fg:       rgba(0, 0, 0, .6);
   --c--tr--fg--more: rgba(0, 0, 0, .4);
+
   /* Color transparent background */
   --c--tr--bg--less: rgba(255, 255, 255, .8);
   --c--tr--bg:       rgba(255, 255, 255, .6);
