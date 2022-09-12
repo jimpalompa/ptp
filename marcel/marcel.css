@@ -40,6 +40,16 @@
   --c--ac--bg--secondary: #6a5a4d; /* shade 50% */
   --c--ac--bg--tertiary:  #55483d; /* shade 60% */
 
+  /* Color transparent foreground */
+  --c--tr--fg--less: rgba(255, 255, 255, .8);
+  --c--tr--fg:       rgba(255, 255, 255, .6);
+  --c--tr--fg--more: rgba(255, 255, 255, .4);
+
+  /* Color transparent background */
+  --c--tr--bg--less: rgba(0, 0, 0, .8);
+  --c--tr--bg:       rgba(0, 0, 0, .6);
+  --c--tr--bg--more: rgba(0, 0, 0, .4);
+
   /* Color */
   --c--black:        #0c0c0c;
   --c--white:        #fcfcfc;
@@ -305,7 +315,7 @@ figure {
 }
 
 fieldset {
-  border-color: silver;
+  border-color: var(--c--fg--tertiary);
   border-style: solid;
   border-width: .0625em;
   margin: 0 2px;
@@ -577,6 +587,7 @@ a:active,
 /* Yellow */
 .ratio-08,
 .ratio-09,
+[class$='__rate'] a,
 a.torrent-info-link--user-leeching,
 .golden-popcorn-character {
   color: var(--c--yellow);
@@ -603,6 +614,7 @@ a.torrent-info-link--user-downloaded {
 }
 
 /* Blue */
+[class$='__bookmark'] a,
 a.torrent-info-link--user-snatched {
   color: var(--c--blue);
 }
@@ -610,6 +622,11 @@ a.torrent-info-link--user-snatched {
 /* Purple */
 a.torrent-info-link--user-uploaded {
   color: var(--c--purple);
+}
+
+/* Pink */
+[class$='__trailer'] a {
+  color: var(--c--pink);
 }
 
 /* -----------------------------------------------------------------------------
@@ -638,7 +655,6 @@ body,
 .huge-movie-list__movie,
 .site-debug,
 .panel,
-.qtip-ptp,
 .staff-toolbar,
 .user-info-bar__item--drop-down-menu-opener:hover,
 .table>tbody>tr.basic-movie-list__details-row,
@@ -2118,7 +2134,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
   padding-top: 12px;
   padding-bottom: 4px;
   font-weight: var(--fw--bold);
-  border-top: 2px solid silver;
+  border-top: 1px solid var(--c--fg--tertiary);
 }
 
 .page__title {
@@ -2184,7 +2200,6 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
 
 .qtip:not(.ie9haxors) div.qtip-content, .qtip:not(.ie9haxors) div.qtip-titlebar {
   filter: none;
-  -ms-filter: none;
 }
 
 .qtip .qtip-tip {
@@ -2205,8 +2220,11 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
 }
 
 .qtip-ptp {
+  background: var(--c--tr--bg--less);
   border: 0;
+  border-radius: var(--br);
   box-shadow: var(--bs--medium);
+  backdrop-filter: blur(8px);
 }
 
 .release-name-movie-list__movie__release-category {
@@ -2218,7 +2236,6 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
   white-space: nowrap;
   font-size: var(--fs--small);
   font-weight: var(--fw--bold);
-  text-shadow: 1px 1px 1px rgba(5, 5, 5, .5);
   margin-left: 4px;
   margin-right: 4px;
 }
