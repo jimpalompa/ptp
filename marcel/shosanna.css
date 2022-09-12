@@ -38,6 +38,14 @@
   --c--ac--bg--primary:   #8c796a;
   --c--ac--bg--secondary: #7e6d5f; /* shade 10% */
   --c--ac--bg--tertiary:  #706155; /* shade 20% */
+  /* Color transparent foreground */
+  --c--tr--fg--less: rgba(0, 0, 0, .8);
+  --c--tr--fg:       rgba(0, 0, 0, .6);
+  --c--tr--fg--more: rgba(0, 0, 0, .4);
+  /* Color transparent background */
+  --c--tr--bg--less: rgba(255, 255, 255, .8);
+  --c--tr--bg:       rgba(255, 255, 255, .6);
+  --c--tr--bg--more: rgba(255, 255, 255, .4);
 }
 
 .site-logo {
