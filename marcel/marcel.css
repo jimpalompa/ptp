@@ -187,7 +187,7 @@
 }
 
 /* -----------------------------------------------------------------------------
-  Hide elemes
+  Hide elements
 ----------------------------------------------------------------------------- */
 
 .hidden, [hidden],
@@ -406,92 +406,7 @@ blockquote {
 }
 
 /* -----------------------------------------------------------------------------
-  Typography
------------------------------------------------------------------------------ */
-
-/* Sizes */
-h1 {font-size: var(--fs--huge);}
-h2 {font-size: var(--fs--x-large);}
-h3 {font-size: var(--fs--large);}
-h4 {font-size: var(--fs--medium);}
-h5 {font-size: var(--fs--small);}
-h6 {font-size: var(--fs--tiny);}
-
-.huge-movie-list__movie__title {font-size: var(--fs--huge);}
-.huge-movie-list__movie__year {font-size: var(--fs--x-large);}
-.huge-movie-list__movie__director-list {font-size: var(--fs--large);}
-.huge-movie-list__movie__synopsis {font-size: var(--fs--medium);}
-
-blockquote,
-.sidebar,
-.alert-bar,
-.staff-toolbar,
-.group_torrent_header,
-.qtip-content,
-.linkbox,
-.basic-movie-list__movie__tags {
-  font-size: var(--fs--tiny);
-}
-
-.search-bar__search-field__input,
-.search-bar__results,
-.footer,
-.huge-movie-list__movie__torrent-summary,
-.basic-movie-list__movie__bookmark,
-.basic-movie-list__movie__rating-container,
-.basic-movie-list__torrent-row,
-.panel__heading__toggler {
-  font-size: var(--fs--tiny);
-}
-
-/* Weights & Styles */
-.main-menu,
-.cover-movie-list__movie__title,
-.huge-movie-list__movie__title,
-.basic-movie-list__movie__rating-container,
-.basic-torrent-list__movie__torrent-opener-link,
-.alert-bar,
-.staff-toolbar,
-.encoding-history-status--finished,
-.missing-torrent-status--exists,
-.encoding-history-status--canceled,
-.missing-torrent-status--trumpable,
-.torrent-info__trumpable,
-.torrent-info__reported,
-.table>thead>tr,
-.torrent-info-link--user-seeding,
-.torrent-info-link--user-leeching,
-.torrent-info-link--user-uploaded,
-.torrent-info-link--user-snatched,
-.torrent-info-link--user-downloaded,
-.panel__heading__title,
-[class$='__new'],
-.pagination__current-page {
-  font-weight: var(--fw--bold);
-}
-
-.alert--warning,
-.cover-movie-list__movie__tags,
-.huge-movie-list__movie__tag-list,
-.basic-movie-list__movie__tags {
-  font-style: italic;
-}
-
-/* Icons */
-.fa,
-.forum-topic__go-to-last-read::after,
-.torrent-info-link--user-snatched::after {
-  display: inline-block;
-  font-family: var(--ff--icons);
-}
-
-.forum-topic__go-to-last-read::after {
-  vertical-align: middle;
-  content: '\e154';
-}
-
-/* -----------------------------------------------------------------------------
-  Foreground colors
+  Colors foreground
 ----------------------------------------------------------------------------- */
 
 /* Foreground primary */
@@ -642,7 +557,7 @@ a.torrent-info-link--user-uploaded {
 }
 
 /* -----------------------------------------------------------------------------
-  Background colors
+  Colors background
 ----------------------------------------------------------------------------- */
 
 button, input, select, textarea {
@@ -740,7 +655,321 @@ blockquote {
 }
 
 /* -----------------------------------------------------------------------------
-  Main divs
+  Shadows
+----------------------------------------------------------------------------- */
+
+.main-menu {
+  box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, .15);
+}
+
+.search-bar,
+.lightbox img {
+  box-shadow: var(--bs--small);
+}
+
+.panel,
+.table--panel-like,
+.cover-movie-list__movie,
+.huge-movie-list__movie,
+.forum-post {
+  box-shadow:var(--bs--medium);
+}
+
+/* -----------------------------------------------------------------------------
+  Typography
+----------------------------------------------------------------------------- */
+
+/* Sizes */
+h1 {font-size: var(--fs--huge);}
+h2 {font-size: var(--fs--x-large);}
+h3 {font-size: var(--fs--large);}
+h4 {font-size: var(--fs--medium);}
+h5 {font-size: var(--fs--small);}
+h6 {font-size: var(--fs--tiny);}
+
+.huge-movie-list__movie__title {font-size: var(--fs--huge);}
+.huge-movie-list__movie__year {font-size: var(--fs--x-large);}
+.huge-movie-list__movie__director-list {font-size: var(--fs--large);}
+.huge-movie-list__movie__synopsis {font-size: var(--fs--medium);}
+
+blockquote,
+.sidebar,
+.alert-bar,
+.staff-toolbar,
+.group_torrent_header,
+.qtip-content,
+.linkbox,
+.basic-movie-list__movie__tags {
+  font-size: var(--fs--tiny);
+}
+
+.search-bar__search-field__input,
+.search-bar__results,
+.footer,
+.huge-movie-list__movie__torrent-summary,
+.basic-movie-list__movie__bookmark,
+.basic-movie-list__movie__rating-container,
+.basic-movie-list__torrent-row,
+.panel__heading__toggler {
+  font-size: var(--fs--tiny);
+}
+
+/* Weights & Styles */
+.main-menu,
+.cover-movie-list__movie__title,
+.huge-movie-list__movie__title,
+.basic-movie-list__movie__rating-container,
+.basic-torrent-list__movie__torrent-opener-link,
+.alert-bar,
+.staff-toolbar,
+.encoding-history-status--finished,
+.missing-torrent-status--exists,
+.encoding-history-status--canceled,
+.missing-torrent-status--trumpable,
+.torrent-info__trumpable,
+.torrent-info__reported,
+.table>thead>tr,
+.torrent-info-link--user-seeding,
+.torrent-info-link--user-leeching,
+.torrent-info-link--user-uploaded,
+.torrent-info-link--user-snatched,
+.torrent-info-link--user-downloaded,
+.panel__heading__title,
+[class$='__new'],
+.pagination__current-page {
+  font-weight: var(--fw--bold);
+}
+
+.alert--warning,
+.cover-movie-list__movie__tags,
+.huge-movie-list__movie__tag-list,
+.basic-movie-list__movie__tags {
+  font-style: italic;
+}
+
+/* Icons */
+.fa,
+.forum-topic__go-to-last-read::after,
+.torrent-info-link--user-snatched::after {
+  display: inline-block;
+  font-family: var(--ff--icons);
+}
+
+.forum-topic__go-to-last-read::after {
+  vertical-align: middle;
+  content: '\e154';
+}
+
+/* -----------------------------------------------------------------------------
+  Images
+----------------------------------------------------------------------------- */
+
+/* Torrents heading */
+img[title='Snatched'],
+img[title='Snatches'],
+img[title='Seeders'],
+img[title='Leechers'],
+img[title='Request time'],
+img[title='Seed time'],
+img[title='Upload time'],
+img[title='Time'] {
+  width: 14px;
+  height: 14px;
+  padding-top: 14px;
+  position: relative;
+  top: 1px;
+}
+
+img[title='Snatched'], img[title='Snatches'] {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fafafa" stroke="%23fcfcfc" stroke-width="2" height="48" width="48"%3E%3Cpath d="M9.15 42v-4.7h29.7V42ZM19 31.5 6.45 18.95 9.8 15.6l9.2 9.2L38.25 5.55l3.35 3.4Z"/%3E%3C/svg%3E') no-repeat center / contain;
+}
+
+img[title='Seeders'] {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fcfcfc" stroke="%23fcfcfc" stroke-width="2" height="48" width="48"%3E%3Cpath d="M10.25 42.4q-1.95 0-3.325-1.4-1.375-1.4-1.375-3.35v-9.4h4.7v9.4H37.7v-9.4h4.7v9.4q0 1.95-1.4 3.35-1.4 1.4-3.3 1.4Zm11.4-11.1V13.5l-5.7 5.75-3.4-3.35L24 4.45 35.45 15.9l-3.4 3.35-5.7-5.75v17.8Z"/%3E%3C/svg%3E') no-repeat center / contain;
+}
+
+img[title='Leechers'] {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fcfcfc" stroke="%23fcfcfc" stroke-width="2" height="48" width="48"%3E%3Cpath d="M10.25 42.4q-1.95 0-3.325-1.4-1.375-1.4-1.375-3.35v-9.4h4.7v9.4H37.7v-9.4h4.7v9.4q0 1.95-1.4 3.35-1.4 1.4-3.3 1.4ZM24 31.3 12.55 19.9l3.4-3.35 5.7 5.75V4.45h4.7V22.3l5.7-5.75 3.4 3.35Z"/%3E%3C/svg%3E') no-repeat center / contain;
+}
+
+img[title='Request time'], img[title='Seed time'], img[title='Upload time'], img[title='Time'] {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fcfcfc" stroke="%23fcfcfc" stroke-width="2" height="48" width="48"%3E%3Cpath d="M16.25 40.55h15.5v-5.9q0-3.35-2.225-5.725Q27.3 26.55 24 26.55q-3.3 0-5.525 2.375Q16.25 31.3 16.25 34.65Zm-9.5 4.7v-4.7h4.8v-5.9q0-3.35 1.6-6.25T17.7 24q-2.95-1.55-4.55-4.45-1.6-2.9-1.6-6.25V7.45h-4.8V2.7H41.3v4.75h-4.8v5.85q0 3.35-1.625 6.25T30.35 24q2.9 1.5 4.525 4.4 1.625 2.9 1.625 6.25v5.9h4.8v4.7Z"/%3E%3C/svg%3E') no-repeat center / contain;
+}
+
+/* Torrents list */
+img[title^='High quality'],
+img[title^='Torrent has been'],
+img[title^='Torrent has not'] {
+  width: 12px !important;
+  height: 12px !important;
+  padding-top: 12px;
+  position: relative;
+  top: 1px;
+}
+
+img[title^='Torrent has not'] {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23d33131" stroke="%23d33131" stroke-width="2" height="48" width="48"%3E%3Cpath d="m12.45 38.85-3.3-3.3L20.7 24 9.15 12.45l3.3-3.3L24 20.7 35.55 9.15l3.3 3.3L27.3 24l11.55 11.55-3.3 3.3L24 27.3Z"/%3E%3C/svg%3E') no-repeat center / contain;
+}
+
+img[title^='Torrent has been'] {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%236fad18" stroke="%236fad18" stroke-width="2" height="48" width="48"%3E%3Cpath d="M18.9 36.9 6.5 24.5l3.4-3.4 9 9 19.15-19.15 3.4 3.4Z"/%3E%3C/svg%3E') no-repeat center / contain;
+}
+
+img[title^='High quality'] {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23d9a400" stroke="%23d9a400" stroke-width="2" height="48" width="48"%3E%3Cpath d="m11.65 44 3.25-14.05L4 20.5l14.4-1.25L24 6l5.6 13.25L44 20.5l-10.9 9.45L36.35 44 24 36.55Z"/%3E%3C/svg%3E') no-repeat center / contain;
+}
+
+/* Ratings */
+img[title='IMDb'] {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAUVBMVEX////ZpADZpADZpADZpADZpADZpADZpADZpADZpADZpACMawVyWAamfgN/YQWyhwK/kQI/MgkMDAwYFQvMmgGZdARYRQhlTgdMOwgyKAolHgurGimCAAAAC3RSTlMAIGCAEJD/wOAwQBf0pZUAAAEVSURBVHgB7dYFssJADIDhxYKtC9De/6Avs0HqltE3++OQ+bCaaFQqlXb7w+r2O/HpeIJNnY6COsPGziJ3gM0dMnCBzV0yAIwEduUCt/8C3CWm8g0GQLd3UDKnlflO2UHAeUzmGwyAbh1I/8mp95RaACjVB3yIy4HUBzC5HJCyDURHjxYDj2cbANkE9Ms9zTTg3AQQ6FtOAqGaAKjXFIBNAI8XPRgFKp+rxgCVZoDP9x8F1ByQ7zsG8OICMt9nAMljmgHkAdUETN0A0n0OAI/ZJkC9aKqqZoGA19AHEk1RcgrA66oPPD9THnMTm7Q7XtMVbdIoFQHAKAxs0haaQNkvCGDE3r2zDzDYhzj8gyz+YR5VKpX+AO4NXUMxhzM2AAAAAElFTkSuQmCC') no-repeat center / 32px;
+}
+
+img[title='Metacritic'] {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAgVBMVEX////ZpADZpADZpADZpADZpADZpADZpADZpADZpADZpADZpADZpADClgyggR19bC5bVz9PUEWUeiM4QlEiNVxmXjrZpADOnQZyZTS3jxEtPFcwQWZZZ4TU19/8/Pzh5Ol0gJidpbbGy9Tv8PNLWnqrssCPmaw9TnBmc46CjKK4vspop82eAAAAF3RSTlMAIBBQkMDw/2CwgHDQ////////////oBN0pykAAAJBSURBVHgBYqA9GAWMTOTqBFBaHVpuwzDsNd7OTpQp73Hr/z+wkSpeDRtZeNsRcCQIUTfz/CCMLMLA92ZvsuMkGiGJZ6/T0zAiCNMXJeZAB4n5K64t5Phytd5sb9isd0v5tvjzjO+Fjr3eqwH2a6cReo/5saMf1AQHJxE/4h/tkdNZUZxP9ufjs79/geKhkcvjGjz78+6KLJ1pJbju7BHvjv+h5SM9y4uiKCslsAohn8WC8OviHxoNCguaH9v/lfANclG4Wh9Iomah8R/9y4r/aDtx0swinKY6NcKj+fUFUzibkyktYKkQreHVH+1IYclKsBEY58+4p5T6zF0RlcskC0NCCjACXzYKDSqYEpJRB0Z0PSR/1Y2ZQYdufCuDtTk9m4ZwMIJuUDUo9HYQ0zj62EHXFpKgcSR66cEHgQBCqMviF7V8rNwsPpVSq9vxAARCsOC7GKAChbYTE0IQME1tlMAakItC/+trK1nYmPMTge1wfG2mdD9W6Eo3lO0jgao2Ah/SiigIHgnIAH5uHC1t4118LiADdIyqBQUmgCZ+SgC+MBGogCbiGPtB0aDQygcYIwRpxdvuSgyUwiBBlLmCzmEQJMpwmbgC8vEy4XWmxulv4LPrjAulwyWGYAsFVtpzBVxpfKnqnCvwpcrWuoaVBGBrnTwsskhzZPOHhT9tPUb48dNGH9cePXj8uNLnveZ8/rzTfzAm9f8dtIFBaROH0kYWpc08Shua5DR1+ZCauhQ2tilt7lPY4aBXl4f+YBQAAMMAnrxx2gxQAAAAAElFTkSuQmCC') no-repeat center / 32px;
+}
+
+img[src*='x3_tomatoes'] {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAk1BMVEX///9vrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRiYeiJ1phmUfyGtYCjASCzTMTHGQS7TMTHTMTGIjh57nhuBlh2bdyPTMTHTMTGhbyS6UCvTMTHNOS+Fkh3TMTHTMTGnZyaOhyDTMTHTMTHTMTHTMTHTMTHTMTHTMTHTMTG0o7oJAAAAMXRSTlMAEEDQgKD/8GAgwFDgMLBwkIf///////+wEP/////wQP//YP/ioCD//8BwgNAwUOCQkJCp9AAAAYJJREFUeAHt1GUC6jAMAODMUtwXvH3DYQL3vxyunea5fb+rMfiLGfBNTMv+ptsdRPFN9+NZCQDKjsCveouNiBZASeCFZQBbBRHNKt7UTOCo22dVgdgQeOUAh1lBTQ04mhhjVQSiqLSqRqHgZRBO7hH1ylkt44gS5Cs3a5iuXaAGU3S6PZf67mCYHUOBn0ZjvJhMXbqTKuP1rxROvuCVR67nefRhlpoC8bp47uJVnxLMUsO36ODFuEfk3Q4i4pywJJqfH3y9tXsNnEvJFCSZ0cv88paxSynkEOJWkl7WON70KN0S4rbEoUCniGXAfoBupUeAmHbwySemLXwKiAs+EVuYlQN+IiNi87UY/vEH7Igt+r5ZCIlt+I2FJLObkd/P/rd2Y0hMK/i2dgxANyOWGeiGkhiS5rrPDqFuz5xn3zDY90PQseIoQ0gxY+/Xzdj7dZHMjd8QMoUBYw4l87OuX0EBq2XadgUFrQ6SdHIZAkd0COhle4gA+JTa+b4/UyH85v47AS/tpqQ5z5taAAAAAElFTkSuQmCC') no-repeat center / 32px;
+}
+
+img[src*='splat'] {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAM1BMVEX///9vrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRjhKPDSAAAAEXRSTlMAIKDg/7BAYPDAMIAQ0JBwUPYRW24AAAGVSURBVHgB7dZhjuMgDAVgEx4GAzS5/2m30hYVJiQuSCutRv1+jjSWa8wj9P/6MpvFk2Na4wNePK1gvBlaYPG20TyPhqV5G1o0T/5dgciRPpDQCM3fAwDrSWXQEHrJBX85Uj3wluiloHpMnUMc/K5IY5H5NIa6Bjmoy7VbPG35VSz0I9jV5apdh9hVSN0Eqtu5BVMXuu0WWgG8leZK1W4PrQCj4dumeLCcRSlgc3MSwRMZQWdXCkByO7dg0bNZyRCgHHwILoRIAwc+JUaPoTFJTh57pCssuFMMqXizGKuD02X2gpHHaqZWaTUTK1l+F1beuISRlLX5eVcAiBRcKJISX5Zhi8+UZGggYsKWlcukCsd8A8qh7OiELQlQyZECfop3J1dyu05u2KHcdFByt06xBmTPXM8g0rlADsoUyikyt77ZQ7leMfx8+AIqril/G82x1BQ/5bQMr3k852pyyefRuZhBBTsTK/vgw4NnUiWdb5ynyQKVL3hyceE7qcrM9IljPPClaHW0JLv6/5kWxSQiG9Pv9/UHwt4bn05SUUUAAAAASUVORK5CYII=') no-repeat center / 32px;
+}
+
+img[title='User Ratings'] {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAClFBMVEX////ZpADZpADZpADZpADbqArZpADZpADZpADgrx3403//3pzjsyfZpADqvUXZpADZpADeqxTZpADzzGz614n/2pz/1pz925PZpADswU7+wJj/vZz/y5zZpADZpADxyGLnujvrsUrvt1rdqRPuxVj/2Jz20HX4y3/ltjH/3Jz/x5z/yZzvu1n9wpL8wZD3v3rqukfZpAD/zZz/0pzdqxPswEznuTj/v5z/xZzisiXpvEHcqAqVMDCVMDC+dxP1z3XRlgabOiyVMDCVMDCVMDCvXB6mTSSVMDCVMDDMMTHEMTGdNy3Rlgbqvkfouz3VnQOkNi68MTHAMTHSMTHTMTHEUDHLtWfYsDflti7/wZzamQ/QMzDTMTHTOjrZ09fCydDTuF/vuWX/0Jz/w5z70o3/1Jzzv6XOx8G+xs3MaGfTMTHTMTHtsLD5+fnQYmTUTSXZnQP805Xskm3eWkvnd2jCxcrd4eX4+fnaXl7TMTHliYn8/PzcYmLPc0zIuYHUzLT73J/i07LOzMHJv5bYYlLewsbVPT3TMTHTMTHdY2PnlpbZX17p6+3Z3uLHv77ke2HjcVnxqHrkhkzph2btuY/Cx8rO1Nnl6Or01tbTMTHgurzkmXvWz7vPsU3r1qve0rXTu3DWmR3UPyvSOjr57+/yycnTMTH34+PSOjvKn3LbUUXWOzfhZ1L40ZjKysTGzdPNamzTMTHvvLzVZ2jRTU3R19zbVlbqo6Px09PTMTHgcHDYSkrifX3TMTHTMTHTMTHWQUHpoKDZUVHrpqb8/Pz8/Pz8/Pznk5Pjf3/ZUFDVPDzgb2/mkJD8/Pz8/PzfamrxxMTkhITeaWnwwcH8/Pzvvr7dZGTliIjhdXXmjY38/Pz8/PwlgKiNAAAA3HRSTlMAIGDw///AEKD/////0P+QQP+A//////9Q/////3Aw////////////////////////4P////////////EggLj/7bVg8P///6AQ/f////////////P//////////8D/////////////////4JD//v/////////////8YP///v////////////+gMP////////////////////+A////////////////UP////////////9A//////////D////QcBDQ95hxoMBgH5z2/s88IJD1dIfcpRDQ63DAsIBAchbrqAAABHlJREFUeAFiGO4AQDpZMEkNQwH45K20X7a33WYJYaUFuqHnrjgc7lDc3eX/j3EdP7evjef5pP9w4gODUipX+voqVRmsVg5g3vNRUq6Va6UgkKH9K6iHBCLiBaEPav8K+hsSyRq6eQRM6ej+hOv1+qCIWK1teKzVxkhnH9LdAVGeeNqPAZLjJ06GqQxKrbGnRFbKIiUfQh96AJEk7lQmSoVS24uCqnJOA0oPj7RGcVkYQGvU05DIwB4UlC0FSoVj4xOTUyKiodUKYoilsXv8nWkFRJmFVKM9Eck0vZnMgZNyozsk0zv5MR3aJLCBBWZngahkXabAzBnieREZlCST+raVr4ryF2KrgObiUruJSyGSzC77rPiYTBIN3vQ2+T8duyxcBvCB3uIsxrNpKGtE+BYgBVCy1SM7c/ZcAHhFx/nIQA8CESlZjctiawG0cz7ehYuXNiu4vHpFAUEK4EQcQCTiGQoWwtBAHEQuDUpXV1evbZS/fuPmrdsZxDGAzhJr7xizAjDbas1glb3rWKbA3Lv/4OEmDx7lj588Bec5aPcoeBY4gJFWa3HYFOtUYPR5kxcv83yTglf56zdv3733RNyH1kfwNVacTm36iZHPFJiSD60vX799z/MfmxT8zPNfv//kf/9JxmgPX0lkJfQiZ+d0UxsK4v90k4V23DAURMvwCfmvOZxPKHM9ZbbaLQfKJNXlNkth+rP2jc46ri29cPbNtc5c7clTp8+cPXf+AjDdAVwECl4CLl+5ek3bU/sPmz41apVeu37j5i0At8k7wN0O4B5Q0gH3H/QePnr85N+B9yloavedePrs+czsXA8A5kkAL7oegTs8Yt/4EsCr66/f7JuyC/X23fsPH4FPc6QHADIA+Lwr0SKqAMBr4cu5c7Nfv33/8fPX717vj4KWrAELu1It9gkgxAdV5ADAcHSeLBuAknSQxUSLjmNgkYQ4MbfEHUC/Biwr0mlxhSvmwjA1IAigoB7t9KcsdltctZUyBo5oPwkYy2KyRfalodBiF1Do74xFtRgqaXAZQBk7lsV0i4vSoLLWWoAi/oTPWVSLa7azONF1pAlwjOXGf+9KjqXW7Fk+AkIbAGCcsahZB7ioKMxIBPQbgMhdk8XU3AXmgzTEswYoWGv1sYpSFlOzAfS9eiqbgPpihfjnqiymZsFevwMECa/ICQA1wA4ii/kWpcEp0Qb09WNeFnMt3rFswX4XME9hKwZZzLbojwCllhb/BzACyEVZzLYYpMHXdTUBheS6aDHfojTEZNkE6M8yb1EDrJmzYN9WEgD9UxazLY65AizqYe0baFRXW8y2GDUUKYCa9bXFXIt923a60a4DCAx5CfEdfaSybB9AG+AF6Gcr0EyjkIZQA1YiYI2c/E8OcrO5pcscvO6e2zm7mwC2/+4QA35w+EgVvGjLQTEAFDhHjzEQBsdPnKyCpIalKAZ0nTp9hoFIcPbceWjZiIi/oxf2M5ACLl7qQjLg1OWzDCSDK8euQg24doKBTHD8+o2bt25fYRjkYBQAAI3enydIRXnUAAAAAElFTkSuQmCC') no-repeat center / 32px;
+}
+
+/* -----------------------------------------------------------------------------
+  Buttons
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+  Tables
+----------------------------------------------------------------------------- */
+
+.table {
+  background: var(--c--bg--secondary);
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: var(--br--bottom);
+}
+
+.panel {
+  border-radius: var(--br);
+}
+
+.panel__heading,
+.table--panel-like>thead>tr>td,
+.table--panel-like>thead>tr>th {
+  color: var(--c--fg--secondary);
+  padding: var(--sp--tiny) var(--sp--medium);
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+.panel__heading {
+  border-radius: var(--br--top);
+}
+
+.panel__heading__toggler {
+  font-size: .9em;
+  font-weight: 400;
+  float: right;
+}
+
+.panel__body {
+  padding: var(--sp--medium);
+  margin-bottom: var(--sp--large);
+  overflow-wrap: break-word;
+}
+
+.table--bordered>tbody>tr>td {
+  padding: 4px var(--sp--medium);
+}
+
+.last5-movies__link {
+  background-color: var(--c--bg--tertiary);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width: 95%;
+  margin-bottom: 4px;
+  padding-bottom: 150%;
+}
+
+.table--bordered>tbody>tr.basic-movie-list__details-row>td {
+  padding: 12px 16px;
+}
+
+#movie-ratings-table {
+  color: var(--c--fg--primary);
+  margin-bottom: 20px !important;
+}
+
+#movie-ratings-table a {
+  color: var(--c--fg--tertiary);
+}
+
+#movie-ratings-table a:hover {
+  color: var(--c--accent);
+}
+
+#movie-ratings-table a {
+  color: var(--c--fg--tertiary);
+}
+
+#movie-ratings-table tr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#movie-ratings-table td {
+  text-align: center;
+  width: auto !important;
+  padding: 0;
+}
+
+#movie-ratings-table img {
+  width: 32px !important;
+  height: 32px !important;
+  margin: var(--sp--medium);
+  margin-left: var(--sp--large);
+  padding-top: 32px;
+}
+
+#movie-ratings-table td:first-child {
+  padding-left: var(--sp--large);
+}
+
+#movie-ratings-table td:nth-child(even) {
+  padding-right: var(--sp--gigantic);
+}
+
+#movie-ratings-table td:last-child {
+  padding: 0;
+}
+
+#movie-ratings-table center {
+  text-align: right;
+}
+
+/* -----------------------------------------------------------------------------
+  Forms
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+  Custom classes
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+  Header
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+  Content
 ----------------------------------------------------------------------------- */
 
 .site-logo {
@@ -850,108 +1079,11 @@ blockquote {
 }
 
 /* -----------------------------------------------------------------------------
-  Shadows
+  Sidebar
 ----------------------------------------------------------------------------- */
 
-.main-menu {
-  box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, .15);
-}
-
-.search-bar,
-.lightbox img {
-  box-shadow: var(--bs--small);
-}
-
-.panel,
-.table--panel-like,
-.cover-movie-list__movie,
-.huge-movie-list__movie,
-.forum-post {
-  box-shadow:var(--bs--medium);
-}
-
 /* -----------------------------------------------------------------------------
-  Images
------------------------------------------------------------------------------ */
-
-/* Torrents heading */
-img[title='Snatched'],
-img[title='Snatches'],
-img[title='Seeders'],
-img[title='Leechers'],
-img[title='Request time'],
-img[title='Seed time'],
-img[title='Upload time'],
-img[title='Time'] {
-  width: 14px;
-  height: 14px;
-  padding-top: 14px;
-  position: relative;
-  top: 1px;
-}
-
-img[title='Snatched'], img[title='Snatches'] {
-  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fafafa" stroke="%23fcfcfc" stroke-width="2" height="48" width="48"%3E%3Cpath d="M9.15 42v-4.7h29.7V42ZM19 31.5 6.45 18.95 9.8 15.6l9.2 9.2L38.25 5.55l3.35 3.4Z"/%3E%3C/svg%3E') no-repeat center / contain;
-}
-
-img[title='Seeders'] {
-  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fcfcfc" stroke="%23fcfcfc" stroke-width="2" height="48" width="48"%3E%3Cpath d="M10.25 42.4q-1.95 0-3.325-1.4-1.375-1.4-1.375-3.35v-9.4h4.7v9.4H37.7v-9.4h4.7v9.4q0 1.95-1.4 3.35-1.4 1.4-3.3 1.4Zm11.4-11.1V13.5l-5.7 5.75-3.4-3.35L24 4.45 35.45 15.9l-3.4 3.35-5.7-5.75v17.8Z"/%3E%3C/svg%3E') no-repeat center / contain;
-}
-
-img[title='Leechers'] {
-  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fcfcfc" stroke="%23fcfcfc" stroke-width="2" height="48" width="48"%3E%3Cpath d="M10.25 42.4q-1.95 0-3.325-1.4-1.375-1.4-1.375-3.35v-9.4h4.7v9.4H37.7v-9.4h4.7v9.4q0 1.95-1.4 3.35-1.4 1.4-3.3 1.4ZM24 31.3 12.55 19.9l3.4-3.35 5.7 5.75V4.45h4.7V22.3l5.7-5.75 3.4 3.35Z"/%3E%3C/svg%3E') no-repeat center / contain;
-}
-
-img[title='Request time'], img[title='Seed time'], img[title='Upload time'], img[title='Time'] {
-  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fcfcfc" stroke="%23fcfcfc" stroke-width="2" height="48" width="48"%3E%3Cpath d="M16.25 40.55h15.5v-5.9q0-3.35-2.225-5.725Q27.3 26.55 24 26.55q-3.3 0-5.525 2.375Q16.25 31.3 16.25 34.65Zm-9.5 4.7v-4.7h4.8v-5.9q0-3.35 1.6-6.25T17.7 24q-2.95-1.55-4.55-4.45-1.6-2.9-1.6-6.25V7.45h-4.8V2.7H41.3v4.75h-4.8v5.85q0 3.35-1.625 6.25T30.35 24q2.9 1.5 4.525 4.4 1.625 2.9 1.625 6.25v5.9h4.8v4.7Z"/%3E%3C/svg%3E') no-repeat center / contain;
-}
-
-/* Torrents list */
-img[title^='High quality'],
-img[title^='Torrent has been'],
-img[title^='Torrent has not'] {
-  width: 12px !important;
-  height: 12px !important;
-  padding-top: 12px;
-  position: relative;
-  top: 1px;
-}
-
-img[title^='Torrent has not'] {
-  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23d33131" stroke="%23d33131" stroke-width="2" height="48" width="48"%3E%3Cpath d="m12.45 38.85-3.3-3.3L20.7 24 9.15 12.45l3.3-3.3L24 20.7 35.55 9.15l3.3 3.3L27.3 24l11.55 11.55-3.3 3.3L24 27.3Z"/%3E%3C/svg%3E') no-repeat center / contain;
-}
-
-img[title^='Torrent has been'] {
-  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%236fad18" stroke="%236fad18" stroke-width="2" height="48" width="48"%3E%3Cpath d="M18.9 36.9 6.5 24.5l3.4-3.4 9 9 19.15-19.15 3.4 3.4Z"/%3E%3C/svg%3E') no-repeat center / contain;
-}
-
-img[title^='High quality'] {
-  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23d9a400" stroke="%23d9a400" stroke-width="2" height="48" width="48"%3E%3Cpath d="m11.65 44 3.25-14.05L4 20.5l14.4-1.25L24 6l5.6 13.25L44 20.5l-10.9 9.45L36.35 44 24 36.55Z"/%3E%3C/svg%3E') no-repeat center / contain;
-}
-
-/* Ratings */
-img[title='IMDb'] {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAUVBMVEX////ZpADZpADZpADZpADZpADZpADZpADZpADZpADZpACMawVyWAamfgN/YQWyhwK/kQI/MgkMDAwYFQvMmgGZdARYRQhlTgdMOwgyKAolHgurGimCAAAAC3RSTlMAIGCAEJD/wOAwQBf0pZUAAAEVSURBVHgB7dYFssJADIDhxYKtC9De/6Avs0HqltE3++OQ+bCaaFQqlXb7w+r2O/HpeIJNnY6COsPGziJ3gM0dMnCBzV0yAIwEduUCt/8C3CWm8g0GQLd3UDKnlflO2UHAeUzmGwyAbh1I/8mp95RaACjVB3yIy4HUBzC5HJCyDURHjxYDj2cbANkE9Ms9zTTg3AQQ6FtOAqGaAKjXFIBNAI8XPRgFKp+rxgCVZoDP9x8F1ByQ7zsG8OICMt9nAMljmgHkAdUETN0A0n0OAI/ZJkC9aKqqZoGA19AHEk1RcgrA66oPPD9THnMTm7Q7XtMVbdIoFQHAKAxs0haaQNkvCGDE3r2zDzDYhzj8gyz+YR5VKpX+AO4NXUMxhzM2AAAAAElFTkSuQmCC') no-repeat center / 32px;
-}
-
-img[title='Metacritic'] {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAgVBMVEX////ZpADZpADZpADZpADZpADZpADZpADZpADZpADZpADZpADZpADClgyggR19bC5bVz9PUEWUeiM4QlEiNVxmXjrZpADOnQZyZTS3jxEtPFcwQWZZZ4TU19/8/Pzh5Ol0gJidpbbGy9Tv8PNLWnqrssCPmaw9TnBmc46CjKK4vspop82eAAAAF3RSTlMAIBBQkMDw/2CwgHDQ////////////oBN0pykAAAJBSURBVHgBYqA9GAWMTOTqBFBaHVpuwzDsNd7OTpQp73Hr/z+wkSpeDRtZeNsRcCQIUTfz/CCMLMLA92ZvsuMkGiGJZ6/T0zAiCNMXJeZAB4n5K64t5Phytd5sb9isd0v5tvjzjO+Fjr3eqwH2a6cReo/5saMf1AQHJxE/4h/tkdNZUZxP9ufjs79/geKhkcvjGjz78+6KLJ1pJbju7BHvjv+h5SM9y4uiKCslsAohn8WC8OviHxoNCguaH9v/lfANclG4Wh9Iomah8R/9y4r/aDtx0swinKY6NcKj+fUFUzibkyktYKkQreHVH+1IYclKsBEY58+4p5T6zF0RlcskC0NCCjACXzYKDSqYEpJRB0Z0PSR/1Y2ZQYdufCuDtTk9m4ZwMIJuUDUo9HYQ0zj62EHXFpKgcSR66cEHgQBCqMviF7V8rNwsPpVSq9vxAARCsOC7GKAChbYTE0IQME1tlMAakItC/+trK1nYmPMTge1wfG2mdD9W6Eo3lO0jgao2Ah/SiigIHgnIAH5uHC1t4118LiADdIyqBQUmgCZ+SgC+MBGogCbiGPtB0aDQygcYIwRpxdvuSgyUwiBBlLmCzmEQJMpwmbgC8vEy4XWmxulv4LPrjAulwyWGYAsFVtpzBVxpfKnqnCvwpcrWuoaVBGBrnTwsskhzZPOHhT9tPUb48dNGH9cePXj8uNLnveZ8/rzTfzAm9f8dtIFBaROH0kYWpc08Shua5DR1+ZCauhQ2tilt7lPY4aBXl4f+YBQAAMMAnrxx2gxQAAAAAElFTkSuQmCC') no-repeat center / 32px;
-}
-
-img[src*='x3_tomatoes'] {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAk1BMVEX///9vrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRiYeiJ1phmUfyGtYCjASCzTMTHGQS7TMTHTMTGIjh57nhuBlh2bdyPTMTHTMTGhbyS6UCvTMTHNOS+Fkh3TMTHTMTGnZyaOhyDTMTHTMTHTMTHTMTHTMTHTMTHTMTHTMTG0o7oJAAAAMXRSTlMAEEDQgKD/8GAgwFDgMLBwkIf///////+wEP/////wQP//YP/ioCD//8BwgNAwUOCQkJCp9AAAAYJJREFUeAHt1GUC6jAMAODMUtwXvH3DYQL3vxyunea5fb+rMfiLGfBNTMv+ptsdRPFN9+NZCQDKjsCveouNiBZASeCFZQBbBRHNKt7UTOCo22dVgdgQeOUAh1lBTQ04mhhjVQSiqLSqRqHgZRBO7hH1ylkt44gS5Cs3a5iuXaAGU3S6PZf67mCYHUOBn0ZjvJhMXbqTKuP1rxROvuCVR67nefRhlpoC8bp47uJVnxLMUsO36ODFuEfk3Q4i4pywJJqfH3y9tXsNnEvJFCSZ0cv88paxSynkEOJWkl7WON70KN0S4rbEoUCniGXAfoBupUeAmHbwySemLXwKiAs+EVuYlQN+IiNi87UY/vEH7Igt+r5ZCIlt+I2FJLObkd/P/rd2Y0hMK/i2dgxANyOWGeiGkhiS5rrPDqFuz5xn3zDY90PQseIoQ0gxY+/Xzdj7dZHMjd8QMoUBYw4l87OuX0EBq2XadgUFrQ6SdHIZAkd0COhle4gA+JTa+b4/UyH85v47AS/tpqQ5z5taAAAAAElFTkSuQmCC') no-repeat center / 32px;
-}
-
-img[src*='splat'] {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAM1BMVEX///9vrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRhvrRjhKPDSAAAAEXRSTlMAIKDg/7BAYPDAMIAQ0JBwUPYRW24AAAGVSURBVHgB7dZhjuMgDAVgEx4GAzS5/2m30hYVJiQuSCutRv1+jjSWa8wj9P/6MpvFk2Na4wNePK1gvBlaYPG20TyPhqV5G1o0T/5dgciRPpDQCM3fAwDrSWXQEHrJBX85Uj3wluiloHpMnUMc/K5IY5H5NIa6Bjmoy7VbPG35VSz0I9jV5apdh9hVSN0Eqtu5BVMXuu0WWgG8leZK1W4PrQCj4dumeLCcRSlgc3MSwRMZQWdXCkByO7dg0bNZyRCgHHwILoRIAwc+JUaPoTFJTh57pCssuFMMqXizGKuD02X2gpHHaqZWaTUTK1l+F1beuISRlLX5eVcAiBRcKJISX5Zhi8+UZGggYsKWlcukCsd8A8qh7OiELQlQyZECfop3J1dyu05u2KHcdFByt06xBmTPXM8g0rlADsoUyikyt77ZQ7leMfx8+AIqril/G82x1BQ/5bQMr3k852pyyefRuZhBBTsTK/vgw4NnUiWdb5ynyQKVL3hyceE7qcrM9IljPPClaHW0JLv6/5kWxSQiG9Pv9/UHwt4bn05SUUUAAAAASUVORK5CYII=') no-repeat center / 32px;
-}
-
-img[title='User Ratings'] {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAClFBMVEX////ZpADZpADZpADZpADbqArZpADZpADZpADgrx3403//3pzjsyfZpADqvUXZpADZpADeqxTZpADzzGz614n/2pz/1pz925PZpADswU7+wJj/vZz/y5zZpADZpADxyGLnujvrsUrvt1rdqRPuxVj/2Jz20HX4y3/ltjH/3Jz/x5z/yZzvu1n9wpL8wZD3v3rqukfZpAD/zZz/0pzdqxPswEznuTj/v5z/xZzisiXpvEHcqAqVMDCVMDC+dxP1z3XRlgabOiyVMDCVMDCVMDCvXB6mTSSVMDCVMDDMMTHEMTGdNy3Rlgbqvkfouz3VnQOkNi68MTHAMTHSMTHTMTHEUDHLtWfYsDflti7/wZzamQ/QMzDTMTHTOjrZ09fCydDTuF/vuWX/0Jz/w5z70o3/1Jzzv6XOx8G+xs3MaGfTMTHTMTHtsLD5+fnQYmTUTSXZnQP805Xskm3eWkvnd2jCxcrd4eX4+fnaXl7TMTHliYn8/PzcYmLPc0zIuYHUzLT73J/i07LOzMHJv5bYYlLewsbVPT3TMTHTMTHdY2PnlpbZX17p6+3Z3uLHv77ke2HjcVnxqHrkhkzph2btuY/Cx8rO1Nnl6Or01tbTMTHgurzkmXvWz7vPsU3r1qve0rXTu3DWmR3UPyvSOjr57+/yycnTMTH34+PSOjvKn3LbUUXWOzfhZ1L40ZjKysTGzdPNamzTMTHvvLzVZ2jRTU3R19zbVlbqo6Px09PTMTHgcHDYSkrifX3TMTHTMTHTMTHWQUHpoKDZUVHrpqb8/Pz8/Pz8/Pznk5Pjf3/ZUFDVPDzgb2/mkJD8/Pz8/PzfamrxxMTkhITeaWnwwcH8/Pzvvr7dZGTliIjhdXXmjY38/Pz8/PwlgKiNAAAA3HRSTlMAIGDw///AEKD/////0P+QQP+A//////9Q/////3Aw////////////////////////4P////////////EggLj/7bVg8P///6AQ/f////////////P//////////8D/////////////////4JD//v/////////////8YP///v////////////+gMP////////////////////+A////////////////UP////////////9A//////////D////QcBDQ95hxoMBgH5z2/s88IJD1dIfcpRDQ63DAsIBAchbrqAAABHlJREFUeAFiGO4AQDpZMEkNQwH45K20X7a33WYJYaUFuqHnrjgc7lDc3eX/j3EdP7evjef5pP9w4gODUipX+voqVRmsVg5g3vNRUq6Va6UgkKH9K6iHBCLiBaEPav8K+hsSyRq6eQRM6ej+hOv1+qCIWK1teKzVxkhnH9LdAVGeeNqPAZLjJ06GqQxKrbGnRFbKIiUfQh96AJEk7lQmSoVS24uCqnJOA0oPj7RGcVkYQGvU05DIwB4UlC0FSoVj4xOTUyKiodUKYoilsXv8nWkFRJmFVKM9Eck0vZnMgZNyozsk0zv5MR3aJLCBBWZngahkXabAzBnieREZlCST+raVr4ryF2KrgObiUruJSyGSzC77rPiYTBIN3vQ2+T8duyxcBvCB3uIsxrNpKGtE+BYgBVCy1SM7c/ZcAHhFx/nIQA8CESlZjctiawG0cz7ehYuXNiu4vHpFAUEK4EQcQCTiGQoWwtBAHEQuDUpXV1evbZS/fuPmrdsZxDGAzhJr7xizAjDbas1glb3rWKbA3Lv/4OEmDx7lj588Bec5aPcoeBY4gJFWa3HYFOtUYPR5kxcv83yTglf56zdv3733RNyH1kfwNVacTm36iZHPFJiSD60vX799z/MfmxT8zPNfv//kf/9JxmgPX0lkJfQiZ+d0UxsK4v90k4V23DAURMvwCfmvOZxPKHM9ZbbaLQfKJNXlNkth+rP2jc46ri29cPbNtc5c7clTp8+cPXf+AjDdAVwECl4CLl+5ek3bU/sPmz41apVeu37j5i0At8k7wN0O4B5Q0gH3H/QePnr85N+B9yloavedePrs+czsXA8A5kkAL7oegTs8Yt/4EsCr66/f7JuyC/X23fsPH4FPc6QHADIA+Lwr0SKqAMBr4cu5c7Nfv33/8fPX717vj4KWrAELu1It9gkgxAdV5ADAcHSeLBuAknSQxUSLjmNgkYQ4MbfEHUC/Biwr0mlxhSvmwjA1IAigoB7t9KcsdltctZUyBo5oPwkYy2KyRfalodBiF1Do74xFtRgqaXAZQBk7lsV0i4vSoLLWWoAi/oTPWVSLa7azONF1pAlwjOXGf+9KjqXW7Fk+AkIbAGCcsahZB7ioKMxIBPQbgMhdk8XU3AXmgzTEswYoWGv1sYpSFlOzAfS9eiqbgPpihfjnqiymZsFevwMECa/ICQA1wA4ii/kWpcEp0Qb09WNeFnMt3rFswX4XME9hKwZZzLbojwCllhb/BzACyEVZzLYYpMHXdTUBheS6aDHfojTEZNkE6M8yb1EDrJmzYN9WEgD9UxazLY65AizqYe0baFRXW8y2GDUUKYCa9bXFXIt923a60a4DCAx5CfEdfaSybB9AG+AF6Gcr0EyjkIZQA1YiYI2c/E8OcrO5pcscvO6e2zm7mwC2/+4QA35w+EgVvGjLQTEAFDhHjzEQBsdPnKyCpIalKAZ0nTp9hoFIcPbceWjZiIi/oxf2M5ACLl7qQjLg1OWzDCSDK8euQg24doKBTHD8+o2bt25fYRjkYBQAAI3enydIRXnUAAAAAElFTkSuQmCC') no-repeat center / 32px;
-}
-
-/* -----------------------------------------------------------------------------
-  User profile
+  Page / User profile
 ----------------------------------------------------------------------------- */
 
 #user .grid-u-1-3 {
@@ -973,7 +1105,7 @@ img[title='User Ratings'] {
 }
 
 /* -----------------------------------------------------------------------------
-  Movie views
+  Page / Movies
 ----------------------------------------------------------------------------- */
 
 /* Movies browser views */
@@ -1226,7 +1358,7 @@ img#browse_settings {
 }
 
 /* -----------------------------------------------------------------------------
-  Single movie
+  Page / Single movie
 ----------------------------------------------------------------------------- */
 
 .torrent-info-link:focus {
@@ -1237,119 +1369,23 @@ img#browse_settings {
 }
 
 /* -----------------------------------------------------------------------------
-  Tables
+  Page / Forum
 ----------------------------------------------------------------------------- */
 
-.table {
-  background: var(--c--bg--secondary);
-  margin-bottom: 20px;
-  width: 100%;
-  border-radius: var(--br--bottom);
-}
-
-.panel {
-  border-radius: var(--br);
-}
-
-.panel__heading,
-.table--panel-like>thead>tr>td,
-.table--panel-like>thead>tr>th {
-  color: var(--c--fg--secondary);
-  padding: var(--sp--tiny) var(--sp--medium);
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-}
-
-.panel__heading {
-  border-radius: var(--br--top);
-}
-
-.panel__heading__toggler {
-  font-size: .9em;
-  font-weight: 400;
-  float: right;
-}
-
-.panel__body {
-  padding: var(--sp--medium);
-  margin-bottom: var(--sp--large);
-  overflow-wrap: break-word;
-}
-
-.table--bordered>tbody>tr>td {
-  padding: 4px var(--sp--medium);
-}
-
-.last5-movies__link {
-  background-color: var(--c--bg--tertiary);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: inline-block;
-  width: 95%;
-  margin-bottom: 4px;
-  padding-bottom: 150%;
-}
-
-.table--bordered>tbody>tr.basic-movie-list__details-row>td {
-  padding: 12px 16px;
-}
-
-#movie-ratings-table {
-  color: var(--c--fg--primary);
-  margin-bottom: 20px !important;
-}
-
-#movie-ratings-table a {
-  color: var(--c--fg--tertiary);
-}
-
-#movie-ratings-table a:hover {
-  color: var(--c--accent);
-}
-
-#movie-ratings-table a {
-  color: var(--c--fg--tertiary);
-}
-
-#movie-ratings-table tr {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#movie-ratings-table td {
-  text-align: center;
-  width: auto !important;
-  padding: 0;
-}
-
-#movie-ratings-table img {
-  width: 32px !important;
-  height: 32px !important;
-  margin: var(--sp--medium);
-  margin-left: var(--sp--large);
-  padding-top: 32px;
-}
-
-#movie-ratings-table td:first-child {
-  padding-left: var(--sp--large);
-}
-
-#movie-ratings-table td:nth-child(even) {
-  padding-right: var(--sp--gigantic);
-}
-
-#movie-ratings-table td:last-child {
-  padding: 0;
-}
-
-#movie-ratings-table center {
-  text-align: right;
-}
+/* -----------------------------------------------------------------------------
+  Footer
+----------------------------------------------------------------------------- */
 
 /* -----------------------------------------------------------------------------
-  Old css
+  Lightbox
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+  Qtip
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+  * Old css *
 ----------------------------------------------------------------------------- */
 
 .heading--no-margin {
@@ -1393,10 +1429,6 @@ img#browse_settings {
 #userrecommended .user-recommendation__body {
   padding: var(--sp--tiny);
 }
-
-/* -----------------------------------------------------------------------------
-  Etc
------------------------------------------------------------------------------ */
 
 .list {
   margin: 0 0 1em;
