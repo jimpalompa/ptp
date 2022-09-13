@@ -1261,12 +1261,8 @@ img#actualAvatar {
 }
 
 .forum-post__edited {
-  color: rgba(255, 255, 255, .4);
   margin-top: 2em;
-}
-
-.forum-post__edited a {
-  opacity: .6;
+  opacity: .4;
 }
 
 .forum-post__movie-vote {
