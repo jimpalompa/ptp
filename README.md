@@ -1,5 +1,3 @@
-<br>
-
 # Django
 Django (dark version)
 ```
@@ -31,4 +29,12 @@ Gamaar (dark/light OS version)
 ```
 https://jimpalompa.github.io/ptp/marcel/gamaar.css
 ```
-<br>
+
+## Poppy icons
+[Download package](https://jimpalompa.github.io/ptp/assets/images/poppy-icons.zip)
+
+<details>
+<summary>Preview</summary>
+
+![Poppy icons](assets/images/poppy-icons.png)
+</details>
