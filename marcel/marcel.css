@@ -190,26 +190,13 @@
   Hide elements
 ----------------------------------------------------------------------------- */
 
-.hidden, [hidden],
+.hidden,
+[hidden],
 .nobr br,
-.tabs__panel,
 hr+br+br,
+.tabs__panel,
 [class$='__tags'] a:nth-child(n+4) {
   display: none;
-}
-
-.huge-movie-list__movie__ratings__votes-column {
-  color: transparent;
-}
-
-span.spoiler {
-  background: var(--c--black) !important;
-  color: transparent !important;
-  transition: var(--ts--all);
-}
-
-span.spoiler:hover {
-  color: var(--c--white) !important;
 }
 
 /* -----------------------------------------------------------------------------
@@ -225,6 +212,7 @@ html {
 }
 
 body {
+  color: var(--c--fg--tertiary);
   font-family: var(--ff--primary);
   font-size: var(--fs--tiny);
   font-weight: var(--fw--regular);
@@ -240,18 +228,35 @@ body {
   padding: 0 32px;
 }
 
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+h1 {font-size: var(--fs--huge);}
+h2 {font-size: var(--fs--x-large);}
+h3 {font-size: var(--fs--large);}
+h4 {font-size: var(--fs--medium);}
+h5 {font-size: var(--fs--small);}
+h6 {font-size: var(--fs--tiny);}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--c--fg--primary);
+}
+
 a {
+  color: var(--c--fg--primary);
   text-decoration: none;
   border: none;
   transition: var(--ts--color);
 }
 
 a:hover {
-  border: none;
   text-decoration: none;
+  border: none;
 }
 
 a:hover, a:focus, a:active {
+  color: var(--c--ac--fg);
   outline: 0;
 }
 
@@ -327,11 +332,11 @@ input+input, select+input {
 }
 
 button, input, select, textarea {
-  border: 0;
   font-family: inherit;
   padding: 6px;
-  outline: 0;
+  border: 0;
   border-radius: var(--br);
+  outline: 0;
 }
 
 textarea {
@@ -366,13 +371,12 @@ button, input[type='button']:focus, input[type='reset']:focus, input[type='submi
 }
 
 input[type='checkbox'], input[type='radio'] {
-  box-sizing: border-box;
   padding: 0;
 }
 
 input[type='search'] {
-  -webkit-appearance: textfield;
   box-sizing: content-box;
+  -webkit-appearance: textfield;
 }
 
 input[type='search']::-webkit-search-cancel-button, input[type='search']::-webkit-search-decoration {
@@ -393,10 +397,6 @@ td {
   padding: 0;
 }
 
-*, ::before, ::after {
-  box-sizing: border-box;
-}
-
 blockquote {
   border-style: dashed;
   border-width: 2px;
@@ -410,18 +410,10 @@ blockquote {
 ----------------------------------------------------------------------------- */
 
 /* Foreground primary */
-a,
-h1, h2, h3, h4, h5, h6,
-.alert-bar,
-.alert-bar__link:hover,
-.alert--error,
-.alert--error .alert__link,
-.alert--error .alert__link:hover,
 .staff-toolbar,
 .search-bar__search-field__input:hover,
 .search-bar__search-field__input:focus,
 .cover-movie-list__movie__rating,
-.huge-movie-list__movie__ratings__votes-column span,
 .basic-movie-list__torrent-edition,
 .page__title,
 .table>thead>tr,
@@ -438,7 +430,6 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* Foreground tertiary */
-body,
 h2 small a,
 .user-info-bar,
 .search-bar__search-field__input,
@@ -455,19 +446,11 @@ h2 small a,
 }
 
 /* Accent */
-a:hover,
-a:focus,
-a:active,
 .user-info-bar__link--highlighted,
 .basic-torrent-list__movie__torrent-opener-link:focus,
 .search-bar__results__list-item--is-highlighted .search-bar__results__link,
 [class$='__new'] {
   color: var(--c--ac--fg);
-}
-
-.huge-movie-list__movie__action-row a,
-.huge-movie-list__movie__torrent-summary a {
-  color: var(--c--ac--fg--shade);
 }
 
 /* Red */
@@ -483,7 +466,6 @@ a:active,
 .encoding-history-status--expired,
 .missing-torrent-status--missing,
 .torrent-info__reported,
-.alert--error,
 .forum-post__id--staff-post {
   color: var(--c--red);
 }
@@ -593,7 +575,6 @@ body,
 
 hr,
 blockquote,
-.alert-bar,
 .staff-toolbar,
 .movie-page__torrent__panel,
 .search-bar,
@@ -613,7 +594,6 @@ blockquote,
 .tabs__bar__link:active,
 .tabs__bar__link:focus,
 .user-info-bar__drop-down-menu__item,
-.alert-bar,
 .staff-toolbar,
 .table>thead>tr,
 .release-description-preview {
@@ -625,7 +605,6 @@ blockquote,
   background: var(--c--bg--quaternary);
 }
 
-.alert-bar,
 .js-basic-movie-list__table-body>tr.basic-movie-list__details-row,
 .panel__heading,
 .table--panel-like>thead>tr>td,
@@ -678,13 +657,6 @@ blockquote {
 ----------------------------------------------------------------------------- */
 
 /* Sizes */
-h1 {font-size: var(--fs--huge);}
-h2 {font-size: var(--fs--x-large);}
-h3 {font-size: var(--fs--large);}
-h4 {font-size: var(--fs--medium);}
-h5 {font-size: var(--fs--small);}
-h6 {font-size: var(--fs--tiny);}
-
 .huge-movie-list__movie__title {font-size: var(--fs--huge);}
 .huge-movie-list__movie__year {font-size: var(--fs--x-large);}
 .huge-movie-list__movie__director-list {font-size: var(--fs--large);}
@@ -692,7 +664,6 @@ h6 {font-size: var(--fs--tiny);}
 
 blockquote,
 .sidebar,
-.alert-bar,
 .staff-toolbar,
 .group_torrent_header,
 .qtip-content,
@@ -718,7 +689,6 @@ blockquote,
 .huge-movie-list__movie__title,
 .basic-movie-list__movie__rating-container,
 .basic-torrent-list__movie__torrent-opener-link,
-.alert-bar,
 .staff-toolbar,
 .encoding-history-status--finished,
 .missing-torrent-status--exists,
@@ -738,7 +708,6 @@ blockquote,
   font-weight: var(--fw--bold);
 }
 
-.alert--warning,
 .cover-movie-list__movie__tags,
 .huge-movie-list__movie__tag-list,
 .basic-movie-list__movie__tags {
@@ -1065,9 +1034,83 @@ img[title='User Ratings'] {
   Custom classes
 ----------------------------------------------------------------------------- */
 
+.text--left {text-align: left;}
+.text--center {text-align: center;}
+.text--right {text-align: right;}
+
+span.spoiler {
+  background: var(--c--black) !important;
+  color: transparent !important;
+  transition: var(--ts--all);
+}
+
+span.spoiler:hover {
+  color: var(--c--white) !important;
+}
+
 /* -----------------------------------------------------------------------------
   Header
 ----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+  Alerts
+----------------------------------------------------------------------------- */
+
+.alert:first-child {
+  margin-top: 0;
+}
+
+.alert:last-child {
+  margin-bottom: 0;
+}
+
+.alert-bar {
+  background: var(--c--ac--bg);
+  color: var(--c--fg--primary);
+  font-size: var(--fs--tiny);
+  font-weight: var(--fw--bold);
+  margin: var(--sp--small);
+  border-color: var(--c--bg--primary);
+  border-style: dashed;
+  border-width: 2px;
+}
+
+.alert-bar__link:hover {
+  color: var(--c--fg--primary);
+}
+
+.alert-bars {
+  margin: 0 auto 20px;
+  text-align: center;
+  position: relative;
+  top: 124px;
+}
+
+.alert-bar, .staff-toolbar {
+  display: inline-block;
+  min-width: 50%;
+}
+
+.alert-bar__link {
+  display: inline-block;
+  padding: 12px;
+  width: 100%;
+}
+
+.alert--error .alert__link {
+  font-weight: var(--fw--bold);
+}
+
+.alert--error,
+.alert--error .alert__link,
+.alert--error .alert__link:hover {
+  color: var(--c--red);
+}
+
+.alert--warning {
+  color: var(--c--ac--fg);
+  font-style: italic;
+}
 
 /* -----------------------------------------------------------------------------
   Content
@@ -1102,24 +1145,6 @@ img[title='User Ratings'] {
   position: absolute;
   top: 164px;
   left: 0;
-}
-
-.alert-bars {
-  margin: 0 auto 20px;
-  text-align: center;
-  position: relative;
-  top: 124px;
-}
-
-.alert-bar, .staff-toolbar {
-  display: inline-block;
-  min-width: 50%;
-}
-
-.alert-bar__link {
-  display: inline-block;
-  padding: 12px;
-  width: 100%;
 }
 
 .search-bar {
@@ -1206,7 +1231,7 @@ img[title='User Ratings'] {
   Page / Movies
 ----------------------------------------------------------------------------- */
 
-/* Movies browser views */
+/* Movie browser views */
 img#browse_settings {
   position: relative;
   right: 70px;
@@ -1337,7 +1362,12 @@ img#browse_settings {
   padding-right: 6px;
 }
 
+.huge-movie-list__movie__ratings__votes-column {
+  color: transparent;
+}
+
 .huge-movie-list__movie__ratings__votes-column span {
+  color: var(--c--fg--primary);
   display: inline-block;
   line-height: 32px;
 }
@@ -1361,6 +1391,11 @@ img#browse_settings {
   position: absolute;
   bottom: var(--sp--gigantic);
   right: var(--sp--gigantic);
+}
+
+.huge-movie-list__movie__action-row a,
+.huge-movie-list__movie__torrent-summary a {
+  color: var(--c--ac--fg--shade);
 }
 
 /* List view */
@@ -1646,25 +1681,6 @@ th {
 
 .text--right {
   text-align: right!important;
-}
-
-.alert--error .alert__link {
-  font-weight: var(--fw--bold);
-}
-
-.alert-bar {
-  background: var(--c--ac--bg);
-  border-style: dashed;
-  border-width: 2px;
-  margin: var(--sp--small);
-}
-
-.alert--warning {
-  color: var(--c--ac--fg);
-}
-
-.alert--error {
-  color: var(--c--red);
 }
 
 .bbcode-size-1 {font-size: var(--fs--small);}
@@ -2655,7 +2671,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
   color: var(--c--orange-shade);
 }
 
-.list:last-child, p:last-child, .table:last-child, .alert:last-child, .search-form--toggleable, .forum-post--heading-only, .panel--no-margin, .poll__bar--no-margin {
+.list:last-child, p:last-child, .table:last-child, .search-form--toggleable, .forum-post--heading-only, .panel--no-margin, .poll__bar--no-margin {
   margin-bottom: 0;
 }
 
@@ -2663,7 +2679,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
   padding-left: 2em;
 }
 
-p:first-child, .alert:first-child, .heading:first-child {
+p:first-child, .heading:first-child {
   margin-top: 0;
 }
 
