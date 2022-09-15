@@ -1411,7 +1411,7 @@ img#actualAvatar {
 }
 
 .qtip-content {
-  background: var(--c--tr--bg--less);
+  background: var(--c--tr--bg);
   padding: var(--sp--x-large);
   border-radius: var(--br);
   box-shadow: var(--bs--medium);

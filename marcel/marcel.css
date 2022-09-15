@@ -2411,7 +2411,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
 }
 
 .qtip-ptp {
-  background: var(--c--tr--bg--less);
+  background: var(--c--tr--bg);
   border: 0;
   border-radius: var(--br);
   box-shadow: var(--bs--medium);
