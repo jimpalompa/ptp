@@ -2112,6 +2112,7 @@ a.tabs__bar__link {
 
 .linkbox #artist_settings, .linkbox #browse_settings {
   background-color: var(--c--bg--tertiary);
+  background-position: center;
   background-size: 24px;
   display: block;
   width: 40px;
