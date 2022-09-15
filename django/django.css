@@ -1412,10 +1412,15 @@ img#actualAvatar {
 
 .qtip-content {
   background: var(--c--tr--bg);
+  font-size: var(--fs--tiny);
   padding: var(--sp--x-large);
   border-radius: var(--br);
   box-shadow: var(--bs--medium);
   backdrop-filter: blur(8px);
+}
+
+.qtip-content .movie-tooltip__title-row {
+  font-size: var(--fs--small);
 }
 
 .qtip-content label {
@@ -2223,7 +2228,6 @@ input[type='button'] {
 
 .movie-tooltip__synopsis {
   margin-bottom: var(--sp--medium);
-  text-align: justify;
 }
 
 .movie-tooltip__trailer+.movie-tooltip__synopsis {
