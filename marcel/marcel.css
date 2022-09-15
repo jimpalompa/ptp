@@ -216,6 +216,7 @@ body {
   font-family: var(--ff--primary);
   font-size: var(--fs--tiny);
   font-weight: var(--fw--regular);
+  line-height: var(--lh--body);
   width: 100%;
   margin: 0 auto;
 }
@@ -241,6 +242,7 @@ h6 {font-size: var(--fs--tiny);}
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--c--fg--primary);
+  line-height: var(--lh--headings);
 }
 
 a {
@@ -341,10 +343,6 @@ button, input, select, textarea {
 
 textarea {
   -webkit-appearance: none;
-}
-
-button, input {
-  line-height: normal;
 }
 
 button, select {
@@ -2314,7 +2312,6 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
 
 .movie-tooltip__synopsis {
   margin-top: 12px;
-  line-height: 12px;
 }
 
 .movie-tooltip__action-row {
@@ -2385,8 +2382,12 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
 }
 
 .qtip-content {
+  font-size: var(--fs--tiny);
   padding: 12px;
-  line-height: 1.5em;
+}
+
+.qtip-content .movie-tooltip__title-row {
+  font-size: var(--fs--small);
 }
 
 .qtip:not(.ie9haxors) div.qtip-content, .qtip:not(.ie9haxors) div.qtip-titlebar {
