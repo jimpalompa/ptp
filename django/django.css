@@ -1736,12 +1736,12 @@ body#collages .thin>.table td:nth-child(2)>a {
   display: block;
 }
 
-.torrent_table {
+#torrent-table, #requests {
   border-collapse: collapse;
   border-bottom: var(--sp--tiny) solid transparent;
 }
 
-.torrent_table th {
+#torrent-table th, #requests th {
   padding: var(--sp--medium) var(--sp--x-large);
 }
 
@@ -1790,10 +1790,6 @@ body#collages .thin>.table td:nth-child(2)>a {
 .group_torrent_header td:last-child {
   padding-right: var(--sp--huge);
 }
-
-/* .group_torrent+.group_torrent_header:last-of-type>td {
-  padding-bottom: var(--sp--medium);
-} */
 
 .page__title {
   color: var(--c--fg--secondary);
