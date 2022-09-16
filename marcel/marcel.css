@@ -2412,11 +2412,11 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
 }
 
 .qtip-ptp {
-  background: var(--c--tr--bg);
+  background: var(--c--tr--bg--less);
   border: 0;
   border-radius: var(--br);
   box-shadow: var(--bs--medium);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(16px);
 }
 
 .release-name-movie-list__movie__release-category {
