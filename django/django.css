@@ -1411,12 +1411,12 @@ img#actualAvatar {
 }
 
 .qtip-content {
-  background: var(--c--tr--bg);
+  background: var(--c--tr--bg--less);
   font-size: var(--fs--tiny);
   padding: var(--sp--x-large);
   border-radius: var(--br);
   box-shadow: var(--bs--medium);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(16px);
 }
 
 .qtip-content .movie-tooltip__title-row {
