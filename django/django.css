@@ -1167,7 +1167,7 @@ body#userhistory .tabs__panel>.linkbox::before {
 ----------------------------------------------------------------------------- */
 
 img#actualAvatar {
-  min-width: 200px !important;
+  min-width: 176px !important;
 }
 
 #user .grid-u-1-3 {
@@ -1269,7 +1269,7 @@ img#actualAvatar {
 
 .forum-post__avatar__image {
   display: block;
-  width: 200px;
+  width: 176px;
   height: auto;
 }
 

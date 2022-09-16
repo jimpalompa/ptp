@@ -1835,9 +1835,9 @@ th {
 
 .forum-post__avatar__image {
   display: block;
-  width: 160px;
+  width: 176px;
   height: auto;
-  max-height: 420px;
+  max-height: 400px;
 }
 
 .forum-post__body {
