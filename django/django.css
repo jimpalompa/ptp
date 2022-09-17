@@ -2977,10 +2977,12 @@ body#torrents .thin>.page__title+h2.text--center {
 
 .movie-page__trailer {
   margin-bottom: 12px;
+  aspect-ratio: 16 / 9;
 }
 
-.movie-page__trailer iframe.youtube-player {
-  height: 480px;
+.movie-page__trailer center,
+.movie-page__trailer .youtube-player {
+  height: 100%;
 }
 
 #synopsis-and-trailer~.table--bordered {

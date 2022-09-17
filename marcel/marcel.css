@@ -2283,6 +2283,12 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel {
 
 .movie-page__trailer {
   margin-bottom: 14px;
+  aspect-ratio: 16 / 9;
+}
+
+.movie-page__trailer center,
+.movie-page__trailer .youtube-player {
+  height: 100%;
 }
 
 .movie-page__actor-column {
