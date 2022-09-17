@@ -1529,6 +1529,31 @@ a.cover-movie-list__movie__tag:nth-child(n+3) {
 }
 
 /* -----------------------------------------------------------------------------
+  Page / Artist
+----------------------------------------------------------------------------- */
+
+#jump_to_container a:nth-of-type(1) {color: var(--c--orange);}
+#jump_to_container a:nth-of-type(1):hover {color: var(--c--orange-shade);}
+
+#jump_to_container a:nth-of-type(2) {color: var(--c--yellow);}
+#jump_to_container a:nth-of-type(2):hover {color: var(--c--yellow-shade);}
+
+#jump_to_container a:nth-of-type(3) {color: var(--c--green);}
+#jump_to_container a:nth-of-type(3):hover {color: var(--c--green-shade);}
+
+#jump_to_container a:nth-of-type(4) {color: var(--c--cyan);}
+#jump_to_container a:nth-of-type(4):hover {color: var(--c--cyan-shade);}
+
+#jump_to_container a:nth-of-type(5) {color: var(--c--teal);}
+#jump_to_container a:nth-of-type(5):hover {color: var(--c--teal-shade);}
+
+#jump_to_container a:nth-of-type(6) {color: var(--c--blue);}
+#jump_to_container a:nth-of-type(6):hover {color: var(--c--blue-shade);}
+
+#jump_to_container a:nth-of-type(7) {color: var(--c--pink);}
+#jump_to_container a:nth-of-type(7):hover {color: var(--c--pink-shade);}
+
+/* -----------------------------------------------------------------------------
   Page / Forum
 ----------------------------------------------------------------------------- */
 
