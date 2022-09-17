@@ -761,13 +761,13 @@ body#forums .pagination--bottom+.linkbox a {
 
 [class$='__rate'] a:hover {
   background: var(--c--yellow);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
   border-color: var(--c--yellow);
 }
 
 [class$='__rate'] a:focus {
   background: var(--c--yellow-shade);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
   border-color: var(--c--yellow-shade);
 }
 
@@ -810,7 +810,7 @@ a[onclick^='ToggleTagSelector'],
 a[onclick^='ToggleTagSelector']:hover,
 [class$='__bookmark'] a:hover {
   background: var(--c--blue);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
   border-color: var(--c--blue);
 }
 
@@ -821,7 +821,7 @@ a[onclick^='ToggleTagSelector']:hover,
 a[onclick^='ToggleTagSelector']:focus,
 [class$='__bookmark'] a:focus {
   background: var(--c--blue-shade);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
   border-color: var(--c--blue-shade);
 }
 
@@ -833,13 +833,13 @@ a[onclick^='ToggleTagSelector']:focus,
 
 [class$='__trailer'] a:hover {
   background: var(--c--pink);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
   border-color: var(--c--pink);
 }
 
 [class$='__trailer'] a:focus {
   background: var(--c--pink-shade);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
   border-color: var(--c--pink-shade);
 }
 
@@ -1473,7 +1473,7 @@ img#actualAvatar {
   content: '';
 }
 
-#jump_to_container a:first-of-type,
+#jump_to_container a:nth-of-type(1),
 #jump_to_container a:nth-of-type(2),
 #jump_to_container a:nth-of-type(3),
 #jump_to_container a:nth-of-type(4),
@@ -2577,7 +2577,7 @@ a[class*='link--seen']::after {
 
 .release-name-movie-list__movie__action:hover {
   background: #3385ff;
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
 }
 
 .release-name-movie-list__movie__ratings-and-tags {
@@ -2606,7 +2606,7 @@ a[class*='link--seen']::after {
 
 [id^='submanager'] a:first-child:hover::before {
   background: var(--c--yellow);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
 }
 
 [id^='submanager'] a:nth-child(2) {
@@ -2624,7 +2624,7 @@ a[class*='link--seen']::after {
 
 [id^='submanager'] a:nth-child(2):hover::before {
   background: var(--c--orange);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
 }
 
 .torrent-info-link {
@@ -2906,7 +2906,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel a {
 
 .screenshot-comparison__old-school-toggler-container a:hover {
   background: var(--c--blue);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
 }
 
 .screenshot-comparison__help {
@@ -3112,14 +3112,14 @@ body#artist [id^='role_']>br {
   margin-left: 8px;
 }
 
-#jump_to_container a:first-of-type {
-  border-color: var(--c--yellow);
-  color: var(--c--yellow);
+#jump_to_container a:nth-of-type(1) {
+  border-color: var(--c--orange);
+  color: var(--c--orange);
 }
 
-#jump_to_container a:first-of-type:hover {
-  background: var(--c--yellow);
-  color: var(--c--bg--primary);
+#jump_to_container :nth-of-type(1):hover {
+  background: var(--c--orange);
+  color: var(--c--bg--input);
 }
 
 #jump_to_container a:nth-of-type(2) {
@@ -3129,7 +3129,7 @@ body#artist [id^='role_']>br {
 
 #jump_to_container a:nth-of-type(2):hover {
   background: var(--c--orange);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
 }
 
 #jump_to_container a:nth-of-type(3) {
@@ -3139,7 +3139,7 @@ body#artist [id^='role_']>br {
 
 #jump_to_container a:nth-of-type(3):hover {
   background: var(--c--red);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
 }
 
 #jump_to_container a:nth-of-type(4) {
@@ -3149,7 +3149,7 @@ body#artist [id^='role_']>br {
 
 #jump_to_container a:nth-of-type(4):hover {
   background: var(--c--purple);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
 }
 
 #jump_to_container a:nth-of-type(5) {
@@ -3159,7 +3159,7 @@ body#artist [id^='role_']>br {
 
 #jump_to_container a:nth-of-type(5):hover {
   background: var(--c--blue);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
 }
 
 body#user .sidebar-cover-image {
@@ -3226,7 +3226,7 @@ body#collages .thin>.table td:last-child {
 
 .subscribed_collages_table td span[style*='right'] a:first-of-type:hover {
   background: var(--c--orange);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
 }
 
 .subscribed_collages_table td span[style*='right'] a:nth-of-type(2) {
@@ -3237,7 +3237,7 @@ body#collages .thin>.table td:last-child {
 
 .subscribed_collages_table td span[style*=right] a:nth-of-type(2):hover {
   background: var(--c--white);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
 }
 
 .subscribed_collages_table td span[style*='right'] a:nth-of-type(3) {
@@ -3248,7 +3248,7 @@ body#collages .thin>.table td:last-child {
 
 .subscribed_collages_table td span[style*='right'] a:nth-of-type(3):hover {
   background: var(--c--red);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
 }
 
 .subscribed_collages_table td span[style*='right'] a:nth-of-type(4) {
@@ -3259,7 +3259,7 @@ body#collages .thin>.table td:last-child {
 
 .subscribed_collages_table td span[style*='right'] a:nth-of-type(4):hover {
   background: #3385ff;
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
 }
 
 body#forums .page__title~.linkbox:nth-of-type(2) {
@@ -3353,7 +3353,7 @@ body#inbox #searchbox span[style^='float'] a {
 
 body#inbox #searchbox span[style^='float'] a:hover {
   background: var(--c--blue);
-  color: var(--c--bg--primary);
+  color: var(--c--bg--input);
 }
 
 body#inbox #searchbox input[name='search'] {
