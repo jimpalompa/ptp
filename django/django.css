@@ -270,7 +270,7 @@ sub, sup {
 
 pre, code {
   background: var(--c--bg--primary);
-  color: rgba(255, 255, 255, .8);
+  color: var(--c--tr--fg--less);
   font-family: var(--ff--monospace);
   padding: var(--sp--huge);
 }
@@ -371,7 +371,7 @@ td, th {
 
 blockquote {
   background: var(--c--bg--primary);
-  color: rgba(255, 255, 255, .4);
+  color: var(--c--tr--fg--more);
   font-style: italic;
   margin: 4px 0;
   padding: 24px 28px 28px 44px;
@@ -781,14 +781,14 @@ body#forums .pagination--bottom+.linkbox a {
 [class$='__new']:hover::before,
 body#forums .pagination--bottom+.linkbox a:hover {
   background: var(--c--ac--fg);
-  color: var(--c--black);
+  color: var(--c--bg--input);
   border-color: var(--c--ac--fg);
 }
 
 [class$='__new']:focus::before,
 body#forums .pagination--bottom+.linkbox a:focus {
   background: var(--c--ac--fg--shade);
-  color: var(--c--black);
+  color: var(--c--bg--input);
   border-color: var(--c--ac--fg--shade);
 }
 
@@ -886,7 +886,7 @@ a[onclick^='ToggleTagSelector']:focus,
 }
 
 [style='text-decoration: line-through'] {
-  color: rgba(255, 255, 255, .4);
+  color: var(--c--tr--fg--more);
 }
 
 [class^='ratio-'] {
@@ -1452,7 +1452,7 @@ body#artist [id^='role_']>br {
 ----------------------------------------------------------------------------- */
 
 .simplemodal-overlay {
-  background: rgba(0, 0, 0, .9);
+  background: var(--c--tr--bg--less);
   opacity: 1 !important;
 }
 
@@ -1783,7 +1783,7 @@ body#collages .thin>.table td:nth-child(2)>a {
 .basic-movie-list__movie__rating-container,
 [class$='__rating-container'] {
   display: inline-block;
-  background: rgba(0, 0, 0, .4);
+  background: var(--c--tr--bg--more);
   padding: 3px 6px 2px;
   border-radius: 2px;
   margin-right: 8px;
@@ -2092,7 +2092,7 @@ a.tabs__bar__link {
 
 .mediainfo--in-release-description+blockquote.spoiler {
   background: var(--c--bg--primary) !important;
-  color: rgba(255, 255, 255, .4) !important;
+  color: var(--c--tr--fg--more) !important;
   font-size: var(--fs--tiny);
   font-style: normal;
   padding: var(--sp--medium);
@@ -2317,7 +2317,7 @@ input[type='button'] {
 }
 
 .simplemodal-data h2 {
-  background: rgba(0, 0, 0, .4);
+  background: var(--c--tr--bg--more);
 }
 
 .simplemodal-data textarea {
@@ -2698,7 +2698,7 @@ a.torrent-info-link::after {
 }
 
 a.torrent-info-link--user-snatched {
-  color: var(--c--blue);
+  color: var(--c--teal);
 }
 
 a.torrent-info-link--user-leeching {
@@ -2771,30 +2771,52 @@ a.torrent-info-link--user-uploaded {
 
 .torrent_info_row a[onclick^='show_peers']:hover, .torrent_info_row a[onclick^='show_peers']:focus {
   background: var(--c--green);
-  color: var(--c--black);
+  color: var(--c--bg--input);
   border-color: var(--c--green);
 }
 
-.torrent_info_row a[onclick^='show_files'] {
+.torrent_info_row a[onclick^='show_downloadlistt'] {
   color: var(--c--cyan);
   border-color: var(--c--cyan);
 }
 
-.torrent_info_row a[onclick^='show_files']:hover, .torrent_info_row a[onclick^='show_files']:focus {
+.torrent_info_row a[onclick^='show_downloadlistt']:hover, .torrent_info_row a[onclick^='show_peers']:focus {
   background: var(--c--cyan);
-  color: var(--c--black);
+  color: var(--c--bg--input);
   border-color: var(--c--cyan);
 }
 
-.torrent_info_row a[onclick^='show_nfo'] {
+.torrent_info_row a[onclick^='show_snatchlistt'] {
   color: var(--c--teal);
   border-color: var(--c--teal);
 }
 
-.torrent_info_row a[onclick^='show_nfo']:hover, .torrent_info_row a[onclick^='show_nfo']:focus {
+.torrent_info_row a[onclick^='show_snatchlistt']:hover, .torrent_info_row a[onclick^='show_peers']:focus {
   background: var(--c--teal);
-  color: var(--c--black);
+  color: var(--c--bg--input);
   border-color: var(--c--teal);
+}
+
+.torrent_info_row a[onclick^='show_files'] {
+  color: var(--c--blue);
+  border-color: var(--c--blue);
+}
+
+.torrent_info_row a[onclick^='show_files']:hover, .torrent_info_row a[onclick^='show_files']:focus {
+  background: var(--c--blue);
+  color: var(--c--bg--input);
+  border-color: var(--c--blue);
+}
+
+.torrent_info_row a[onclick^='show_nfo'] {
+  color: var(--c--pink);
+  border-color: var(--c--pink);
+}
+
+.torrent_info_row a[onclick^='show_nfo']:hover, .torrent_info_row a[onclick^='show_nfo']:focus {
+  background: var(--c--pink);
+  color: var(--c--bg--input);
+  border-color: var(--c--pink);
 }
 
 .torrent_quick_edit_ignore~br:nth-of-type(3) {
@@ -2816,7 +2838,7 @@ body#torrents a[onclick^='RequestSeedingHelp']::before {
 
 body#torrents a[onclick^='RequestSeedingHelp']:hover::before {
   background: var(--c--red);
-  color: var(--c--black);
+  color: var(--c--bg--input);
 }
 
 .no-seeders {
@@ -2828,7 +2850,7 @@ body#torrents a[onclick^='RequestSeedingHelp']:hover::before {
   width: 30px;
   border-radius: 3px;
   margin-right: 8px;
-  background: rgba(0, 0, 0, .4);
+  background: var(--c--tr--bg--more);
 }
 
 .basic-torrent-list__movie__torrent-opener-link::before {
@@ -2839,7 +2861,7 @@ body#torrents a[onclick^='RequestSeedingHelp']:hover::before {
 }
 
 .basic-torrent-list__movie__torrent-opener-link:hover {
-  background: rgba(0, 0, 0, .6)
+  background: var(--c--tr--bg);
 }
 
 .basic-torrent-list__movie__additional-info {
@@ -2907,7 +2929,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel a {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, .9);
+  background: var(--c--tr--bg--less);
 }
 
 .screenshot-comparison__container {
@@ -2918,7 +2940,7 @@ body#torrents div[id^='trumpable'].movie-page__torrent__panel a {
   text-align: center;
   width: 100%;
   overflow: auto;
-  background: rgba(0, 0, 0, .9);
+  background: var(--c--tr--bg--less);
 }
 
 .screenshot-comparison__row {
