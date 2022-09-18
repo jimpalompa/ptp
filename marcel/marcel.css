@@ -509,13 +509,13 @@ a.torrent-info-link--user-seeding,
 
 /* Cyan */
 a.torrent-info-link--user-downloaded,
-.torrent_info_row a[onclick^='show_downloadlistt'] {
+.torrent_info_row a[onclick^='show_downloads'] {
   color: var(--c--cyan);
 }
 
 /* Teal */
 a.torrent-info-link--user-snatched,
-.torrent_info_row a[onclick^='show_snatchlistt'] {
+.torrent_info_row a[onclick^='show_snatches'] {
   color: var(--c--teal);
 }
 
