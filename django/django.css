@@ -143,10 +143,10 @@
   --bs--g--large: rgba(229, 210, 194, .3) 0 4px 12px;
 
   /* Transition */
-  --tr--all: all .1s ease-out;
-  --tr--background: background .1s ease-out;
-  --tr--color: color .1s ease-out;
-  --tr--opacity: opacity .1s ease-out;
+  --ts--all: all .1s ease-out;
+  --ts--background: background .1s ease-out;
+  --ts--color: color .1s ease-out;
+  --ts--opacity: opacity .1s ease-out;
 }
 /* -----------------------------------------------------------------------------
   Web fonts
@@ -228,7 +228,7 @@ body {
 a {
   color: var(--c--fg--primary);
   text-decoration: none;
-  transition: var(--tr--color);
+  transition: var(--ts--color);
 }
 
 a:hover {
@@ -306,7 +306,7 @@ input, textarea, select, option, input[type='button'], input[type='submit'], .li
   outline: 0;
   margin-bottom: 8px;
   padding: 6px 12px;
-  transition: var(--tr--all);
+  transition: var(--ts--all);
 }
 
 input:hover, input:focus, textarea:hover, textarea:focus, select:hover, select:focus, option:hover, option:focus {
@@ -349,7 +349,7 @@ textarea {
   width: 100%;
   min-height: 220px;
   resize: vertical;
-  transition: var(--tr--background);
+  transition: var(--ts--background);
 }
 
 select {
@@ -418,7 +418,7 @@ blockquote::before {
   -webkit-font-feature-settings: 'liga';
   font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
-  transition: var(--tr--color);
+  transition: var(--ts--color);
 }
 
 ::placeholder {
@@ -437,7 +437,7 @@ blockquote::before {
   width: var(--fs--gigantic);
   height: var(--fs--gigantic);
   padding-top: var(--fs--gigantic);
-  transition: var(--tr--opacity);
+  transition: var(--ts--opacity);
 }
 
 #artist_settings:hover, #browse_settings:hover, #artist_settings:focus, #browse_settings:focus {
@@ -645,7 +645,7 @@ img[title='User Ratings'] {
   background-size: auto 16px;
   width: 16px;
   height: 16px;
-  transition: var(--tr--opacity);
+  transition: var(--ts--opacity);
   cursor: pointer;
 }
 
@@ -712,7 +712,7 @@ body#forums .pagination--bottom+.linkbox a {
   margin-top: var(--sp--medium);
   border: 2px solid;
   border-radius: var(--br--small);
-  transition: var(--tr--all);
+  transition: var(--ts--all);
 }
 
 .last5-movies__show-all-row td,
@@ -873,7 +873,7 @@ a[onclick^='ToggleTagSelector']:focus,
   background: var(--c--bg--initial) !important;
   color: var(--c--bg--initial) !important;
   padding: 3px 0;
-  transition: var(--tr--color);
+  transition: var(--ts--color);
 }
 
 .spoiler:hover, .spoiler-show {
@@ -1519,7 +1519,7 @@ body#artist [id^='role_']>br {
 .discuss::before,
 .panel__heading__toggler::before,
 .toggle::before {
-  transition: var(--tr--color);
+  transition: var(--ts--color);
 }
 
 #content::after,
@@ -1934,7 +1934,7 @@ body#upload .thin>div[style*='width:700px'] {
 .tabs__bar__item {
   flex-grow: 1;
   padding: 0;
-  transition: var(--tr--background);
+  transition: var(--ts--background);
 }
 
 .tabs__bar__item:hover {
@@ -2685,18 +2685,11 @@ a[class*='link--seen']::after {
   color: var(--c--bg--input);
 }
 
-.torrent-info-link {
+a.torrent-info-link {
   color: var(--c--fg--tertiary);
 }
 
-.torrent-info-link:focus {
-  color: inherit;
-}
-.torrent-info-link:active {
-  color: var(--c--ac--fg--shade);
-}
-
-.torrent-info-link::after {
+a.torrent-info-link::after {
   font-size: var(--fs--medium);
   line-height: var(--fs--small);
   padding-left: 4px;
@@ -2704,23 +2697,23 @@ a[class*='link--seen']::after {
   top: 3px;
 }
 
-.torrent-info-link--user-snatched {
+a.torrent-info-link--user-snatched {
   color: var(--c--blue);
 }
 
-.torrent-info-link--user-leeching {
+a.torrent-info-link--user-leeching {
   color: var(--c--yellow);
 }
 
-.torrent-info-link--user-seeding {
+a.torrent-info-link--user-seeding {
   color: var(--c--green);
 }
 
-.torrent-info-link--user-downloaded {
+a.torrent-info-link--user-downloaded {
   color: var(--c--cyan);
 }
 
-.torrent-info-link--user-uploaded {
+a.torrent-info-link--user-uploaded {
   color: var(--c--purple);
 }
 
@@ -3657,7 +3650,7 @@ body#staff .thin>div:nth-of-type(2) h3 {
   text-transform: uppercase;
   width: 100%;
   height: 52px;
-  transition: var(--tr--background);
+  transition: var(--ts--background);
 }
 
 .main-menu a:hover {
