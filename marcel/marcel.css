@@ -488,6 +488,7 @@ a.torrent-info-link--user-leeching,
   color: var(--c--yellow);
 }
 
+/* Green */
 .ratio-10,
 .ratio-20,
 .ratio-50,
@@ -508,17 +509,19 @@ a.torrent-info-link--user-seeding,
 
 /* Cyan */
 a.torrent-info-link--user-downloaded,
-.torrent_info_row a[onclick^='show_files'] {
+.torrent_info_row a[onclick^='show_downloadlistt'] {
   color: var(--c--cyan);
 }
 
-.torrent_info_row a[onclick^='show_nfo'] {
+/* Teal */
+a.torrent-info-link--user-snatched,
+.torrent_info_row a[onclick^='show_snatchlistt'] {
   color: var(--c--teal);
 }
 
 /* Blue */
 [class$='__bookmark'] a,
-a.torrent-info-link--user-snatched {
+.torrent_info_row a[onclick^='show_files'] {
   color: var(--c--blue);
 }
 
@@ -528,7 +531,8 @@ a.torrent-info-link--user-uploaded {
 }
 
 /* Pink */
-[class$='__trailer'] a {
+[class$='__trailer'] a,
+.torrent_info_row a[onclick^='show_nfo'] {
   color: var(--c--pink);
 }
 
@@ -2128,7 +2132,7 @@ th {
 }
 
 .lightbox__shroud {
-  background-color: rgba(0, 0, 0, .8);
+  background-color: var(--c--tr--bg--less);
   width: 100%;
   height: 100%;
   position: fixed;
