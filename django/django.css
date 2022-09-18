@@ -2775,23 +2775,23 @@ a.torrent-info-link--user-uploaded {
   border-color: var(--c--green);
 }
 
-.torrent_info_row a[onclick^='show_downloadlistt'] {
+.torrent_info_row a[onclick^='show_downloads'] {
   color: var(--c--cyan);
   border-color: var(--c--cyan);
 }
 
-.torrent_info_row a[onclick^='show_downloadlistt']:hover, .torrent_info_row a[onclick^='show_peers']:focus {
+.torrent_info_row a[onclick^='show_downloads']:hover, .torrent_info_row a[onclick^='show_peers']:focus {
   background: var(--c--cyan);
   color: var(--c--bg--input);
   border-color: var(--c--cyan);
 }
 
-.torrent_info_row a[onclick^='show_snatchlistt'] {
+.torrent_info_row a[onclick^='show_snatches'] {
   color: var(--c--teal);
   border-color: var(--c--teal);
 }
 
-.torrent_info_row a[onclick^='show_snatchlistt']:hover, .torrent_info_row a[onclick^='show_peers']:focus {
+.torrent_info_row a[onclick^='show_snatches']:hover, .torrent_info_row a[onclick^='show_peers']:focus {
   background: var(--c--teal);
   color: var(--c--bg--input);
   border-color: var(--c--teal);
