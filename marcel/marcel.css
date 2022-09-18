@@ -247,18 +247,15 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: var(--c--fg--primary);
   text-decoration: none;
-  border: none;
   transition: var(--ts--color);
 }
 
 a:hover {
-  text-decoration: none;
-  border: none;
+  color: var(--c--ac--fg);
 }
 
-a:hover, a:focus, a:active {
-  color: var(--c--ac--fg);
-  outline: 0;
+a:focus {
+  color: var(--c--ac--fg--shade);
 }
 
 abbr[title] {
@@ -437,7 +434,7 @@ h2 small a,
 .basic-movie-list__movie__tag,
 .page__title a,
 .linkbox a,
-.torrent-info-link,
+a.torrent-info-link,
 .movie-tooltip__rating__title>a,
 .movie-tooltip__tag {
   color: var(--c--fg--tertiary);
@@ -1517,13 +1514,6 @@ a.cover-movie-list__movie__tag:nth-child(n+3) {
   Page / Single movie
 ----------------------------------------------------------------------------- */
 
-.torrent-info-link:focus {
-  color: inherit;
-}
-.torrent-info-link:active {
-  color: var(--c--ac--fg--shade);
-}
-
 #ptp_your_rating {
   color: var(--c--purple-shade);
 }
@@ -1738,15 +1728,15 @@ th {
   text-align: right!important;
 }
 
-.bbcode-size-1 {font-size: var(--fs--small);}
-.bbcode-size-2 {font-size: var(--fs--medium);}
-.bbcode-size-3 {font-size: var(--fs--large);}
-.bbcode-size-4 {font-size: var(--fs--x-large);}
-.bbcode-size-5 {font-size: 19px;}
-.bbcode-size-6 {font-size: var(--fs--huge);}
-.bbcode-size-7 {font-size: 21px;}
-.bbcode-size-8 {font-size: 22px;}
-.bbcode-size-9 {font-size: 23px;}
+.bbcode-size-1 {font-size: var(--fs--tiny);}
+.bbcode-size-2 {font-size: var(--fs--small);}
+.bbcode-size-3 {font-size: var(--fs--medium);}
+.bbcode-size-4 {font-size: var(--fs--large);}
+.bbcode-size-5 {font-size: 1.0625rem;}
+.bbcode-size-6 {font-size: var(--fs--x-large);}
+.bbcode-size-7 {font-size: 1.1875rem;}
+.bbcode-size-8 {font-size: var(--fs--huge);}
+.bbcode-size-9 {font-size: 1.3125rem;}
 .bbcode-size-10 {font-size: var(--fs--gigantic);}
 
 .bbcode__image {
