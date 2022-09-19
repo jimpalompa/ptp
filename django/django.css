@@ -1800,7 +1800,7 @@ body#collages .thin>.table td:nth-child(2)>a {
 }
 
 #torrent-table th, #requests th {
-  padding: var(--sp--medium) var(--sp--x-large);
+  padding: var(--sp--medium) var(--sp--x-large) var(--sp--small);
 }
 
 .torrent_table th:nth-last-child(-n+4) {
