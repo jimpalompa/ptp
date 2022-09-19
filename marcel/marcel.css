@@ -1056,6 +1056,31 @@ span.spoiler:hover {
   color: var(--c--white) !important;
 }
 
+a[class*='link--seen'] {
+  position: relative;
+}
+
+a[class*='link--seen']::before {
+  border-top: 36px solid var(--c--purple-shade);
+  border-left: 36px solid transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '';
+}
+
+a[class*='link--seen']::after {
+  color: var(--c--white);
+  font-family: var(--ff--icons);
+  font-size: var(--fs--small);
+  font-weight: var(--fw--bold);
+  line-height: 1;
+  position: absolute;
+  top: 4px;
+  right: 3px;
+  content: '\e876';
+}
+
 /* -----------------------------------------------------------------------------
   Header
 ----------------------------------------------------------------------------- */
