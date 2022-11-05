@@ -615,13 +615,14 @@ img[title='User Ratings'] {
 .star-rating--with-inline-rating-display {
   display: inline-table;
   margin-right: 8px;
+  vertical-align: middle;
 }
 
 .star-rating__inline-rating-display {
   display: inline-block;
-  margin-top: 2px;
-  vertical-align: top;
   font-weight: var(--fw--regular);
+  margin-top: 2px;
+  vertical-align: middle;
 }
 
 /* Top & bottom 250 */
