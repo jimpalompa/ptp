@@ -1804,8 +1804,16 @@ body#collages .thin>.table td:nth-child(2)>a {
   border-bottom: var(--sp--tiny) solid transparent;
 }
 
-#torrent-table th, #requests th {
+#torrent-table th {
   padding: var(--sp--medium) var(--sp--x-large) var(--sp--small);
+}
+
+#requests th {
+  padding: var(--sp--medium) var(--sp--x-large) var(--sp--small) var(--sp--puny);
+}
+
+#requests thead th:first-child {
+  width: 30% !important;
 }
 
 .torrent_table th:nth-last-child(-n+4) {
