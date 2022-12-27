@@ -2702,7 +2702,7 @@ a[class*='link--seen']::after {
   color: var(--c--fg--tertiary);
 }
 
-a.torrent-info-link::after {
+.group_torrent a.torrent-info-link::after {
   font-size: var(--fs--medium);
   line-height: var(--fs--small);
   padding-left: 4px;
@@ -2710,23 +2710,23 @@ a.torrent-info-link::after {
   top: 3px;
 }
 
-a.torrent-info-link--user-snatched {
+.group_torrent a.torrent-info-link--user-snatched {
   color: var(--c--teal);
 }
 
-a.torrent-info-link--user-leeching {
+.group_torrent a.torrent-info-link--user-leeching {
   color: var(--c--yellow);
 }
 
-a.torrent-info-link--user-seeding {
+.group_torrent a.torrent-info-link--user-seeding {
   color: var(--c--green);
 }
 
-a.torrent-info-link--user-downloaded {
+.group_torrent a.torrent-info-link--user-downloaded {
   color: var(--c--cyan);
 }
 
-a.torrent-info-link--user-uploaded {
+.group_torrent a.torrent-info-link--user-uploaded {
   color: var(--c--purple);
 }
 
