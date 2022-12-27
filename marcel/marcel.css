@@ -699,8 +699,7 @@ blockquote,
 .torrent-info-link--user-snatched,
 .torrent-info-link--user-downloaded,
 .panel__heading__title,
-[class$='__new'],
-.pagination__current-page {
+[class$='__new'] {
   font-weight: var(--fw--bold);
 }
 
