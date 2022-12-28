@@ -434,7 +434,7 @@ h2 small a,
 .basic-movie-list__movie__tag,
 .page__title a,
 .linkbox a,
-.group_torrent a.torrent-info-link,
+a.torrent-info-link,
 .movie-tooltip__rating__title>a,
 .movie-tooltip__tag {
   color: var(--c--fg--tertiary);
@@ -482,7 +482,7 @@ body#torrents a[onclick^='RequestSeedingHelp'],
 .ratio-08,
 .ratio-09,
 [class$='__rate'] a,
-.group_torrent a.torrent-info-link--user-leeching,
+a.torrent-info-link--user-leeching,
 .golden-popcorn-character,
 [id^='submanager'] a:nth-child(2) {
   color: var(--c--yellow);
@@ -498,7 +498,7 @@ body#torrents a[onclick^='RequestSeedingHelp'],
 .snatchlist-status--not-hnr,
 .encoding-history-status--finished,
 .missing-torrent-status--exists,
-.group_torrent a.torrent-info-link--user-seeding,
+a.torrent-info-link--user-seeding,
 .torrent_info_row a[onclick^='show_peers'] {
   color: var(--c--green);
 }
@@ -508,13 +508,13 @@ body#torrents a[onclick^='RequestSeedingHelp'],
 }
 
 /* Cyan */
-.group_torrent a.torrent-info-link--user-downloaded,
+a.torrent-info-link--user-downloaded,
 .torrent_info_row a[onclick^='show_downloads'] {
   color: var(--c--cyan);
 }
 
 /* Teal */
-.group_torrent a.torrent-info-link--user-snatched,
+a.torrent-info-link--user-snatched,
 .torrent_info_row a[onclick^='show_snatches'] {
   color: var(--c--teal);
 }
@@ -526,7 +526,7 @@ body#torrents a[onclick^='RequestSeedingHelp'],
 }
 
 /* Purple */
-.group_torrent a.torrent-info-link--user-uploaded {
+a.torrent-info-link--user-uploaded {
   color: var(--c--purple);
 }
 
