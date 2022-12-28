@@ -434,7 +434,7 @@ h2 small a,
 .basic-movie-list__movie__tag,
 .page__title a,
 .linkbox a,
-.torrent_table a.torrent-info-link,
+.torrent_table a.torrent-info-link:not([class*="--"]),
 .movie-tooltip__rating__title>a,
 .movie-tooltip__tag {
   color: var(--c--fg--tertiary);
