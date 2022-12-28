@@ -2698,11 +2698,11 @@ a[class*='link--seen']::after {
   color: var(--c--bg--input);
 }
 
-.group_torrent a.torrent-info-link {
+a.torrent-info-link {
   color: var(--c--fg--tertiary);
 }
 
-.group_torrent a.torrent-info-link::after {
+a.torrent-info-link::after {
   font-size: var(--fs--medium);
   line-height: var(--fs--small);
   padding-left: 4px;
@@ -2710,23 +2710,23 @@ a[class*='link--seen']::after {
   top: 3px;
 }
 
-.group_torrent a.torrent-info-link--user-snatched {
+a.torrent-info-link--user-snatched {
   color: var(--c--teal);
 }
 
-.group_torrent a.torrent-info-link--user-leeching {
+a.torrent-info-link--user-leeching {
   color: var(--c--yellow);
 }
 
-.group_torrent a.torrent-info-link--user-seeding {
+a.torrent-info-link--user-seeding {
   color: var(--c--green);
 }
 
-.group_torrent a.torrent-info-link--user-downloaded {
+a.torrent-info-link--user-downloaded {
   color: var(--c--cyan);
 }
 
-.group_torrent a.torrent-info-link--user-uploaded {
+a.torrent-info-link--user-uploaded {
   color: var(--c--purple);
 }
 
