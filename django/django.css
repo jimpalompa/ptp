@@ -2698,7 +2698,7 @@ a[class*='link--seen']::after {
   color: var(--c--bg--input);
 }
 
-a.torrent-info-link {
+.torrent_table a.torrent-info-link {
   color: var(--c--fg--tertiary);
 }
 
