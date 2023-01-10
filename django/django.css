@@ -394,11 +394,11 @@ blockquote a {
 }
 
 blockquote::before {
-  font-size: var(--fs--gigantic);
+  font-size: var(--fs--icons);
   display: inline-block;
   position: absolute;
-  top: 0;
-  left: var(--sp--small);
+  top: var(--sp--small);
+  left: var(--sp--medium);
   content: '\e244';
   transform: rotate(180deg);
 }
