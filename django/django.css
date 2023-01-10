@@ -395,7 +395,6 @@ blockquote a {
 
 blockquote::before {
   color: rgba(255, 255, 255, .1);
-  font-size: var(--fs--icons);
   content: '\e244';
   display: inline-block;
   position: absolute;
