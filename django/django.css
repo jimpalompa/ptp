@@ -3552,7 +3552,7 @@ body#staff .thin>div:nth-of-type(2) h3 {
   box-shadow: var(--bs--medium);
   position: absolute;
   top: 80px;
-  right: 40px;
+  right: 20px;
   z-index: 200;
 }
 
