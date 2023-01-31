@@ -3854,6 +3854,7 @@ body#staff .thin>div:nth-of-type(2) h3 {
   #userinfo_username {margin-left: 380px;}
   #userinfo {padding-left: 400px;}
   #userinfo_major {flex-basis: 192px;}
+  #nav_bonus a {right: 36px;}
 }
 
 /* ------------ Before you go, will you tell Miss Lara goodbye? ------------- */
