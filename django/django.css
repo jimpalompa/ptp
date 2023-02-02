@@ -3772,6 +3772,7 @@ body#staff .thin>div:nth-of-type(2) h3 {
 
 .alert-bar {
   background: var(--c--bg--tertiary);
+  color: var(--c--white);
   margin: var(--sp--medium) 0;
   padding: var(--sp--medium);
   text-align: center;
