@@ -396,10 +396,11 @@ blockquote a {
 blockquote::before {
   color: rgba(255, 255, 255, .1);
   content: '\e244';
+  font-style: italic;
   display: inline-block;
   position: absolute;
   top: var(--sp--tiny);
-  left: var(--sp--small);
+  left: var(--sp--medium);
   transform: rotate(180deg);
 }
 
