@@ -398,8 +398,8 @@ blockquote::before {
   content: '\e244';
   display: inline-block;
   position: absolute;
-  top: var(--sp--small);
-  left: var(--sp--medium);
+  top: var(--sp--tiny);
+  left: var(--sp--small);
   transform: rotate(180deg);
 }
 
