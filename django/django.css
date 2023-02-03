@@ -2390,7 +2390,7 @@ a[class*='link--seen']::after {
 }
 
 .basic-movie-list__torrent-edition {
-  background: var(--c--bg--primary);
+  background: var(--c--bg--tertiary);
   color: var(--c--fg--primary);
   font-weight: var(--fw--bold);
   text-transform: uppercase;
