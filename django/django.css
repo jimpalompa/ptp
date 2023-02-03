@@ -400,7 +400,7 @@ blockquote::before {
   display: inline-block;
   position: absolute;
   top: var(--sp--tiny);
-  left: var(--sp--medium);
+  left: var(--sp--small);
   transform: rotate(180deg);
 }
 
