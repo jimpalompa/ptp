@@ -1461,6 +1461,10 @@ a.cover-movie-list__movie__tag:nth-child(n+3) {
   display: table-row;
 }
 
+.basic-movie-list__movie__cover-link {
+  display: block;
+}
+
 .basic-movie-list__movie__cover {
   background-color: var(--c--bg--tertiary);
   width: 96px;
