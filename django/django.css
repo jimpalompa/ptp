@@ -1310,7 +1310,6 @@ body#artist [id^='role_']>br {
 
 .forum-post--sticky {
   border: 6px solid var(--c--blue-shade);
-  border-radius: 0;
 }
 
 .forum-post--sticky .forum-post__heading {
