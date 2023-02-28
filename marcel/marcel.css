@@ -521,7 +521,8 @@ a.torrent-info-link--user-snatched,
 
 /* Blue */
 [class$='__bookmark'] a,
-.torrent_info_row a[onclick^='show_files'] {
+.torrent_info_row a[onclick^='show_files'],
+.forum-post__heading span.sticky_post {
   color: var(--c--blue);
 }
 
