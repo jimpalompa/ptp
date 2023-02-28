@@ -1884,6 +1884,8 @@ th {
 .forum-post--sticky {
   border-top-width: 6px;
   border-top-style: solid;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .forum-post--unread .forum-post__heading,
