@@ -1308,6 +1308,15 @@ body#artist [id^='role_']>br {
   padding: 0;
 }
 
+.forum-post--sticky {
+  border: 6px solid var(--c--blue-shade);
+  border-radius: 0;
+}
+
+.forum-post--sticky .forum-post__heading {
+  border-radius: 0;
+}
+
 .forum-post__heading {
   display: flex;
   background-color: var(--c--bg--tertiary);
@@ -1325,6 +1334,10 @@ body#artist [id^='role_']>br {
   flex-grow: 0;
   flex-shrink: 0;
   padding-left: var(--sp--x-large);
+}
+
+.forum-post__heading span.sticky_post {
+  color: var(--c--blue);
 }
 
 .forum-post__avatar-and-body {
