@@ -629,6 +629,10 @@ blockquote {
   border-color: var(--c--ac--fg--shade);
 }
 
+.forum-post--sticky {
+  border-color: var(--c--blue-shade);
+}
+
 /* -----------------------------------------------------------------------------
   Shadows
 ----------------------------------------------------------------------------- */
@@ -1871,7 +1875,7 @@ th {
   border-radius: var(--br--bottom);
 }
 
-.forum-post--unread {
+.forum-post--unread, .forum-post--sticky {
   border-top-width: 4px;
   border-top-style: solid;
 }
