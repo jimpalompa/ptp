@@ -1881,6 +1881,11 @@ th {
   border-top-style: solid;
 }
 
+.forum-post--unread .forum-post__heading,
+.forum-post--sticky .forum-post__heading {
+  border-radius: 0;
+}
+
 .forum-post--is-reply {
   margin-top: 30px;
 }
