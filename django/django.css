@@ -1309,7 +1309,7 @@ body#artist [id^='role_']>br {
 }
 
 .forum-post--unread {
-  border-top: 4px solid var(--c--ac--fg);
+  border-top: 4px solid var(--c--ac--fg--shade);
 }
 
 .forum-post--sticky {
