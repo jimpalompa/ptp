@@ -626,7 +626,7 @@ blockquote {
 }
 
 .forum-post--unread {
-  border-color: var(--c--ac--fg);
+  border-color: var(--c--ac--fg--shade);
 }
 
 /* -----------------------------------------------------------------------------
