@@ -1314,6 +1314,8 @@ body#artist [id^='role_']>br {
 
 .forum-post--sticky {
   border-top: 8px solid var(--c--blue-shade);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .forum-post--unread .forum-post__heading,
