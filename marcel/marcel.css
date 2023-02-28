@@ -1876,9 +1876,12 @@ th {
   border-radius: var(--br);
 }
 
-.forum-post--unread, .forum-post--sticky {
+.forum-post--unread,
+.forum-post--sticky {
   border-top-width: 4px;
   border-top-style: solid;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .forum-post--unread .forum-post__heading,
