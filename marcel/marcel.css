@@ -1873,7 +1873,7 @@ th {
   display: table;
   width: 100%;
   margin-bottom: 20px;
-  border-radius: var(--br--bottom);
+  border-radius: var(--br);
 }
 
 .forum-post--unread, .forum-post--sticky {
