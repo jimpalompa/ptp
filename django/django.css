@@ -24,11 +24,11 @@
   /* Color background */
   --c--bg--initial:    #000;
   --c--bg--input:      #0c0c0c; /* between */
-  --c--bg--primary:    #171615;
-  --c--bg--secondary:  #232221; /* tint 5% */
-  --c--bg--tertiary:   #3a3938; /* tint 15% */
+  --c--bg--primary:    #171616;
+  --c--bg--secondary:  #232222; /* tint 5% */
+  --c--bg--tertiary:   #3a3939; /* tint 15% */
   --c--bg--quaternary: #515050; /* tint 25% */
-  --c--bg--quinary:    #686867; /* tint 35% */
+  --c--bg--quinary:    #686868; /* tint 35% */
 
   /* Color accent foreground */
   --c--ac--fg--tint:   #e5d2c2; /* tint 40% */
