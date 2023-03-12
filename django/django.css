@@ -31,14 +31,14 @@
   --c--bg--quinary:    #686868; /* tint 35% */
 
   /* Color accent foreground */
-  --c--ac--fg--tint:   #e5d2c2; /* tint 40% */
-  --c--ac--fg:         #d4b499;
-  --c--ac--fg--shade:  #947e6b; /* shade 30% */
+  --c--ac--fg--tint:   #e5d4c5; /* tint 40% */
+  --c--ac--fg:         #d4b79f;
+  --c--ac--fg--shade:  #94806f; /* shade 30% */
 
   /* Color accent background */
-  --c--ac--bg--tint:   #7f6c5c; /* shade 40% */
-  --c--ac--bg:         #6a5a4d; /* shade 50% */
-  --c--ac--bg--shade:  #55483d; /* shade 60% */
+  --c--ac--bg--tint:   #7f6e5f; /* shade 40% */
+  --c--ac--bg:         #6a5c50; /* shade 50% */
+  --c--ac--bg--shade:  #554940; /* shade 60% */
 
   /* Color transparent foreground */
   --c--tr--fg--less: rgba(255, 255, 255, .8);
