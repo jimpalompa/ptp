@@ -2611,7 +2611,7 @@ a[class*='link--seen']::after {
   text-align: center;
   width: var(--sp--gigantic);
   height: var(--sp--gigantic);
-  border-radius: 8px 0;
+  border-radius: var(--br--small) 0;
   position: absolute;
   bottom: 0;
   right: 0;
