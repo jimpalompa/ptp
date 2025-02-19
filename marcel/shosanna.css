@@ -15,7 +15,7 @@
 
 :root {
   /* Color foreground */
-  --c--fg--initial:    #000000;
+  --c--fg--initial:    #000;
   --c--fg--input:      #1a1a1a; /* between */
   --c--fg--primary:    #353433;
   --c--fg--secondary:  #5d5c5b; /* tint 20% */
