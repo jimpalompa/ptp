@@ -1911,12 +1911,12 @@ body#upload .thin>div[style*='width:700px'] {
 
 .panel__heading__toggler {
   position: absolute;
-  top: 4px;
+  top: 2px;
   right: 0;
 }
 
 .panel__heading__toggler::before {
-  font-size: var(--fs--medium);
+  font-size: var(--fs--large);
   content: '\e061';
 }
 
