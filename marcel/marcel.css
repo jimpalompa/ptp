@@ -13,7 +13,7 @@
 
 :root {
   /* Color foreground */
-  --c--fg--initial:    #ffffff;
+  --c--fg--initial:    #fff;
   --c--fg--input:      #fcfcfc; /* between */
   --c--fg--primary:    #f9f7f5;
   --c--fg--secondary:  #aeadac; /* shade 30% */
